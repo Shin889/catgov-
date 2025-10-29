@@ -1,0 +1,142 @@
+
+<style>
+  .membership {
+    display: flex;
+    gap: 28px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(15,23,42,0.06);
+    overflow: hidden;
+    align-items: stretch;
+  }
+
+  /* Left column - image holder */
+  .col-left {
+    flex: 0 0 42%;            /* left column width on wide screens */
+    min-width: 240px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(180deg, #fff 0%, #fbfdff 100%);
+    padding: 18px;
+  }
+  .col-left .image {
+    width: 100%;
+    max-width: 420px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(2,6,23,0.06);
+  }
+  .col-left img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    vertical-align: middle;
+  }
+
+  /* Right column - content */
+  .col-right {
+    flex: 1 1 58%;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .col-right h2 {
+    font-size: 20px;
+    margin-bottom: 6px;
+    color: #0f172a;
+  }
+
+  .col-right p {
+    line-height: 1.5;
+    color: #334155;
+    font-size: 15px;
+  }
+
+  .steps {
+    margin-top: 6px;
+    padding-left: 18px;
+  }
+  .steps li {
+    margin: 8px 0;
+    line-height: 1.5;
+    color: #263251;
+  }
+
+  .link-inline {
+    display: inline-block;
+    margin-top: 6px;
+    text-decoration: none;
+    color: #0b5fff;
+    font-weight: 600;
+  }
+  .muted-small {
+    font-size: 13px;
+    color: #6b7280;
+  }
+
+  .cta {
+    display: inline-block;
+    padding: 8px 12px;
+    margin-top: 8px;
+    border-radius: 8px;
+    background: #eef2ff;
+    color: #3730a3;
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  @media (max-width: 880px) {
+    .card { gap: 16px; flex-direction: column; }
+    .col-left { flex-basis: auto; padding: 14px; }
+    .col-left .image { max-width: 100%; }
+    .col-right { padding: 18px; }
+  }
+
+  @media (max-width: 480px) {
+    .wrapper { padding: 12px; }
+    .col-right h2 { font-size: 18px; }
+    .col-right p, .steps li { font-size: 14px; }
+    .cta { padding: 8px 10px; }
+  }
+</style>
+
+  <div class="membership">
+
+    <!-- LEFT: image -->
+    <div class="col-left">
+      <div class="image" role="img" aria-label="Advise image">
+        <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/10/ADVISE.png" alt="Advise / membership image">
+      </div>
+    </div>
+
+    <!-- RIGHT: text content -->
+    <div class="col-right">
+      <h2>3 Ways of Membership Applications:</h2>
+
+      <ul class="steps">
+        <li>Download the application form and fill-up the blanks.</li>
+        <li>Email your application form to our Email Address - <a class="link-inline" href="mailto:progoceaoffice@gmail.com">progoceaoffice@gmail.com</a></li>
+        <li>You can also apply walk-in through the PROGOCEA office from Monday to Friday at 8am to 5pm.</li>
+      </ul>
+
+      <p class="muted-small">
+        You can also apply via this link:
+        <a class="cta" href="#" title="Open membership application link">Click here</a>
+      </p>
+
+      <p>
+        Just download the application form and fill it up then upload it to the Membership Application Form inside the link above.
+      </p>
+
+      <p>
+        Authorized person in the office of the PROGOCEA will immediately respond through your email address once you have already submitted your online application on the link above.
+      </p>
+    </div>
+
+  </div>
+
+
