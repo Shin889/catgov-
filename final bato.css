@@ -1,0 +1,2821 @@
+<style>
+/* custom-table */
+.custom-table {
+    max-width: 600px;
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+    font-size: clamp(12px, 2vw, 14px);
+    table-layout: fixed;
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+.custom-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+
+.custom-table th {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    text-align: left;
+    border: none;
+}
+
+.custom-table td {
+    border: none;
+    padding: 8px;
+    vertical-align: top;
+    white-space: normal;
+    word-break: break-word;
+}
+
+@media (max-width: 600px) {
+    .custom-table {
+        font-size: 0.9em;
+    }
+
+    .custom-table td:first-child {
+        width: 50%;
+    }
+}
+
+/* slider */
+.tourism-gallery {
+    max-width: auto;
+    text-align: center;
+    position: relative;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.tourism-gallery h3 {
+    text-align: center;
+    text-transform: none;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.tourism-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.tourism-wrapper {
+    display: flex;
+    transition: transform 0.6s ease-in-out;
+    width: 100%;
+}
+
+.tourism-wrapper img {
+    width: 100%;
+    flex-shrink: 0;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* pagination */
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 4px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.pagination button {
+    padding: 0 2px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 0;
+    min-width: 20px;
+    min-height: 24px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 10px;
+}
+
+.pagination button:hover {
+    background-color: #dcdcdc;
+}
+
+.pagination button.active {
+    background-color: #004499cc;
+    color: white;
+    border-color: #004499cc;
+}
+
+.pagination-wrapper {
+    text-align: right;
+    margin-top: 10px;
+}
+
+.pagination {
+    display: inline-flex;
+    gap: 4px;
+}
+
+/* tab 2 & 3 styled table */
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 8px;
+    border-bottom: 1px solid #ccc;
+    text-align: left;
+}
+
+
+.styled-table td:last-child {
+    text-align: center;
+    white-space: normal;
+}
+
+
+.hover-target {
+    position: relative;
+    display: inline-block;
+    white-space: normal;
+    line-height: 1.2;
+}
+
+
+
+@media (min-width: 601px) {
+    .hover-target {
+        white-space: nowrap;
+    }
+
+    .styled-table td:last-child {
+        white-space: nowrap;
+    }
+}
+
+
+
+@media (max-width: 600px) {
+    .styled-table td:last-child {
+        text-align: right;
+        white-space: normal;
+    }
+
+    .hover-target {
+        white-space: normal;
+        word-break: break-word;
+    }
+}
+
+/* 3rd column     */
+.official-profile {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.official-profile:hover .profile-modal {
+    display: block;
+}
+
+.official-profile a {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #000;
+    padding: 10px 15px;
+    border-radius: 10px;
+    transition: background 0.3s ease;
+}
+
+.hover-target {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    overflow: visible !important;
+}
+
+.official-profile a:hover {
+    background: #f1f1f1;
+}
+
+.official-profile img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* table */
+.tabs-panel {
+    position: relative;
+    overflow: visible;
+    z-index: 0;
+}
+
+hr {
+    margin: 20px 0;
+    border: none;
+    border-top: 1px dashed #aaa;
+}
+
+.pagination-wrapper {
+    text-align: right;
+    margin-top: 10px;
+}
+
+.pagination {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 4px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.pagination button {
+    padding: 0 2px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 0;
+    min-width: 18px;
+    min-height: 22px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 10px;
+}
+
+.pagination button:hover {
+    background-color: #dcdcdc;
+}
+
+.pagination button.active {
+    background-color: #004499cc;
+    color: white;
+    border-color: #004499cc;
+}
+
+table {
+    table-layout: fixed;
+}
+
+th,
+td {
+    padding: 8px;
+    border-bottom: 1px solid #ccc;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+td {
+    position: relative;
+    overflow: visible !important;
+}
+
+th.sortable {
+    cursor: pointer;
+    user-select: none;
+    text-align: center;
+    position: relative;
+    padding: 8px;
+    border-bottom: 1px solid #ccc;
+}
+
+th.sortable .sort-arrow {
+    font-size: 12px;
+    color: #888;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 2px;
+    width: 12px;
+    height: 12px;
+    line-height: 12px;
+    text-align: center;
+}
+
+th.sortable .sort-arrow::after {
+    content: "▲";
+    color: #888;
+}
+
+th.sortable.asc .sort-arrow::after {
+    content: "▲";
+    color: #000;
+}
+
+th.sortable.desc .sort-arrow::after {
+    content: "▼";
+    color: #000;
+}
+
+th.sortable[data-type="string"] {
+    text-align: left;
+}
+
+th.sortable[data-type="number"] {
+    text-align: center;
+}
+
+#mayorTableContainer,
+#viceMayorTableContainer,
+#councilorTableContainer {
+    overflow: visible !important;
+    position: relative;
+    z-index: 1;
+}
+
+/* -----------------------------------------------
+ DEFAULT (DESKTOP): Hover Modal
+------------------------------------------------- */
+.profile-modal,
+.barangay-modal {
+  position: absolute !important;
+  top: 0 !important;
+  left: 100% !important;
+  margin-left: 10px !important;
+  width: 330px !important;
+  background: #fff;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 10000;
+  display: none;
+  white-space: normal;
+  box-sizing: border-box;
+ /*  animation: accordionFade 0.3s ease; */
+}
+
+.hover-target:hover .profile-modal,
+.hover-target:hover .barangay-modal,
+.official-profile:hover .profile-modal {
+  display: block !important;
+}
+
+.profile-modal > div,
+.barangay-modal > div {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  flex-wrap: nowrap;
+}
+
+.profile-modal img,
+.barangay-modal img {
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.profile-modal h4,
+.barangay-modal h4 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.profile-modal p,
+.barangay-modal p {
+  font-size: 13px;
+  margin: 4px 0;
+  color: #555;
+}
+
+.profile-modal h3,
+.barangay-modal h3 {
+  text-align: center;
+  font-size: 16px;
+}
+
+/* -----------------------------------------------
+RESPONSIVE ACCORDION (320px – 1050px)
+------------------------------------------------- */
+@media (max-width: 1050px) {
+  .barangayRow td:first-child::before,
+  .mayorRow td:first-child::before,
+  .viceMayorRow td:first-child::before,
+  .councilorRow td:first-child::before {
+    content: "\f06e";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 600;
+    display: inline-block;
+    margin-right: 5px;
+    color: #0066cc;
+    vertical-align: top;
+  }
+
+  td {
+    position: relative;
+    overflow: visible !important;
+    vertical-align: top;
+    text-align: center;
+  }
+
+  .profile-modal,
+  .barangay-modal {
+    position: static !important;
+    display: none;
+    width: clamp(50vw, 55vw, 60vw) !important; 
+    margin: 12px auto 0 auto !important;
+    padding: 12px !important;
+    border: none !important;
+    box-shadow: none !important;
+    background-color: inherit !important;
+    /* animation: accordionFade 0.3s ease; */
+  }
+
+  .profile-modal.open,
+  .barangay-modal.open {
+    display: block !important;
+  }
+
+  .hover-target {
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    white-space: normal !important;
+  }
+
+/*   .hover-target:hover .profile-modal,
+  .hover-target:hover .barangay-modal {
+    display: none !important;
+  } */
+
+  .profile-modal > div,
+  .barangay-modal > div {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .profile-modal img,
+  .barangay-modal img {
+    width: 60px !important;
+    height: 60px !important;
+  }
+
+  .profile-modal h4,
+  .barangay-modal h4 {
+    font-size: 14px;
+    margin: 0;
+  }
+
+  .profile-modal p,
+  .barangay-modal p {
+    font-size: 12px;
+    margin: 0;
+  }
+}
+
+/* -----------------------------------------------
+ Fade Animation
+------------------------------------------------- */
+/* @keyframes accordionFade {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+ */
+
+
+
+/* CHART */
+.chart-header {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 8px;
+    width: 550px;
+    padding-right: -1px;
+}
+
+.zoom-controls {
+    display: flex;
+    gap: 5px;
+}
+
+.zoom-btn {
+    width: 25px;
+    height: 25px;
+    background: #fff;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 3px;
+    text-align: center;
+    line-height: 22px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.zoom-btn:hover {
+    background: #f0f0f0;
+}
+
+.chart-wrapper {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: relative;
+    cursor: grab;
+}
+
+.chart-wrapper:active {
+    cursor: grabbing;
+}
+
+.chart-scale {
+    transform-origin: top left;
+}
+
+@media (max-width: 768px) {
+    .chart-wrapper {
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+
+    #chart-container {
+        min-width: unset;
+    }
+
+    .chart-header {
+        width: 100%;
+        padding-right: 0;
+    }
+}
+
+/*    EMERGENCY CARD */
+.emergency-wrapper {
+    width: 100%;
+    max-width: 870px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.wp-emergency-card {
+    width: 100%;
+    background: #fff;
+    color: #222;
+    border: 2px solid #e5e7eb;
+    border-top: none;
+    border-radius: 0 0 8px 8px;
+    overflow: hidden;
+    margin-top: 10px;
+
+}
+
+.wp-emergency-card .header {
+    background-color: #0066cc;
+    color: #fff;
+    padding: 12px 15px;
+    font-size: 18px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-transform: uppercase;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.wp-emergency-card .header-icon {
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+}
+
+.wp-emergency-card .list {
+    padding: 8px 12px;
+}
+
+.wp-emergency-card .item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+    background: none;
+    border-bottom: 1px solid #eee;
+}
+
+.wp-emergency-card .item:last-child {
+    border-bottom: none;
+}
+
+.wp-emergency-card .icon {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none !important;
+    border: none !important;
+}
+
+.wp-emergency-card .icon img {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+}
+
+.wp-emergency-card .line {
+    flex: 1;
+    min-width: 0;
+}
+
+.wp-emergency-card .line .number {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.2;
+    word-break: break-word;
+}
+
+.wp-emergency-card .line .sub {
+    display: block;
+    font-size: 13px;
+    color: #6b7280;
+    text-transform: uppercase;
+}
+
+.wp-emergency-card .footer {
+    background-color: #0066cc;
+    color: #fff;
+    padding: 14px 15px;
+    font-size: 12px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.wp-emergency-card .footer img {
+    width: 36px;
+    height: auto;
+    flex-shrink: 0;
+}
+
+.officials-section {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.officials-wrapper {
+    width: 100%;
+    max-width: 870px;
+}
+
+.municipal-officials,
+.emergency-wrapper {
+    margin: 0 auto;
+}
+
+@media (max-width: 480px) {
+    .wp-emergency-card .header {
+        font-size: 16px;
+        gap: 8px;
+    }
+
+    .wp-emergency-card .icon img {
+        width: 28px;
+        height: 28px;
+    }
+
+    .wp-emergency-card .line .number {
+        font-size: 14px;
+    }
+
+    .wp-emergency-card .line .sub {
+        font-size: 11px;
+    }
+
+    .wp-emergency-card .footer {
+        font-size: 11px;
+        gap: 6px;
+    }
+
+    .wp-emergency-card .footer img {
+        width: 28px;
+    }
+}
+</style>
+
+<!-- wp:html -->
+<p class="municipality__breadcrumbs">
+        <a href="https://roblesanthony.com/~happyimartph/">Home</a> > <a href="https://roblesanthony.com/~happyimartph/municipalities/">Municipalities</a> > Bato
+    </p>
+<!-- /wp:html -->
+
+<!-- wp:spacer {"height":"34px"} -->
+<div style="height:34px" aria-hidden="true" class="wp-block-spacer"></div>
+<!-- /wp:spacer -->
+
+<!-- wp:columns -->
+<div class="wp-block-columns"><!-- wp:column {"width":"25%"} -->
+<div class="wp-block-column" style="flex-basis:25%"><!-- wp:image {"id":3400,"width":"160px","height":"160px","scale":"cover","sizeSlug":"full","linkDestination":"none","align":"center"} -->
+<figure class="wp-block-image aligncenter size-full is-resized"><img src="/~happyimartph/wp-content/uploads/2025/08/Bato.png" alt="" class="wp-image-3400" style="object-fit:cover;width:160px;height:160px"/></figure>
+<!-- /wp:image -->
+
+<!-- wp:paragraph {"align":"center"} -->
+<p class="has-text-align-center"><strong>Bato Official Seal</strong></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:table {"align":"center","className":"custom-table"} -->
+<figure class="wp-block-table aligncenter">
+
+  <table class="custom-table has-fixed-layout">
+    <tbody>
+      <tr><td>Founded:</td><td>1799</td></tr>
+      <tr><td>Population:</td><td>19,984</td></tr>
+      <tr><td>District:</td><td>Lone District</td></tr>
+      <tr><td>Municipality Class:</td><td>5th</td></tr>
+      <tr><td>Zip Code:</td><td>4801</td></tr>
+      <tr><td>No. of Barangays:</td><td>27</td></tr>
+      <tr><td>Area:</td><td>4,880 hectares</td></tr>
+    </tbody>
+  </table>
+</figure>
+<!-- /wp:table -->
+<!-- wp:spacer {"height":"13px"} -->
+<div style="height:13px" aria-hidden="true" class="wp-block-spacer"></div>
+<!-- /wp:spacer -->
+
+<!-- wp:html -->
+<div class=""></div>
+            <div class="mapouter municipality__map-container">
+                <div class="gmap_canvas">
+                    <iframe width="100%" height="300" id="gmap_canvas" src="https://maps.google.com/maps?q=Bato,%20Catanduanes&t=&z=11&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://123movies-to.org"></a><br />
+                    <style>
+                        .mapouter {
+                            position: relative;
+                            text-align: right;
+                            height: 300px;
+                            width: 100%;
+                        }
+                    </style><a href="https://www.embedgooglemap.net"></a>
+                    <style>
+                        .gmap_canvas {
+                            overflow: hidden;
+                            background: none !important;
+                            height: 300px;
+                            width: 100%;
+                        }
+                    </style>
+                </div>
+            </div>
+<!-- /wp:html -->
+
+<!-- wp:spacer {"height":"4px"} -->
+<div style="height:4px" aria-hidden="true" class="wp-block-spacer"></div>
+<!-- /wp:spacer -->
+
+<!-- wp:image {"id":9265,"sizeSlug":"full","linkDestination":"none"} -->
+<figure class="wp-block-image size-full" id="love-catanduanes"><img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/09/Love-Catanduanes-2.png" alt="" class="wp-image-9265"/></figure>
+<!-- /wp:image -->
+
+<!-- wp:spacer {"height":"3px"} -->
+<div style="height:3px" aria-hidden="true" class="wp-block-spacer"></div>
+<!-- /wp:spacer -->
+
+<!-- wp:html -->
+<div class="tourism-gallery">
+  <div class="tourism-container">
+    <div class="tourism-wrapper" id="batoSlides">
+      <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/09/BatoChurch2.jpg" alt="Bato Church">
+      <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/09/Carorian2.jpg" alt="Carorian">
+      <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/09/Lighthouse2.jpg" alt="Lighthouse">
+      <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/09/Maribina2.jpg" alt="Maribina">
+      <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/09/Poseidon2.jpg" alt="Poseidon"> 
+    </div>
+
+    <button class="slide-btn prev" onclick="batoChangeSlide(-1)">❮</button>
+    <button class="slide-btn next" onclick="batoChangeSlide(1)">❯</button>
+  </div>
+  <h3>Bato Featured Places</h3>
+</div>
+
+<script>
+// Unique variables para sa Bato gallery
+let batoIndex = 0;
+let batoInterval;
+
+function batoShowSlides(n) {
+  const slides = document.getElementById('batoSlides');
+  const totalSlides = slides.children.length;
+
+  if (n >= totalSlides) batoIndex = 0;
+  if (n < 0) batoIndex = totalSlides - 1;
+
+  slides.style.transform = `translateX(-${batoIndex * 100}%)`;
+}
+
+function batoChangeSlide(n) {
+  batoIndex += n;
+  batoShowSlides(batoIndex);
+}
+
+function batoStartAutoSlide() {
+  clearInterval(batoInterval); // siguraduhin walang duplicate interval
+  batoInterval = setInterval(() => {
+    batoIndex++;
+    batoShowSlides(batoIndex);
+  }, 4500);
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  batoShowSlides(batoIndex);
+  batoStartAutoSlide();
+});
+</script>
+<!-- /wp:html -->
+
+<!-- wp:social-links {"size":"has-small-icon-size","align":"center"} -->
+<ul class="wp-block-social-links aligncenter has-small-icon-size"><!-- wp:social-link {"url":"https://www.facebook.com/lgubatocatnes.catanduanes","service":"facebook"} /--></ul>
+<!-- /wp:social-links --></div>
+<!-- /wp:column -->
+
+<!-- wp:column {"width":"50%"} -->
+<div class="wp-block-column" style="flex-basis:50%"><!-- wp:html -->
+<div class="cell large-6 municipality__tabs-container">
+    <ul class="tabs" data-tabs="" id="example-tabs">
+        <li class="tabs-title is-active">
+            <a href="#panel1" aria-selected="true" class="municipality__panel-tab">About</a>
+        </li>
+        <li class="tabs-title">
+            <a href="#panel2" class="municipality__panel-tab">Barangays</a>
+        </li>
+        <li class="tabs-title">
+            <a href="#panel3" class="municipality__panel-tab">Previous Officials</a>
+        </li>
+    </ul>
+    <div class="tabs-content" data-tabs-content="example-tabs" style="text-align: justify;">
+        <div class="tabs-panel is-active" id="panel1">
+                
+      <p><strong>Background</strong> </p>
+      <p>When the Spanish conquest adores led by Juan de Salcedo set foot in 1575, Bato was relatively unexplored. Local Spanish officials assigned to the place once asked a woman who was washing clothes in the natural stone well the name of the place. She thought that the Spaniards were asking the name of the well. So she answered “Bato”, which the Spaniards recorded and reported as the name of one of the sitios of Virac. From then on, the place was called Bato until it became a full-fledged municipality in 1896.</p>
+      
+      <p><strong>GENERAL INFORMATION</strong></p>
+      <p>Bato is one of the satellite municipalities of the Province of Catanduanes. It is a fifth class municipality composed of 27 barangays with a total land of 4,880 hectares, which is the smallest among the 11 towns of the province. It is a 20-minute ride from Virac, the provincial capital passing through paved national road.
+  
+        Agriculture and fishing are the major industries. The best variety of abaca fiber (Manila hemp) is produced in Bato. It is also the only municipality in the province that produces millet, a kind of cereal which is one of the town’s delicacies.
+        
+        The geographical location of Bato, facing the Pacific Ocean was found to be a “Tuna Highway” Large and marketable sizes of tuna are caught the whole year round as well as other first class fish species like blue marlin and tanguigue.</p>
+  
+        <p><strong>PHYSICAL CHARACTERISTICS:</strong></p>
+  
+        <p><strong>LOCATION</strong></p>
+        <p>Bato is situated along the eastern coast of the Bicol Region and lies on the southeastern part of storm-tossed island Province of Catanduanes. It is located (11) kilometers southeast of Virac, the provincial capital towm. It is bounded on the north by the Municipality of San Miguel; on the east by the greatest body of water, the Pacific Ocean; on the South by Cabugao Bay and on the West by the Municipality of Virac. Meridional coordinates of the municipality’s location are: 124015’16” to 124i21’7” East longitude and 13 32’50” to 130 38’47” North latitude.</p>
+  
+        <p><strong>TOPOGRAPHY</strong></p>
+        <p>The land elevation of the municipality of Bato varies from sea level to about 700 meters above  sea level, it has space and areas for approximately all its necessities. The areas of flat to nearly flat lands along the coast of Cabugao Bay and the Pacific and those along the banks of Bato river do not only cater to the agricultural needs of its inhabitants but also to their to their shelter and recreational needs.
+  
+            The eastern portion of the bank of the river has a vast expanse of flat nearly flat lands. Covering an area of 25-30 percent of the locality, this flat land is 80 percent productive or agriculturally used. Also included within this area the swamps and marshes of Bato, which are spawning grounds of games and fishes of both fresh and salt-water fishes.
+            
+             </p>
+  
+        <p><strong>CLIMATE</strong></p>
+        <p>Bato fall under the second type of climate, characterized by absence of dry season with a very pronounced maximum rainfall from November to January, while April and May are the only months with the least rainfall averaging 162 mm. with its location along the Pacific coast, Bato is neither sheltered from northeast monsoon nor the trade winds as well as cyclonic storms.
+  
+            From September to early March the Northeasterly wind prevails at an average velocity of 3 knots. The southwesterly wind or “Habagat” prevails from May to early September at an average velocity of 4 knots December to February is the coldest months.</p>
+  
+  
+          </div>
+  
+  
+       
+            <div class="tabs-panel" id="panel2">
+                <table class="styled-table">
+              <thead>
+                 <tr>
+                <th style="text-align: left; padding: 8px; border-bottom: 1px solid #ccc;">
+                  Barangay
+                </th>
+                <th style="text-align: center; padding: 8px; border-bottom: 1px solid #ccc;">
+                  Fiesta Date
+                </th>
+              </tr>
+               
+              </thead>
+              <tbody>
+  
+              <tr class="barangayRow">
+              <td>
+                <div class="hover-target" style="position: relative; display: inline-block;">
+                    Aroyao Pequento
+                  <div class="barangay-modal top-right">
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                      <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/09/BATO-Aroyao-Pequeno-Carorian.png"
+                           style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                      <div style="font-size: 13px; line-height: 1.3;">
+                       
+                         <div style="text-align:center;">
+                          <h4 style="margin: 0; color: #0073aa;">Santo Niño</h4>
+                    </div>
+                        <p style="text-align: justify; font-size: 12px; color: #555;">
+                          The barangay celebrates its fiesta in honor of  <b>Patron Santo Niño</b>
+                          with religious and cultural activities.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td style="text-align: center;">May 9 - &#8203; 10</td>
+            </tr>
+  
+            
+            <tr class="barangayRow">
+                <td>
+                  <div class="hover-target" style="position: relative; display: inline-block;">
+                    Bagumbayan   
+                    <div class="barangay-modal top-right">
+                      <div style="display: flex; align-items: center; gap: 10px;">
+                        <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/09/BATO-Bagumbayan.png"
+                             style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                        <div style="font-size: 13px; line-height: 1.3;">
+                         
+                           <div style="text-align:center;">
+                            <h4 style="margin: 0; color: #0073aa;">Santa Maria Faustina Kowalska</h4>
+                      </div>
+                          <p style="text-align: justify; font-size: 12px; color: #555;">
+                            The barangay celebrates its fiesta in honor of  <b>Patron Saint Maria Faustina Kowalska</b>
+                            with religious and cultural activities.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td style="text-align: center;">May 11 - 12</td>
+              </tr>
+  
+              
+            <tr class="barangayRow">
+                <td>
+                  <div class="hover-target" style="position: relative; display: inline-block;">
+                    Banawang (Poblacion) 
+                    <div class="barangay-modal top-right">
+                      <div style="display: flex; align-items: center; gap: 10px;">
+                        <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/09/BATO-Talisay-Tamburan-Libod-Banawang-Tilis.png"
+                             style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                        <div style="font-size: 13px; line-height: 1.3;">
+                         
+                           <div style="text-align:center;">
+                            <h4 style="margin: 0; color: #0073aa;">Saint John the Baptist</h4>
+                      </div>
+                          <p style="text-align: justify; font-size: 12px; color: #555;">
+                            The barangay celebrates its fiesta in honor of  <b>Patron Saint John the Baptist</b>
+                            with religious and cultural activities.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td style="text-align: center;">June 22 - 23</td>
+              </tr>
+  
+              
+            <tr class="barangayRow">
+                <td>
+                  <div class="hover-target" style="position: relative; display: inline-block;">
+                    Batalay      
+                    <div class="barangay-modal top-right">
+                      <div style="display: flex; align-items: center; gap: 10px;">
+                        <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/09/BATO-Batalay.png"
+                             style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                        <div style="font-size: 13px; line-height: 1.3;">
+                         
+                           <div style="text-align:center;">
+                            <h4 style="margin: 0; color: #0073aa;">Our Lady of Sorrows Parish and Diocesan Shrine of the Holy Cross</h4>
+                      </div>
+                          <p style="text-align: justify; font-size: 12px; color: #555;">
+                            The barangay celebrates its fiesta in honor of  <b>Patron Saint Our Lady of Sorrows Parish and Diocesan Shrine of the Holy Cross</b>
+                            with religious and cultural activities.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td style="text-align: center;">May 14 - 15</td>
+              </tr>
+  
+              
+            <tr class="barangayRow">
+                <td>
+                  <div class="hover-target" style="position: relative; display: inline-block;">
+                    Binanwahan    
+                  <div class="barangay-modal top-right">
+                      <div style="display: flex; align-items: center; gap: 10px;">
+                        <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/09/BATO-Binanuahan-Sibacungan.png"
+                             style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                        <div style="font-size: 13px; line-height: 1.3;">
+                         
+                           <div style="text-align:center;">
+                            <h4 style="margin: 0; color: #0073aa;">St.Isidro Labrador</h4>
+                      </div>
+                          <p style="text-align: justify; font-size: 12px; color: #555;">
+                            The barangay celebrates its fiesta in honor of  <b>Patron Saint Isidro Labrador</b>
+                            with religious and cultural activities.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td style="text-align: center;">May 14 - 15</td>
+              </tr>
+  
+                
+            <tr class="barangayRow">
+                <td>
+                  <div class="hover-target" style="position: relative; display: inline-block;">
+                    Bote    
+                    <div class="barangay-modal top-right">
+                      <div style="display: flex; align-items: center; gap: 10px;">
+                        <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/09/BATO-Bote.png"
+                             style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                        <div style="font-size: 13px; line-height: 1.3;">
+                         
+                           <div style="text-align:center;">
+                            <h4 style="margin: 0; color: #0073aa;">Nuestra  Señora  de la Anunciación</h4>
+                      </div>
+                          <p style="text-align: justify; font-size: 12px; color: #555;">
+                            The barangay celebrates its fiesta in honor of  <b>Patron Saint Nuestra  Señora  de la Anunciación</b>
+                            with religious and cultural activities.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td style="text-align: center;">May 12 - 13</td>
+              </tr>
+  
+              
+            <tr class="barangayRow">
+                <td>
+                  <div class="hover-target" style="position: relative; display: inline-block;">
+                    Buenavista  
+                   <div class="barangay-modal top-right">
+                      <div style="display: flex; align-items: center; gap: 10px;">
+                        <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/09/BATO-Buenavista.png"
+                             style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                        <div style="font-size: 13px; line-height: 1.3;">
+                         
+                           <div style="text-align:center;">
+                            <h4 style="margin: 0; color: #0073aa;">Nuestra  Señora  de la Anunciación</h4>
+                      </div>
+                          <p style="text-align: justify; font-size: 12px; color: #555;">
+                            The barangay celebrates its fiesta in honor of  <b>Patron Saint Nuestra  Señora  de la Anunciación</b>
+                            with religious and cultural activities.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td style="text-align: center;">April 4 - 5</td>
+              </tr>
+  
+              
+            <tr class="barangayRow">
+                <td>
+                  <div class="hover-target" style="position: relative; display: inline-block;">
+                    Cabugao  
+                    <div class="barangay-modal top-right">
+                      <div style="display: flex; align-items: center; gap: 10px;">
+                        <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/09/BATO-Cabugao.png"
+                             style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                        <div style="font-size: 13px; line-height: 1.3;">
+                         
+                           <div style="text-align:center;">
+                            <h4 style="margin: 0; color: #0073aa;">St. Anthony of Padua</h4>
+                      </div>
+                          <p style="text-align: justify; font-size: 12px; color: #555;">
+                            The barangay celebrates its fiesta in honor of  <b>Patron Saint Anthony of Padua</b>
+                            with religious and cultural activities.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td style="text-align: center;">June 12 - 13</td>
+              </tr>
+  
+              
+            <tr class="barangayRow">
+                <td>
+                  <div class="hover-target" style="position: relative; display: inline-block;">
+                    Cagraray
+                 <div class="barangay-modal top-right">
+                      <div style="display: flex; align-items: center; gap: 10px;">
+                        <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/09/BATO-Sipi-Cagraray-Pananaogan.png"
+                             style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                        <div style="font-size: 13px; line-height: 1.3;">
+                         
+                           <div style="text-align:center;">
+                            <h4 style="margin: 0; color: #0073aa;">Patrong Saint</h4>
+                      </div>
+                          <p style="text-align: justify; font-size: 12px; color: #555;">
+                            The barangay celebrates its fiesta in honor of  <b>Patron Saint Anthony of Padua</b>
+                            with religious and cultural activities.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td style="text-align: center;">May 27 - 28</td>
+              </tr>
+  
+              
+              
+            <tr class="barangayRow">
+                <td>
+                  <div class="hover-target" style="position: relative; display: inline-block;">
+                    Carorian
+                    <div class="barangay-modal top-right">
+                      <div style="display: flex; align-items: center; gap: 10px;">
+                        <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/09/BATO-Aroyao-Pequeno-Carorian.png"
+                             style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                        <div style="font-size: 13px; line-height: 1.3;">
+                         
+                           <div style="text-align:center;">
+                            <h4 style="margin: 0; color: #0073aa;">Patrong Saint</h4>
+                      </div>
+                          <p style="text-align: justify; font-size: 12px; color: #555;">
+                            The barangay celebrates its fiesta in honor of  <b>Patron Saint Anthony of Padua</b>
+                            with religious and cultural activities.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td style="text-align: center;">May 25 - 26</td>
+              </tr>
+  
+  
+              
+              <tr class="barangayRow">
+                <td>
+                  <div class="hover-target" style="position: relative; display: inline-block;">
+                    Guinobatan
+                  <div class="barangay-modal top-right">
+                      <div style="display: flex; align-items: center; gap: 10px;">
+                        <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/09/BATO-Guinobatan-Marinawa.png"
+                             style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                        <div style="font-size: 13px; line-height: 1.3;">
+                         
+                           <div style="text-align:center;">
+                            <h4 style="margin: 0; color: #0073aa;">Nuestra Señora de Salvacion</h4>
+                      </div>
+                          <p style="text-align: justify; font-size: 12px; color: #555;">
+                            The barangay celebrates its fiesta in honor of  <b>Patron Saint Nuestra Señora de Salvacion</b>
+                            with religious and cultural activities.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td style="text-align: center;">May 19 - 20</td>
+              </tr>
+  
+              
+              
+              <tr class="barangayRow">
+                <td>
+                  <div class="hover-target" style="position: relative; display: inline-block;">
+                    Libjo
+                <div class="barangay-modal top-right">
+                      <div style="display: flex; align-items: center; gap: 10px;">
+                        <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/09/BATO-Libjo.png"
+                             style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                        <div style="font-size: 13px; line-height: 1.3;">
+                         
+                           <div style="text-align:center;">
+                            <h4 style="margin: 0; color: #0073aa;">Nuestra Señora de Salvacion</h4>
+                      </div>
+                          <p style="text-align: justify; font-size: 12px; color: #555;">
+                            The barangay celebrates its fiesta in honor of  <b>Patron Saint Nuestra Señora de Salvacion</b>
+                            with religious and cultural activities.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td style="text-align: center;">May 10 - 11</td>
+              </tr>
+  
+              
+              
+              <tr class="barangayRow">
+                <td>
+                  <div class="hover-target" style="position: relative; display: inline-block;">
+                    Marinawa
+                   <div class="barangay-modal top-right">
+                      <div style="display: flex; align-items: center; gap: 10px;">
+                        <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/09/BATO-Guinobatan-Marinawa.png"
+                             style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                        <div style="font-size: 13px; line-height: 1.3;">
+                         
+                           <div style="text-align:center;">
+                            <h4 style="margin: 0; color: #0073aa;">Nuestra Señora de Salvacion</h4>
+                      </div>
+                          <p style="text-align: justify; font-size: 12px; color: #555;">
+                            The barangay celebrates its fiesta in honor of  <b>Patron Saint Nuestra Señora de Salvacion</b>
+                            with religious and cultural activities.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td style="text-align: center;">May 10 - 11</td>
+              </tr>
+  
+               
+              <tr class="barangayRow">
+                <td>
+                  <div class="hover-target" style="position: relative; display: inline-block;">
+                    Mintay   
+                   <div class="barangay-modal top-right">
+                      <div style="display: flex; align-items: center; gap: 10px;">
+                        <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/09/BATO-Mintay.png"
+                             style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                        <div style="font-size: 13px; line-height: 1.3;">
+                         
+                           <div style="text-align:center;">
+                            <h4 style="margin: 0; color: #0073aa;">Patron Saint</h4>
+                      </div>
+                          <p style="text-align: justify; font-size: 12px; color: #555;">
+                            The barangay celebrates its fiesta in honor of  <b>Patron Saint Nuestra Señora de Salvacion</b>
+                            with religious and cultural activities.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td style="text-align: center;">May 16 - 17</td>
+              </tr>
+  
+              
+              <tr class="barangayRow">
+                <td>
+                  <div class="hover-target" style="position: relative; display: inline-block;">
+                    Oguis       
+                   <div class="barangay-modal top-right">
+                      <div style="display: flex; align-items: center; gap: 10px;">
+                        <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/09/BATO-Oguis.png"
+                             style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                        <div style="font-size: 13px; line-height: 1.3;">
+                         
+                           <div style="text-align:center;">
+                            <h4 style="margin: 0; color: #0073aa;">Mary Undoer of Knots</h4>
+                      </div>
+                          <p style="text-align: justify; font-size: 12px; color: #555;">
+                            The barangay celebrates its fiesta in honor of  <b>Patron Saint Mary Undoer of Knots</b>
+                            with religious and cultural activities.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td style="text-align: center;">September 27 - 28</td>
+              </tr>
+  
+              
+              <tr class="barangayRow">
+                <td>
+                  <div class="hover-target" style="position: relative; display: inline-block;">
+                    Pananaogan     
+                  <div class="barangay-modal top-right">
+                      <div style="display: flex; align-items: center; gap: 10px;">
+                        <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/09/BATO-Sipi-Cagraray-Pananaogan.png"
+                             style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                        <div style="font-size: 13px; line-height: 1.3;">
+                         
+                           <div style="text-align:center;">
+                            <h4 style="margin: 0; color: #0073aa;">Patron Saint</h4>
+                      </div>
+                          <p style="text-align: justify; font-size: 12px; color: #555;">
+                            The barangay celebrates its fiesta in honor of  <b>Patron Saint Mary Undoer of Knots</b>
+                            with religious and cultural activities.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td style="text-align: center;">May 17 - 18</td>
+              </tr>
+  
+              
+              
+              <tr class="barangayRow">
+                <td>
+                  <div class="hover-target" style="position: relative; display: inline-block;">
+                    Libod (Poblacion)    
+               <div class="barangay-modal top-right">
+                      <div style="display: flex; align-items: center; gap: 10px;">
+                        <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/09/BATO-Talisay-Tamburan-Libod-Banawang-Tilis.png"
+                             style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                        <div style="font-size: 13px; line-height: 1.3;">
+                         
+                           <div style="text-align:center;">
+                            <h4 style="margin: 0; color: #0073aa;">Saint John the Baptist</h4>
+                      </div>
+                          <p style="text-align: justify; font-size: 12px; color: #555;">
+                            The barangay celebrates its fiesta in honor of  <b>Patron Saint John the Baptist</b>
+                            with religious and cultural activities.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td style="text-align: center;">June 23 - 24</td>
+              </tr>
+  
+              
+              
+              <tr class="barangayRow">
+                <td>
+                  <div class="hover-target" style="position: relative; display: inline-block;">
+                    San Andres      
+                 <div class="barangay-modal top-right">
+                      <div style="display: flex; align-items: center; gap: 10px;">
+                        <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/09/BATO-San-Andres.png"
+                             style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                        <div style="font-size: 13px; line-height: 1.3;">
+                         
+                           <div style="text-align:center;">
+                            <h4 style="margin: 0; color: #0073aa;">Saint Andrew the Apostle</h4>
+                      </div>
+                          <p style="text-align: justify; font-size: 12px; color: #555;">
+                            The barangay celebrates its fiesta in honor of  <b>Patron Saint Andrew the Apostle</b>
+                            with religious and cultural activities.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td style="text-align: center;">May 14 - 15</td>
+              </tr>
+  
+              
+              
+              <tr class="barangayRow">
+                <td>
+                  <div class="hover-target" style="position: relative; display: inline-block;">
+                    San Pedro      
+                     <div class="barangay-modal top-right">
+                      <div style="display: flex; align-items: center; gap: 10px;">
+                        <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/09/BATO-San-Pedro.png"
+                             style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                        <div style="font-size: 13px; line-height: 1.3;">
+                         
+                           <div style="text-align:center;">
+                            <h4 style="margin: 0; color: #0073aa;">Saint Peter</h4>
+                      </div>
+                          <p style="text-align: justify; font-size: 12px; color: #555;">
+                            The barangay celebrates its fiesta in honor of  <b>Patron Saint Peter</b>
+                            with religious and cultural activities.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td style="text-align: center;">May 13 - 14</td>
+              </tr>
+  
+              
+              <tr class="barangayRow">
+                <td>
+                  <div class="hover-target" style="position: relative; display: inline-block;">
+                    San Roque     
+                 <div class="barangay-modal top-right">
+                      <div style="display: flex; align-items: center; gap: 10px;">
+                        <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/09/BATO-San-Roque.png"
+                             style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                        <div style="font-size: 13px; line-height: 1.3;">
+                         
+                           <div style="text-align:center;">
+                            <h4 style="margin: 0; color: #0073aa;">St. Sr. San Roque</h4>
+                      </div>
+                          <p style="text-align: justify; font-size: 12px; color: #555;">
+                            The barangay celebrates its fiesta in honor of  <b>Patron Saint Sr. San Roque</b>
+                            with religious and cultural activities.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td style="text-align: center;">May 15 - 16</td>
+              </tr>
+  
+              
+              <tr class="barangayRow">
+                <td>
+                  <div class="hover-target" style="position: relative; display: inline-block;">
+                    Santa Isabel  
+                 <div class="barangay-modal top-right">
+                      <div style="display: flex; align-items: center; gap: 10px;">
+                        <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/09/BATO-Santa-Isabel.png"
+                             style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                        <div style="font-size: 13px; line-height: 1.3;">
+                         
+                           <div style="text-align:center;">
+                            <h4 style="margin: 0; color: #0073aa;">Patron Saint</h4>
+                      </div>
+                          <p style="text-align: justify; font-size: 12px; color: #555;">
+                            The barangay celebrates its fiesta in honor of  <b>Patron Saint Sr. San Roque</b>
+                            with religious and cultural activities.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td style="text-align: center;">May 18 - 19</td>
+              </tr>
+  
+              
+              
+              <tr class="barangayRow">
+                <td>
+                  <div class="hover-target" style="position: relative; display: inline-block;">
+                    Sibacungan    
+                    <div class="barangay-modal top-right">
+                      <div style="display: flex; align-items: center; gap: 10px;">
+                        <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/09/PANDAN-San-Isidro-Langob.png"
+                             style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                        <div style="font-size: 13px; line-height: 1.3;">
+                         
+                           <div style="text-align:center;">
+                            <h4 style="margin: 0; color: #0073aa;">Patron Saint</h4>
+                      </div>
+                          <p style="text-align: justify; font-size: 12px; color: #555;">
+                            The barangay celebrates its fiesta in honor of  <b>Patron Saint Sr. San Roque</b>
+                            with religious and cultural activities.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td style="text-align: center;">May 1 - 2</td>
+              </tr>
+  
+              
+              
+              <tr class="barangayRow">
+                <td>
+                  <div class="hover-target" style="position: relative; display: inline-block;">
+                    Sipi   
+                    <div class="barangay-modal top-right">
+                      <div style="display: flex; align-items: center; gap: 10px;">
+                        <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/09/BATO-Sipi-Cagraray-Pananaogan.png"
+                             style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                        <div style="font-size: 13px; line-height: 1.3;">
+                         
+                           <div style="text-align:center;">
+                            <h4 style="margin: 0; color: #0073aa;">Patron Saint</h4>
+                      </div>
+                          <p style="text-align: justify; font-size: 12px; color: #555;">
+                            The barangay celebrates its fiesta in honor of  <b>Patron Saint Senior San Rafael</b>
+                            with religious and cultural activities.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td style="text-align: center;">October 23 - 24</td>
+              </tr>
+  
+               
+              <tr class="barangayRow">
+                <td>
+                  <div class="hover-target" style="position: relative; display: inline-block;">
+                    Talisay 
+                  <div class="barangay-modal top-right">
+                      <div style="display: flex; align-items: center; gap: 10px;">
+                        <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/09/BATO-Talisay-Tamburan-Libod-Banawang-Tilis.png"
+                             style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                        <div style="font-size: 13px; line-height: 1.3;">
+                         
+                           <div style="text-align:center;">
+                            <h4 style="margin: 0; color: #0073aa;">Patron Saint</h4>
+                      </div>
+                          <p style="text-align: justify; font-size: 12px; color: #555;">
+                            The barangay celebrates its fiesta in honor of  <b>Patron Saint Senior San Rafael</b>
+                            with religious and cultural activities.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td style="text-align: center;">September 7 - 8</td>
+              </tr>
+  
+              
+               
+              <tr class="barangayRow">
+                <td>
+                  <div class="hover-target" style="position: relative; display: inline-block;">
+                    Tamburan (Poblacion)
+                 <div class="barangay-modal top-right">
+                      <div style="display: flex; align-items: center; gap: 10px;">
+                        <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/09/BATO-Talisay-Tamburan-Libod-Banawang-Tilis.png"
+                             style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                        <div style="font-size: 13px; line-height: 1.3;">
+                         
+                           <div style="text-align:center;">
+                            <h4 style="margin: 0; color: #0073aa;">Saint John the Baptist</h4>
+                      </div>
+                          <p style="text-align: justify; font-size: 12px; color: #555;">
+                            The barangay celebrates its fiesta in honor of  <b>Patron Saint John the Baptist</b>
+                            with religious and cultural activities.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td style="text-align: center;">June 20 - 21</td>
+              </tr>
+  
+               
+              <tr class="barangayRow">
+                <td>
+                  <div class="hover-target" style="position: relative; display: inline-block;">
+                    Tilis   
+                   <div class="barangay-modal top-right">
+                      <div style="display: flex; align-items: center; gap: 10px;">
+                        <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/09/BATO-Talisay-Tamburan-Libod-Banawang-Tilis.png"
+                             style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                        <div style="font-size: 13px; line-height: 1.3;">
+                         
+                           <div style="text-align:center;">
+                            <h4 style="margin: 0; color: #0073aa;">Patron Saint</h4>
+                      </div>
+                          <p style="text-align: justify; font-size: 12px; color: #555;">
+                            The barangay celebrates its fiesta in honor of  <b>Patron Saint Senior San Rafael</b>
+                            with religious and cultural activities.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td style="text-align: center;">May 6 - 7</td>
+              </tr>
+  
+              
+              <tr class="barangayRow">
+                <td>
+                  <div class="hover-target" style="position: relative; display: inline-block;">
+                    Ilawod (Poblacion) 
+                <div class="barangay-modal top-right">
+                      <div style="display: flex; align-items: center; gap: 10px;">
+                        <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/09/BATO-IlawodPoblacion.png"
+                             style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                        <div style="font-size: 13px; line-height: 1.3;">
+                         
+                           <div style="text-align:center;">
+                            <h4 style="margin: 0; color: #0073aa;">St. John the Baptist</h4>
+                      </div>
+                          <p style="text-align: justify; font-size: 12px; color: #555;">
+                            The barangay celebrates its fiesta in honor of  <b>Patron Saint John the Baptist</b>
+                            with religious and cultural activities.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td style="text-align: center;">May 6 - 7</td>
+              </tr>
+  
+           
+  </tbody>
+  </table>
+  
+  
+  <div class="pagination-wrapper" style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
+  <p id="barangayPageInfo" style="margin: 0; font-weight: bold; font-size: 14px;">This is page 1 out of X</p>
+  <div id="barangayPagination" class="pagination" style="display: flex; gap: 5px;"></div>
+  </div>
+  </div>
+  
+  <script>
+document.addEventListener("DOMContentLoaded", () => {
+  const TOUCH_BREAKPOINT = 782; 
+  const MODAL_SELECTORS = [".barangay-modal", ".profile-modal"];
+  const HOVER_TARGET_SELECTOR = ".hover-target";
+  let initialized = new WeakSet();
+
+  const isDesktopView = () => window.innerWidth > TOUCH_BREAKPOINT;
+
+  function closeAllAccordions() {
+    MODAL_SELECTORS.forEach(sel => {
+      document.querySelectorAll(sel + ".open").forEach(m => m.classList.remove("open"));
+    });
+  }
+
+  function removeDesktopVisible() {
+    MODAL_SELECTORS.forEach(sel => {
+      document.querySelectorAll(sel + ".visible-desktop").forEach(m => m.classList.remove("visible-desktop"));
+    });
+  }
+
+  function attachToTarget(target) {
+    if (initialized.has(target)) return;
+    initialized.add(target);
+
+    const modal = MODAL_SELECTORS.map(s => target.querySelector(s)).find(Boolean);
+    if (!modal) return;
+
+    target.addEventListener("pointerenter", (e) => {
+      if (isDesktopView()) {
+        // ensure other desktop-only visible modals are cleared for cleanliness
+        removeDesktopVisible();
+        modal.classList.add("visible-desktop");
+      }
+    });
+
+    target.addEventListener("pointerleave", (e) => {
+      if (isDesktopView()) {
+        modal.classList.remove("visible-desktop");
+      }
+    });
+
+    target.addEventListener("click", (e) => {
+      if (!isDesktopView()) {
+        // prevent the document click handler from immediately closing it
+        e.stopPropagation();
+        const wasOpen = modal.classList.contains("open");
+
+        closeAllAccordions();
+
+        if (!wasOpen) {
+          modal.classList.add("open");
+          modal.classList.remove("visible-desktop");
+        }
+      }
+    });
+
+    modal.addEventListener("click", (e) => {
+      e.stopPropagation();
+    });
+  }
+
+  function setupAllTargets() {
+    document.querySelectorAll(HOVER_TARGET_SELECTOR).forEach(attachToTarget);
+  }
+
+  document.addEventListener("click", () => {
+    if (!isDesktopView()) closeAllAccordions();
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      removeDesktopVisible();
+      closeAllAccordions();
+    }
+  });
+
+  let resizeTimer = null;
+  window.addEventListener("resize", () => {
+    if (resizeTimer) clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+      removeDesktopVisible();
+      if (isDesktopView()) closeAllAccordions();
+
+      setupAllTargets();
+    }, 120);
+  });
+
+  setupAllTargets();
+});
+</script>
+  <script>
+  (function(){
+  const rowsPerPage = 24;
+  let currentPage = 1;
+  
+  function updateBarangayTable() {
+  const rows = document.querySelectorAll("#panel2 .barangayRow");
+  const totalPages = Math.ceil(rows.length / rowsPerPage);
+  
+  rows.forEach((row, index) => {
+  row.style.display = (
+    index >= (currentPage - 1) * rowsPerPage &&
+    index < currentPage * rowsPerPage
+  ) ? '' : 'none';
+  });
+  
+  renderPagination(totalPages);
+  }
+  
+  function changeBarangayPage(page) {
+  const rows = document.querySelectorAll("#panel2 .barangayRow");
+  const totalPages = Math.ceil(rows.length / rowsPerPage);
+  
+  if (page < 1) page = 1;
+  if (page > totalPages) page = totalPages;
+  
+  currentPage = page;
+  updateBarangayTable();
+  }
+  
+  function renderPagination(totalPages) {
+  document.getElementById("barangayPageInfo").textContent = `This is page ${currentPage} out of ${totalPages}`;
+  
+  const container = document.getElementById("barangayPagination");
+  container.innerHTML = "";
+  
+  const prevBtn = document.createElement("button");
+  prevBtn.textContent = "<< Prev";
+  prevBtn.disabled = currentPage === 1;
+  if (currentPage === 1) prevBtn.classList.add("disabled");
+  prevBtn.onclick = () => changeBarangayPage(currentPage - 1);
+  container.appendChild(prevBtn);
+  
+  const maxPagesToShow = 7;
+  let startPage = 1;
+  let endPage = totalPages;
+  
+  if (totalPages > maxPagesToShow) {
+  if (currentPage <= 4) {
+    endPage = 5;
+  } else if (currentPage >= totalPages - 3) {
+    startPage = totalPages - 4;
+  } else {
+    startPage = currentPage - 2;
+    endPage = currentPage + 2;
+  }
+  }
+  
+  if (startPage > 1) {
+  addPageButton(container, 1);
+  if (startPage > 2) {
+    addEllipsis(container);
+  }
+  }
+  
+  for (let i = startPage; i <= endPage; i++) {
+  addPageButton(container, i);
+  }
+  
+  if (endPage < totalPages) {
+  if (endPage < totalPages - 1) {
+    addEllipsis(container);
+  }
+  addPageButton(container, totalPages);
+  }
+  
+  const nextBtn = document.createElement("button");
+  nextBtn.textContent = "Next >>";
+  nextBtn.disabled = currentPage === totalPages;
+  if (currentPage === totalPages) nextBtn.classList.add("disabled");
+  nextBtn.onclick = () => changeBarangayPage(currentPage + 1);
+  container.appendChild(nextBtn);
+  }
+  
+  function addPageButton(container, pageNumber) {
+  const btn = document.createElement("button");
+  btn.textContent = pageNumber;
+  if (currentPage === pageNumber) {
+  btn.classList.add("active");
+  }
+  btn.onclick = () => changeBarangayPage(pageNumber);
+  container.appendChild(btn);
+  }
+  
+  function addEllipsis(container) {
+  const ellipsis = document.createElement("span");
+  ellipsis.textContent = "...";
+  ellipsis.className = "ellipsis";
+  container.appendChild(ellipsis);
+  }
+  
+  updateBarangayTable();
+  })();
+  </script>
+  
+          <div class="tabs-panel" id="panel3">
+  
+  
+              <h4 style="margin-top: 0;">Mayors</h4>
+  
+              <div id="mayorTableContainer" style="position: relative;">
+                  <table id="mayorTable"
+                      style="width: 100%; border-collapse: collapse; font-size: 14px; margin-bottom: 20px;">
+                     <thead>
+    <tr style="background-color: #f1f1f1;">
+      <th class="sortable" style="text-align: left; padding: 8px; border-bottom: 1px solid #ccc;" data-column="name" data-type="string">
+        Name <span class="sort-arrow"></span>
+      </th>
+  <th class="sortable desc" style="text-align: center; padding: 8px; border-bottom: 1px solid #ccc;" data-column="termStart" data-type="number">
+    Term Start<span class="sort-arrow"></span>
+  </th>
+  
+      <th class="sortable" style="text-align: center; padding: 8px; border-bottom: 1px solid #ccc;" data-column="termEnd" data-type="number">
+        Term End <span class="sort-arrow"></span>
+      </th>
+    </tr>
+  </thead>
+                      <tbody id="mayorTableBody">
+                          <tr class="mayorRow">
+                              <td
+                                  style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                  <div class="hover-target" style="position: relative; display: inline-block;">
+                                      Johnny T. Rodulfo 
+                                      <div class="profile-modal top-right">
+                                          <div style="display: flex; align-items: center; gap: 10px;">
+                                              <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/Hon.-Juan-Todoc-Rodulfo-Bato-1.png"
+                                                  style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                              <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                                  <h4 style="margin: 0;">Johnny Todoc Rodulfo (Juan) (Ind)</h4>
+                                                  <p style="text-align: center;">Date of Birth: March 16, 1969</p>
+                                                  <p style="text-align: justify;">Looking back on the past year, I am proud of the progress we’ve made together.</p>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </td>
+                              <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                              <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                          </tr>
+                          <tr class="mayorRow">
+                              <td
+                                  style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                  <div class="hover-target" style="position: relative; display: inline-block;">
+                                      Johnny T. Rodulfo 
+                                      <div class="profile-modal top-right">
+                                          <div style="display: flex; align-items: center; gap: 10px;">
+                                              <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/Hon.-Juan-Todoc-Rodulfo-Bato-1.png"
+                                                  style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                              <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                                  <h4 style="margin: 0;">Johnny Todoc Rodulfo (Juan) (Ind)</h4>
+                                                  <p style="text-align: center;">Date of Birth: March 16, 1969</p>
+                                                  <p style="text-align: justify;">Looking back on the past year, I am proud of the progress we’ve made together.</p>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </td>
+                              <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2019</td>
+                              <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                          </tr>
+                          
+                  
+                      </tbody>
+                  </table>
+                  <div class="pagination-wrapper"
+                      style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
+                      <p id="pageInfo" style="margin: 0; font-weight: bold; font-size: 14px;">This is page 1 out of X</p>
+                      <div id="mayorPagination" class="pagination" style="display: flex; gap: 5px;"></div>
+                  </div>
+  
+                  <hr style="margin: 15px 0; border-top: 1px solid #ccc;">
+                  <script>
+                      const rowsPerPage = 10;
+                      let currentPage = 1;
+  
+                      function updateMayorTable() {
+                          const rows = document.querySelectorAll(".mayorRow");
+                          const totalPages = Math.ceil(rows.length / rowsPerPage);
+  
+                          rows.forEach((row, index) => {
+                              row.style.display = (
+                                  index >= (currentPage - 1) * rowsPerPage &&
+                                  index < currentPage * rowsPerPage
+                              ) ? '' : 'none';
+                          });
+  
+                          renderPagination(totalPages);
+                      }
+  
+                      function changeMayorPage(page) {
+                          const rows = document.querySelectorAll(".mayorRow");
+                          const totalPages = Math.ceil(rows.length / rowsPerPage);
+  
+                          if (page < 1) page = 1;
+                          if (page > totalPages) page = totalPages;
+  
+                          currentPage = page;
+                          updateMayorTable();
+                      }
+  
+                      function renderPagination(totalPages) {
+                          document.getElementById("pageInfo").textContent = `This is page ${currentPage} out of ${totalPages}`;
+  
+  
+                          const pageInfo = document.getElementById("pageInfo");
+                          const container = document.getElementById("mayorPagination");
+  
+                          // Update the text
+                          pageInfo.textContent = `This is page ${currentPage} out of ${totalPages}`;
+                          container.innerHTML = "";
+  
+                          // ← Prev button
+                          const prevBtn = document.createElement("button");
+                          prevBtn.textContent = "<< Prev";
+                          prevBtn.className = currentPage === 1 ? "disabled" : "";
+                          prevBtn.disabled = currentPage === 1;
+                          prevBtn.onclick = () => changeMayorPage(currentPage - 1);
+                          container.appendChild(prevBtn);
+  
+                          const maxPagesToShow = 7;
+                          let startPage = 1;
+                          let endPage = totalPages;
+  
+                          if (totalPages > maxPagesToShow) {
+                              if (currentPage <= 4) {
+                                  endPage = 5;
+                              } else if (currentPage >= totalPages - 3) {
+                                  startPage = totalPages - 4;
+                              } else {
+                                  startPage = currentPage - 2;
+                                  endPage = currentPage + 2;
+                              }
+                          }
+  
+                          if (startPage > 1) {
+                              addPageButton(container, 1);
+                              if (startPage > 2) {
+                                  addEllipsis(container);
+                              }
+                          }
+  
+                          for (let i = startPage; i <= endPage; i++) {
+                              addPageButton(container, i);
+                          }
+  
+                          if (endPage < totalPages) {
+                              if (endPage < totalPages - 1) {
+                                  addEllipsis(container);
+                              }
+                              addPageButton(container, totalPages);
+                          }
+  
+                          // → Next button
+                          const nextBtn = document.createElement("button");
+                          nextBtn.textContent = "Next >>";
+                          nextBtn.className = currentPage === totalPages ? "disabled" : "";
+                          nextBtn.disabled = currentPage === totalPages;
+                          nextBtn.onclick = () => changeMayorPage(currentPage + 1);
+                          container.appendChild(nextBtn);
+                      }
+  
+  
+  
+                      function addPageButton(container, pageNumber) {
+                          const btn = document.createElement("button");
+                          btn.textContent = pageNumber;
+                          if (currentPage === pageNumber) {
+                              btn.className = "active";
+                          }
+                          btn.onclick = () => changeMayorPage(pageNumber);
+                          container.appendChild(btn);
+                      }
+  
+                      function addEllipsis(container) {
+                          const ellipsis = document.createElement("span");
+                          ellipsis.textContent = "...";
+                          ellipsis.className = "ellipsis";
+                          container.appendChild(ellipsis);
+                      }
+  
+  
+                      updateMayorTable();
+  
+  
+                  </script>
+  
+  
+                  <script>
+                      document.addEventListener("DOMContentLoaded", () => {
+                          document.querySelectorAll(".hover-target").forEach(target => {
+                              target.addEventListener("mouseenter", () => {
+                                  const modal = target.querySelector(".profile-modal");
+                                  if (modal) modal.style.display = "block";
+                              });
+                              target.addEventListener("mouseleave", () => {
+                                  const modal = target.querySelector(".profile-modal");
+                                  if (modal) modal.style.display = "none";
+                              });
+                          });
+                      });
+                  </script>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  
+  <div class="chart-header">
+    <div class="zoom-controls">
+      <div class="zoom-btn" onclick="zoomIn()">+</div>
+      <div class="zoom-btn" onclick="zoomOut()">−</div>
+    </div>
+  </div>
+  <div class="chart-wrapper" id="chartWrapper">
+      <div id="chart-container" class="chart-scale">
+        <div id="example2_1"></div>
+      </div>
+    </div>
+  
+    <script>
+      
+      const chartWrapper = document.getElementById("chartWrapper");
+      let isDown = false;
+      let startX;
+      let scrollLeft;
+    
+      chartWrapper.addEventListener("mousedown", (e) => {
+        isDown = true;
+        chartWrapper.classList.add("active");
+        startX = e.pageX - chartWrapper.offsetLeft;
+        scrollLeft = chartWrapper.scrollLeft;
+      });
+    
+      chartWrapper.addEventListener("mouseleave", () => {
+        isDown = false;
+      });
+    
+      chartWrapper.addEventListener("mouseup", () => {
+        isDown = false;
+      });
+    
+      chartWrapper.addEventListener("mousemove", (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - chartWrapper.offsetLeft;
+        const walk = (x - startX) * 1; // multiply for speed
+        chartWrapper.scrollLeft = scrollLeft - walk;
+      });
+    </script>
+  <script type="text/javascript">
+    google.charts.load("current", { packages: ["timeline"] });
+    google.charts.setOnLoadCallback(init);
+  
+    let chart, dataTable;
+    let minDate, maxDate;
+    let zoomFactor = 1; 
+  function init() {
+    const container = document.getElementById("example2_1");
+    chart = new google.visualization.Timeline(container);
+    dataTable = new google.visualization.DataTable();
+  
+    dataTable.addColumn({ type: "string", id: "Term" });
+    dataTable.addColumn({ type: "string", id: "Name" });
+    dataTable.addColumn({ type: "date", id: "Start" });
+    dataTable.addColumn({ type: "date", id: "End" });
+  
+   dataTable.addRows([
+    ["1", "Johnny Todoc Rodulfo", new Date(2019, 0, 1), new Date(2022, 0, 2)],
+    ["2", "Johnny Todoc Rodulfo", new Date(2022, 0, 1), new Date(2025, 0, 2)],
+    
+  ]);
+  
+  // Limit chart view from 2016 to 2025
+  minDate = new Date(2016, 0, 1);
+  maxDate = new Date(2025, 11, 31);
+  
+    drawChart();
+  }function drawChart() {
+    let ticks = [];
+    let startYear = minDate.getFullYear();
+    let endYear = maxDate.getFullYear();
+    for (let y = startYear; y <= endYear; y++) {
+      ticks.push(new Date(y, 0, 1));
+    }
+  
+    const baseRowHeight = zoomFactor === 1 ? 35 : 45;
+    const rowHeight = baseRowHeight * zoomFactor;
+    const chartHeight = dataTable.getNumberOfRows() * rowHeight + 30;
+  
+    let years = endYear - startYear + 1;
+    let baseWidth = zoomFactor === 1 ? 80 : 100; 
+    let chartWidth = years * baseWidth * zoomFactor;
+  
+    
+    let finalWidth = Math.max(chartWidth, 550);
+  
+    chart.draw(dataTable, {
+      height: chartHeight,
+      width: finalWidth,
+      timeline: {
+        rowLabelStyle: { fontSize: 12 * zoomFactor, color: '#444' },
+        barLabelStyle: { fontSize: 12 * zoomFactor, color: '#222' }
+      },
+      avoidOverlappingGridLines: true,
+     hAxis: {
+    format: 'yyyy',
+    ticks: ticks,
+    gridlines: { count: ticks.length },
+    minorGridlines: { count: 0 },
+    viewWindowMode: 'explicit',
+    viewWindow: { min: minDate, max: maxDate }
+  }
+  
+    });
+  }
+  
+  
+  
+  function zoomIn() {
+    zoomFactor = Math.min(zoomFactor * 1.25, 5); 
+    drawChart();
+  }
+  
+  function zoomOut() {
+    zoomFactor = Math.max(zoomFactor / 1.25, 0.5); 
+    drawChart();
+  }
+  
+  </script>
+  
+  
+  
+              </div>
+  
+  
+              <hr style="margin: 15px 0; border-top: 1px solid #ccc;">
+              <h4 style="margin-top: 0;">Vice Mayors</h4>
+  
+              <div id="viceMayorTableContainer" style="position: relative;">
+                  <table id="viceMayorTable"
+                      style="width: 100%; border-collapse: collapse; font-size: 14px; margin-bottom: 20px;">
+                        <thead>
+    <tr style="background-color: #f1f1f1;">
+      <th class="sortable" style="text-align: left; padding: 8px; border-bottom: 1px solid #ccc;" data-column="name" data-type="string">
+        Name <span class="sort-arrow"></span>
+      </th>
+  <th class="sortable desc" style="text-align: center; padding: 8px; border-bottom: 1px solid #ccc;" data-column="termStart" data-type="number">
+    Term Start<span class="sort-arrow"></span>
+  </th>
+  
+      <th class="sortable" style="text-align: center; padding: 8px; border-bottom: 1px solid #ccc;" data-column="termEnd" data-type="number">
+        Term End <span class="sort-arrow"></span>
+      </th>
+    </tr>
+                    </thead>
+                      <tbody id="viceMayorTableBody">
+                          <tr class="viceMayorRow">
+                              <td
+                                  style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                  <div class="hover-target" style="position: relative; display: inline-block;">
+                                      Roy P. Regalado 
+                                      <div class="profile-modal top-right">
+                                          <div style="display: flex; align-items: center; gap: 10px;">
+                                              <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/Vice-Mayor-ROY-PALEAN-REGALADO.png"
+                                                  style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                              <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                                  <h4 style="margin: 0;">Roy Palean Regalado (Ind)</h4>
+                                                  <p style="text-align: center;">Date of Birth: January 30, 1979</p>
+                                                  <p style="text-align: justify;">Looking back on the past year, I am proud of the progress we’ve made together.</p>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </td>
+                              <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                              <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                          </tr>
+                          <tr class="viceMayorRow">
+                              <td
+                                  style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                  <div class="hover-target" style="position: relative; display: inline-block;">
+                                      Roy P. Regalado 
+                                      <div class="profile-modal top-right">
+                                          <div style="display: flex; align-items: center; gap: 10px;">
+                                              <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/Vice-Mayor-ROY-PALEAN-REGALADO.png"
+                                                  style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                              <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                                  <h4 style="margin: 0;">Roy Palean Regalado (Ind)</h4>
+                                                  <p style="text-align: center;">Date of Birth: January 30, 1979</p>
+                                                  <p style="text-align: justify;">Looking back on the past year, I am proud of the progress we’ve made together.</p>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </td>
+                              <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2019</td>
+                              <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                          </tr>
+                          <tr class="viceMayorRow">
+                              <td
+                                  style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                  <div class="hover-target" style="position: relative; display: inline-block;">
+                                      Roy P. Regalado 
+                                      <div class="profile-modal top-right">
+                                          <div style="display: flex; align-items: center; gap: 10px;">
+                                              <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/Vice-Mayor-ROY-PALEAN-REGALADO.png"
+                                                  style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                              <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                                  <h4 style="margin: 0;">Roy Palean Regalado (Ind)</h4>
+                                                  <p style="text-align: center;">Date of Birth: January 30, 1979</p>
+                                                  <p style="text-align: justify;">Looking back on the past year, I am proud of the progress we’ve made together.</p>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </td>
+                              <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2016</td>
+                              <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2029</td>
+                          </tr> 
+                      </tbody>
+                  </table>
+  
+                  <div class="pagination-wrapper-vice" style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
+                      <p id="vicePageInfo" style="margin: 0; font-weight: bold; font-size: 14px;">This is page 1 out of X</p>
+                      <div id="vicePagination" class="pagination" style="display: flex; gap: 5px;"></div>
+                    </div>
+                 
+              </div>
+              <script>
+                  const rowsPerPageVice = 10;
+                  let currentPageVice = 1;
+                
+                  function updateViceMayorTable() {
+                    const rows = document.querySelectorAll(".viceMayorRow");
+                    const totalPages = Math.ceil(rows.length / rowsPerPageVice);
+                
+                    rows.forEach((row, index) => {
+                      row.style.display = (
+                        index >= (currentPageVice - 1) * rowsPerPageVice &&
+                        index < currentPageVice * rowsPerPageVice
+                      ) ? '' : 'none';
+                    });
+                
+                    renderVicePagination(totalPages);
+                  }
+                
+                  function changeVicePage(page) {
+                    const rows = document.querySelectorAll(".viceMayorRow");
+                    const totalPages = Math.ceil(rows.length / rowsPerPageVice);
+                
+                    if (page < 1) page = 1;
+                    if (page > totalPages) page = totalPages;
+                
+                    currentPageVice = page;
+                    updateViceMayorTable();
+                  }
+                
+                  function renderVicePagination(totalPages) {
+                    document.getElementById("vicePageInfo").textContent = `This is page ${currentPageVice} out of ${totalPages}`;
+                    const container = document.getElementById("vicePagination");
+                    container.innerHTML = "";
+                
+                    const prevBtn = document.createElement("button");
+                    prevBtn.textContent = "<< Prev";
+                    prevBtn.className = currentPageVice === 1 ? "disabled" : "";
+                    prevBtn.disabled = currentPageVice === 1;
+                    prevBtn.onclick = () => changeVicePage(currentPageVice - 1);
+                    container.appendChild(prevBtn);
+                
+                    const maxPagesToShow = 7;
+                    let startPage = 1;
+                    let endPage = totalPages;
+                
+                    if (totalPages > maxPagesToShow) {
+                      if (currentPageVice <= 4) {
+                        endPage = 5;
+                      } else if (currentPageVice >= totalPages - 3) {
+                        startPage = totalPages - 4;
+                      } else {
+                        startPage = currentPageVice - 2;
+                        endPage = currentPageVice + 2;
+                      }
+                    }
+                
+                    if (startPage > 1) {
+                      addVicePageButton(container, 1);
+                      if (startPage > 2) {
+                        addViceEllipsis(container);
+                      }
+                    }
+                
+                    for (let i = startPage; i <= endPage; i++) {
+                      addVicePageButton(container, i);
+                    }
+                
+                    if (endPage < totalPages) {
+                      if (endPage < totalPages - 1) {
+                        addViceEllipsis(container);
+                      }
+                      addVicePageButton(container, totalPages);
+                    }
+                
+                    const nextBtn = document.createElement("button");
+                    nextBtn.textContent = "Next >>";
+                    nextBtn.className = currentPageVice === totalPages ? "disabled" : "";
+                    nextBtn.disabled = currentPageVice === totalPages;
+                    nextBtn.onclick = () => changeVicePage(currentPageVice + 1);
+                    container.appendChild(nextBtn);
+                  }
+                
+                  function addVicePageButton(container, pageNumber) {
+                    const btn = document.createElement("button");
+                    btn.textContent = pageNumber;
+                    if (currentPageVice === pageNumber) {
+                      btn.className = "active";
+                    }
+                    btn.onclick = () => changeVicePage(pageNumber);
+                    container.appendChild(btn);
+                  }
+                
+                  function addViceEllipsis(container) {
+                    const ellipsis = document.createElement("span");
+                    ellipsis.textContent = "...";
+                    ellipsis.className = "ellipsis";
+                    container.appendChild(ellipsis);
+                  }
+                
+                  updateViceMayorTable();
+                </script>
+                
+              <hr style="margin: 15px 0; border-top: 1px solid #ccc;">
+              <h4 style="margin-top: 0;">Councilors</h4>
+  
+              <div id="councilorTableContainer" style="position: relative;">
+                  <table id="councilorTable"
+                      style="width: 100%; border-collapse: collapse; font-size: 14px; margin-bottom: 20px;">
+                       <thead>
+    <tr style="background-color: #f1f1f1;">
+      <th class="sortable" style="text-align: left; padding: 8px; border-bottom: 1px solid #ccc;" data-column="name" data-type="string">
+        Name <span class="sort-arrow"></span>
+      </th>
+  <th class="sortable desc" style="text-align: center; padding: 8px; border-bottom: 1px solid #ccc;" data-column="termStart" data-type="number">
+    Term Start<span class="sort-arrow"></span>
+  </th>
+  
+      <th class="sortable" style="text-align: center; padding: 8px; border-bottom: 1px solid #ccc;" data-column="termEnd" data-type="number">
+        Term End <span class="sort-arrow"></span>
+      </th>
+    </tr>
+                    </thead>
+                      <tbody id="councilorTableBody">
+  
+                          <tr class="councilorRow">
+                              <td
+                                  style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                  <div class="hover-target" style="position: relative; display: inline-block;">
+                                      Renz Mickenly Todoc 
+                                      <div class="profile-modal top-right">
+                                          <div style="display: flex; align-items: center; gap: 10px;">
+                                              <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/Mayor-Border-male.png"
+                                                  style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                              <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                                  <h4 style="margin: 0;">Renz Mickenly Todoc Rodulfo (Ind)</h4>
+                                                  <p style="text-align: justify;">Looking back on the past year, I am proud of the progress we’ve made together.</p>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </td>
+                              <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                              <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                          </tr>
+                          <tr class="councilorRow">
+                              <td
+                                  style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                  <div class="hover-target" style="position: relative; display: inline-block;">
+                                      Dennis T. Timbal 
+                                      <div class="profile-modal top-right">
+                                          <div style="display: flex; align-items: center; gap: 10px;">
+                                              <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/Mayor-Border-male.png"
+                                                  style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                              <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                                  <h4 style="margin: 0;">Dennis Tarroquin Timbal (Npc)</h4>
+                                                  <p style="text-align: justify;">Looking back on the past year, I am proud of the progress we’ve made together.</p>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </td>
+                              <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                              <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                          </tr>
+                          <tr class="councilorRow">
+                              <td
+                                  style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                  <div class="hover-target" style="position: relative; display: inline-block;">
+                                      Reynanto C. Teston 
+                                      <div class="profile-modal top-right">
+                                          <div style="display: flex; align-items: center; gap: 10px;">
+                                              <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/Mayor-Border-male.png"
+                                                  style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                              <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                                  <h4 style="margin: 0;">Reynanto Camacho Teston (Atoy) (Npc)</h4>
+                                                  <p style="text-align: justify;">Looking back on the past year, I am proud of the progress we’ve made together.</p>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </td>
+                              <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                              <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                          </tr>
+                          <tr class="councilorRow">
+                              <td
+                                  style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                  <div class="hover-target" style="position: relative; display: inline-block;">
+                                      Amador T. Toledana 
+                                      <div class="profile-modal top-right">
+                                          <div style="display: flex; align-items: center; gap: 10px;">
+                                              <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/Mayor-Border-male.png"
+                                                  style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                              <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                                  <h4 style="margin: 0;">Amador Tubiera Toledana (Adoy) (Ind)</h4>
+                                                  <p style="text-align: justify;">Looking back on the past year, I am proud of the progress we’ve made together.</p>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </td>
+                              <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                              <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                          </tr>
+                          <tr class="councilorRow">
+                              <td
+                                  style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                  <div class="hover-target" style="position: relative; display: inline-block;">
+                                      Pedro T. Vergara 
+                                      <div class="profile-modal top-right">
+                                          <div style="display: flex; align-items: center; gap: 10px;">
+                                              <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/Mayor-Border-male.png"
+                                                  style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                              <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                                  <h4 style="margin: 0;">Pedro Torrenueva Vergara (Bong) (Ind)</h4>
+                                                  <p style="text-align: justify;">Looking back on the past year, I am proud of the progress we’ve made together.</p>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </td>
+                              <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                              <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                          </tr>
+                          <tr class="councilorRow">
+                              <td
+                                  style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                  <div class="hover-target" style="position: relative; display: inline-block;">
+                                      Francis S. Rodulfo 
+                                      <div class="profile-modal top-right">
+                                          <div style="display: flex; align-items: center; gap: 10px;">
+                                              <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/Mayor-Border-male.png"
+                                                  style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                              <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                                  <h4 style="margin: 0;">Francis Reagan Soneja Rodulfo (Khominie) (Ind)</h4>
+                                                  <p style="text-align: justify;">Looking back on the past year, I am proud of the progress we’ve made together.</p>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </td>
+                              <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                              <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                          </tr>
+                          <tr class="councilorRow">
+                              <td
+                                  style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                  <div class="hover-target" style="position: relative; display: inline-block;">
+                                      Joselito T. Alberto 
+                                      <div class="profile-modal top-right">
+                                          <div style="display: flex; align-items: center; gap: 10px;">
+                                              <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/Mayor-Border-male.png"
+                                                  style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                              <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                                  <h4 style="margin: 0;">Joselito Taño Alberto (Lito) (Npc)</h4>
+                                                  <p style="text-align: justify;">Looking back on the past year, I am proud of the progress we’ve made together.</p>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </td>
+                              <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                              <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                          </tr>
+                          <tr class="councilorRow">
+                              <td
+                                  style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                  <div class="hover-target" style="position: relative; display: inline-block;">
+                                      Ely T. Tasarra 
+                                      <div class="profile-modal top-right">
+                                          <div style="display: flex; align-items: center; gap: 10px;">
+                                              <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/Mayor-Border-male.png"
+                                                  style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                              <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                                  <h4 style="margin: 0;">Ely Tardecilla Tasarra (Ind)</h4>
+                                                  <p style="text-align: justify;">Looking back on the past year, I am proud of the progress we’ve made together.</p>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </td>
+                              <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                              <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                          </tr>
+                      </tbody>
+                  </table>
+  
+                  <div class="pagination-wrapper" style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
+                      <p id="councilorPageInfo" style="margin: 0; font-weight: bold; font-size: 14px;">This is page 1 out of X</p>
+                      <div id="councilorPagination" class="pagination" style="display: flex; gap: 5px;"></div>
+                    </div>
+                    
+              </div>
+  
+              <script>
+                  const rowsPerPageCouncilor = 10;
+                  let currentPageCouncilor = 1;
+                
+                  function updateCouncilorTable() {
+                    const rows = document.querySelectorAll(".councilorRow");
+                    const totalPages = Math.ceil(rows.length / rowsPerPageCouncilor);
+                
+                    rows.forEach((row, index) => {
+                      row.style.display = (
+                        index >= (currentPageCouncilor - 1) * rowsPerPageCouncilor &&
+                        index < currentPageCouncilor * rowsPerPageCouncilor
+                      ) ? '' : 'none';
+                    });
+                
+                    renderCouncilorPagination(totalPages);
+                  }
+                
+                  function changeCouncilorPage(page) {
+                    const rows = document.querySelectorAll(".councilorRow");
+                    const totalPages = Math.ceil(rows.length / rowsPerPageCouncilor);
+                
+                    if (page < 1) page = 1;
+                    if (page > totalPages) page = totalPages;
+                
+                    currentPageCouncilor = page;
+                    updateCouncilorTable();
+                  }
+                
+                  function renderCouncilorPagination(totalPages) {
+                    document.getElementById("councilorPageInfo").textContent = `This is page ${currentPageCouncilor} out of ${totalPages}`;
+                    const container = document.getElementById("councilorPagination");
+                    container.innerHTML = "";
+                
+                    const prevBtn = document.createElement("button");
+                    prevBtn.textContent = "<< Prev";
+                    prevBtn.className = currentPageCouncilor === 1 ? "disabled" : "";
+                    prevBtn.disabled = currentPageCouncilor === 1;
+                    prevBtn.onclick = () => changeCouncilorPage(currentPageCouncilor - 1);
+                    container.appendChild(prevBtn);
+                
+                    const maxPagesToShow = 7;
+                    let startPage = 1;
+                    let endPage = totalPages;
+                
+                    if (totalPages > maxPagesToShow) {
+                      if (currentPageCouncilor <= 4) {
+                        endPage = 5;
+                      } else if (currentPageCouncilor >= totalPages - 3) {
+                        startPage = totalPages - 4;
+                      } else {
+                        startPage = currentPageCouncilor - 2;
+                        endPage = currentPageCouncilor + 2;
+                      }
+                    }
+                
+                    if (startPage > 1) {
+                      addCouncilorPageButton(container, 1);
+                      if (startPage > 2) {
+                        addCouncilorEllipsis(container);
+                      }
+                    }
+                
+                    for (let i = startPage; i <= endPage; i++) {
+                      addCouncilorPageButton(container, i);
+                    }
+                
+                    if (endPage < totalPages) {
+                      if (endPage < totalPages - 1) {
+                        addCouncilorEllipsis(container);
+                      }
+                      addCouncilorPageButton(container, totalPages);
+                    }
+                
+                    const nextBtn = document.createElement("button");
+                    nextBtn.textContent = "Next >>";
+                    nextBtn.className = currentPageCouncilor === totalPages ? "disabled" : "";
+                    nextBtn.disabled = currentPageCouncilor === totalPages;
+                    nextBtn.onclick = () => changeCouncilorPage(currentPageCouncilor + 1);
+                    container.appendChild(nextBtn);
+                  }
+                
+                  function addCouncilorPageButton(container, pageNumber) {
+                    const btn = document.createElement("button");
+                    btn.textContent = pageNumber;
+                    if (currentPageCouncilor === pageNumber) {
+                      btn.className = "active";
+                    }
+                    btn.onclick = () => changeCouncilorPage(pageNumber);
+                    container.appendChild(btn);
+                  }
+                
+                  function addCouncilorEllipsis(container) {
+                    const ellipsis = document.createElement("span");
+                    ellipsis.textContent = "...";
+                    ellipsis.className = "ellipsis";
+                    container.appendChild(ellipsis);
+                  }
+                
+                  updateCouncilorTable();
+                </script>
+  
+  <script>
+  /**
+   * Generic table sorter
+   * @param {string} tbodyId - ID ng tbody (e.g.,"viceMayorTableBody", "councilorTableBody")
+   * @param {string} rowClass - class ng row (e.g., "viceMayorRow", "councilorRow")
+   * @param {number} columnIndex - index ng column to sort
+   * @param {string} type - "string" o "number"
+   * @param {boolean} asc - ascending or descending
+   */
+  function sortGenericTable(tbodyId, rowClass, columnIndex, type, asc) {
+    const tbody = document.getElementById(tbodyId);
+    const rowsArray = Array.from(tbody.querySelectorAll("." + rowClass));
+  
+    rowsArray.sort((a, b) => {
+      let valA, valB;
+      if(type === "string") {
+        // For Name column or text
+        valA = a.children[columnIndex].innerText.trim().toLowerCase();
+        valB = b.children[columnIndex].innerText.trim().toLowerCase();
+        if(valA < valB) return asc ? -1 : 1;
+        if(valA > valB) return asc ? 1 : -1;
+        return 0;
+      } else if(type === "number") {
+        // For Term Start / Term End
+        valA = parseInt(a.children[columnIndex].innerText.trim(), 10);
+        valB = parseInt(b.children[columnIndex].innerText.trim(), 10);
+        return asc ? valA - valB : valB - valA;
+      }
+      return 0;
+    });
+  
+    tbody.innerHTML = "";
+    rowsArray.forEach(row => tbody.appendChild(row));
+  }
+  
+  document.querySelectorAll("table").forEach(table => {
+    const tbodyId = table.querySelector("tbody").id;
+    const rowClass = table.querySelector("tbody tr").className;
+  
+    table.querySelectorAll("th.sortable").forEach((th, idx) => {
+      th.addEventListener("click", () => {
+        table.querySelectorAll("th.sortable").forEach(header => {
+          if(header !== th) header.classList.remove("asc", "desc");
+        });
+  
+        const asc = !th.classList.contains("asc");
+        th.classList.toggle("asc", asc);
+        th.classList.toggle("desc", !asc);
+  
+        const type = th.dataset.type;
+        sortGenericTable(tbodyId, rowClass, idx, type, asc);
+      });
+    });
+  });
+  </script>
+  
+          </div>
+  
+      </div>
+  </div>
+  </div>
+  
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  
+  
+  <div class="officials-section">
+      <div class="officials-wrapper">
+  
+  
+      <div class="municipal-officials" style="padding: 10px;">
+          <div style="text-align: center; margin-bottom: 25px;">
+              <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/Hon.-Juan-Todoc-Rodulfo-Bato.png"
+                  alt="Mayor"
+                  style="width: 160px; height: 160px; border-radius: 50%; object-fit: cover; margin-bottom: 10px;">
+              <p style="margin: 0; padding: 0; line-height: 2;"><strong>Juan Todoc Rodulfo</strong></p>
+              <p style="margin: 0 0 30px 0; padding: 0; line-height: 1;">Mayor</p>
+          </div>
+          <div style="text-align: center; margin-bottom: 30px;">
+              <p style="margin: 0; padding: 0; line-height: 2;"><strong>Reynato Camacho Teston</strong></p>
+              <p style="margin: 0 0 10px 0; padding: 0; line-height: 1;">Vice Mayor</p>
+          </div>
+              <hr style="border: none; border-top: 1px solid #ddd; margin: 0 0 30px 0;">
+          <div style="text-align: center;">
+              <p style="margin: 0 0 0 0; padding: 0; font-weight: bold; font-size: 14px;">MUNICIPAL COUNCILORS</p>
+              <p style="margin: 0; padding: 0; line-height: 1.5;">Janice Teope Viado</p>
+              <p style="margin: 0; padding: 0; line-height: 1.5;">Joevic Tevar Bernal</p>
+              <p style="margin: 0; padding: 0; line-height: 1.5;">Dennis Grajo Pereyra</p>
+              <p style="margin: 0; padding: 0; line-height: 1.5;">Ely Tardecilla Tasarra</p>
+              <p style="margin: 0; padding: 0; line-height: 1.5;">Dennis Tarroquin Timbal</p>
+              <p style="margin: 0; padding: 0; line-height: 1.5;">Amador Tubiena Toledana</p>
+              <p style="margin: 0; padding: 0; line-height: 1.5;">Renz Mickenly Todoc Tanael</p>
+              <p style="margin: 0; padding: 0; line-height: 1.5;">Francis Reagan Soneja Rodulfo</p>      
+          </div>
+        </div>
+  
+  
+        <div class="emergency-wrapper">
+          <div class="wp-emergency-card">
+            <div class="header">
+              <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/Bato.png" alt="Emergency Icon" class="header-icon">
+           EMERGENCY HOTLINES
+            </div>
+           
+            <div class="list">
+              
+                <div class="item">
+                  <div class="icon"><img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/09/Bato-MDRRMO.png" alt="PDRRMO"></div>
+                  <div class="line"><span class="number">0968-658-2037 | 0939-831-4518</span><span class="sub">MDRRMO</span></div>
+                </div>
+        
+                <div class="item">
+                  <div class="icon"><img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/09/PNP-1.png" alt="PDRRMO"></div>
+                  <div class="line"><span class="number">0998-876-5310 | 0920-586-2583</span><span class="sub"> Police Station</span></div>
+                </div>
+        
+                <div class="item">
+                  <div class="icon"><img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/09/bato.jpg" alt="PDRRMO"></div>
+                  <div class="line"><span class="number">0961-178-4598</span><span class="sub"> Bureau of Fire Protection</span></div>
+                </div>
+        
+                <div class="item">
+                  <div class="icon"><img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/09/Bato-BMCH.png" alt="PDRRMO"></div>
+                  <div class="line"><span class="number">0920-592-8333</span><span class="sub">Maternity and Children’s Hospital
+                    (BMCH)
+                    </span></div>
+                </div>
+        
+                <div class="item">
+                  <div class="icon"><img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/09/Bato-Water-District.png" alt="PDRRMO"></div>
+                  <div class="line"><span class="number">0998-391-4622</span><span class="sub">Bato Water District</span></div>
+                </div>
+        
+                <div class="item">
+                  <div class="icon"><img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/09/Ficelco.png" alt="PDRRMO"></div>
+                  <div class="line"><span class="number">0929-550-1512</span><span class="sub">FICELCO</span></div>
+                </div>
+        </div>
+  
+  
+  
+        
+        
+                <div class="footer">
+                  <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/Capitol.png" alt="Capitol Logo">
+                  <strong>REPUBLIC OF THE PHILIPPINES<br>PROVINCE OF CATANDUANES</strong>
+                </div>
+              </div>
+  
+  
+  
+  
+      </div>
+<!-- /wp:html --></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns -->
+
+<!-- wp:paragraph -->
+<p></p>
+<!-- /wp:paragraph -->

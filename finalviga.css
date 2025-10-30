@@ -340,7 +340,9 @@ th.sortable[data-type="number"] {
     z-index: 1;
 }
 
-/* ---------- DESKTOP MODAL (Default) ---------- */
+/* -----------------------------------------------
+ DEFAULT (DESKTOP): Hover Modal
+------------------------------------------------- */
 .profile-modal,
 .barangay-modal {
   position: absolute !important;
@@ -348,8 +350,7 @@ th.sortable[data-type="number"] {
   left: 100% !important;
   margin-left: 10px !important;
   width: 330px !important;
-  max-width: none !important;
-  background: white;
+  background: #fff;
   padding: 15px;
   border: 1px solid #ccc;
   border-radius: 10px;
@@ -358,6 +359,7 @@ th.sortable[data-type="number"] {
   display: none;
   white-space: normal;
   box-sizing: border-box;
+ /*  animation: accordionFade 0.3s ease; */
 }
 
 .hover-target:hover .profile-modal,
@@ -386,6 +388,7 @@ th.sortable[data-type="number"] {
 .barangay-modal h4 {
   margin: 0;
   font-size: 15px;
+  font-weight: 600;
 }
 
 .profile-modal p,
@@ -398,10 +401,13 @@ th.sortable[data-type="number"] {
 .profile-modal h3,
 .barangay-modal h3 {
   text-align: center;
+  font-size: 16px;
 }
 
-/* ---------- TABLET ACCORDION (769px – 1024px) ---------- */
-@media (min-width: 769px) and (max-width: 1024px) {
+/* -----------------------------------------------
+RESPONSIVE ACCORDION (320px – 1050px)
+------------------------------------------------- */
+@media (max-width: 1050px) {
   .barangayRow td:first-child::before,
   .mayorRow td:first-child::before,
   .viceMayorRow td:first-child::before,
@@ -410,7 +416,7 @@ th.sortable[data-type="number"] {
     font-family: "Font Awesome 6 Free";
     font-weight: 600;
     display: inline-block;
-    margin-right: 4px;
+    margin-right: 5px;
     color: #0066cc;
     vertical-align: top;
   }
@@ -426,82 +432,13 @@ th.sortable[data-type="number"] {
   .barangay-modal {
     position: static !important;
     display: none;
-    width: 70vw !important;         
-    max-width: 90vw !important;     
-    margin: 10px auto 0 auto !important;
-    box-shadow: none !important;
+    width: clamp(50vw, 55vw, 60vw) !important; 
+    margin: 12px auto 0 auto !important;
+    padding: 12px !important;
     border: none !important;
-    background-color: inherit !important;
-    animation: accordionFade 0.3s ease;
-    padding: 10px !important;
-  }
-
-  .profile-modal.open,
-  .barangay-modal.open {
-    display: block !important;
-  }
-
-  .hover-target {
-    cursor: pointer;
-    display: block;
-    width: 100%;
-  }
-
-  .hover-target:hover .profile-modal,
-  .hover-target:hover .barangay-modal {
-    display: none !important;
-  }
-
-  .profile-modal > div,
-  .barangay-modal > div {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 12px;
-    justify-content: center;
-  }
-
-  .profile-modal img,
-  .barangay-modal img {
-    width: 70px !important;
-    height: 70px !important;
-  }
-}
-
-/* ---------- MOBILE ACCORDION (Up to 768px) ---------- */
-@media (max-width: 768px) {
-  .barangayRow td:first-child::before,
-  .mayorRow td:first-child::before,
-  .viceMayorRow td:first-child::before,
-  .councilorRow td:first-child::before {
-    content: "\f06e";
-    font-family: "Font Awesome 6 Free";
-    font-weight: 600;
-    display: inline-block;
-    margin-right: 3px;
-    color: #0066cc;
-    vertical-align: top;
-  }
-
-  td {
-    position: relative;
-    overflow: visible !important;
-    vertical-align: top;
-    text-align: center;
-  }
-
-  .profile-modal,
-  .barangay-modal {
-    position: static !important;
-    display: none;
-    width: 85vw !important;         
-    max-width: 95vw !important;      
-    margin: 10px auto 0 auto !important;
-    padding: 10px !important;
     box-shadow: none !important;
-    border: none !important;
     background-color: inherit !important;
-    animation: accordionFade 0.3s ease;
+    /* animation: accordionFade 0.3s ease; */
   }
 
   .profile-modal.open,
@@ -514,21 +451,19 @@ th.sortable[data-type="number"] {
     display: block;
     width: 100%;
     white-space: normal !important;
-    padding: 0 !important;
   }
 
-  .hover-target:hover .profile-modal,
+/*   .hover-target:hover .profile-modal,
   .hover-target:hover .barangay-modal {
     display: none !important;
-  }
+  } */
 
   .profile-modal > div,
   .barangay-modal > div {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 12px;
-    justify-content: center;
+    gap: 10px;
   }
 
   .profile-modal img,
@@ -550,18 +485,14 @@ th.sortable[data-type="number"] {
   }
 }
 
-
-/* ---------- Animation ---------- */
-@keyframes accordionFade {
-  from {
-    opacity: 0;
-    transform: translateY(-5px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* -----------------------------------------------
+ Fade Animation
+------------------------------------------------- */
+/* @keyframes accordionFade {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
 }
+ */
 
 
 
@@ -1481,73 +1412,96 @@ th.sortable[data-type="number"] {
 
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-  // Use 1024px so tablets are treated like mobile (accordion behavior)
-  const TOUCH_BREAKPOINT = 1024;
+  const TOUCH_BREAKPOINT = 782; 
+  const MODAL_SELECTORS = [".barangay-modal", ".profile-modal"];
+  const HOVER_TARGET_SELECTOR = ".hover-target";
+  let initialized = new WeakSet();
+
+  const isDesktopView = () => window.innerWidth > TOUCH_BREAKPOINT;
 
   function closeAllAccordions() {
-    document.querySelectorAll(".barangay-modal.open").forEach(m => m.classList.remove("open"));
+    MODAL_SELECTORS.forEach(sel => {
+      document.querySelectorAll(sel + ".open").forEach(m => m.classList.remove("open"));
+    });
   }
 
-  function setupHandlers() {
-    document.querySelectorAll(".hover-target").forEach(target => {
-      const modal = target.querySelector(".barangay-modal");
+  function removeDesktopVisible() {
+    MODAL_SELECTORS.forEach(sel => {
+      document.querySelectorAll(sel + ".visible-desktop").forEach(m => m.classList.remove("visible-desktop"));
+    });
+  }
 
-      // Clone to remove old listeners
-      const newTarget = target.cloneNode(true);
-      target.parentNode.replaceChild(newTarget, target);
+  function attachToTarget(target) {
+    if (initialized.has(target)) return;
+    initialized.add(target);
+
+    const modal = MODAL_SELECTORS.map(s => target.querySelector(s)).find(Boolean);
+    if (!modal) return;
+
+    target.addEventListener("pointerenter", (e) => {
+      if (isDesktopView()) {
+        // ensure other desktop-only visible modals are cleared for cleanliness
+        removeDesktopVisible();
+        modal.classList.add("visible-desktop");
+      }
     });
 
-    // Re-query after replacing nodes
-    document.querySelectorAll(".hover-target").forEach(target => {
-      const modal = target.querySelector(".barangay-modal");
-      if (!modal) return;
+    target.addEventListener("pointerleave", (e) => {
+      if (isDesktopView()) {
+        modal.classList.remove("visible-desktop");
+      }
+    });
 
-      // Hover for real desktops only
-      target.addEventListener("mouseenter", () => {
-        if (window.innerWidth > TOUCH_BREAKPOINT) modal.classList.add("visible-desktop");
-      });
-      target.addEventListener("mouseleave", () => {
-        if (window.innerWidth > TOUCH_BREAKPOINT) modal.classList.remove("visible-desktop");
-      });
+    target.addEventListener("click", (e) => {
+      if (!isDesktopView()) {
+        // prevent the document click handler from immediately closing it
+        e.stopPropagation();
+        const wasOpen = modal.classList.contains("open");
 
-      // Tap/Click accordion for mobile + tablet
-      target.addEventListener("click", (e) => {
-        if (window.innerWidth <= TOUCH_BREAKPOINT) {
-          e.stopPropagation();
-          const isOpen = modal.classList.contains("open");
-          closeAllAccordions();
-          if (!isOpen) modal.classList.add("open");
+        closeAllAccordions();
+
+        if (!wasOpen) {
+          modal.classList.add("open");
+          modal.classList.remove("visible-desktop");
         }
-      });
+      }
+    });
 
-      // Prevent modal click from bubbling
-      modal.addEventListener("click", (e) => e.stopPropagation());
+    modal.addEventListener("click", (e) => {
+      e.stopPropagation();
     });
   }
 
-  // Close all when clicking outside (touch devices)
+  function setupAllTargets() {
+    document.querySelectorAll(HOVER_TARGET_SELECTOR).forEach(attachToTarget);
+  }
+
   document.addEventListener("click", () => {
-    if (window.innerWidth <= TOUCH_BREAKPOINT) closeAllAccordions();
+    if (!isDesktopView()) closeAllAccordions();
   });
 
-  // Rebuild handlers on resize
-  let resizeTimer;
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      removeDesktopVisible();
+      closeAllAccordions();
+    }
+  });
+
+  let resizeTimer = null;
   window.addEventListener("resize", () => {
-    clearTimeout(resizeTimer);
+    if (resizeTimer) clearTimeout(resizeTimer);
     resizeTimer = setTimeout(() => {
-      document.querySelectorAll(".barangay-modal").forEach(m => {
-        m.classList.remove("visible-desktop");
-        if (window.innerWidth > TOUCH_BREAKPOINT) m.classList.remove("open");
-      });
-      setupHandlers();
-    }, 150);
+      removeDesktopVisible();
+      if (isDesktopView()) closeAllAccordions();
+
+      setupAllTargets();
+    }, 120);
   });
 
-  setupHandlers();
+  setupAllTargets();
 });
-
-
 </script>
+
 
 
 
@@ -1806,75 +1760,7 @@ document.addEventListener("DOMContentLoaded", () => {
 <div id="mayorPagination" class="pagination" style="display: flex; gap: 5px;"> </div>
 </div>
 <hr style="margin: 15px 0; border-top: 1px solid #ccc;" />
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  // Use 1024px so tablets are treated like mobile (accordion behavior)
-  const TOUCH_BREAKPOINT = 1024;
 
-  function closeAllAccordions() {
-    document.querySelectorAll(".profile-modal.open").forEach(m => m.classList.remove("open"));
-  }
-
-  function setupHandlers() {
-    document.querySelectorAll(".hover-target").forEach(target => {
-      const modal = target.querySelector(".profile-modal");
-
-      // Clone to remove old listeners
-      const newTarget = target.cloneNode(true);
-      target.parentNode.replaceChild(newTarget, target);
-    });
-
-    // Re-query after replacing nodes
-    document.querySelectorAll(".hover-target").forEach(target => {
-      const modal = target.querySelector(".profile-modal");
-      if (!modal) return;
-
-      // Hover for real desktops only
-      target.addEventListener("mouseenter", () => {
-        if (window.innerWidth > TOUCH_BREAKPOINT) modal.classList.add("visible-desktop");
-      });
-      target.addEventListener("mouseleave", () => {
-        if (window.innerWidth > TOUCH_BREAKPOINT) modal.classList.remove("visible-desktop");
-      });
-
-      // Tap/Click accordion for mobile + tablet
-      target.addEventListener("click", (e) => {
-        if (window.innerWidth <= TOUCH_BREAKPOINT) {
-          e.stopPropagation();
-          const isOpen = modal.classList.contains("open");
-          closeAllAccordions();
-          if (!isOpen) modal.classList.add("open");
-        }
-      });
-
-      // Prevent modal click from bubbling
-      modal.addEventListener("click", (e) => e.stopPropagation());
-    });
-  }
-
-  // Close all when clicking outside (touch devices)
-  document.addEventListener("click", () => {
-    if (window.innerWidth <= TOUCH_BREAKPOINT) closeAllAccordions();
-  });
-
-  // Rebuild handlers on resize
-  let resizeTimer;
-  window.addEventListener("resize", () => {
-    clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(() => {
-      document.querySelectorAll(".profile-modal").forEach(m => {
-        m.classList.remove("visible-desktop");
-        if (window.innerWidth > TOUCH_BREAKPOINT) m.classList.remove("open");
-      });
-      setupHandlers();
-    }, 150);
-  });
-
-  setupHandlers();
-});
-
-
-</script>
 <script>
               const rowsPerPage = 10;
               let currentPage = 1;
