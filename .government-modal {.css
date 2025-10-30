@@ -1,0 +1,52 @@
+.government-modal {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  margin-left: 10px;
+  background: white;
+  padding: 15px;
+  width: 330px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  display: none;
+  white-space: normal;
+}
+
+.hover-target:hover .government-modal {
+  display: block;
+}
+
+.government-modal > div {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  flex-wrap: nowrap;
+}
+
+.government-modal img {
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.government-modal h4 {
+  margin: 0;
+  font-size: 15px;
+}
+
+.government-modal p {
+  font-size: 13px;
+  margin: 4px 0;
+  color: #555;
+}
+
+.government-modal {
+    width: 100vw; /* full screen width if needed */
+    left: -10px; /* adjust to align visually */
+    top: auto;
+    position: static; /* simpler layout for mobile/tablet */
+    margin-top: 8px;
+  }
