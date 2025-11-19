@@ -1,0 +1,178 @@
+/* Default (desktop base) */
+body #pst-container {
+    position: absolute !important;
+    font-size: 14px !important;
+    color: black !important;
+    padding: 2px !important;
+    background: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    font-family: inherit !important;
+    white-space: nowrap !important;
+    max-width: 300px !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    text-align: right !important;
+}
+
+/* Exact 320px and below */
+@media (max-width: 320px) {
+    body #pst-container {
+        top: 296px !important;   
+    }
+}
+@media (min-width:321px) and (max-width: 375px) {
+    body #pst-container {
+        top: 245px !important;   
+    }
+}
+@media (min-width:376px) and (max-width: 425px) {
+    body #pst-container {
+        top: 247px !important;   
+    }
+}
+
+#text-3,
+#pst-time {
+    padding: 0 !important;
+    margin: 0 !important;
+    line-height: 1 !important;
+    display: inline !important;
+}
+
+#text-3,
+#pst-container,
+#pst-time {
+    background-image: none !important;
+    padding: 0 !important;
+    color: black !important;
+    margin-top: 18px !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    font-family: inherit !important;
+    line-height: 1.1px !important;
+}
+
+#pst-container {
+    position: absolute;
+    top: auto !important;
+    right: auto;
+    font-size: 14px;
+    color: black !important;
+    padding: 2px !important;
+    background-image: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    font-family: inherit !important;
+    line-height: 1.1 !important;
+    white-space: nowrap;
+    max-width: 300px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    z-index: 0 !important;
+}
+
+.widget_text,
+.textwidget {
+    background: none !important;
+    box-shadow: none !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.large-3.columns {
+    background: none !important;
+}
+
+.textwidget {
+    background: white !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+@media (width: 768px) {
+    body #pst-container {
+        top: 260px !important;  
+        right: 20px !important;
+        font-size: 13px !important;
+        white-space: normal !important;
+        overflow-wrap: break-word !important;
+        max-width: calc(100% - 40px) !important;
+        overflow: visible !important;
+        text-overflow: unset !important;
+        padding-right: 12px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    #pst-container {
+        top: 140px !important;
+        right: 15px !important;
+        font-size: 12px !important;
+        white-space: normal !important;
+        overflow-wrap: break-word !important;
+        max-width: calc(100% - 30px) !important;
+        overflow: visible !important;
+        text-overflow: unset !important;
+        padding-right: 10px !important;
+        z-index: 1000 !important;
+    }
+    .wp-block-heading-home{
+        margin-left: 0px !important;
+    }
+}
+
+
+ @media (max-width: 425px) {
+    body #pst-container {
+        top: 250px !important;   
+        right: 15px !important;
+        font-size: 12px !important;
+        white-space: normal !important;
+        overflow-wrap: break-word !important;
+        max-width: calc(100% - 30px) !important;
+        overflow: visible !important;
+        text-overflow: unset !important;
+        padding-right: 10px !important;
+    }
+} 
+
+/* Between 426px and 768px */
+@media (min-width: 426px) {
+    body #pst-container {
+        top: 40px !important;
+        right: 15px !important;
+    }
+}
+
+/* Large (769px and up) */
+@media (min-width: 769px) {
+    .container-masthead .row {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: flex-start !important;
+    }
+
+    body #textlogo-wrapper {
+        flex: 1 !important;
+        text-align: left !important;
+        margin-right: 10px !important;
+    }
+
+    body #pst-container {
+        flex: 0 0 auto !important;
+        text-align: right !important;
+        margin-left: auto !important;
+        position: relative !important;
+        top: 0 !important;
+        right: 0 !important;
+    }
+}
+
+

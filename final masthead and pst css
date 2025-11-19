@@ -1,0 +1,116 @@
+#pst-container {
+    position: absolute !important;
+    font-size: 14px !important;
+    color: black !important;
+    padding: 2px !important;
+    background: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    font-family: inherit !important;
+    white-space: nowrap !important;
+    max-width: 300px !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    text-align: right !important;
+}
+
+@media (max-width: 320px) {
+    #pst-container { 
+			top: 287px !important; 
+			right: 15px !important;
+	}
+	 .container-masthead {
+     min-height: 240px !important;
+     padding-bottom: 60px !important;
+    }
+}
+
+@media (min-width: 321px) and (max-width: 375px) {
+    #pst-container { 
+			top: 225px !important; 
+			right: 15px !important;
+	}
+	.container-masthead {
+     min-height: 240px !important;
+     padding-bottom: 55px !important;
+    }
+}
+
+@media (min-width: 376px) and (max-width: 425px) {
+    #pst-container { 
+			top: 247px !important; 
+			right: 15px !important;
+	}
+	.container-masthead {
+     min-height: 290px !important;
+     padding-bottom: 50px !important;
+    }
+}
+
+@media (min-width: 426px) and (max-width: 500px) {
+    #pst-container {
+        top: 220px !important;
+			  right: 15px !important;
+    }
+	.container-masthead {
+     min-height: 280px !important;
+     padding-bottom: 45px !important;
+    }
+}
+
+@media (min-width: 501px) and (max-width: 699px) {
+    #pst-container {
+        top: 180px !important;
+        right: 15px !important;
+    }
+    .container-masthead {
+        min-height: 200px !important;
+        padding-bottom: 20px !important;
+    }
+}
+
+@media (min-width: 700px) and (max-width: 768px) {
+    #pst-container {
+        top: 40px !important;
+        right: 15px !important;
+    }
+	.container-masthead {
+        min-height: 200px !important;
+        padding-bottom: 20px !important;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 819px) {
+    #pst-container {
+        top: 10px !important;
+        right: 15px !important;
+    }
+	.container-masthead {
+        min-height: 160px !important;
+        padding-bottom: 20px !important;
+    }
+}
+
+@media (min-width: 820px) and (max-width: 930px) {
+    #pst-container {
+        top: 10px !important;
+        right: 15px !important;
+    }
+	.container-masthead {
+        min-height: 210px !important;
+        padding-bottom: 20px !important;
+    }
+}
+
+
+@media (min-width: 931px) and (max-width: 1024px) {
+    #pst-container {
+        top: 10px !important;
+        right: 15px !important;
+    }
+	.container-masthead {
+        min-height: 160px !important;
+        padding-bottom: 20px !important;
+    }
+}

@@ -1,0 +1,77 @@
+#pst-container {
+    position: absolute !important;
+    top: 10px !important; 
+    right: 15px !important;
+    margin-top: 35px !important;
+    font-size: 14px;
+    color: black;
+    padding: 2px;
+    background: none;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    font-family: inherit;
+    white-space: nowrap;
+    max-width: 300px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: right;
+}
+
+
+@media (max-width: 320px) {
+    #pst-container {
+        top: 287px !important; 
+    }
+    .container-masthead {
+        min-height: 280px; 
+        padding-bottom: 20px; 
+    }
+}
+
+@media (min-width: 321px) and (max-width: 375px) {
+    #pst-container {
+        top: 225px !important; 
+    }
+    .container-masthead {
+        min-height: 280px; 
+        padding-bottom: 20px; 
+    }
+}
+
+@media (min-width: 376px) and (max-width: 425px) {
+    #pst-container {
+        top: 247px !important;
+    }
+    .container-masthead {
+        min-height: 280px; 
+        padding-bottom: 20px; 
+    }
+}
+
+@media (min-width: 426px) and (max-width: 500px) {
+    #pst-container { top: 220px !important; } 
+    .container-masthead {
+        min-height: 280px; 
+        padding-bottom: 20px; 
+    }
+}
+
+@media (min-width: 501px) and (max-width: 699px) {
+    #pst-container { top: 180px !important; } 
+    .container-masthead {
+        min-height: 250px; 
+        padding-bottom: 20px; 
+    }
+}
+
+
+@media (min-width: 700px) and (max-width: 1024px) {
+    #pst-container { top: 40px !important; } 
+    .container-masthead { min-height: 200px; } 
+    .container-masthead .row { position: relative !important; }
+}
+
+@media (min-width: 1025px) {
+    #pst-container { top: 10px !important; } 
+}

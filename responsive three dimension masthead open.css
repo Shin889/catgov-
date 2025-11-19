@@ -17,14 +17,6 @@ body #pst-container {
     margin-top: 35px !important;
 }
 
-/* Mobile (≤768px) */
-@media (max-width: 768px) {
-    body #pst-container {
-        top: 238px !important;
-        right: 15px !important;
-    }
-}
-
 /* Exact 320px and below */
 @media (max-width: 320px) {
     body #pst-container {
@@ -41,6 +33,14 @@ body #pst-container {
 @media (min-width: 376px) and (max-width: 425px) {
     body #pst-container {
         top: 247px !important;   
+    }
+}
+
+/* Mobile (≤768px) */
+@media (max-width: 768px) {
+    body #pst-container {
+        top: 238px !important;
+        right: 15px !important;
     }
 }
 
@@ -67,7 +67,6 @@ body #pst-container {
     }
 }
 
-/* Tablets (769px–1024px) */
 @media (min-width: 769px) and (max-width: 1024px) {
     body #pst-container {
         position: absolute !important;
