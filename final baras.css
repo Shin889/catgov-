@@ -1,0 +1,4040 @@
+<style>
+/* custom-table */
+.custom-table {
+    max-width: 600px;
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+    font-size: clamp(12px, 2vw, 14px);
+    table-layout: fixed;
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+.custom-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+
+.custom-table th {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    text-align: left;
+    border: none;
+}
+
+.custom-table td {
+    border: none;
+    padding: 8px;
+    vertical-align: top;
+    white-space: normal;
+    word-break: break-word;
+}
+
+@media (max-width: 600px) {
+    .custom-table {
+        font-size: 0.9em;
+    }
+
+    .custom-table td:first-child {
+        width: 50%;
+    }
+}
+
+/* slider */
+.tourism-gallery {
+    max-width: auto;
+    text-align: center;
+    position: relative;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.tourism-gallery h3 {
+    text-align: center;
+    text-transform: none;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.tourism-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.tourism-wrapper {
+    display: flex;
+    transition: transform 0.6s ease-in-out;
+    width: 100%;
+}
+
+.tourism-wrapper img {
+    width: 100%;
+    flex-shrink: 0;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* pagination */
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 4px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.pagination button {
+    padding: 0 2px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 0;
+    min-width: 20px;
+    min-height: 24px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 10px;
+}
+
+.pagination button:hover {
+    background-color: #dcdcdc;
+}
+
+.pagination button.active {
+    background-color: #004499cc;
+    color: white;
+    border-color: #004499cc;
+}
+
+.pagination-wrapper {
+    text-align: right;
+    margin-top: 10px;
+}
+
+.pagination {
+    display: inline-flex;
+    gap: 4px;
+}
+
+/* tab 2 & 3 styled table */
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 8px;
+    border-bottom: 1px solid #ccc;
+    text-align: left;
+}
+
+
+.styled-table td:last-child {
+    text-align: center;
+    white-space: normal;
+}
+
+
+.hover-target {
+    position: relative;
+    display: inline-block;
+    white-space: normal;
+    line-height: 1.2;
+}
+
+
+
+@media (min-width: 601px) {
+    .hover-target {
+        white-space: nowrap;
+    }
+
+    .styled-table td:last-child {
+        white-space: nowrap;
+    }
+}
+
+
+
+@media (max-width: 600px) {
+    .styled-table td:last-child {
+        text-align: right;
+        white-space: normal;
+    }
+
+    .hover-target {
+        white-space: normal;
+        word-break: break-word;
+    }
+}
+
+/* 3rd column     */
+.official-profile {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.official-profile:hover .profile-modal {
+    display: block;
+}
+
+.official-profile a {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #000;
+    padding: 10px 15px;
+    border-radius: 10px;
+    transition: background 0.3s ease;
+}
+
+.hover-target {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    overflow: visible !important;
+}
+
+.official-profile a:hover {
+    background: #f1f1f1;
+}
+
+.official-profile img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* table */
+.tabs-panel {
+    position: relative;
+    overflow: visible;
+    z-index: 0;
+}
+
+hr {
+    margin: 20px 0;
+    border: none;
+    border-top: 1px dashed #aaa;
+}
+
+.pagination-wrapper {
+    text-align: right;
+    margin-top: 10px;
+}
+
+.pagination {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 4px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.pagination button {
+    padding: 0 2px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 0;
+    min-width: 18px;
+    min-height: 22px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 10px;
+}
+
+.pagination button:hover {
+    background-color: #dcdcdc;
+}
+
+.pagination button.active {
+    background-color: #004499cc;
+    color: white;
+    border-color: #004499cc;
+}
+
+table {
+    table-layout: fixed;
+}
+
+th,
+td {
+    padding: 8px;
+    border-bottom: 1px solid #ccc;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+td {
+    position: relative;
+    overflow: visible !important;
+}
+
+th.sortable {
+    cursor: pointer;
+    user-select: none;
+    text-align: center;
+    position: relative;
+    padding: 8px;
+    border-bottom: 1px solid #ccc;
+}
+
+th.sortable .sort-arrow {
+    font-size: 12px;
+    color: #888;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 2px;
+    width: 12px;
+    height: 12px;
+    line-height: 12px;
+    text-align: center;
+}
+
+th.sortable .sort-arrow::after {
+    content: "▲";
+    color: #888;
+}
+
+th.sortable.asc .sort-arrow::after {
+    content: "▲";
+    color: #000;
+}
+
+th.sortable.desc .sort-arrow::after {
+    content: "▼";
+    color: #000;
+}
+
+th.sortable[data-type="string"] {
+    text-align: left;
+}
+
+th.sortable[data-type="number"] {
+    text-align: center;
+}
+
+#mayorTableContainer,
+#viceMayorTableContainer,
+#councilorTableContainer {
+    overflow: visible !important;
+    position: relative;
+    z-index: 1;
+}
+
+/* -----------------------------------------------
+ DEFAULT (DESKTOP): Hover Modal
+------------------------------------------------- */
+.profile-modal,
+.barangay-modal {
+  position: absolute !important;
+  top: 0 !important;
+  left: 100% !important;
+  margin-left: 10px !important;
+  width: 330px !important;
+  background: #fff;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 10000;
+  display: none;
+  white-space: normal;
+  box-sizing: border-box;
+ /*  animation: accordionFade 0.3s ease; */
+}
+
+.hover-target:hover .profile-modal,
+.hover-target:hover .barangay-modal,
+.official-profile:hover .profile-modal {
+  display: block !important;
+}
+
+.profile-modal > div,
+.barangay-modal > div {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  flex-wrap: nowrap;
+}
+
+.profile-modal img,
+.barangay-modal img {
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.profile-modal h4,
+.barangay-modal h4 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.profile-modal p,
+.barangay-modal p {
+  font-size: 13px;
+  margin: 4px 0;
+  color: #555;
+}
+
+.profile-modal h3,
+.barangay-modal h3 {
+  text-align: center;
+  font-size: 16px;
+}
+
+/* -----------------------------------------------
+RESPONSIVE ACCORDION (320px – 1050px)
+------------------------------------------------- */
+@media (max-width: 1050px) {
+  .barangayRow td:first-child::before,
+  .mayorRow td:first-child::before,
+  .viceMayorRow td:first-child::before,
+  .councilorRow td:first-child::before {
+    content: "\f06e";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 600;
+    display: inline-block;
+    margin-right: 5px;
+    color: #0066cc;
+    vertical-align: top;
+  }
+
+  td {
+    position: relative;
+    overflow: visible !important;
+    vertical-align: top;
+    text-align: center;
+  }
+
+  .profile-modal,
+  .barangay-modal {
+    position: static !important;
+    display: none;
+    width: clamp(50vw, 55vw, 60vw) !important; 
+    margin: 12px auto 0 auto !important;
+    padding: 12px !important;
+    border: none !important;
+    box-shadow: none !important;
+    background-color: inherit !important;
+    /* animation: accordionFade 0.3s ease; */
+  }
+
+  .profile-modal.open,
+  .barangay-modal.open {
+    display: block !important;
+  }
+
+  .hover-target {
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    white-space: normal !important;
+  }
+
+/*   .hover-target:hover .profile-modal,
+  .hover-target:hover .barangay-modal {
+    display: none !important;
+  } */
+
+  .profile-modal > div,
+  .barangay-modal > div {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .profile-modal img,
+  .barangay-modal img {
+    width: 60px !important;
+    height: 60px !important;
+  }
+
+  .profile-modal h4,
+  .barangay-modal h4 {
+    font-size: 14px;
+    margin: 0;
+  }
+
+  .profile-modal p,
+  .barangay-modal p {
+    font-size: 12px;
+    margin: 0;
+  }
+}
+
+/* -----------------------------------------------
+ Fade Animation
+------------------------------------------------- */
+/* @keyframes accordionFade {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+ */
+
+
+
+/* CHART */
+.chart-header {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 8px;
+    width: 550px;
+    padding-right: -1px;
+}
+
+.zoom-controls {
+    display: flex;
+    gap: 5px;
+}
+
+.zoom-btn {
+    width: 25px;
+    height: 25px;
+    background: #fff;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 3px;
+    text-align: center;
+    line-height: 22px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.zoom-btn:hover {
+    background: #f0f0f0;
+}
+
+.chart-wrapper {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: relative;
+    cursor: grab;
+}
+
+.chart-wrapper:active {
+    cursor: grabbing;
+}
+
+.chart-scale {
+    transform-origin: top left;
+}
+
+@media (max-width: 768px) {
+    .chart-wrapper {
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+
+    #chart-container {
+        min-width: unset;
+    }
+
+    .chart-header {
+        width: 100%;
+        padding-right: 0;
+    }
+}
+
+/*    EMERGENCY CARD */
+.emergency-wrapper {
+    width: 100%;
+    max-width: 870px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.wp-emergency-card {
+    width: 100%;
+    background: #fff;
+    color: #222;
+    border: 2px solid #e5e7eb;
+    border-top: none;
+    border-radius: 0 0 8px 8px;
+    overflow: hidden;
+    margin-top: 10px;
+
+}
+
+.wp-emergency-card .header {
+    background-color: #0066cc;
+    color: #fff;
+    padding: 12px 15px;
+    font-size: 18px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-transform: uppercase;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.wp-emergency-card .header-icon {
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+}
+
+.wp-emergency-card .list {
+    padding: 8px 12px;
+}
+
+.wp-emergency-card .item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+    background: none;
+    border-bottom: 1px solid #eee;
+}
+
+.wp-emergency-card .item:last-child {
+    border-bottom: none;
+}
+
+.wp-emergency-card .icon {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none !important;
+    border: none !important;
+}
+
+.wp-emergency-card .icon img {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+}
+
+.wp-emergency-card .line {
+    flex: 1;
+    min-width: 0;
+}
+
+.wp-emergency-card .line .number {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.2;
+    word-break: break-word;
+}
+
+.wp-emergency-card .line .sub {
+    display: block;
+    font-size: 13px;
+    color: #6b7280;
+    text-transform: uppercase;
+}
+
+.wp-emergency-card .footer {
+    background-color: #0066cc;
+    color: #fff;
+    padding: 14px 15px;
+    font-size: 12px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.wp-emergency-card .footer img {
+    width: 36px;
+    height: auto;
+    flex-shrink: 0;
+}
+
+.officials-section {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.officials-wrapper {
+    width: 100%;
+    max-width: 870px;
+}
+
+.municipal-officials,
+.emergency-wrapper {
+    margin: 0 auto;
+}
+
+@media (max-width: 480px) {
+    .wp-emergency-card .header {
+        font-size: 16px;
+        gap: 8px;
+    }
+
+    .wp-emergency-card .icon img {
+        width: 28px;
+        height: 28px;
+    }
+
+    .wp-emergency-card .line .number {
+        font-size: 14px;
+    }
+
+    .wp-emergency-card .line .sub {
+        font-size: 11px;
+    }
+
+    .wp-emergency-card .footer {
+        font-size: 11px;
+        gap: 6px;
+    }
+
+    .wp-emergency-card .footer img {
+        width: 28px;
+    }
+}
+</style>
+
+
+<!-- wp:html -->
+<p class="municipality__breadcrumbs">
+    <a href="https://roblesanthony.com/~happyimartph/">Home</a> > <a href="https://roblesanthony.com/~happyimartph/municipalities/">Municipalities</a> > Baras
+  </p>
+  <!-- /wp:html -->
+  
+  <!-- wp:spacer {"height":"35px"} -->
+  <div style="height:35px" aria-hidden="true" class="wp-block-spacer"></div>
+  <!-- /wp:spacer -->
+  
+  <!-- wp:columns -->
+  <div class="wp-block-columns"><!-- wp:column {"width":"25%"} -->
+  <div class="wp-block-column" style="flex-basis:25%"><!-- wp:image {"id":3399,"width":"160px","height":"160px","scale":"cover","sizeSlug":"full","linkDestination":"none","align":"center"} -->
+  <figure class="wp-block-image aligncenter size-full is-resized"><img src="/~happyimartph/wp-content/uploads/2025/08/Baras.png" alt="" class="wp-image-3399" style="object-fit:cover;width:160px;height:160px"/></figure>
+  <!-- /wp:image -->
+  
+  <!-- wp:paragraph {"align":"center"} -->
+  <p class="has-text-align-center"><strong>Baras Official Seal</strong></p>
+  <!-- /wp:paragraph -->
+  
+<!-- wp:table {"align":"center","className":"custom-table"} -->
+<figure class="wp-block-table aligncenter">
+
+  <table class="custom-table has-fixed-layout">
+    <tbody>
+      <tr><td>Founded:</td><td>May 11, 1987</td></tr>
+      <tr><td>Population:</td><td>11,653</td></tr>
+      <tr><td>District:</td><td>Lone District</td></tr>
+      <tr><td>Municipality Class:</td><td>5th</td></tr>
+      <tr><td>Zip Code:</td><td>4803</td></tr>
+      <tr><td>No. of Barangays:</td><td>29</td></tr>
+      <tr><td>Area:</td><td>10,950 hectares</td></tr>
+    </tbody>
+  </table>
+</figure>
+<!-- /wp:table -->
+  
+  <!-- wp:spacer {"height":"11px"} -->
+  <div style="height:11px" aria-hidden="true" class="wp-block-spacer"></div>
+  <!-- /wp:spacer -->
+  
+  <!-- wp:html -->
+  <div class=""></div>
+        <div class="mapouter municipality__map-container">
+            <div class="gmap_canvas">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62023.89681902179!2d124.32602394130029!3d13.68853098891772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a00483aa6ff297%3A0xfdb75f94b6f2ef74!2sBaras%2C%20Catanduanes!5e0!3m2!1sen!2sph!4v1757567709171!5m2!1sen!2sph" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe><a href="https://123movies-to.org"></a><br />
+  <p class="has-text-align-center"><strong>Map of Virac</strong></p>                   
+   <style>
+                    .mapouter {
+                        position: relative;
+                        text-align: right;
+                        height: 300px;
+                        width: 100%;
+                    }
+                </style><a href="https://www.embedgooglemap.net"></a>
+                <style>
+                    .gmap_canvas {
+                        overflow: hidden;
+                        background: none !important;
+                        height: 300px;
+                        width: 100%;
+                    }
+                </style>
+            </div>
+        </div>
+  <!-- /wp:html -->
+  
+  <!-- wp:spacer {"height":"8px"} -->
+  <div style="height:8px" aria-hidden="true" class="wp-block-spacer"></div>
+  <!-- /wp:spacer -->
+  
+  <!-- wp:image {"id":9265,"sizeSlug":"full","linkDestination":"none"} -->
+  <figure class="wp-block-image size-full" id="love-catanduanes"><img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/09/Love-Catanduanes-2.png" alt="" class="wp-image-9265"/></figure>
+  <!-- /wp:image -->
+  
+  <!-- wp:spacer {"height":"7px"} -->
+  <div style="height:7px" aria-hidden="true" class="wp-block-spacer"></div>
+  <!-- /wp:spacer -->
+  
+  <!-- wp:html -->
+  <div class="tourism-gallery">
+  <div class="tourism-container">
+  <div class="tourism-wrapper" id="tourismSlidesBaras">
+  <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/09/Puraran2.jpg" alt="Panganiban">
+  <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/09/Balakay2.jpg" alt="Panganiban">
+  <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/09/Binurong2.jpg">
+  <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/09/MacutanFalls2.jpg" alt="Viga">
+  <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/09/bar-Alon.jpg" alt="Viga">
+  </div>
+  
+  <button class="slide-btn prev">❮</button>
+  <button class="slide-btn next">❯</button>
+  </div>
+  <h3>Baras Featured Places</h3>
+  </div>
+  
+  
+  <script>
+  (function() {
+  let slideIndex = 1;
+  let slideInterval;
+  const slides = document.getElementById('tourismSlidesBaras');
+  const prevBtn = document.querySelector(".tourism-gallery .slide-btn.prev");
+  const nextBtn = document.querySelector(".tourism-gallery .slide-btn.next");
+  
+  function showSlides(n) {
+  const totalSlides = slides.children.length;
+  if (n > totalSlides) { slideIndex = 1; }
+  if (n < 1) { slideIndex = totalSlides; }
+  slides.style.transform = `translateX(-${(slideIndex - 1) * 100}%)`;
+  }
+  
+  function changeSlide(n) {
+  clearInterval(slideInterval);
+  slideIndex += n;
+  showSlides(slideIndex);
+  startAutoSlide();
+  }
+  
+  function startAutoSlide() {
+  slideInterval = setInterval(() => {
+  slideIndex++;
+  showSlides(slideIndex);
+  }, 4500);
+  }
+  
+  document.addEventListener('DOMContentLoaded', function() {
+  showSlides(slideIndex);
+  startAutoSlide();
+  prevBtn.addEventListener("click", () => changeSlide(-1));
+  nextBtn.addEventListener("click", () => changeSlide(1));
+  });
+  })();
+  </script>
+  <!-- /wp:html -->
+  
+  <!-- wp:social-links {"size":"has-small-icon-size","align":"center"} -->
+  <ul class="wp-block-social-links aligncenter has-small-icon-size"><!-- wp:social-link {"url":"https://www.facebook.com/barastourismpromotion","service":"facebook"} /--></ul>
+  <!-- /wp:social-links --></div>
+  <!-- /wp:column -->
+  
+  <!-- wp:column {"width":"50%"} -->
+  <div class="wp-block-column" style="flex-basis:50%"><!-- wp:html -->
+  <div class="cell large-6 municipality__tabs-container">
+  <ul class="tabs" data-tabs="" id="example-tabs">
+    <li class="tabs-title is-active">
+        <a href="#panel1" aria-selected="true" class="municipality__panel-tab">About</a>
+    </li>
+    <li class="tabs-title">
+        <a href="#panel2" class="municipality__panel-tab">Barangays</a>
+    </li>
+    <li class="tabs-title">
+        <a href="#panel3" class="municipality__panel-tab">Previous Officials</a>
+    </li>
+  </ul>
+  <div class="tabs-content" data-tabs-content="example-tabs" style="text-align: justify;">
+    <div class="tabs-panel is-active" id="panel1">
+      <p><strong>Background</strong> </p>
+      <p>The village town then was luxuriant and verdant with “badas” plants. As to what kind of vegetation “badas” was, is a subject of conjuncture, for some believed that it was a kind of bamboo now called “bagacay”. But one common belief is the fact that the Moro raiders and pirates agreed that “badas” was much in demand as materials for building the native huts. Because of its abundance in the area, the town had been called Baras.</p>
+      
+      <p><strong>History</strong> </p>
+      <p>Once called “Badas” during the early Spanish colonization it has now metamorphosed into what are now Baras. The village town then was luxuriant and verdant with “badas” plants. As to what kind of vegetation “badas” was, is a subject of conjuncture, for some believed that it was a kind of bamboo now called “bagacay”. Others believed it to be kind of sturdy tree, but majority believed that it is a wild rattan plant abounding the surrounding mountains.
+  
+  But one common belief is the fact that the Moro raiders agreed that “badas” was in demand as materials for building the native huts, for making spears, a weapon used by the native to repel the raiders and pirates. Because of its abundance in the area, villagers called the place “Cabadasan”, meaning a place where “Badas” thrive. The colonizers however, Hispanized it and so the town was called “BARAS” up to this time.
+  
+  Some elders recall that Baras, centuries back was once s progressive fishing village located over a small mountain projecting towards the sea on the western side of Baras Bay. The poblacion was its cemetery and the cemetery now was its former poblacion site. The old site was chosen because it was an elevated area overlooking the sea. The villagers could easily see approaching pirates that occasionally plundered the sea, giving them ample time to evacuate their families and prepare for the encounter. Excavation in the Church Plaza reveals human remains of evaders. The pirates gone, the villagers later settled in what are now Baras.
+  A splintered group of insurrectos who was facing the advantage of the insurrection taking place in the Southern Tagalog region, braved the rough seas to set a place in the long quest for Philippine Independence in the Island, forced by the gusty Southeast Monsoon wind they finally set anchor in the once rich fishing village called “Cabadasan” posing as fisherman.
+  
+  By befriending the villagers and at the same time working on the growing discontent among the people against the tyrannical rule of Capitan CARLOS MACAPUGAY who was then the town executive, the rebel grouped the men folk of the village to form a fierce fighting bond. Out of this uprising led by Catalino Catakutan, the umbilical cord through which Cabadasan ruled was detached and the town of Baras was born. Capitan Catakutan, with the burning desire for independence, did not live long to set office in the entire province.
+  
+  The Spaniards caught up with him while attending a wedding feast. Tortured and chained by the neck, he was paraded around the poblacion of Bato to serve as warning to the people. He was hanged near the church of Bato. Baras’ original barrios were Tilod, Macutal, Paniquihan and Gigmoto.
+  The early year of Baras as a town was a period of difficult adjustment. In 1905, construction of a semi-permanent Municipal Building called “TRIBUNAL” was started. In 1907 due to financial difficulties the town was reverted to a barrio status. Baras existed as a barrio up to the last days of 1909. Before the end of the year 1909, Civic religious and business leaders of the community demanded from the ruling governing power that Baras be recreated into a municipality. In 1910, Baras, became a town for the second time.
+  
+  From then Baras move on experiencing the test of time as a municipality. In 1927 Camu Street was constructed connecting it to San Lorenzo Street. In 1929 the present light house in barrio Putsan was constructed. In May 1933, the Bato-Baras road was opened to traffic. In 1935 the gold boom reached Baras, an American firm dug sitio Banog in Agban and started what it seemed a flourishing firm, the Agban gold mines.
+  
+  Baras is located on the southeast of the province. On the north it is bounded by the town of Gigmoto, on the west by San Miguel and on the east it is bounded by the Pacific Ocean. Baras is bestowed with about seven rivers/creeks of which drain their way to the sea facing the Pacific Ocean. Spring is abundantly found all over the municipality. With its unexploited environment, unspoiled beaches and simple and affordable resort facilities, Baras is gearing towards the major tourist destination of the province.
+  
+  Abaca production is the major source of income followed by copra and field crops (cassava, camote or sweet potato and other vegetables). Rice production in the municipality is not enough for local consumption due to limited arable land considering the terrain of the place. However some barangays (villages or barrios) are continuously opening new rice fields in the form of rice terraces that could be irrigated by springs in the hillside. Fishing is prosperous only in some barangays and the catch is only enough for the community consumption. Fishing is limited due to the strong pacific waves that confronts majority of the shorelines.
+  
+  The town is peaceful, the crime rate is very low, hospitality is prevalent and expenses are low. Being a predominantly Roman Catholic municipality, the culture of the people is traditional with close knitted social and family structures.
+  
+  </p>
+      
+            
+          <p><strong>LAND AREA</strong></p>
+          <p>The municipality of Baras comprises twenty nine (29) barangays with six (6) urban barangays and twenty thee (23) rural barangays for a total land area of 76.400 square kilometers. Urban barangays have a total land area of only 1.0200 square kilometers or 1.332% made up of Barangays Bagong Sirang, Buenavista, Eastern Poblacion, San Lorenzo, Quezon and Western Poblacion. On the other hand, rural barangays comprise the remaining 75.3800 square kilometers or 96.668% made up of Barangays Abihao, Agban, Batolinao, Benticayan, Caragumihan, Danao, Genitligan, Guisaanan, J.M. Alberto, Macutal, Moning, Nagbarorong, Osmena, Paniquihan, P. Teston, Putsan, Sagrada, Rizal, Puraran, San Miguel, Salvacion, Sta. Maria and Tilod.
+  
+  Barangays with smaller land area are Barangays Bagong Sirang, Buenavista, Eastern Poblacion, San Lorenzo, Quezon, Western Poblacion and Sta. Maria. On the contrary, barangays with the largest land areas are Agban, Benticayan, Genitligan, J.M. Alberto, San Miguel and Tilod.</p>
+  
+  <p><strong>LAND CLASSIFICATION </strong></p>
+          <p>The municipality of Baras comprises twenty nine (29) barangays with six (6) urban barangays and twenty thee (23) rural barangays for a total land area of 76.400 square kilometers. Urban barangays have a total land area of only 1.0200 square kilometers or 1.332% made up of Barangays Bagong Sirang, Buenavista, Eastern Poblacion, San Lorenzo, Quezon and Western Poblacion. On the other hand, rural barangays comprise the remaining 75.3800 square kilometers or 96.668% made up of Barangays Abihao, Agban, Batolinao, Benticayan, Caragumihan, Danao, Genitligan, Guisaanan, J.M. Alberto, Macutal, Moning, Nagbarorong, Osmena, Paniquihan, P. Teston, Putsan, Sagrada, Rizal, Puraran, San Miguel, Salvacion, Sta. Maria and Tilod.
+  
+  Barangays with smaller land area are Barangays Bagong Sirang, Buenavista, Eastern Poblacion, San Lorenzo, Quezon, Western Poblacion and Sta. Maria. On the contrary, barangays with the largest land areas are Agban, Benticayan, Genitligan, J.M. Alberto, San Miguel and Tilod.</p>
+  
+  
+  <p><strong>SOIL CLASSIFICATION</strong></p>
+          <p>The municipality of Baras possesses varying soil types particularly Bantog Clay, Mountain soil, Atimodian Clay, and Luciana Clay. Most dominant soil types are Luciana Clay occupying about 56.1700 square kilometers or 73.590% and mountain soil occupying about 17.2800 square kilometers or 22.620%. The least soil types are Bantog Clay with land area of only about 2.1900 square kilometers or 2.860% and Atimodian Clay with land area of only about 0.7600 square kilometers or 0.930%.</p>
+  
+  
+       </div> 
+  <div class="tabs-panel" id="panel2">
+      <table class="styled-table">
+    <thead>
+       <tr>
+      <th style="text-align: left; padding: 8px; border-bottom: 1px solid #ccc;">
+        Barangay
+      </th>
+      <th style="text-align: center; padding: 8px; border-bottom: 1px solid #ccc;">
+        Fiesta Date
+      </th>
+    </tr>
+     
+    </thead>
+    <tbody>
+    <tr class="barangayRow">
+    <td>
+      <div class="hover-target" style="position: relative; display: inline-block;">
+        Abihao
+        <div class="barangay-modal top-right">
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/BARAS-Agban-J.M-Alberto-Danao-Abihao.png"
+                 style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+            <div style="font-size: 13px; line-height: 1.3;">
+             
+               <div style="text-align:center;">
+                <h4 style="margin: 0; color: #0073aa;">St. Vincent Ferrer</h4>
+          </div>
+              <p style="text-align: justify; font-size: 12px; color: #555;">
+                The barangay celebrates its fiesta in honor of  <b>St. Vincent Ferrer</b>
+                with religious and cultural activities.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </td>
+    <td style="text-align: center;">April 28 - &#8203;29</td>
+  </tr>
+  
+  <tr class="barangayRow">
+      <td>
+        <div class="hover-target" style="position: relative; display: inline-block;">
+         Agban 
+          <div class="barangay-modal top-right">
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/BARAS-Agban-J.M-Alberto-Danao-Abihao.png"
+                   style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+              <div style="font-size: 13px; line-height: 1.3;">
+               
+                 <div style="text-align:center;">
+                  <h4 style="margin: 0; color: #0073aa;">St. Vincent Ferrer</h4>
+            </div>
+                <p style="text-align: justify; font-size: 12px; color: #555;">
+                  The barangay celebrates its fiesta in honor of  <b>Patron Saint Vincent Ferrer</b>
+                  with religious and cultural activities.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </td>
+      <td style="text-align: center;">April 4 - 5</td>
+    </tr>
+  
+    
+  <tr class="barangayRow">
+      <td>
+        <div class="hover-target" style="position: relative; display: inline-block;">
+          Bagong Sirang 
+          <div class="barangay-modal top-right">
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/BARAS-Buenavista-Bagong-Sirang-Osmena-Eastern-Poblacion-Quezon-San-Lorenzo-Wester-Poblacion.png"
+                   style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+              <div style="font-size: 13px; line-height: 1.3;">
+               
+                 <div style="text-align:center;">
+                  <h4 style="margin: 0; color: #0073aa;">San Lorenzo Decon</h4>
+            </div>
+                <p style="text-align: justify; font-size: 12px; color: #555;">
+                  The barangay celebrates its fiesta in honor of  <b>San Lorenzo Decon</b>
+                  with religious and cultural activities.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </td>
+      <td style="text-align: center;">August 9 - 10</td>
+    </tr>
+  
+    
+  <tr class="barangayRow">
+      <td>
+        <div class="hover-target" style="position: relative; display: inline-block;">
+          Benticayan
+          <div class="barangay-modal top-right">
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/BARAS-Benticayan.png"
+                   style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+              <div style="font-size: 13px; line-height: 1.3;">
+               
+                 <div style="text-align:center;">
+                  <h4 style="margin: 0; color: #0073aa;">Senior San Rafael Archangel</h4>
+            </div>
+                <p style="text-align: justify; font-size: 12px; color: #555;">
+                  The barangay celebrates its fiesta in honor of  <b>Patron Saint Senior San Rafael Archangel</b>
+                  with religious and cultural activities.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </td>
+      <td style="text-align: center;">October 23 - 24</td>
+    </tr>
+  
+  
+    
+    <tr class="barangayRow">
+      <td>
+        <div class="hover-target" style="position: relative; display: inline-block;">
+          Buenavista
+          <div class="barangay-modal top-right">
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/BARAS-Buenavista-Bagong-Sirang-Osmena-Eastern-Poblacion-Quezon-San-Lorenzo-Wester-Poblacion.png"
+                   style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+              <div style="font-size: 13px; line-height: 1.3;">
+               
+                 <div style="text-align:center;">
+                  <h4 style="margin: 0; color: #0073aa;">San Lorenzo</h4>
+            </div>
+                <p style="text-align: justify; font-size: 12px; color: #555;">
+                  The barangay celebrates its fiesta in honor of  <b>San Lorenzo</b>
+                  with religious and cultural activities.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </td>
+      <td style="text-align: center;">August 9 - 10</td>
+    </tr>
+  
+    
+    <tr class="barangayRow">
+      <td>
+        <div class="hover-target" style="position: relative; display: inline-block;">
+          Caragumihan
+          <div class="barangay-modal top-right">
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/BARAS-Caragumihan.png"
+                   style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+              <div style="font-size: 13px; line-height: 1.3;">
+               
+                 <div style="text-align:center;">
+                  <h4 style="margin: 0; color: #0073aa;">Our Lady of Rosary</h4>
+            </div>
+                <p style="text-align: justify; font-size: 12px; color: #555;">
+                  The barangay celebrates its fiesta in honor of  <b>Patron Saint Our Lady of Rosary</b>
+                  with religious and cultural activities.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </td>
+      <td style="text-align: center;">May 26 - 27</td>
+    </tr>
+  
+    
+    <tr class="barangayRow">
+      <td>
+        <div class="hover-target" style="position: relative; display: inline-block;">
+          Batolinao
+          <div class="barangay-modal top-right">
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/BARAS-Batolinao.png"
+                   style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+              <div style="font-size: 13px; line-height: 1.3;">
+               
+                 <div style="text-align:center;">
+                  <h4 style="margin: 0; color: #0073aa;">Santa Cruz</h4>
+            </div>
+                <p style="text-align: justify; font-size: 12px; color: #555;">
+                  The barangay celebrates its fiesta in honor of  <b>Santa Cruz</b>
+                  with religious and cultural activities.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </td>
+      <td style="text-align: center;">May 2 - 3</td>
+    </tr>
+  
+  
+    
+    <tr class="barangayRow">
+      <td>
+        <div class="hover-target" style="position: relative; display: inline-block;">
+          Danao
+          <div class="barangay-modal top-right">
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/BARAS-Agban-J.M-Alberto-Danao-Abihao.png"
+                   style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+              <div style="font-size: 13px; line-height: 1.3;">
+               
+                 <div style="text-align:center;">
+                  <h4 style="margin: 0; color: #0073aa;">St. Vincent Ferrer</h4>
+            </div>
+                <p style="text-align: justify; font-size: 12px; color: #555;">
+                  The barangay celebrates its fiesta in honor of  <b>St. Vincent Ferrer</b>
+                  with religious and cultural activities.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </td>
+      <td style="text-align: center;">April 26 - 27</td>
+    </tr>
+  
+  <tr class="barangayRow">
+      <td>
+        <div class="hover-target" style="position: relative; display: inline-block;">
+          Eastern Poblacion
+          <div class="barangay-modal top-right">
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/BARAS-Buenavista-Bagong-Sirang-Osmena-Eastern-Poblacion-Quezon-San-Lorenzo-Wester-Poblacion.png"
+                   style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+              <div style="font-size: 13px; line-height: 1.3;">
+               
+                 <div style="text-align:center;">
+                  <h4 style="margin: 0; color: #0073aa;">San Lorenzo</h4>
+            </div>
+                <p style="text-align: justify; font-size: 12px; color: #555;">
+                  The barangay celebrates its fiesta in honor of  <b>San Lorenzo</b>
+                  with religious and cultural activities.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </td>
+      <td style="text-align: center;">August 9 - 10</td>
+    </tr>
+  
+    
+    <tr class="barangayRow">
+      <td>
+        <div class="hover-target" style="position: relative; display: inline-block;">
+          Sagrada
+          <div class="barangay-modal top-right">
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/BARAS-Sagrada.png"
+                   style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+              <div style="font-size: 13px; line-height: 1.3;">
+               
+                 <div style="text-align:center;">
+                  <h4 style="margin: 0; color: #0073aa;">Sacred Heart  of Jesus</h4>
+            </div>
+                <p style="text-align: justify; font-size: 12px; color: #555;">
+                  The barangay celebrates its fiesta in honor of  <b>Sacred Heart  of Jesus</b>
+                  with religious and cultural activities.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </td>
+      <td style="text-align: center;">May 10 - 11</td>
+    </tr>
+  
+    
+  
+    
+    <tr class="barangayRow">
+      <td>
+        <div class="hover-target" style="position: relative; display: inline-block;">
+          Ginitligan
+          <div class="barangay-modal top-right">
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/BARAS-Ginitligan-Guisaanan-Putsan-Salvacion.png"
+                   style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+              <div style="font-size: 13px; line-height: 1.3;">
+               
+                 <div style="text-align:center;">
+                  <h4 style="margin: 0; color: #0073aa;">Nuestra Señora de Salvación</h4>
+            </div>
+                <p style="text-align: justify; font-size: 12px; color: #555;">
+                  The barangay celebrates its fiesta in honor of  <b>Nuestra Señora de Salvación</b>
+                  with religious and cultural activities.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </td>
+      <td style="text-align: center;">April 20 - 21</td>
+    </tr>
+  
+    
+    
+    <tr class="barangayRow">
+      <td>
+        <div class="hover-target" style="position: relative; display: inline-block;">
+          Guisaanan   
+          <div class="barangay-modal top-right">
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/BARAS-Ginitligan-Guisaanan-Putsan-Salvacion.png"
+                   style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+              <div style="font-size: 13px; line-height: 1.3;">
+               
+                 <div style="text-align:center;">
+                  <h4 style="margin: 0; color: #0073aa;">Nuestra Señora de Salvación</h4>
+            </div>
+                <p style="text-align: justify; font-size: 12px; color: #555;">
+                  The barangay celebrates its fiesta in honor of  <b>Patron Saint Nuestra Señora de Salvación</b>
+                  with religious and cultural activities.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </td>
+      <td style="text-align: center;">May 21 - 22</td>
+    </tr>
+  
+    
+    <tr class="barangayRow">
+      <td>
+        <div class="hover-target" style="position: relative; display: inline-block;">
+          J.M Alberto
+          <div class="barangay-modal top-right">
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/BARAS-Agban-J.M-Alberto-Danao-Abihao.png"
+                   style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+              <div style="font-size: 13px; line-height: 1.3;">
+               
+                 <div style="text-align:center;">
+                  <h4 style="margin: 0; color: #0073aa;">St. Vincent Ferrer</h4>
+            </div>
+                <p style="text-align: justify; font-size: 12px; color: #555;">
+                  The barangay celebrates its fiesta in honor of  <b>Patron Saint Vincent Ferrer</b>
+                  with religious and cultural activities.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </td>
+      <td style="text-align: center;">April 4 - 5</td>
+    </tr>
+  
+  
+    
+    <tr class="barangayRow">
+      <td>
+        <div class="hover-target" style="position: relative; display: inline-block;">
+          Macutal 
+          <div class="barangay-modal top-right">
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/BARAS-Macutal.png"
+                   style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+              <div style="font-size: 13px; line-height: 1.3;">
+               
+                 <div style="text-align:center;">
+                  <h4 style="margin: 0; color: #0073aa;">Del Remedios</h4>
+            </div>
+                <p style="text-align: justify; font-size: 12px; color: #555;">
+                  The barangay celebrates its fiesta in honor of  <b>Del Remedios</b>
+                  with religious and cultural activities.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </td>
+      <td style="text-align: center;">May 3 - 4</td>
+    </tr>
+  
+    
+  
+    
+    <tr class="barangayRow">
+      <td>
+        <div class="hover-target" style="position: relative; display: inline-block;">
+          Moning     
+          <div class="barangay-modal top-right">
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/BARAS-Moning.png"
+                   style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+              <div style="font-size: 13px; line-height: 1.3;">
+               
+                 <div style="text-align:center;">
+                  <h4 style="margin: 0; color: #0073aa;">Sagrada Familia</h4>
+            </div>
+                <p style="text-align: justify; font-size: 12px; color: #555;">
+                  The barangay celebrates its fiesta in honor of  <b>Sagrada Familia</b>
+                  with religious and cultural activities.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </td>
+      <td style="text-align: center;">May 11 - 12</td>
+    </tr>
+  
+    
+    
+    <tr class="barangayRow">
+      <td>
+        <div class="hover-target" style="position: relative; display: inline-block;">
+          Nagbarorong         
+          <div class="barangay-modal top-right">
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/BARAS-Nagbarorong.png"
+                   style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+              <div style="font-size: 13px; line-height: 1.3;">
+               
+                 <div style="text-align:center;">
+                  <h4 style="margin: 0; color: #0073aa;">Our Lady of Fatima</h4>
+            </div>
+                <p style="text-align: justify; font-size: 12px; color: #555;">
+                  The barangay celebrates its fiesta in honor of  <b>Our Lady of Fatima</b>
+                  with religious and cultural activities.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </td>
+      <td style="text-align: center;">May 12 - 13</td>
+    </tr>
+  
+    
+    
+    <tr class="barangayRow">
+      <td>
+        <div class="hover-target" style="position: relative; display: inline-block;">
+          Osmeña        
+          <div class="barangay-modal top-right">
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/BARAS-Buenavista-Bagong-Sirang-Osmena-Eastern-Poblacion-Quezon-San-Lorenzo-Wester-Poblacion.png"
+                   style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+              <div style="font-size: 13px; line-height: 1.3;">
+               
+                 <div style="text-align:center;">
+                  <h4 style="margin: 0; color: #0073aa;">San Lorenzo</h4>
+            </div>
+                <p style="text-align: justify; font-size: 12px; color: #555;">
+                  The barangay celebrates its fiesta in honor of  <b>San Lorenzo</b>
+                  with religious and cultural activities.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </td>
+      <td style="text-align: center;">August 9 - 10</td>
+    </tr>
+  
+  
+    
+    <tr class="barangayRow">
+      <td>
+        <div class="hover-target" style="position: relative; display: inline-block;">
+          P. Teston     
+          <div class="barangay-modal top-right">
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/BARAS-P.-Teston.png"
+                   style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+              <div style="font-size: 13px; line-height: 1.3;">
+               
+                 <div style="text-align:center;">
+                  <h4 style="margin: 0; color: #0073aa;">Black Nazareno</h4>
+            </div>
+                <p style="text-align: justify; font-size: 12px; color: #555;">
+                  The barangay celebrates its fiesta in honor of  <b>Black Nazareno</b>
+                  with religious and cultural activities.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </td>
+      <td style="text-align: center;">January 8 - 9</td>
+    </tr>
+  
+    
+    <tr class="barangayRow">
+      <td>
+        <div class="hover-target" style="position: relative; display: inline-block;">
+          Paniquihan  
+          <div class="barangay-modal top-right">
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/BARAS-Paniquihan.png"
+                   style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+              <div style="font-size: 13px; line-height: 1.3;">
+               
+                 <div style="text-align:center;">
+                  <h4 style="margin: 0; color: #0073aa;">San Roque
+  
+                  </h4>
+            </div>
+                <p style="text-align: justify; font-size: 12px; color: #555;">
+                  The barangay celebrates its fiesta in honor of  <b>San Roque</b>
+                  with religious and cultural activities.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </td>
+      <td style="text-align: center;">May 15 - 16</td>
+    </tr>
+  
+  
+    
+    <tr class="barangayRow">
+      <td>
+        <div class="hover-target" style="position: relative; display: inline-block;">
+          Puraran
+          <div class="barangay-modal top-right">
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/BARAS-Puraran.png"
+                   style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+              <div style="font-size: 13px; line-height: 1.3;">
+               
+                 <div style="text-align:center;">
+                  <h4 style="margin: 0; color: #0073aa;">Senior Santo Nino</h4>
+            </div>
+                <p style="text-align: justify; font-size: 12px; color: #555;">
+                  The barangay celebrates its fiesta in honor of  <b>Patron Saint Senior Santo Nino</b>
+                  with religious and cultural activities.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </td>
+      <td style="text-align: center;">May 8 - 9</td>
+    </tr>
+  
+    
+    
+    <tr class="barangayRow">
+      <td>
+        <div class="hover-target" style="position: relative; display: inline-block;">
+          Putsan
+          <div class=barangay-modal top-right">
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/BARAS-Ginitligan-Guisaanan-Putsan-Salvacion.png"
+                   style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+              <div style="font-size: 13px; line-height: 1.3;">
+               
+                 <div style="text-align:center;">
+                  <h4 style="margin: 0; color: #0073aa;">Nuestra Señora De Salvación</h4>
+            </div>
+                <p style="text-align: justify; font-size: 12px; color: #555;">
+                  The barangay celebrates its fiesta in honor of  <b>Nuestra Señora De Salvación</b>
+                  with religious and cultural activities.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </td>
+      <td style="text-align: center;">May 5 - 6</td>
+    </tr>
+  
+    
+    
+    <tr class="barangayRow">
+      <td>
+        <div class="hover-target" style="position: relative; display: inline-block;">
+          Quezon
+          <div class="barangay-modal top-right">
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/BARAS-Buenavista-Bagong-Sirang-Osmena-Eastern-Poblacion-Quezon-San-Lorenzo-Wester-Poblacion.png"
+                   style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+              <div style="font-size: 13px; line-height: 1.3;">
+               
+                 <div style="text-align:center;">
+                  <h4 style="margin: 0; color: #0073aa;">San Lorenzo</h4>
+            </div>
+                <p style="text-align: justify; font-size: 12px; color: #555;">
+                  The barangay celebrates its fiesta in honor of  <b>San Lorenzo</b>
+                  with religious and cultural activities.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </td>
+      <td style="text-align: center;">August 9 - 10</td>
+    </tr>
+  
+    
+    
+    
+    <tr class="barangayRow">
+      <td>
+        <div class="hover-target" style="position: relative; display: inline-block;">
+          Rizal
+          <div class="barangay-modal top-right">
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/BARAS-Rizal.png"
+                   style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+              <div style="font-size: 13px; line-height: 1.3;">
+               
+                 <div style="text-align:center;">
+                  <h4 style="margin: 0; color: #0073aa;">Saint Joseph</h4>
+            </div>
+                <p style="text-align: justify; font-size: 12px; color: #555;">
+                  The barangay celebrates its fiesta in honor of  <b>Saint Joseph</b>
+                  with religious and cultural activities.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </td>
+      <td style="text-align: center;">May 1 - 2</td>
+    </tr>
+  
+    
+    
+    <tr class="barangayRow">
+      <td>
+        <div class="hover-target" style="position: relative; display: inline-block;">
+          Salvacion 
+          <div class="barangay-modal top-right">
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/BARAS-Ginitligan-Guisaanan-Putsan-Salvacion.png"
+                   style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+              <div style="font-size: 13px; line-height: 1.3;">
+               
+                 <div style="text-align:center;">
+                  <h4 style="margin: 0; color: #0073aa;">Nuestra Señora De Salvación</h4>
+            </div>
+                <p style="text-align: justify; font-size: 12px; color: #555;">
+                  The barangay celebrates its fiesta in honor of  <b>Nuestra Señora De Salvación</b>
+                  with religious and cultural activities.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </td>
+      <td style="text-align: center;">May 9 - 10</td>
+    </tr>
+  
+    
+    
+    
+    <tr class="barangayRow">
+      <td>
+        <div class="hover-target" style="position: relative; display: inline-block;">
+          San Lorenzo
+          <div class="barangay-modal top-right">
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/BARAS-Buenavista-Bagong-Sirang-Osmena-Eastern-Poblacion-Quezon-San-Lorenzo-Wester-Poblacion.png"
+                   style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+              <div style="font-size: 13px; line-height: 1.3;">
+               
+                 <div style="text-align:center;">
+                  <h4 style="margin: 0; color: #0073aa;">San Lorenzo </h4>
+            </div>
+                <p style="text-align: justify; font-size: 12px; color: #555;">
+                  The barangay celebrates its fiesta in honor of  <b>San Lorenzo </b>
+                  with religious and cultural activities.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </td>
+      <td style="text-align: center;">August 9 - 10</td>
+    </tr>
+  
+    
+    
+    
+    <tr class="barangayRow">
+      <td>
+        <div class="hover-target" style="position: relative; display: inline-block;">
+          San Miguel
+          <div class="barangay-modal top-right">
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/BARAS-San-Miguel.png"
+                   style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+              <div style="font-size: 13px; line-height: 1.3;">
+               
+                 <div style="text-align:center;">
+                  <h4 style="margin: 0; color: #0073aa;">Senior San Miguel</h4>
+            </div>
+                <p style="text-align: justify; font-size: 12px; color: #555;">
+                  The barangay celebrates its fiesta in honor of  <b>Senior San Miguel</b>
+                  with religious and cultural activities.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </td>
+      <td style="text-align: center;">May 7 - 8</td>
+    </tr>
+  
+    
+    <tr class="barangayRow">
+      <td>
+        <div class="hover-target" style="position: relative; display: inline-block;">
+          Santa Maria
+          <div class="barangay-modal top-right">
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/BARAS-Santa-Maria.png"
+                   style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+              <div style="font-size: 13px; line-height: 1.3;">
+               
+                 <div style="text-align:center;">
+                  <h4 style="margin: 0; color: #0073aa;">Santa Maria</h4>
+            </div>
+                <p style="text-align: justify; font-size: 12px; color: #555;">
+                  The barangay celebrates its fiesta in honor of  <b>Santa Maria</b>
+                  with religious and cultural activities.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </td>
+      <td style="text-align: center;">May 17 - 18</td>
+    </tr>
+  
+    
+    
+    <tr class="barangayRow">
+      <td>
+        <div class="hover-target" style="position: relative; display: inline-block;">
+          Tilod
+          <div class="barangay-modal top-right">
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/BARAS-Tilod.png"
+                   style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+              <div style="font-size: 13px; line-height: 1.3;">
+               
+                 <div style="text-align:center;">
+                  <h4 style="margin: 0; color: #0073aa;">St. Joseph Protector of Families </h4>
+            </div>
+                <p style="text-align: justify; font-size: 12px; color: #555;">
+                  The barangay celebrates its fiesta in honor of  <b>Patron Saint Joseph Protector of Families </b>
+                  with religious and cultural activities.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </td>
+      <td style="text-align: center;">May 19 - 20</td>
+    </tr>
+  
+    
+    <tr class="barangayRow">
+      <td>
+        <div class="hover-target" style="position: relative; display: inline-block;">
+          Wester Poblacion
+          <div class="barangay-modal top-right">
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/BARAS-Buenavista-Bagong-Sirang-Osmena-Eastern-Poblacion-Quezon-San-Lorenzo-Wester-Poblacion.png"
+                   style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+              <div style="font-size: 13px; line-height: 1.3;">
+               
+                 <div style="text-align:center;">
+                  <h4 style="margin: 0; color: #0073aa;">San Lorenzo</h4>
+            </div>
+                <p style="text-align: justify; font-size: 12px; color: #555;">
+                  The barangay celebrates its fiesta in honor of  <b>San Lorenzo</b>
+                  with religious and cultural activities.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </td>
+      <td style="text-align: center;">August  9 - 10</td>
+    </tr>
+  
+  
+  
+  </tbody>
+  </table>
+  
+  
+  <div class="pagination-wrapper" style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
+  <p id="barangayPageInfo" style="margin: 0; font-weight: bold; font-size: 14px;">This is page 1 out of X</p>
+  <div id="barangayPagination" class="pagination" style="display: flex; gap: 5px;"></div>
+  </div>
+  </div>
+  
+  <script>
+document.addEventListener("DOMContentLoaded", () => {
+  const TOUCH_BREAKPOINT = 782; 
+  const MODAL_SELECTORS = [".barangay-modal", ".profile-modal"];
+  const HOVER_TARGET_SELECTOR = ".hover-target";
+  let initialized = new WeakSet();
+
+  const isDesktopView = () => window.innerWidth > TOUCH_BREAKPOINT;
+
+  function closeAllAccordions() {
+    MODAL_SELECTORS.forEach(sel => {
+      document.querySelectorAll(sel + ".open").forEach(m => m.classList.remove("open"));
+    });
+  }
+
+  function removeDesktopVisible() {
+    MODAL_SELECTORS.forEach(sel => {
+      document.querySelectorAll(sel + ".visible-desktop").forEach(m => m.classList.remove("visible-desktop"));
+    });
+  }
+
+  function attachToTarget(target) {
+    if (initialized.has(target)) return;
+    initialized.add(target);
+
+    const modal = MODAL_SELECTORS.map(s => target.querySelector(s)).find(Boolean);
+    if (!modal) return;
+
+    target.addEventListener("pointerenter", (e) => {
+      if (isDesktopView()) {
+        // ensure other desktop-only visible modals are cleared for cleanliness
+        removeDesktopVisible();
+        modal.classList.add("visible-desktop");
+      }
+    });
+
+    target.addEventListener("pointerleave", (e) => {
+      if (isDesktopView()) {
+        modal.classList.remove("visible-desktop");
+      }
+    });
+
+    target.addEventListener("click", (e) => {
+      if (!isDesktopView()) {
+        // prevent the document click handler from immediately closing it
+        e.stopPropagation();
+        const wasOpen = modal.classList.contains("open");
+
+        closeAllAccordions();
+
+        if (!wasOpen) {
+          modal.classList.add("open");
+          modal.classList.remove("visible-desktop");
+        }
+      }
+    });
+
+    modal.addEventListener("click", (e) => {
+      e.stopPropagation();
+    });
+  }
+
+  function setupAllTargets() {
+    document.querySelectorAll(HOVER_TARGET_SELECTOR).forEach(attachToTarget);
+  }
+
+  document.addEventListener("click", () => {
+    if (!isDesktopView()) closeAllAccordions();
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      removeDesktopVisible();
+      closeAllAccordions();
+    }
+  });
+
+  let resizeTimer = null;
+  window.addEventListener("resize", () => {
+    if (resizeTimer) clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+      removeDesktopVisible();
+      if (isDesktopView()) closeAllAccordions();
+
+      setupAllTargets();
+    }, 120);
+  });
+
+  setupAllTargets();
+});
+</script>
+
+  <script>
+  (function(){
+  const rowsPerPage = 24;
+  let currentPage = 1;
+  
+  function updateBarangayTable() {
+  const rows = document.querySelectorAll("#panel2 .barangayRow");
+  const totalPages = Math.ceil(rows.length / rowsPerPage);
+  
+  rows.forEach((row, index) => {
+  row.style.display = (
+  index >= (currentPage - 1) * rowsPerPage &&
+  index < currentPage * rowsPerPage
+  ) ? '' : 'none';
+  });
+  
+  renderPagination(totalPages);
+  }
+  
+  function changeBarangayPage(page) {
+  const rows = document.querySelectorAll("#panel2 .barangayRow");
+  const totalPages = Math.ceil(rows.length / rowsPerPage);
+  
+  if (page < 1) page = 1;
+  if (page > totalPages) page = totalPages;
+  
+  currentPage = page;
+  updateBarangayTable();
+  }
+  
+  function renderPagination(totalPages) {
+  document.getElementById("barangayPageInfo").textContent = `This is page ${currentPage} out of ${totalPages}`;
+  
+  const container = document.getElementById("barangayPagination");
+  container.innerHTML = "";
+  
+  const prevBtn = document.createElement("button");
+  prevBtn.textContent = "<< Prev";
+  prevBtn.disabled = currentPage === 1;
+  if (currentPage === 1) prevBtn.classList.add("disabled");
+  prevBtn.onclick = () => changeBarangayPage(currentPage - 1);
+  container.appendChild(prevBtn);
+  
+  const maxPagesToShow = 7;
+  let startPage = 1;
+  let endPage = totalPages;
+  
+  if (totalPages > maxPagesToShow) {
+  if (currentPage <= 4) {
+  endPage = 5;
+  } else if (currentPage >= totalPages - 3) {
+  startPage = totalPages - 4;
+  } else {
+  startPage = currentPage - 2;
+  endPage = currentPage + 2;
+  }
+  }
+  
+  if (startPage > 1) {
+  addPageButton(container, 1);
+  if (startPage > 2) {
+  addEllipsis(container);
+  }
+  }
+  
+  for (let i = startPage; i <= endPage; i++) {
+  addPageButton(container, i);
+  }
+  
+  if (endPage < totalPages) {
+  if (endPage < totalPages - 1) {
+  addEllipsis(container);
+  }
+  addPageButton(container, totalPages);
+  }
+  
+  const nextBtn = document.createElement("button");
+  nextBtn.textContent = "Next >>";
+  nextBtn.disabled = currentPage === totalPages;
+  if (currentPage === totalPages) nextBtn.classList.add("disabled");
+  nextBtn.onclick = () => changeBarangayPage(currentPage + 1);
+  container.appendChild(nextBtn);
+  }
+  
+  function addPageButton(container, pageNumber) {
+  const btn = document.createElement("button");
+  btn.textContent = pageNumber;
+  if (currentPage === pageNumber) {
+  btn.classList.add("active");
+  }
+  btn.onclick = () => changeBarangayPage(pageNumber);
+  container.appendChild(btn);
+  }
+  
+  function addEllipsis(container) {
+  const ellipsis = document.createElement("span");
+  ellipsis.textContent = "...";
+  ellipsis.className = "ellipsis";
+  container.appendChild(ellipsis);
+  }
+  
+  updateBarangayTable();
+  })();
+  </script>
+
+  
+  <div class="tabs-panel" id="panel3">
+  
+  
+      <h4 style="margin-top: 0;">Mayors</h4>
+  
+      <div id="mayorTableContainer" style="position: relative;">
+          <table id="mayorTable"
+              style="width: 100%; border-collapse: collapse; font-size: 14px; margin-bottom: 20px;">
+              <thead>
+                  <tr style="background-color: #f1f1f1;">
+                      <th class="sortable" style="text-align: left; padding: 8px; border-bottom: 1px solid #ccc;"
+                          data-column="name" data-type="string">
+                          Name <span class="sort-arrow"></span>
+                      </th>
+                      <th class="sortable desc"
+                          style="text-align: center; padding: 8px; border-bottom: 1px solid #ccc;"
+                          data-column="termStart" data-type="number">
+                          Term Start<span class="sort-arrow"></span>
+                      </th>
+  
+                      <th class="sortable"
+                          style="text-align: center; padding: 8px; border-bottom: 1px solid #ccc;"
+                          data-column="termEnd" data-type="number">
+                          Term End <span class="sort-arrow"></span>
+                      </th>
+                  </tr>
+              </thead>
+              <tbody id="mayorTableBody">
+                  <tr class="mayorRow">
+                      <td
+                          style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                          <div class="hover-target" style="position: relative; display: inline-block;">
+                              Mariano Teologo
+                              <div class="profile-modal top-right">
+                                  <div style="display: flex; align-items: center; gap: 10px;">
+                                    <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/Mayor-Border-male.png"
+                                    style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                      <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                          <h4 style="margin: 0;">Mariano Teologo</h4>
+                                          <p style="text-align: justify;">Looking back on the past year, I am
+                                              proud of the progress we’ve made together.</p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1897</td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1898</td>
+                  </tr>
+                  <tr class="mayorRow">
+                      <td
+                          style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                          <div class="hover-target" style="position: relative; display: inline-block;">
+                              Vicente Guerrero
+                              <div class="profile-modal top-right">
+  
+  
+                                  <div style="display: flex; align-items: center; gap: 10px;">
+                                <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/Mayor-Border-male.png"
+                                style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                      <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                          <h4 style="margin: 0;">Vicente Guerrero</h4>
+                                          <p style="text-align: justify;">Looking back on the past year, I am
+                                              proud of the progress we’ve made together.</p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1899</td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1900</td>
+                  </tr>
+                  <tr class="mayorRow">
+                      <td
+                          style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                          <div class="hover-target" style="position: relative; display: inline-block;">
+                              Jose Patrocinio Rodulfo
+                              <div class="profile-modal top-right">
+                               
+                                  <div style="display: flex; align-items: center; gap: 10px;">
+                                    <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/Mayor-Border-male.png"
+                                    style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+      
+                                      <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                          <h4 style="margin: 0;">Jose Patrocinio Rodulfo</h4>
+                                          <p style="text-align: justify;">Looking back on the past year, I am
+                                              proud of the progress we’ve made together.</p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1901</td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1903</td>
+                  </tr>
+                  <tr class="mayorRow">
+                      <td
+                          style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                          <div class="hover-target" style="position: relative; display: inline-block;">
+                              Quirico Arcilla
+                              <div class="profile-modal top-right">
+                                
+  
+                                  <div style="display: flex; align-items: center; gap: 10px;">
+                                    <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/Mayor-Border-male.png"
+                                style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                      <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                          <h4 style="margin: 0;">Quirico Arcilla</h4>
+                                          <p style="text-align: justify;">Looking back on the past year, I am
+                                              proud of the progress we’ve made together.</p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1904</td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1905</td>
+                  </tr>
+                  <tr class="mayorRow">
+                      <td
+                          style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                          <div class="hover-target" style="position: relative; display: inline-block;">
+                              Alvaro Vergara
+                              <div class="profile-modal top-right">
+                                
+  
+                                  <div style="display: flex; align-items: center; gap: 10px;">
+                                    <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/Mayor-Border-male.png"
+                                style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                      <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                          <h4 style="margin: 0;">Alvaro Vergara</h4>
+                                          <p style="text-align: justify;">Looking back on the past year, I am
+                                              proud of the progress we’ve made together.</p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1906</td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1906</td>
+                  </tr>
+                  <tr class="mayorRow">
+                      <td
+                          style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                          <div class="hover-target" style="position: relative; display: inline-block;">
+                              Raymundo Tanael
+                              <div class="profile-modal top-right">
+                               
+  
+                                  <div style="display: flex; align-items: center; gap: 10px;">
+                                    <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/Mayor-Border-male.png"
+                                    style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                      <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                          <h4 style="margin: 0;">Raymundo Tanael</h4>
+                                          <p style="text-align: justify;">Looking back on the past year, I am
+                                              proud of the progress we’ve made together.</p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1907</td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1907</td>
+                  </tr>
+                  <tr class="mayorRow">
+                      <td
+                          style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                          <div class="hover-target" style="position: relative; display: inline-block;">
+                              Agustin Tanael
+                              <div class="profile-modal top-right">
+                               
+  
+                                  <div style="display: flex; align-items: center; gap: 10px;">
+                                    <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/Mayor-Border-male.png"
+                                    style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                      <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                          <h4 style="margin: 0;">Agustin Tanael</h4>
+                                          <p style="text-align: justify;">Looking back on the past year, I am
+                                              proud of the progress we’ve made together.</p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1907</td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1907</td>
+                  </tr>
+                  <tr class="mayorRow">
+                      <td
+                          style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                          <div class="hover-target" style="position: relative; display: inline-block;">
+                              Felix Teologo
+                              <div class="profile-modal top-right">
+                               
+  
+                                  <div style="display: flex; align-items: center; gap: 10px;">
+                                    <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/Mayor-Border-male.png"
+                                    style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                      <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                          <h4 style="margin: 0;">Felix Teologo</h4>
+                                          <p style="text-align: justify;">Looking back on the past year, I am
+                                              proud of the progress we’ve made together.</p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1908</td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1908</td>
+                  </tr>
+                  <tr class="mayorRow">
+                      <td
+                          style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                          <div class="hover-target" style="position: relative; display: inline-block;">
+                              Lucas Arcilla
+                              <div class="profile-modal top-right">
+                                
+                                  <div style="display: flex; align-items: center; gap: 10px;">
+                                    <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/Mayor-Border-male.png"
+                                style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+  
+                                      <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                          <h4 style="margin: 0;">Lucas Arcilla</h4>
+                                          <p style="text-align: justify;">Looking back on the past year, I am
+                                              proud of the progress we’ve made together.</p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1908</td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1908</td>
+                  </tr>
+                  <tr class="mayorRow">
+                      <td
+                          style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                          <div class="hover-target" style="position: relative; display: inline-block;">
+                              Catalino Guerrero
+                              <div class="profile-modal top-right">
+                               
+  
+                                  <div style="display: flex; align-items: center; gap: 10px;">
+                                    <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/Mayor-Border-male.png"
+                                    style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                      <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                          <h4 style="margin: 0;">Catalino Guerrero</h4>
+                                          <p style="text-align: justify;">Looking back on the past year, I am
+                                              proud of the progress we’ve made together.</p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1909</td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1909</td>
+                  </tr>
+                  <tr class="mayorRow">
+                      <td
+                          style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                          <div class="hover-target" style="position: relative; display: inline-block;">
+                              Quirico Arcilla
+                              <div class="profile-modal top-right">
+                               
+  
+                                  <div style="display: flex; align-items: center; gap: 10px;">
+                                    <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/Mayor-Border-male.png"
+                                    style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                      <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                          <h4 style="margin: 0;">Quirico Arcilla</h4>
+                                          <p style="text-align: justify;">Looking back on the past year, I am
+                                              proud of the progress we’ve made together.</p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1910</td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1911</td>
+                  </tr>
+                  <tr class="mayorRow">
+                      <td
+                          style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                          <div class="hover-target" style="position: relative; display: inline-block;">
+                              Alvaro Vergara
+                              <div class="profile-modal top-right">
+                                
+                                  <div style="display: flex; align-items: center; gap: 10px;">
+                                    <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/Mayor-Border-male.png"
+                                style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+  
+                                      <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                          <h4 style="margin: 0;">Alvaro Vergara</h4>
+                                          <p style="text-align: justify;">Looking back on the past year, I am
+                                              proud of the progress we’ve made together.</p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1912</td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1913</td>
+                  </tr>
+                  <tr class="mayorRow">
+                      <td
+                          style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                          <div class="hover-target" style="position: relative; display: inline-block;">
+                              Juan Pablo
+                              <div class="profile-modal top-right">
+                                
+  
+                                  <div style="display: flex; align-items: center; gap: 10px;">
+                                    <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/Mayor-Border-male.png"
+                                style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                      <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                          <h4 style="margin: 0;">Juan Pablo</h4>
+                                          <p style="text-align: justify;">Looking back on the past year, I am
+                                              proud of the progress we’ve made together.</p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1914</td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1915</td>
+                  </tr>
+                  <tr class="mayorRow">
+                      <td
+                          style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                          <div class="hover-target" style="position: relative; display: inline-block;">
+                              Pedro Vergara
+                              <div class="profile-modal top-right">
+                                
+  
+                                  <div style="display: flex; align-items: center; gap: 10px;">
+                                    <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/Mayor-Border-male.png"
+                                style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                      <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                          <h4 style="margin: 0;">Pedro Vergara</h4>
+                                          <p style="text-align: justify;">Looking back on the past year, I am
+                                              proud of the progress we’ve made together.</p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1916</td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1917</td>
+                  </tr>
+                  <tr class="mayorRow">
+                      <td
+                          style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                          <div class="hover-target" style="position: relative; display: inline-block;">
+                              Juan Pablo
+                              <div class="profile-modal top-right">
+                               
+                                  <div style="display: flex; align-items: center; gap: 10px;">
+                                    <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/Mayor-Border-male.png"
+                                    style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+      
+                                      <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                          <h4 style="margin: 0;">Juan Pablo</h4>
+                                          <p style="text-align: justify;">Looking back on the past year, I am
+                                              proud of the progress we’ve made together.</p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1918</td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1919</td>
+                  </tr>
+                  <tr class="mayorRow">
+                      <td
+                          style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                          <div class="hover-target" style="position: relative; display: inline-block;">
+                              Cristobal Geurrero
+                              <div class="profile-modal top-right">
+                                
+                                  <div style="display: flex; align-items: center; gap: 10px;">
+                                    <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/Mayor-Border-male.png"
+                                style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+  
+                                      <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                          <h4 style="margin: 0;">Cristobal Geurrero</h4>
+                                          <p style="text-align: justify;">Looking back on the past year, I am
+                                              proud of the progress we’ve made together.</p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1920</td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1921</td>
+                  </tr>
+                  <tr class="mayorRow">
+                      <td
+                          style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                          <div class="hover-target" style="position: relative; display: inline-block;">
+                              Pablo Tariman
+                              <div class="profile-modal top-right">
+                                
+  
+                                  <div style="display: flex; align-items: center; gap: 10px;">
+                                    <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/Mayor-Border-male.png"
+                                style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                      <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                          <h4 style="margin: 0;">Pablo Tariman/h4>
+                                          <p style="text-align: justify;">Looking back on the past year, I am
+                                              proud of the progress we’ve made together.</p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1922</td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1923</td>
+                  </tr>
+                  <tr class="mayorRow">
+                      <td
+                          style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                          <div class="hover-target" style="position: relative; display: inline-block;">
+                              Victoriano Tanael
+                              <div class="profile-modal top-right">
+                               
+  
+                                  <div style="display: flex; align-items: center; gap: 10px;">
+                                    <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/Mayor-Border-male.png"
+                                    style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                      <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                          <h4 style="margin: 0;">Victoriano Tanael</h4>
+                                          <p style="text-align: justify;">Looking back on the past year, I am
+                                              proud of the progress we’ve made together.</p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1923</td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1924</td>
+                  </tr>
+                  <tr class="mayorRow">
+                      <td
+                          style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                          <div class="hover-target" style="position: relative; display: inline-block;">
+                              Martin Toledana
+                              <div class="profile-modal top-right">
+                            
+                                  <div style="display: flex; align-items: center; gap: 10px;">
+                                    <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/Mayor-Border-male.png"
+                                    style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+      
+                                      <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                          <h4 style="margin: 0;">Martin Toledana</h4>
+                                          <p style="text-align: justify;">Looking back on the past year, I am
+                                              proud of the progress we’ve made together.</p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1924</td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1925</td>
+                  </tr>
+                  <tr class="mayorRow">
+                      <td
+                          style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                          <div class="hover-target" style="position: relative; display: inline-block;">
+                              Antonio Tulay
+                              <div class="profile-modal top-right">
+                                
+                                  <div style="display: flex; align-items: center; gap: 10px;">
+                                    <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/Mayor-Border-male.png"
+                                style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+  
+                                      <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                          <h4 style="margin: 0;">Antonio Tulay</h4>
+                                          <p style="text-align: justify;">Looking back on the past year, I am
+                                              proud of the progress we’ve made together.</p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1925</td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1926</td>
+                  </tr>
+                  <tr class="mayorRow">
+                      <td
+                          style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                          <div class="hover-target" style="position: relative; display: inline-block;">
+                              Flaviano Camu-
+                              <div class="profile-modal top-right">
+                                
+  
+                                  <div style="display: flex; align-items: center; gap: 10px;">
+                                    <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/Mayor-Border-male.png"
+                                style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                      <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                          <h4 style="margin: 0;">Flaviano Camu-</h4>
+                                          <p style="text-align: justify;">Looking back on the past year, I am
+                                              proud of the progress we’ve made together.</p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1926</td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1928</td>
+                  </tr>
+                  <tr class="mayorRow">
+                      <td
+                          style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                          <div class="hover-target" style="position: relative; display: inline-block;">
+                              Roman Rodulfo
+                              <div class="profile-modal top-right">
+                              
+                                  <div style="display: flex; align-items: center; gap: 10px;">
+                                    <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/Mayor-Border-male.png"
+                                    style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+      
+                                      <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                          <h4 style="margin: 0;">Roman Rodulfo</h4>
+                                          <p style="text-align: justify;">Looking back on the past year, I am
+                                              proud of the progress we’ve made together.</p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1928</td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1930</td>
+                  </tr>
+                  <tr class="mayorRow">
+                      <td
+                          style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                          <div class="hover-target" style="position: relative; display: inline-block;">
+                              Martin Toledana
+                              <div class="profile-modal top-right">
+                                
+  
+                                  <div style="display: flex; align-items: center; gap: 10px;">
+                                    <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/Mayor-Border-male.png"
+                                style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                      <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                          <h4 style="margin: 0;">Martin Toledana</h4>
+                                          <p style="text-align: justify;">Looking back on the past year, I am
+                                              proud of the progress we’ve made together.</p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1930</td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1931</td>
+                  </tr>
+                  <tr class="mayorRow">
+                      <td
+                          style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                          <div class="hover-target" style="position: relative; display: inline-block;">
+                              Honwario Dayawon
+                              <div class="profile-modal top-right">
+                              
+  
+                                  <div style="display: flex; align-items: center; gap: 10px;">
+                                    <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/Mayor-Border-male.png"
+                                    style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                      <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                          <h4 style="margin: 0;">Honwario Dayawon</h4>
+                                          <p style="text-align: justify;">Looking back on the past year, I am
+                                              proud of the progress we’ve made together.</p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1931</td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1933</td>
+                  </tr>
+                  <tr class="mayorRow">
+                      <td
+                          style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                          <div class="hover-target" style="position: relative; display: inline-block;">
+                              Pedro Beraquit
+                              <div class="profile-modal top-right">
+                             
+                                  <div style="display: flex; align-items: center; gap: 10px;">
+                                    <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/Mayor-Border-male.png"
+                                    style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+      
+                                      <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                          <h4 style="margin: 0;">Pedro Beraquit</h4>
+                                          <p style="text-align: justify;">Looking back on the past year, I am
+                                              proud of the progress we’ve made together.</p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1934</td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1936</td>
+                  </tr>
+                  <tr class="mayorRow">
+                      <td
+                          style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                          <div class="hover-target" style="position: relative; display: inline-block;">
+                              Ramon Templonuevo
+                              <div class="profile-modal top-right">
+                               
+                                  <div style="display: flex; align-items: center; gap: 10px;">
+                                    <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/Mayor-Border-male.png"
+                                    style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+      
+                                      <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                          <h4 style="margin: 0;">Ramon Templonuevo</h4>
+                                          <p style="text-align: justify;">Looking back on the past year, I am
+                                              proud of the progress we’ve made together.</p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1937</td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1941</td>
+                  </tr>
+                  <tr class="mayorRow">
+                      <td
+                          style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                          <div class="hover-target" style="position: relative; display: inline-block;">
+                              Victor Tanael
+                              <div class="profile-modal top-right">
+                                
+  
+                                  <div style="display: flex; align-items: center; gap: 10px;">
+                                    <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/Mayor-Border-male.png"
+                                style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                      <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                          <h4 style="margin: 0;">Victor Tanael</h4>
+                                          <p style="text-align: justify;">Looking back on the past year, I am
+                                              proud of the progress we’ve made together.</p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1941</td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1942</td>
+                  </tr>
+                  <tr class="mayorRow">
+                      <td
+                          style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                          <div class="hover-target" style="position: relative; display: inline-block;">
+                              Dionisio Tolledo
+                              <div class="profile-modal top-right">
+                              
+                                  <div style="display: flex; align-items: center; gap: 10px;">
+                                    <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/Mayor-Border-male.png"
+                                    style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+      
+                                      <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                          <h4 style="margin: 0;">Dionisio Tolledo</h4>
+                                          <p style="text-align: justify;">Looking back on the past year, I am
+                                              proud of the progress we’ve made together.</p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1942</td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1944</td>
+                  </tr>
+                  <tr class="mayorRow">
+                      <td
+                          style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                          <div class="hover-target" style="position: relative; display: inline-block;">
+                              Selvino Joson
+                              <div class="profile-modal top-right">
+                             
+                                  <div style="display: flex; align-items: center; gap: 10px;">
+                                    <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/Mayor-Border-male.png"
+                                    style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+      
+                                      <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                          <h4 style="margin: 0;">Selvino Joson</h4>
+                                          <p style="text-align: justify;">Looking back on the past year, I am
+                                              proud of the progress we’ve made together.</p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1945</td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1946</td>
+                  </tr>
+                  <tr class="mayorRow">
+                      <td
+                          style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                          <div class="hover-target" style="position: relative; display: inline-block;">
+                              Placida Beraquit
+                              <div class="profile-modal top-right">
+                               
+                                  <div style="display: flex; align-items: center; gap: 10px;">
+                                    <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/Mayor-Border-female.png"
+                                    style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                      <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                          <h4 style="margin: 0;">Placida Beraquit</h4>
+                                          <p style="text-align: justify;">Looking back on the past year, I am
+                                              proud of the progress we’ve made together.</p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1947</td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1948</td>
+                  </tr>
+                  <tr class="mayorRow">
+                      <td
+                          style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                          <div class="hover-target" style="position: relative; display: inline-block;">
+                              Godofredo Tayam
+                              <div class="profile-modal top-right">
+                               
+                                  <div style="display: flex; align-items: center; gap: 10px;">
+                                    <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/Mayor-Border-male.png"
+                                    style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                      <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                          <h4 style="margin: 0;">Godofredo Tayam</h4>
+                                          <p style="text-align: justify;">Looking back on the past year, I am
+                                              proud of the progress we’ve made together.</p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1948</td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1951</td>
+                  </tr>
+                  <tr class="mayorRow">
+                      <td
+                          style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                          <div class="hover-target" style="position: relative; display: inline-block;">
+                              Pedro Teston
+                              <div class="profile-modal top-right">
+                               
+                                  <div style="display: flex; align-items: center; gap: 10px;">
+                                    <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/Mayor-Border-male.png"
+                                    style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                      <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                          <h4 style="margin: 0;">Pedro Teston</h4>
+                                          <p style="text-align: justify;">Looking back on the past year, I am
+                                              proud of the progress we’ve made together.</p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1952</td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1955</td>
+                  </tr>
+                  <tr class="mayorRow">
+                      <td
+                          style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                          <div class="hover-target" style="position: relative; display: inline-block;">
+                              Alfredo Tanael
+                              <div class="profile-modal top-right">
+                                
+                                  <div style="display: flex; align-items: center; gap: 10px;">
+                                    <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/Mayor-Border-male.png"
+                                            style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                      <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                          <h4 style="margin: 0;">Alfredo Tanael</h4>
+                                          <p style="text-align: justify;">Looking back on the past year, I am
+                                              proud of the progress we’ve made together.</p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1956</td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1959</td>
+                  </tr>
+                  <tr class="mayorRow">
+                      <td
+                          style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                          <div class="hover-target" style="position: relative; display: inline-block;">
+                              Pedro Beraquit
+                              <div class="profile-modal top-right">
+                               
+                                  <div style="display: flex; align-items: center; gap: 10px;">
+                                    <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/Mayor-Border-male.png"
+                                    style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                      <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                          <h4 style="margin: 0;">Pedro Beraquit</h4>
+                                          <p style="text-align: justify;">Looking back on the past year, I am
+                                              proud of the progress we’ve made together.</p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1960</td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1963</td>
+                  </tr>
+                  <tr class="mayorRow">
+                      <td
+                          style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                          <div class="hover-target" style="position: relative; display: inline-block;">
+                              Amador Teston
+                              <div class="profile-modal top-right">
+                               
+                                  <div style="display: flex; align-items: center; gap: 10px;">
+                                    <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/Mayor-Border-male.png"
+                                    style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                      <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                          <h4 style="margin: 0;">Amador Teston</h4>
+                                          <p style="text-align: justify;">Looking back on the past year, I am
+                                              proud of the progress we’ve made together.</p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1964</td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1967</td>
+                  </tr>
+                  <tr class="mayorRow">
+                      <td
+                          style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                          <div class="hover-target" style="position: relative; display: inline-block;">
+                              David Templonuevo
+                              <div class="profile-modal top-right">
+                                
+                                  <div style="display: flex; align-items: center; gap: 10px;">
+                                    <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/Mayor-Border-male.png"
+                                            style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                      <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                          <h4 style="margin: 0;">David Templonuevo</h4>
+                                          <p style="text-align: justify;">Looking back on the past year, I am
+                                              proud of the progress we’ve made together.</p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1967</td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1967</td>
+                  </tr>
+                  <tr class="mayorRow">
+                      <td
+                          style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                          <div class="hover-target" style="position: relative; display: inline-block;">
+                              Temis Teves
+                              <div class="profile-modal top-right">
+                                
+                                  <div style="display: flex; align-items: center; gap: 10px;">
+                                    <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/Mayor-Border-male.png"
+                                            style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                      <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                          <h4 style="margin: 0;">Temis Teves</h4>
+                                          <p style="text-align: justify;">Looking back on the past year, I am
+                                              proud of the progress we’ve made together.</p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1968</td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1971</td>
+                  </tr>
+                  <tr class="mayorRow">
+                      <td
+                          style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                          <div class="hover-target" style="position: relative; display: inline-block;">
+                              Serafin Sarmiento
+                              <div class="profile-modal top-right">
+                                
+                                  <div style="display: flex; align-items: center; gap: 10px;">
+                                    <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/Mayor-Border-female.png"
+                                            style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                      <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                          <h4 style="margin: 0;">Serafin Sarmiento</h4>
+                                          <p style="text-align: justify;">Looking back on the past year, I am
+                                              proud of the progress we’ve made together.</p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1972</td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1986</td>
+                  </tr>
+                  <tr class="mayorRow">
+                      <td
+                          style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                          <div class="hover-target" style="position: relative; display: inline-block;">
+                              Jesus Torrente
+                              <div class="profile-modal top-right">
+                              
+                                  <div style="display: flex; align-items: center; gap: 10px;">
+                                    <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/Mayor-Border-male.png"
+                                    style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                      <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                          <h4 style="margin: 0;">Jesus Torrente</h4>
+                                          <p style="text-align: justify;">Looking back on the past year, I am
+                                              proud of the progress we’ve made together.</p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1986</td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1987</td>
+                  </tr>
+                  <tr class="mayorRow">
+                      <td
+                          style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                          <div class="hover-target" style="position: relative; display: inline-block;">
+                              Serafin Sarmiento
+                              <div class="profile-modal top-right">
+                                
+                                  <div style="display: flex; align-items: center; gap: 10px;">
+                                    <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/Mayor-Border-male.png"
+                                style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                      <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                          <h4 style="margin: 0;">Serafin Sarmiento</h4>
+                                          <p style="text-align: justify;">Looking back on the past year, I am
+                                              proud of the progress we’ve made together.</p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1988</td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1995</td>
+                  </tr>
+                  <tr class="mayorRow">
+                      <td
+                          style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                          <div class="hover-target" style="position: relative; display: inline-block;">
+                              Jorge Tanael
+                              <div class="profile-modal top-right">
+                              
+                                  <div style="display: flex; align-items: center; gap: 10px;">
+                                    <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/Mayor-Border-male.png"
+                                    style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                      <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                          <h4 style="margin: 0;">Jorge Tanael</h4>
+                                          <p style="text-align: justify;">Looking back on the past year, I am
+                                              proud of the progress we’ve made together.</p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1995</td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1998</td>
+                  </tr>
+                  <tr class="mayorRow">
+                      <td
+                          style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                          <div class="hover-target" style="position: relative; display: inline-block;">
+                              Serafin Sarmiento
+                              <div class="profile-modal top-right">
+                               
+                                  <div style="display: flex; align-items: center; gap: 10px;">
+                                    <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/Mayor-Border-male.png"
+                                    style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                      <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                          <h4 style="margin: 0;">Serafin Sarmiento</h4>
+                                          <p style="text-align: justify;">Looking back on the past year, I am
+                                              proud of the progress we’ve made together.</p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1998</td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2001</td>
+                  </tr>
+                  <tr class="mayorRow">
+                      <td
+                          style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                          <div class="hover-target" style="position: relative; display: inline-block;">
+                              Jose Teves Jr.
+                              <div class="profile-modal top-right">
+                               
+                                  <div style="display: flex; align-items: center; gap: 10px;">
+                                    <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/Mayor-Border-male.png"
+                                    style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                      <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                          <h4 style="margin: 0;">Jose Teves Jr.</h4>
+                                          <p style="text-align: justify;">Looking back on the past year, I am
+                                              proud of the progress we’ve made together.</p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2001</td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2010</td>
+                  </tr>
+                  <tr class="mayorRow">
+                      <td
+                          style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                          <div class="hover-target" style="position: relative; display: inline-block;">
+                              Chito Chi
+                              <div class="profile-modal top-right">
+                               
+                                  <div style="display: flex; align-items: center; gap: 10px;">
+                                    <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/Mayor-Border-male.png"
+                                    style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                      <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                          <h4 style="margin: 0;">Chito Chi</h4>
+                                          <p style="text-align: justify;">Looking back on the past year, I am
+                                              proud of the progress we’ve made together.</p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2010</td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2013</td>
+                  </tr>
+                  <tr class="mayorRow">
+                      <td
+                          style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                          <div class="hover-target" style="position: relative; display: inline-block;">
+                              Rodel Abichuela
+                              <div class="profile-modal top-right">
+                               
+                                  <div style="display: flex; align-items: center; gap: 10px;">
+                                    <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/Mayor-Border-male.png"
+                                    style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                      <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                          <h4 style="margin: 0;">Rodel Abichuela</h4>
+                                          <p style="text-align: justify;">Looking back on the past year, I am
+                                              proud of the progress we’ve made together.</p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2013</td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2016</td>
+                  </tr>
+                  <tr class="mayorRow">
+                      <td
+                          style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                          <div class="hover-target" style="position: relative; display: inline-block;">
+                              Chito Chi
+                              <div class="profile-modal top-right">
+                                
+                                  <div style="display: flex; align-items: center; gap: 10px;">
+                                    <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/Mayor-Border-male.png"
+                                style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                      <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                          <h4 style="margin: 0;">Chito Chi</h4>
+                                          <p style="text-align: justify;">Looking back on the past year, I am
+                                              proud of the progress we’ve made together.</p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2016</td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2019</td>
+                  </tr>
+                  <tr class="mayorRow">
+                        <td
+                            style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                            <div class="hover-target" style="position: relative; display: inline-block;">
+                                Jose Paolo P. Teves III
+                                <div class="profile-modal top-right">
+                              
+                                    <div style="display: flex; align-items: center; gap: 10px;">
+                                      <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/Mayor-Border-male.png"
+                                      style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                        <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                            <h4 style="margin: 0;">Jose Paolo Pestaño Teves III</h4>
+                                            <p style="text-align: justify;">Looking back on the past year, I am proud of the progress we’ve made together.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                        <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                    </tr>
+                    <tr class="mayorRow">
+                        <td
+                            style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                            <div class="hover-target" style="position: relative; display: inline-block;">
+                                Jose Paolo P. Teves III
+                                <div class="profile-modal top-right">
+                                 
+                                    <div style="display: flex; align-items: center; gap: 10px;">
+                                      <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/Mayor-Border-male.png"
+                                      style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                        <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                            <h4 style="margin: 0;">Jose Paolo Pestaño Teves III</h4>
+                                            <p style="text-align: justify;">Looking back on the past year, I am proud of the progress we’ve made together.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2019</td>
+                        <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                    </tr>
+  
+              </tbody>
+  
+          </table>
+          
+  
+  <div class="pagination-wrapper"
+  style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
+  <p id="pageInfo" style="margin: 0; font-weight: bold; font-size: 14px;">This is page 1 out of X</p>
+  <div id="mayorPagination" class="pagination" style="display: flex; gap: 5px;"></div>
+  </div>
+  
+  
+  <script>
+          (function sortMayorsByTermStartDesc() {
+              const table = document.getElementById("mayorTable");
+              if (!table) return;
+              const tbody = table.querySelector("tbody");
+              if (!tbody) return;
+  
+              function extractYear(text) {
+                  if (!text) return 0;
+                  const m = String(text).match(/\d{4}/); // find first 4-digit year
+                  return m ? parseInt(m[0], 10) : 0;
+              }
+  
+              const rows = Array.from(tbody.querySelectorAll("tr.mayorRow"));
+              if (!rows.length) return;
+  
+              rows.sort((a, b) => {
+                  const yearA = extractYear(a.cells[1]?.textContent.trim() ?? "");
+                  const yearB = extractYear(b.cells[1]?.textContent.trim() ?? "");
+                  return yearB - yearA; // latest (biggest year) first
+              });
+  
+              // Re-append in sorted order
+              rows.forEach(row => tbody.appendChild(row));
+  
+              const termStartHeader = table.querySelector("th[data-column='termStart']");
+              if (termStartHeader) termStartHeader.classList.add("desc");
+  
+              if (typeof updateMayorTable === "function") {
+                  try { updateMayorTable(); } catch (e) { console.warn("updateMayorTable call failed:", e); }
+              }
+          })();
+      </script>
+  
+  <hr style="margin: 15px 0; border-top: 1px solid #ccc;">
+  <script>
+  const rowsPerPage = 10;
+  let currentPage = 1;
+  
+  function updateMayorTable() {
+  const rows = document.querySelectorAll(".mayorRow");
+  const totalPages = Math.ceil(rows.length / rowsPerPage);
+  
+  rows.forEach((row, index) => {
+  row.style.display =
+    index >= (currentPage - 1) * rowsPerPage &&
+    index < currentPage * rowsPerPage
+      ? ""
+      : "none";
+  });
+  
+  renderPagination(totalPages);
+  }
+  
+  function changeMayorPage(page) {
+  const rows = document.querySelectorAll(".mayorRow");
+  const totalPages = Math.ceil(rows.length / rowsPerPage);
+  
+  if (page < 1) page = 1;
+  if (page > totalPages) page = totalPages;
+  
+  currentPage = page;
+  updateMayorTable();
+  }
+  
+  function renderPagination(totalPages) {
+  const pageInfo = document.getElementById("pageInfo");
+  const container = document.getElementById("mayorPagination");
+  
+  pageInfo.textContent = `This is page ${currentPage} out of ${totalPages}`;
+  container.innerHTML = "";
+  
+  const prevBtn = document.createElement("button");
+  prevBtn.textContent = "<< Prev";
+  prevBtn.className = currentPage === 1 ? "disabled" : "";
+  prevBtn.disabled = currentPage === 1;
+  prevBtn.onclick = () => changeMayorPage(currentPage - 1);
+  container.appendChild(prevBtn);
+  
+  const maxPagesToShow = 7;
+  let startPage = 1;
+  let endPage = totalPages;
+  
+  if (totalPages > maxPagesToShow) {
+  if (currentPage <= 4) {
+    endPage = 5;
+  } else if (currentPage >= totalPages - 3) {
+    startPage = totalPages - 4;
+  } else {
+    startPage = currentPage - 2;
+    endPage = currentPage + 2;
+  }
+  }
+  
+  if (startPage > 1) {
+  addPageButton(container, 1);
+  if (startPage > 2) addEllipsis(container);
+  }
+  
+  for (let i = startPage; i <= endPage; i++) {
+  addPageButton(container, i);
+  }
+  
+  if (endPage < totalPages) {
+  if (endPage < totalPages - 1) addEllipsis(container);
+  addPageButton(container, totalPages);
+  }
+  
+  const nextBtn = document.createElement("button");
+  nextBtn.textContent = "Next >>";
+  nextBtn.className = currentPage === totalPages ? "disabled" : "";
+  nextBtn.disabled = currentPage === totalPages;
+  nextBtn.onclick = () => changeMayorPage(currentPage + 1);
+  container.appendChild(nextBtn);
+  }
+  
+  function addPageButton(container, pageNumber) {
+  const btn = document.createElement("button");
+  btn.textContent = pageNumber;
+  if (currentPage === pageNumber) btn.className = "active";
+  btn.onclick = () => changeMayorPage(pageNumber);
+  container.appendChild(btn);
+  }
+  
+  function addEllipsis(container) {
+  const ellipsis = document.createElement("span");
+  ellipsis.textContent = "...";
+  ellipsis.className = "ellipsis";
+  container.appendChild(ellipsis);
+  }
+  
+  
+  document.addEventListener("DOMContentLoaded", function () {
+  const table = document.getElementById("mayorTable");
+  const headers = table.querySelectorAll("th.sortable");
+  
+  // store state per column
+  let sortState = {};
+  
+  headers.forEach((header, index) => {
+  header.addEventListener("click", () => {
+  const type = header.dataset.type;
+  const tbody = table.querySelector("tbody");
+  const rows = Array.from(tbody.querySelectorAll("tr"));
+  
+  // kunin last state ng column na ito
+  let newOrder = sortState[index] === "asc" ? "desc" : "asc";
+  sortState[index] = newOrder; // update state
+  
+  // reset lang yung class sa lahat ng headers (visual lang)
+  headers.forEach((h) => h.classList.remove("asc", "desc"));
+  header.classList.add(newOrder);
+  
+  // sorting logic
+  rows.sort((a, b) => {
+    let aText = a.cells[index].innerText.trim();
+    let bText = b.cells[index].innerText.trim();
+  
+    if (type === "number") {
+      aText = parseInt(aText, 10) || 0;
+      bText = parseInt(bText, 10) || 0;
+    }
+  
+    if (aText < bText) return newOrder === "asc" ? -1 : 1;
+    if (aText > bText) return newOrder === "asc" ? 1 : -1;
+    return 0;
+  });
+  
+  rows.forEach((row) => tbody.appendChild(row));
+  
+  // reset page + zebra
+  currentPage = 1;
+  updateMayorTable();
+  });
+  });
+  
+  updateMayorTable();
+  });
+  </script>
+  
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  
+  
+          <script>
+              document.addEventListener("DOMContentLoaded", () => {
+                  document.querySelectorAll(".hover-target").forEach(target => {
+                      target.addEventListener("mouseenter", () => {
+                          const modal = target.querySelector(".profile-modal");
+                          if (modal) modal.style.display = "block";
+                      });
+                      target.addEventListener("mouseleave", () => {
+                          const modal = target.querySelector(".profile-modal");
+                          if (modal) modal.style.display = "none";
+                      });
+                  });
+              });
+          </script>
+       
+  <div class="chart-header">
+  <div class="zoom-controls">
+  <div class="zoom-btn" onclick="zoomIn()">+</div>
+  <div class="zoom-btn" onclick="zoomOut()">−</div>
+  </div>
+  </div>
+  <div class="chart-wrapper" id="chartWrapper">
+  <div id="chart-container" class="chart-scale">
+    <div id="example2_1"></div>
+  </div>
+  </div>
+  
+  <script>
+  
+  const chartWrapper = document.getElementById("chartWrapper");
+  let isDown = false;
+  let startX;
+  let scrollLeft;
+  
+  chartWrapper.addEventListener("mousedown", (e) => {
+    isDown = true;
+    chartWrapper.classList.add("active");
+    startX = e.pageX - chartWrapper.offsetLeft;
+    scrollLeft = chartWrapper.scrollLeft;
+  });
+  
+  chartWrapper.addEventListener("mouseleave", () => {
+    isDown = false;
+  });
+  
+  chartWrapper.addEventListener("mouseup", () => {
+    isDown = false;
+  });
+  
+  chartWrapper.addEventListener("mousemove", (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - chartWrapper.offsetLeft;
+    const walk = (x - startX) * 1; // multiply for speed
+    chartWrapper.scrollLeft = scrollLeft - walk;
+  });
+  </script>
+  <script type="text/javascript">
+  google.charts.load("current", { packages: ["timeline"] });
+  google.charts.setOnLoadCallback(init);
+  
+  let chart, dataTable;
+  let minDate, maxDate;
+  let zoomFactor = 1; 
+  function init() {
+  const container = document.getElementById("example2_1");
+  chart = new google.visualization.Timeline(container);
+  dataTable = new google.visualization.DataTable();
+  
+  dataTable.addColumn({ type: "string", id: "Term" });
+  dataTable.addColumn({ type: "string", id: "Name" });
+  dataTable.addColumn({ type: "date", id: "Start" });
+  dataTable.addColumn({ type: "date", id: "End" });
+  
+  dataTable.addRows([
+  ["1", "Mariano Teologo", new Date(1897, 0, 1), new Date(1898, 0, 2)],
+  ["2", "Vicente Guerrero", new Date(1899, 0, 1), new Date(1900, 0, 2)],
+  ["3", "Jose Patrocinio Rodulfo", new Date(1901, 0, 1), new Date(1903, 0, 2)],
+  ["4", "Quirico Arcilla", new Date(1904, 0, 1), new Date(1905, 0, 2)],
+  ["5", "Alvaro Vergara", new Date(1906, 0, 1), new Date(1907, 0, 2)],
+  ["6", "Reymund Tanael", new Date(1906, 0, 1), new Date(1907, 0, 2)],
+  ["7", "Agustine Tanael", new Date(1906, 0, 1), new Date(1907, 0, 2)],
+  ["8", "Felix Teologo", new Date(1907, 0, 1), new Date(1908, 0, 2)],
+  ["9", "Lucas Arcilla", new Date(1907, 0, 1), new Date(1908, 0, 2)],
+  ["10", "Catalino Guerrero", new Date(1908, 0, 1), new Date(1909, 0, 2)],
+  ["11", "Quirico Arcilla", new Date(1910, 0, 1), new Date(1911, 0, 2)],
+  ["12", "Alvaro Vergara", new Date(1912, 0, 1), new Date(1913, 0, 2)],
+  ["13", "Juan Pablo", new Date(1914, 0, 1), new Date(1915, 0, 2)],
+  ["14", "Pedro Vergara", new Date(1916, 0, 1), new Date(1917, 0, 2)],
+  ["15", "Juan Pablo", new Date(1918, 0, 1), new Date(1919, 0, 2)],
+  ["16", "Cristobal Guerrero", new Date(1920, 0, 1), new Date(1921, 0, 2)],
+  ["17", "Pablo Tariman", new Date(1922, 0, 1), new Date(1923, 0, 2)],
+  ["18", "Victorino Tanael", new Date(1924, 0, 1), new Date(1925, 0, 2)],
+  ["19", "Martin Toledana", new Date(1924, 0, 1), new Date(1925, 0, 2)],
+  ["20", "Antonio Tulay", new Date(1925, 0, 1), new Date(1926, 0, 2)],
+  ["21", "Flaviano Camu", new Date(1926, 0, 1), new Date(1928, 0, 2)],
+  ["22", "Roman Rodulfo", new Date(1928, 0, 1), new Date(1930, 0, 2)],
+  ["23", "Martin Toledana", new Date(1930, 0, 1), new Date(1931, 0, 2)],
+  ["24", "Honwario Dayawon", new Date(1931, 0, 1), new Date(1933, 0, 2)],
+  ["25", "Pedro Beraquit", new Date(1934, 0, 1), new Date(1936, 0, 2)],
+  ["26", "Ramon Templonuevo", new Date(1937, 0, 1), new Date(1941, 0, 2)],
+  ["27", "Victor Tanael", new Date(1941, 0, 1), new Date(1942, 0, 2)],
+  ["28", "Dionisio Tolledo", new Date(1942, 0, 1), new Date(1944, 0, 2)],
+  ["29", "Selvino Joson", new Date(1945, 0, 1), new Date(1946, 0, 2)],
+  ["30", "Placida Beraquit", new Date(1947, 0, 1), new Date(1948, 0, 2)],
+  ["31", "Godofredo Tayam", new Date(1948, 0, 1), new Date(1951, 0, 2)],
+  ["32", "Pedro Teston", new Date(1952, 0, 1), new Date(1955, 0, 2)],
+  ["33", "Alfredo Tanael", new Date(1956, 0, 1), new Date(1959, 0, 2)],
+  ["34", "Pedro Beraquit", new Date(1960, 0, 1), new Date(1963, 0, 2)],
+  ["35", "Amador A. Teston", new Date(1964, 0, 1), new Date(1967, 0, 2)],
+  ["36", "David Templonuevo", new Date(1967, 0, 1), new Date(1968, 0, 2)],
+  ["37", "Temis Teves", new Date(1968, 0, 1), new Date(1971, 0, 2)],
+  ["38", "Sefarin Sarmiento", new Date(1972, 0, 1), new Date(1986, 0, 2)],
+  ["39", "Jesus V. Torrente", new Date(1986, 0, 1), new Date(1987, 0, 2)],
+  ["40", "Sefarin Sarmiento", new Date(1988, 0, 1), new Date(1995, 0, 2)],
+  ["41", "Jorge G. Tanael", new Date(1995, 0, 1), new Date(1998, 0, 2)],
+  ["42", "Sefarin T. Sarmiento", new Date(1998, 0, 1), new Date(2001, 0, 2)],
+  ["43", "Jose J. Teves Jr.", new Date(2001, 0, 1), new Date(2010, 0, 2)],
+  ["44", "Chito S. Chi", new Date(2010, 0, 1), new Date(2013, 0, 2)],
+  ["45", "Rodel V. Abichuela", new Date(2013, 0, 1), new Date(2016, 0, 2)],
+  ["46", "Chito S. Chi", new Date(2016, 0, 1), new Date(2019, 0, 2)],
+  ["47", "Jose Paolo P. Teves III", new Date(2019, 0, 1), new Date(2025, 0, 2)]
+
+  
+  ]);
+  
+
+  minDate = new Date(2016, 0, 1);
+  maxDate = new Date(2025, 11, 31);
+  
+  drawChart();
+  }function drawChart() {
+  let ticks = [];
+  let startYear = minDate.getFullYear();
+  let endYear = maxDate.getFullYear();
+  for (let y = startYear; y <= endYear; y++) {
+  ticks.push(new Date(y, 0, 1));
+  }
+  
+  const baseRowHeight = zoomFactor === 1 ? 35 : 45;
+  const rowHeight = baseRowHeight * zoomFactor;
+  const chartHeight = dataTable.getNumberOfRows() * rowHeight + 30;
+  
+  let years = endYear - startYear + 1;
+  let baseWidth = zoomFactor === 1 ? 80 : 100; 
+  let chartWidth = years * baseWidth * zoomFactor;
+  
+  
+  let finalWidth = Math.max(chartWidth, 550);
+  
+  chart.draw(dataTable, {
+  height: chartHeight,
+  width: finalWidth,
+  timeline: {
+    rowLabelStyle: { fontSize: 12 * zoomFactor, color: '#444' },
+    barLabelStyle: { fontSize: 12 * zoomFactor, color: '#222' }
+  },
+  avoidOverlappingGridLines: true,
+  hAxis: {
+  format: 'yyyy',
+  ticks: ticks,
+  gridlines: { count: ticks.length },
+  minorGridlines: { count: 0 },
+  viewWindowMode: 'explicit',
+  viewWindow: { min: minDate, max: maxDate }
+  }
+  
+  });
+  }
+  
+  
+  
+  function zoomIn() {
+  zoomFactor = Math.min(zoomFactor * 1.25, 5); 
+  drawChart();
+  }
+  
+  function zoomOut() {
+  zoomFactor = Math.max(zoomFactor / 1.25, 0.5); 
+  drawChart();
+  }
+  
+  </script>
+  </div>
+  
+ 
+  
+  
+        <hr style="margin: 15px 0; border-top: 1px solid #ccc;">
+        <h4 style="margin-top: 0;">Vice Mayors</h4>
+  
+        <div id="viceMayorTableContainer" style="position: relative;">
+            <table id="viceMayorTable"
+                style="width: 100%; border-collapse: collapse; font-size: 14px; margin-bottom: 20px;">
+                               <thead>
+  <tr style="background-color: #f1f1f1;">
+  <th class="sortable" style="text-align: left; padding: 8px; border-bottom: 1px solid #ccc;" data-column="name" data-type="string">
+  Name <span class="sort-arrow"></span>
+  </th>
+  <th class="sortable desc" style="text-align: center; padding: 8px; border-bottom: 1px solid #ccc;" data-column="termStart" data-type="number">
+  Term Start<span class="sort-arrow"></span>
+  </th>
+  
+  <th class="sortable" style="text-align: center; padding: 8px; border-bottom: 1px solid #ccc;" data-column="termEnd" data-type="number">
+  Term End <span class="sort-arrow"></span>
+  </th>
+  </tr>
+                </thead>
+                <tbody id="viceMayorTableBody">
+                    <tr class="viceMayorRow">
+                        <td
+                            style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                            <div class="hover-target" style="position: relative; display: inline-block;">
+                                Rico T. Tating 
+                                <div class="profile-modal top-right">
+                                    <div style="display: flex; align-items: center; gap: 10px;">
+                                        <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/Vice-Mayor-RICO-TESORERO-TATING.png"
+                                            style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                        <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                            <h4 style="margin: 0;">Rico Tesorero Tating (Npc)</h4>
+                                            <p style="text-align: justify;">Looking back on the past year, I am proud of the progress we’ve made together.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                        <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                    </tr>
+                    <tr class="viceMayorRow">
+                        <td
+                            style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                            <div class="hover-target" style="position: relative; display: inline-block;">
+                                Rico T. Tating 
+                                <div class="profile-modal top-right">
+                                    <div style="display: flex; align-items: center; gap: 10px;">
+                                        <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/Vice-Mayor-RICO-TESORERO-TATING.png"
+                                            style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                        <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                            <h4 style="margin: 0;">Rico Tesorero Tating (Npc)</h4>
+                                            <p style="text-align: justify;">Looking back on the past year, I am proud of the progress we’ve made together.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2019</td>
+                        <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                    </tr>
+                </tbody>
+            </table>
+  
+            <div class="pagination-wrapper-vice" style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
+                <p id="vicePageInfo" style="margin: 0; font-weight: bold; font-size: 14px;">This is page 1 out of X</p>
+                <div id="vicePagination" class="pagination" style="display: flex; gap: 5px;"></div>
+              </div>
+              
+        </div>
+        <script>
+            const rowsPerPageVice = 10;
+            let currentPageVice = 1;
+          
+            function updateViceMayorTable() {
+              const rows = document.querySelectorAll(".viceMayorRow");
+              const totalPages = Math.ceil(rows.length / rowsPerPageVice);
+          
+              rows.forEach((row, index) => {
+                row.style.display = (
+                  index >= (currentPageVice - 1) * rowsPerPageVice &&
+                  index < currentPageVice * rowsPerPageVice
+                ) ? '' : 'none';
+              });
+          
+              renderVicePagination(totalPages);
+            }
+          
+            function changeVicePage(page) {
+              const rows = document.querySelectorAll(".viceMayorRow");
+              const totalPages = Math.ceil(rows.length / rowsPerPageVice);
+          
+              if (page < 1) page = 1;
+              if (page > totalPages) page = totalPages;
+          
+              currentPageVice = page;
+              updateViceMayorTable();
+            }
+          
+            function renderVicePagination(totalPages) {
+              document.getElementById("vicePageInfo").textContent = `This is page ${currentPageVice} out of ${totalPages}`;
+              const container = document.getElementById("vicePagination");
+              container.innerHTML = "";
+          
+              const prevBtn = document.createElement("button");
+              prevBtn.textContent = "<< Prev";
+              prevBtn.className = currentPageVice === 1 ? "disabled" : "";
+              prevBtn.disabled = currentPageVice === 1;
+              prevBtn.onclick = () => changeVicePage(currentPageVice - 1);
+              container.appendChild(prevBtn);
+          
+              const maxPagesToShow = 7;
+              let startPage = 1;
+              let endPage = totalPages;
+          
+              if (totalPages > maxPagesToShow) {
+                if (currentPageVice <= 4) {
+                  endPage = 5;
+                } else if (currentPageVice >= totalPages - 3) {
+                  startPage = totalPages - 4;
+                } else {
+                  startPage = currentPageVice - 2;
+                  endPage = currentPageVice + 2;
+                }
+              }
+          
+              if (startPage > 1) {
+                addVicePageButton(container, 1);
+                if (startPage > 2) {
+                  addViceEllipsis(container);
+                }
+              }
+          
+              for (let i = startPage; i <= endPage; i++) {
+                addVicePageButton(container, i);
+              }
+          
+              if (endPage < totalPages) {
+                if (endPage < totalPages - 1) {
+                  addViceEllipsis(container);
+                }
+                addVicePageButton(container, totalPages);
+              }
+          
+              const nextBtn = document.createElement("button");
+              nextBtn.textContent = "Next >>";
+              nextBtn.className = currentPageVice === totalPages ? "disabled" : "";
+              nextBtn.disabled = currentPageVice === totalPages;
+              nextBtn.onclick = () => changeVicePage(currentPageVice + 1);
+              container.appendChild(nextBtn);
+            }
+          
+            function addVicePageButton(container, pageNumber) {
+              const btn = document.createElement("button");
+              btn.textContent = pageNumber;
+              if (currentPageVice === pageNumber) {
+                btn.className = "active";
+              }
+              btn.onclick = () => changeVicePage(pageNumber);
+              container.appendChild(btn);
+            }
+          
+            function addViceEllipsis(container) {
+              const ellipsis = document.createElement("span");
+              ellipsis.textContent = "...";
+              ellipsis.className = "ellipsis";
+              container.appendChild(ellipsis);
+            }
+          
+            updateViceMayorTable();
+          </script>
+          
+         <hr style="margin: 15px 0; border-top: 1px solid #ccc;">
+      <h4 style="margin-top: 0;">Councilors</h4>
+  
+      <div id="councilorTableContainer" style="position: relative;">
+          <table id="councilorTable"
+              style="width: 100%; border-collapse: collapse; font-size: 14px; margin-bottom: 20px;">
+              <thead>
+  <tr style="background-color: #f1f1f1;">
+  <th class="sortable" style="text-align: left; padding: 8px; border-bottom: 1px solid #ccc;" data-column="name" data-type="string">
+  Name <span class="sort-arrow"></span>
+  </th>
+  <th class="sortable desc" style="text-align: center; padding: 8px; border-bottom: 1px solid #ccc;" data-column="termStart" data-type="number">
+  Term Start<span class="sort-arrow"></span>
+  </th>
+  
+  <th class="sortable" style="text-align: center; padding: 8px; border-bottom: 1px solid #ccc;" data-column="termEnd" data-type="number">
+  Term End <span class="sort-arrow"></span>
+  </th>
+  </tr>
+                </thead>
+                <tbody id="councilorTableBody">
+  
+                    <tr class="councilorRow">
+                        <td
+                            style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                            <div class="hover-target" style="position: relative; display: inline-block;">
+                                Maria Eunice Carranza 
+                                <div class="profile-modal top-right">
+                                    <div style="display: flex; align-items: center; gap: 10px;">
+                                        <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/Mayor-Border-female.png"
+                                            style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                        <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                            <h4 style="margin: 0;">Maria Eunice Carranza (Lakas)</h4>
+                                            <p style="text-align: justify;">Looking back on the past year, I am proud of the progress we’ve made together.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                        <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                    </tr>
+                    <tr class="councilorRow">
+                        <td
+                            style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                            <div class="hover-target" style="position: relative; display: inline-block;">
+                                Antonio C. Ogalinola 
+                                <div class="profile-modal top-right">
+                                    <div style="display: flex; align-items: center; gap: 10px;">
+                                        <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/Mayor-Border-male.png"
+                                            style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                        <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                            <h4 style="margin: 0;">Antonio Carranza Ogalinola (Sir Tony) (Ind)</h4>
+                                            <p style="text-align: justify;">Looking back on the past year, I am proud of the progress we’ve made together.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                        <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                    </tr>
+                    <tr class="councilorRow">
+                        <td
+                            style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                            <div class="hover-target" style="position: relative; display: inline-block;">
+                                Perfecto M. Guerrero Jr. 
+                                <div class="profile-modal top-right">
+                                    <div style="display: flex; align-items: center; gap: 10px;">
+                                        <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/Mayor-Border-male.png"
+                                            style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                        <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                            <h4 style="margin: 0;">Perfecto Mingo Guerrero Jr. (Npc)</h4>
+                                            <p style="text-align: justify;">Looking back on the past year, I am proud of the progress we’ve made together.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                        <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                    </tr>
+                    <tr class="councilorRow">
+                        <td
+                            style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                            <div class="hover-target" style="position: relative; display: inline-block;">
+                                Diolito R. Tanel 
+                                <div class="profile-modal top-right">
+                                    <div style="display: flex; align-items: center; gap: 10px;">
+                                        <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/Mayor-Border-male.png"
+                                            style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                        <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                            <h4 style="margin: 0;">Diolito Rojas Tanel (Choy) (Pdplbn)</h4>
+                                            <p style="text-align: justify;">Looking back on the past year, I am proud of the progress we’ve made together.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                        <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                    </tr>
+                    <tr class="councilorRow">
+                        <td
+                            style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                            <div class="hover-target" style="position: relative; display: inline-block;">
+                                David C. Guerrero 
+                                <div class="profile-modal top-right">
+                                    <div style="display: flex; align-items: center; gap: 10px;">
+                                        <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/Mayor-Border-male.png"
+                                            style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                        <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                            <h4 style="margin: 0;">David Cervantes Guerrero (Tabo) (Pdplbn)</h4>
+                                            <p style="text-align: justify;">Looking back on the past year, I am proud of the progress we’ve made together.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                        <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                    </tr>
+                    <tr class="councilorRow">
+                        <td
+                            style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                            <div class="hover-target" style="position: relative; display: inline-block;">
+                                Amos G. Carranza 
+                                <div class="profile-modal top-right">
+                                    <div style="display: flex; align-items: center; gap: 10px;">
+                                        <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/Mayor-Border-male.png"
+                                            style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                        <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                            <h4 style="margin: 0;">Amos Guerrero Carranza (Doc Amos) (Pdplbn)</h4>
+                                            <p style="text-align: justify;">Looking back on the past year, I am proud of the progress we’ve made together.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                        <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                    </tr>
+                    <tr class="councilorRow">
+                        <td
+                            style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                            <div class="hover-target" style="position: relative; display: inline-block;">
+                                Salve S. Bataanon 
+                                <div class="profile-modal top-right">
+                                    <div style="display: flex; align-items: center; gap: 10px;">
+                                        <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/Mayor-Border-female.png"
+                                            style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                        <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                            <h4 style="margin: 0;">Salve Soriao Bataanon (Npc)</h4>
+                                            <p style="text-align: justify;">Looking back on the past year, I am proud of the progress we’ve made together.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                        <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                    </tr>
+                    <tr class="councilorRow">
+                        <td
+                            style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                            <div class="hover-target" style="position: relative; display: inline-block;">
+                                Fidelito T. Soledad 
+                                <div class="profile-modal top-right">
+                                    <div style="display: flex; align-items: center; gap: 10px;">
+                                        <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/Mayor-Border-male.png"
+                                            style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                        <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                            <h4 style="margin: 0;">Fidelito Tawat Soledad (Pdplbn)</h4>
+                                            <p style="text-align: justify;">Looking back on the past year, I am proud of the progress we’ve made together.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                        <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                    </tr>
+                </tbody>
+            </table>
+  
+            <div class="pagination-wrapper" style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
+                <p id="councilorPageInfo" style="margin: 0; font-weight: bold; font-size: 14px;">This is page 1 out of X</p>
+                <div id="councilorPagination" class="pagination" style="display: flex; gap: 5px;"></div>
+              </div>
+              
+        </div>
+  
+        <script>
+            const rowsPerPageCouncilor = 24;
+            let currentPageCouncilor = 1;
+          
+            function updateCouncilorTable() {
+              const rows = document.querySelectorAll(".councilorRow");
+              const totalPages = Math.ceil(rows.length / rowsPerPageCouncilor);
+          
+              rows.forEach((row, index) => {
+                row.style.display = (
+                  index >= (currentPageCouncilor - 1) * rowsPerPageCouncilor &&
+                  index < currentPageCouncilor * rowsPerPageCouncilor
+                ) ? '' : 'none';
+              });
+          
+              renderCouncilorPagination(totalPages);
+            }
+          
+            function changeCouncilorPage(page) {
+              const rows = document.querySelectorAll(".councilorRow");
+              const totalPages = Math.ceil(rows.length / rowsPerPageCouncilor);
+          
+              if (page < 1) page = 1;
+              if (page > totalPages) page = totalPages;
+          
+              currentPageCouncilor = page;
+              updateCouncilorTable();
+            }
+          
+            function renderCouncilorPagination(totalPages) {
+              document.getElementById("councilorPageInfo").textContent = `This is page ${currentPageCouncilor} out of ${totalPages}`;
+              const container = document.getElementById("councilorPagination");
+              container.innerHTML = "";
+          
+              const prevBtn = document.createElement("button");
+              prevBtn.textContent = "<< Prev";
+              prevBtn.className = currentPageCouncilor === 1 ? "disabled" : "";
+              prevBtn.disabled = currentPageCouncilor === 1;
+              prevBtn.onclick = () => changeCouncilorPage(currentPageCouncilor - 1);
+              container.appendChild(prevBtn);
+          
+              const maxPagesToShow = 7;
+              let startPage = 1;
+              let endPage = totalPages;
+          
+              if (totalPages > maxPagesToShow) {
+                if (currentPageCouncilor <= 4) {
+                  endPage = 5;
+                } else if (currentPageCouncilor >= totalPages - 3) {
+                  startPage = totalPages - 4;
+                } else {
+                  startPage = currentPageCouncilor - 2;
+                  endPage = currentPageCouncilor + 2;
+                }
+              }
+          
+              if (startPage > 1) {
+                addCouncilorPageButton(container, 1);
+                if (startPage > 2) {
+                  addCouncilorEllipsis(container);
+                }
+              }
+          
+              for (let i = startPage; i <= endPage; i++) {
+                addCouncilorPageButton(container, i);
+              }
+          
+              if (endPage < totalPages) {
+                if (endPage < totalPages - 1) {
+                  addCouncilorEllipsis(container);
+                }
+                addCouncilorPageButton(container, totalPages);
+              }
+          
+              const nextBtn = document.createElement("button");
+              nextBtn.textContent = "Next >>";
+              nextBtn.className = currentPageCouncilor === totalPages ? "disabled" : "";
+              nextBtn.disabled = currentPageCouncilor === totalPages;
+              nextBtn.onclick = () => changeCouncilorPage(currentPageCouncilor + 1);
+              container.appendChild(nextBtn);
+            }
+          
+            function addCouncilorPageButton(container, pageNumber) {
+              const btn = document.createElement("button");
+              btn.textContent = pageNumber;
+              if (currentPageCouncilor === pageNumber) {
+                btn.className = "active";
+              }
+              btn.onclick = () => changeCouncilorPage(pageNumber);
+              container.appendChild(btn);
+            }
+          
+            function addCouncilorEllipsis(container) {
+              const ellipsis = document.createElement("span");
+              ellipsis.textContent = "...";
+              ellipsis.className = "ellipsis";
+              container.appendChild(ellipsis);
+            }
+          
+            updateCouncilorTable();
+          </script>
+          
+                  
+  <script>
+  /**
+  * Generic table sorter
+  * @param {string} tbodyId - ID ng tbody (e.g.,"viceMayorTableBody", "councilorTableBody")
+  * @param {string} rowClass - class ng row (e.g., "viceMayorRow", "councilorRow")
+  * @param {number} columnIndex - index ng column to sort
+  * @param {string} type - "string" o "number"
+  * @param {boolean} asc - ascending or descending
+  */
+  function sortGenericTable(tbodyId, rowClass, columnIndex, type, asc) {
+  const tbody = document.getElementById(tbodyId);
+  const rowsArray = Array.from(tbody.querySelectorAll("." + rowClass));
+  
+  rowsArray.sort((a, b) => {
+  let valA, valB;
+  if(type === "string") {
+  // For Name column or text
+  valA = a.children[columnIndex].innerText.trim().toLowerCase();
+  valB = b.children[columnIndex].innerText.trim().toLowerCase();
+  if(valA < valB) return asc ? -1 : 1;
+  if(valA > valB) return asc ? 1 : -1;
+  return 0;
+  } else if(type === "number") {
+  // For Term Start / Term End
+  valA = parseInt(a.children[columnIndex].innerText.trim(), 10);
+  valB = parseInt(b.children[columnIndex].innerText.trim(), 10);
+  return asc ? valA - valB : valB - valA;
+  }
+  return 0;
+  });
+  
+  tbody.innerHTML = "";
+  rowsArray.forEach(row => tbody.appendChild(row));
+  }
+  
+  // Apply sorting to all tables
+  document.querySelectorAll("table").forEach(table => {
+  const tbodyId = table.querySelector("tbody").id;
+  const rowClass = table.querySelector("tbody tr").className;
+  
+  table.querySelectorAll("th.sortable").forEach((th, idx) => {
+  th.addEventListener("click", () => {
+  // Remove asc/desc from other headers
+  table.querySelectorAll("th.sortable").forEach(header => {
+    if(header !== th) header.classList.remove("asc", "desc");
+  });
+  
+  // Toggle direction
+  const asc = !th.classList.contains("asc");
+  th.classList.toggle("asc", asc);
+  th.classList.toggle("desc", !asc);
+  
+  // Sort table
+  const type = th.dataset.type;
+  sortGenericTable(tbodyId, rowClass, idx, type, asc);
+  });
+  });
+  });
+  </script>
+    </div>
+  
+  </div>
+  </div>
+  </div>
+
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  
+  
+  
+  <div class="officials-section">
+    <div class="officials-wrapper">
+  
+  
+    <div class="municipal-officials" style="padding: 20px;">
+        <div style="text-align: center; margin-bottom: 25px;">
+            <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/Hon.Paolo-Teves-Baras.png"
+                alt="Mayor"
+                style="width: 160px; height: 160px; border-radius: 50%; object-fit: cover; margin-bottom: 10px;">
+            <p style="margin: 0; padding: 0; line-height: 1.2;"><strong>Jose Paolo Petaño Teves III </strong></p>
+            <p style="margin: 0 0 30px 0; padding: 0; line-height: 1;">Mayor</p>
+        </div>
+        <div style="text-align: center; margin-bottom: 30px;">
+            <p style="margin: 0; padding: 0; line-height: 1.2;"><strong>Rico Tesorero Tating</strong></p>
+            <p style="margin: 0 0 10px 0; padding: 0; line-height: 1;">Vice Mayor</p>
+        </div>
+        <hr style="border: none; border-top: 1px solid #ddd; margin: 0 0 30px 0;">
+        <div style="text-align: center;">
+            <p style="margin: 0 0 15px 0; padding: 0; font-weight: bold; font-size: 14px;">MUNICIPAL COUNCILORS</p>
+            <p style="margin: 0; padding: 0; line-height: 1.2;">Chito Siao Chi</p>
+            <p style="margin: 0; padding: 0; line-height: 1.2;">Glenn Bigtas Dalma</p>
+            <p style="margin: 0; padding: 0; line-height: 1.2;">Fidelito Tawat Soledad</p>
+            <p style="margin: 0; padding: 0; line-height: 1.2;">Ariel Vergara Samonte</p>
+            <p style="margin: 0; padding: 0; line-height: 1.2;">Caridad Taway Bautista</p>
+            <p style="margin: 0; padding: 0; line-height: 1.2;">Jessica Mae Tabirao Guerrero</p>
+            <p style="margin: 0; padding: 0; line-height: 1.2;">Christian Nikko Quilaton Tanael</p>
+            <p style="margin: 0; padding: 0; line-height: 1.2;">Maria Eunice Tendencia Carranza</p> 
+        </div>
+      </div>
+  
+      <div class="emergency-wrapper">
+        <div class="wp-emergency-card">
+          <div class="header">
+            <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/Baras.png" alt="Emergency Icon" class="header-icon">
+           EMERGENCY HOTLINES
+          </div>
+         
+          <div class="list">
+            
+              <div class="item">
+                <div class="icon"><img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/09/Baras-MDRRMO.png" alt="PDRRMO"></div>
+                <div class="line"><span class="number">0961-551-7634</span><span class="sub">MDRRMO</span></div>
+              </div>
+      
+            
+              <div class="item">
+                <div class="icon"><img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/09/Baras-Fire-Station.png" alt="PDRRMO"></div>
+                <div class="line"><span class="number">0968-248-7517</span><span class="sub">Fire Station</span></div>
+              </div>
+      
+              <div class="item">
+                <div class="icon"><img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/09/PNP.png" alt="PDRRMO"></div>
+                <div class="line"><span class="number">0981-442-4897 | 0998-967-3592 </span><span class="sub">Police Station</span></div>
+              </div>
+      
+              <div class="item">
+                <div class="icon"><img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/09/Baras-Emergency-Medical-Service.png" alt="PDRRMO"></div>
+                <div class="line"><span class="number">0962-894-4065</span><span class="sub">24/7 Emergency Medical Service (EMS)</span></div>
+              </div>
+      
+              <div class="item">
+                <div class="icon"><img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/09/Baras-Municipal-Jail.png" alt="PDRRMO"></div>
+                <div class="line"><span class="number">0905-908-2637 | 0283537358</span><span class="sub">Municipal Jail</span></div>
+              </div>
+  
+              <div class="item">
+                <div class="icon"><img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/09/ficelco.jpg" alt="PDRRMO"></div>
+                <div class="line"><span class="number">0947-402-1529</span><span class="sub">Ficelco</span></div>
+              </div>
+      </div>
+      
+      
+              <div class="footer">
+                <img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/08/Capitol.png" alt="Capitol Logo">
+                <strong>REPUBLIC OF THE PHILIPPINES<br>PROVINCE OF CATANDUANES</strong>
+              </div>
+  
+  
+  
+  
+    </div>
+  </div>
+  <!-- /wp:html --></div>
+  <!-- /wp:column --></div>
+  <!-- /wp:columns -->

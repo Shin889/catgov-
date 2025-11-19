@@ -1,0 +1,215 @@
+<!-- wp:html -->
+<style>
+               
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 30px;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            min-height: 480px;
+        }
+        
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: #0066cc;
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-weight: 600;
+            flex-shrink: 0;
+text-align: center;
+        }
+        
+        .card ul {
+            list-style: none;
+            margin-bottom: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .card li {
+            margin-bottom: 12px;
+            padding-left: 20px;
+            position: relative;
+            color: #555;
+            line-height: 1.6;
+text-align: left;
+        }
+        
+        .card li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #4facfe;
+            font-weight: bold;
+            font-size: 12px;
+        }
+        
+        .card-button {
+            display: inline-block;
+            background: #0066cc;
+            color: #ffffff;
+            padding: 12px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            letter-spacing: 0.5px;
+            text-align: center;
+            margin-top: auto;
+            flex-shrink: 0;
+width: auto;
+ align-self: center;
+        }
+        
+        .section-divider {
+            margin: 60px 0;
+            text-align: center;
+        }
+      .wp-block-heading-peso {
+background-color: #0066cc;
+padding: 15px;
+color: white;
+border-bottom: 3px solid red;
+}  
+        @media (max-width: 768px) {
+            .cards-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            .card {
+                padding: 20px;
+                min-height: auto;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            body {
+                padding: 20px 10px;
+            }
+            .card {
+                padding: 15px;
+            }
+        }
+    </style>
+
+    <div class="container">
+        <h2 class="wp-block-heading-peso has-text-align-center">FOR JOB SEEKERS</h2>
+        <div class="cards-grid">
+            <div class="card">
+                <h3>How to Register as Applicant</h3>
+                <ul>
+                    <li>Go to https://pesojobs.ph/ and select REGISTER NOW</li>
+                    <li>Select APPLICANT and fill out the registration form</li>
+                    <li>Accept terms and create your account</li>
+                    <li>After login, select CURRICULUM VITAE to build or update your CV</li>
+                    <li>Complete BASIC PROFILE, EDUCATIONS, WORK EXPERIENCE, and SKILLS sections</li>
+                </ul>
+                <a href="https://pesojobs.ph/" class="card-button">Register Now</a>
+            </div>
+            <div class="card">
+                <h3>How to Build Your CV</h3>
+                <ul>
+                    <li>Go to https://pesojobs.ph/ and login</li>
+                    <li>Select CURRICULUM VITAE</li>
+                    <li>Update BASIC PROFILE, EDUCATIONS, WORK EXPERIENCE, and SKILLS</li>
+                    <li>Save changes after each section</li>
+                </ul>
+                <a href="https://pesojobs.ph/" class="card-button">Build CV</a>
+            </div>
+            <div class="card">
+                <h3>How to Search and Apply for Jobs</h3>
+                <ul>
+                    <li>Using your web browser, enter the URL https://pesojobs.ph/</li>
+                    <li>Select JOB SEARCH to search for job vacancies. Select SEARCH to manually search the name of the employer / job position</li>
+                    <li>Select VIEW to view the details / job post of the employer</li>
+                    <li>Select APPLY to apply for the selected job vacancy</li>
+                </ul>
+                <a href="https://pesojobs.ph/" class="card-button">Search Jobs</a>
+            </div>
+        </div>
+        <div class="section-divider">
+            <h2 class="wp-block-heading-peso has-text-align-center">FOR EMPLOYERS</h2>
+        <div class="cards-grid">
+            <div class="card">
+                <h3>How to Register as Employer</h3>
+                <ul>
+                    <li>Using your web browser, enter the URL https://pesojobs.ph/</li>
+                    <li>You will be redirected to the login / registration page of the system</li>
+                    <li>Select REGISTER NOW to create an account</li>
+                    <li>Select EMPLOYER. Enter all the information required in the registration form</li>
+                    <li>Select ACCEPT OUR TERMS AND CONDITIONS. Select CREATE ACCOUNT to proceed</li>
+                    <li>You will be redirected to the home page of the system, after successful login</li>
+                </ul>
+                <a href="https://pesojobs.ph/" class="card-button">Register as Employer</a>
+            </div>
+            <div class="card">
+                <h3>How to Update Company Details</h3>
+                <ul>
+                    <li>After successfully registering, provide or update your company details subject for approval of the PESO to be able to post job vacancies</li>
+                    <li>Select your PROFILE PICTURE / ICON and select COMPANY DETAILS</li>
+                    <li>Enter all the required information to update your company details & information</li>
+                    <li>Select if a Licensed Overseas Recruitment Agency (LRA) or Private Employment Agency (PEA), then enter your business address / location, contact information and upload your company logo. Select SUBMIT button to finalize</li>
+                </ul>
+                <a href="https://pesojobs.ph/" class="card-button">Update Details</a>
+            </div>
+            <div class="card">
+                <h3>How to Upload Legal Documents</h3>
+                <ul>
+                    <li>Select LEGAL DOCUMENTS to attach your company's legal documents subject for review and approval of PESO</li>
+                    <li>Select CHOOSE FILE to upload a document and enter the DATE ISSUED and DATE EXPIRY then select UPLOAD once completed</li>
+                </ul>
+                <a href="https://pesojobs.ph/" class="card-button">Upload Documents</a>
+            </div>
+            <div class="card">
+                <h3>How to Post Jobs</h3>
+                <ul>
+                    <li>Once PESO has approved your registration, you will be notified in the system dashboard and the JOB POSTS function will be enabled</li>
+                    <li>Select JOB POSTS and select ADD VACANCY / JOB POST and enter all the required information</li>
+                    <li>Select SAVE when done</li>
+                    <li>You can VIEW, UPDATE, MONITOR your job vacancy, or REMOVE if necessary</li>
+                </ul>
+                <a href="https://pesojobs.ph/" class="card-button">Post Jobs</a>
+            </div>
+            <div class="card">
+                <h3>How to Manage Applications</h3>
+                <ul>
+                    <li>Select APPLICATION to view applicants who applied for the posted job vacancy</li>
+                    <li>Select an action to VIEW APPLICANT, SCHEDULE AN INTERVIEW, HIRE or REJECT an application</li>
+                    <li>Select VIEW APPLICANT icon to view the applicant's system generated CV or download the uploaded CV</li>
+                    <li>Select SCHEDULE AN INTERVIEW icon to send a message to the applicant including interview details and platform. Select SUBMIT when done</li>
+                    <li>Select ACCEPT / HIRE APPLICANT icon to hire the applicant. Enter the hiring date. The hired applicant profile will be reflected in the HIRED module and job vacancy counts will update</li>
+                </ul>
+                <a href="https://pesojobs.ph/" class="card-button">Manage Applications</a>
+            </div>
+        </div>
+    </div>
+        </div>
+<!-- /wp:html -->

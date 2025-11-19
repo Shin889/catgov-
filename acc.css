@@ -1,0 +1,149 @@
+/* ---------- TABLET ACCORDION (769px – 1024px) ---------- */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .barangayRow td:first-child::before,
+  .mayorRow td:first-child::before,
+  .viceMayorRow td:first-child::before,
+  .councilorRow td:first-child::before {
+    content: "\f06e";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 600;
+    display: inline-block;
+    margin-right: 4px;
+    color: #0066cc;
+    vertical-align: top;
+  }
+
+  td {
+    position: relative;
+    overflow: visible !important;
+    vertical-align: top;
+    text-align: center;
+  }
+
+  .profile-modal,
+  .barangay-modal {
+    position: static !important;
+    display: none;
+    width: 70vw !important;         
+    max-width: 90vw !important;     
+    margin: 10px auto 0 auto !important;
+    box-shadow: none !important;
+    border: none !important;
+    background-color: inherit !important;
+    animation: accordionFade 0.3s ease;
+    padding: 10px !important;
+  }
+
+  .profile-modal.open,
+  .barangay-modal.open {
+    display: block !important;
+  }
+
+  .hover-target {
+    cursor: pointer;
+    display: block;
+    width: 100%;
+  }
+
+  .hover-target:hover .profile-modal,
+  .hover-target:hover .barangay-modal {
+    display: none !important;
+  }
+
+  .profile-modal > div,
+  .barangay-modal > div {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+    justify-content: center;
+  }
+
+  .profile-modal img,
+  .barangay-modal img {
+    width: 70px !important;
+    height: 70px !important;
+  }
+}
+
+/* ---------- MOBILE ACCORDION (Up to 768px) ---------- */
+@media (max-width: 768px) {
+  .barangayRow td:first-child::before,
+  .mayorRow td:first-child::before,
+  .viceMayorRow td:first-child::before,
+  .councilorRow td:first-child::before {
+    content: "\f06e";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 600;
+    display: inline-block;
+    margin-right: 3px;
+    color: #0066cc;
+    vertical-align: top;
+  }
+
+  td {
+    position: relative;
+    overflow: visible !important;
+    vertical-align: top;
+    text-align: center;
+  }
+
+  .profile-modal,
+  .barangay-modal {
+    position: static !important;
+    display: none;
+    width: 85vw !important;         
+    max-width: 95vw !important;      
+    margin: 10px auto 0 auto !important;
+    padding: 10px !important;
+    box-shadow: none !important;
+    border: none !important;
+    background-color: inherit !important;
+    animation: accordionFade 0.3s ease;
+  }
+
+  .profile-modal.open,
+  .barangay-modal.open {
+    display: block !important;
+  }
+
+  .hover-target {
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    white-space: normal !important;
+    padding: 0 !important;
+  }
+
+  .hover-target:hover .profile-modal,
+  .hover-target:hover .barangay-modal {
+    display: none !important;
+  }
+
+  .profile-modal > div,
+  .barangay-modal > div {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+    justify-content: center;
+  }
+
+  .profile-modal img,
+  .barangay-modal img {
+    width: 60px !important;
+    height: 60px !important;
+  }
+
+  .profile-modal h4,
+  .barangay-modal h4 {
+    font-size: 14px;
+    margin: 0;
+  }
+
+  .profile-modal p,
+  .barangay-modal p {
+    font-size: 12px;
+    margin: 0;
+  }
+}

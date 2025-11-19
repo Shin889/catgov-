@@ -1,0 +1,2651 @@
+<style>
+/* custom-table */
+.custom-table {
+    max-width: 600px;
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+    font-size: clamp(12px, 2vw, 14px);
+    table-layout: fixed;
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+.custom-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+
+.custom-table th {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    text-align: left;
+    border: none;
+}
+
+.custom-table td {
+    border: none;
+    padding: 8px;
+    vertical-align: top;
+    white-space: normal;
+    word-break: break-word;
+}
+
+@media (max-width: 600px) {
+    .custom-table {
+        font-size: 0.9em;
+    }
+
+    .custom-table td:first-child {
+        width: 50%;
+    }
+}
+
+/* slider */
+.tourism-gallery {
+    max-width: auto;
+    text-align: center;
+    position: relative;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.tourism-gallery h3 {
+    text-align: center;
+    text-transform: none;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.tourism-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.tourism-wrapper {
+    display: flex;
+    transition: transform 0.6s ease-in-out;
+    width: 100%;
+}
+
+.tourism-wrapper img {
+    width: 100%;
+    flex-shrink: 0;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* pagination */
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 4px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.pagination button {
+    padding: 0 2px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 0;
+    min-width: 20px;
+    min-height: 24px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 10px;
+}
+
+.pagination button:hover {
+    background-color: #dcdcdc;
+}
+
+.pagination button.active {
+    background-color: #004499cc;
+    color: white;
+    border-color: #004499cc;
+}
+
+.pagination-wrapper {
+    text-align: right;
+    margin-top: 10px;
+}
+
+.pagination {
+    display: inline-flex;
+    gap: 4px;
+}
+
+/* tab 2 & 3 styled table */
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 8px;
+    border-bottom: 1px solid #ccc;
+    text-align: left;
+}
+
+
+.styled-table td:last-child {
+    text-align: center;
+    white-space: normal;
+}
+
+
+.hover-target {
+    position: relative;
+    display: inline-block;
+    white-space: normal;
+    line-height: 1.2;
+}
+
+
+
+@media (min-width: 601px) {
+    .hover-target {
+        white-space: nowrap;
+    }
+
+    .styled-table td:last-child {
+        white-space: nowrap;
+    }
+}
+
+
+
+@media (max-width: 600px) {
+    .styled-table td:last-child {
+        text-align: right;
+        white-space: normal;
+    }
+
+    .hover-target {
+        white-space: normal;
+        word-break: break-word;
+    }
+}
+
+/* 3rd column     */
+.official-profile {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.official-profile:hover .profile-modal {
+    display: block;
+}
+
+.official-profile a {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #000;
+    padding: 10px 15px;
+    border-radius: 10px;
+    transition: background 0.3s ease;
+}
+
+.hover-target {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    overflow: visible !important;
+}
+
+.official-profile a:hover {
+    background: #f1f1f1;
+}
+
+.official-profile img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* table */
+.tabs-panel {
+    position: relative;
+    overflow: visible;
+    z-index: 0;
+}
+
+hr {
+    margin: 20px 0;
+    border: none;
+    border-top: 1px dashed #aaa;
+}
+
+.pagination-wrapper {
+    text-align: right;
+    margin-top: 10px;
+}
+
+.pagination {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 4px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.pagination button {
+    padding: 0 2px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 0;
+    min-width: 18px;
+    min-height: 22px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 10px;
+}
+
+.pagination button:hover {
+    background-color: #dcdcdc;
+}
+
+.pagination button.active {
+    background-color: #004499cc;
+    color: white;
+    border-color: #004499cc;
+}
+
+table {
+    table-layout: fixed;
+}
+
+th,
+td {
+    padding: 8px;
+    border-bottom: 1px solid #ccc;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+td {
+    position: relative;
+    overflow: visible !important;
+}
+
+th.sortable {
+    cursor: pointer;
+    user-select: none;
+    text-align: center;
+    position: relative;
+    padding: 8px;
+    border-bottom: 1px solid #ccc;
+}
+
+th.sortable .sort-arrow {
+    font-size: 12px;
+    color: #888;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 2px;
+    width: 12px;
+    height: 12px;
+    line-height: 12px;
+    text-align: center;
+}
+
+th.sortable .sort-arrow::after {
+    content: "▲";
+    color: #888;
+}
+
+th.sortable.asc .sort-arrow::after {
+    content: "▲";
+    color: #000;
+}
+
+th.sortable.desc .sort-arrow::after {
+    content: "▼";
+    color: #000;
+}
+
+th.sortable[data-type="string"] {
+    text-align: left;
+}
+
+th.sortable[data-type="number"] {
+    text-align: center;
+}
+
+#mayorTableContainer,
+#viceMayorTableContainer,
+#councilorTableContainer {
+    overflow: visible !important;
+    position: relative;
+    z-index: 1;
+}
+
+/* -----------------------------------------------
+ DEFAULT (DESKTOP): Hover Modal
+------------------------------------------------- */
+.profile-modal,
+.barangay-modal {
+  position: absolute !important;
+  top: 0 !important;
+  left: 100% !important;
+  margin-left: 10px !important;
+  width: 330px !important;
+  background: #fff;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 10000;
+  display: none;
+  white-space: normal;
+  box-sizing: border-box;
+ /*  animation: accordionFade 0.3s ease; */
+}
+
+.hover-target:hover .profile-modal,
+.hover-target:hover .barangay-modal,
+.official-profile:hover .profile-modal {
+  display: block !important;
+}
+
+.profile-modal > div,
+.barangay-modal > div {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  flex-wrap: nowrap;
+}
+
+.profile-modal img,
+.barangay-modal img {
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.profile-modal h4,
+.barangay-modal h4 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.profile-modal p,
+.barangay-modal p {
+  font-size: 13px;
+  margin: 4px 0;
+  color: #555;
+}
+
+.profile-modal h3,
+.barangay-modal h3 {
+  text-align: center;
+  font-size: 16px;
+}
+
+/* -----------------------------------------------
+RESPONSIVE ACCORDION (320px – 1050px)
+------------------------------------------------- */
+@media (max-width: 1050px) {
+  .barangayRow td:first-child::before,
+  .mayorRow td:first-child::before,
+  .viceMayorRow td:first-child::before,
+  .councilorRow td:first-child::before {
+    content: "\f06e";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 600;
+    display: inline-block;
+    margin-right: 5px;
+    color: #0066cc;
+    vertical-align: top;
+  }
+
+  td {
+    position: relative;
+    overflow: visible !important;
+    vertical-align: top;
+    text-align: center;
+  }
+
+  .profile-modal,
+  .barangay-modal {
+    position: static !important;
+    display: none;
+    width: clamp(50vw, 55vw, 60vw) !important; 
+    margin: 12px auto 0 auto !important;
+    padding: 12px !important;
+    border: none !important;
+    box-shadow: none !important;
+    background-color: inherit !important;
+    /* animation: accordionFade 0.3s ease; */
+  }
+
+  .profile-modal.open,
+  .barangay-modal.open {
+    display: block !important;
+  }
+
+  .hover-target {
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    white-space: normal !important;
+  }
+
+/*   .hover-target:hover .profile-modal,
+  .hover-target:hover .barangay-modal {
+    display: none !important;
+  } */
+
+  .profile-modal > div,
+  .barangay-modal > div {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .profile-modal img,
+  .barangay-modal img {
+    width: 60px !important;
+    height: 60px !important;
+  }
+
+  .profile-modal h4,
+  .barangay-modal h4 {
+    font-size: 14px;
+    margin: 0;
+  }
+
+  .profile-modal p,
+  .barangay-modal p {
+    font-size: 12px;
+    margin: 0;
+  }
+}
+
+/* -----------------------------------------------
+ Fade Animation
+------------------------------------------------- */
+/* @keyframes accordionFade {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+ */
+
+
+
+/* CHART */
+.chart-header {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 8px;
+    width: 550px;
+    padding-right: -1px;
+}
+
+.zoom-controls {
+    display: flex;
+    gap: 5px;
+}
+
+.zoom-btn {
+    width: 25px;
+    height: 25px;
+    background: #fff;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 3px;
+    text-align: center;
+    line-height: 22px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.zoom-btn:hover {
+    background: #f0f0f0;
+}
+
+.chart-wrapper {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: relative;
+    cursor: grab;
+}
+
+.chart-wrapper:active {
+    cursor: grabbing;
+}
+
+.chart-scale {
+    transform-origin: top left;
+}
+
+@media (max-width: 768px) {
+    .chart-wrapper {
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+
+    #chart-container {
+        min-width: unset;
+    }
+
+    .chart-header {
+        width: 100%;
+        padding-right: 0;
+    }
+}
+
+/*    EMERGENCY CARD */
+.emergency-wrapper {
+    width: 100%;
+    max-width: 870px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.wp-emergency-card {
+    width: 100%;
+    background: #fff;
+    color: #222;
+    border: 2px solid #e5e7eb;
+    border-top: none;
+    border-radius: 0 0 8px 8px;
+    overflow: hidden;
+    margin-top: 10px;
+
+}
+
+.wp-emergency-card .header {
+    background-color: #0066cc;
+    color: #fff;
+    padding: 12px 15px;
+    font-size: 18px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-transform: uppercase;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.wp-emergency-card .header-icon {
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+}
+
+.wp-emergency-card .list {
+    padding: 8px 12px;
+}
+
+.wp-emergency-card .item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+    background: none;
+    border-bottom: 1px solid #eee;
+}
+
+.wp-emergency-card .item:last-child {
+    border-bottom: none;
+}
+
+.wp-emergency-card .icon {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none !important;
+    border: none !important;
+}
+
+.wp-emergency-card .icon img {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+}
+
+.wp-emergency-card .line {
+    flex: 1;
+    min-width: 0;
+}
+
+.wp-emergency-card .line .number {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.2;
+    word-break: break-word;
+}
+
+.wp-emergency-card .line .sub {
+    display: block;
+    font-size: 13px;
+    color: #6b7280;
+    text-transform: uppercase;
+}
+
+.wp-emergency-card .footer {
+    background-color: #0066cc;
+    color: #fff;
+    padding: 14px 15px;
+    font-size: 12px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.wp-emergency-card .footer img {
+    width: 36px;
+    height: auto;
+    flex-shrink: 0;
+}
+
+.officials-section {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.officials-wrapper {
+    width: 100%;
+    max-width: 870px;
+}
+
+.municipal-officials,
+.emergency-wrapper {
+    margin: 0 auto;
+}
+
+@media (max-width: 480px) {
+    .wp-emergency-card .header {
+        font-size: 16px;
+        gap: 8px;
+    }
+
+    .wp-emergency-card .icon img {
+        width: 28px;
+        height: 28px;
+    }
+
+    .wp-emergency-card .line .number {
+        font-size: 14px;
+    }
+
+    .wp-emergency-card .line .sub {
+        font-size: 11px;
+    }
+
+    .wp-emergency-card .footer {
+        font-size: 11px;
+        gap: 6px;
+    }
+
+    .wp-emergency-card .footer img {
+        width: 28px;
+    }
+}
+</style>
+<!-- wp:html -->
+<p class="municipality__breadcrumbs">
+  <a href="https://roblesanthony.com/~happyimartph/">Home</a> > <a href="/municipalities/">Municipalities</a> > San Miguel
+</p>
+<!-- /wp:html -->
+
+<!-- wp:spacer {"height":"34px"} -->
+<div style="height:34px" aria-hidden="true" class="wp-block-spacer"></div>
+<!-- /wp:spacer -->
+
+<!-- wp:columns -->
+<div class="wp-block-columns"><!-- wp:column {"width":"25%"} -->
+<div class="wp-block-column" style="flex-basis:25%"><!-- wp:image {"id":3454,"width":"160px","height":"160px","scale":"cover","sizeSlug":"full","linkDestination":"none","align":"center"} -->
+<figure class="wp-block-image aligncenter size-full is-resized"><img src="/~happyimartph/wp-content/uploads/2025/08/San-Miguel-1.png" alt="" class="wp-image-3454" style="object-fit:cover;width:160px;height:160px"/></figure>
+<!-- /wp:image -->
+
+<!-- wp:paragraph {"align":"center"} -->
+<p class="has-text-align-center"><strong>San Miguel Official Seal</strong></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:table {"align":"center","className":"custom-table"} -->
+<figure class="wp-block-table aligncenter">
+
+  <table class="custom-table has-fixed-layout">
+    <tbody>
+      <tr><td>Founded:</td><td>August 23, 1952</td></tr>
+      <tr><td>Population:</td><td>12,205</td></tr>
+      <tr><td>District:</td><td>Lone District</td></tr>
+      <tr><td>Municipality Class:</td><td>5th</td></tr>
+      <tr><td>Zip Code:</td><td>4802</td></tr>
+      <tr><td>No. of Barangays:</td><td>24</td></tr>
+      <tr><td>Area:</td><td>12,510 hectares</td></tr>
+    </tbody>
+  </table>
+</figure>
+<!-- /wp:table -->
+
+<!-- wp:spacer {"height":"21px"} -->
+<div style="height:21px" aria-hidden="true" class="wp-block-spacer"></div>
+<!-- /wp:spacer -->
+
+<!-- wp:html -->
+<div class="mapouter municipality__map-container" style="position: relative; text-align: right; height: 300px; width: 100%;">
+    <div class="gmap_canvas" style="overflow: hidden; background: none !important; height: 300px; width: 100%;">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124039.54503165509!2d124.17446924772959!3d13.704164698426057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a01c08fd4a4163%3A0x9a4f8f72924e2110!2sSan%20Miguel%2C%20Catanduanes!5e0!3m2!1sen!2sph!4v1753769706146!5m2!1sen!2sph" width="100%" height="300" frameborder="0" 
+            scrolling="no" 
+            marginheight="0" 
+            marginwidth="0" 
+            allowfullscreen=""
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+</div>
+<!-- /wp:html -->
+
+<!-- wp:spacer {"height":"6px"} -->
+<div style="height:6px" aria-hidden="true" class="wp-block-spacer"></div>
+<!-- /wp:spacer -->
+
+<!-- wp:image {"id":9265,"sizeSlug":"full","linkDestination":"none"} -->
+<figure class="wp-block-image size-full" id="love-catanduanes"><img src="https://roblesanthony.com/~happyimartph/wp-content/uploads/2025/09/Love-Catanduanes-2.png" alt="" class="wp-image-9265"/></figure>
+<!-- /wp:image -->
+
+<!-- wp:spacer {"height":"6px"} -->
+<div style="height:6px" aria-hidden="true" class="wp-block-spacer"></div>
+<!-- /wp:spacer -->
+
+<!-- wp:html -->
+<div class="tourism-gallery">
+  <div class="tourism-container">
+    <div class="tourism-wrapper" id="tourismSlides_SM">
+      <img src="/~happyimartph/wp-content/uploads/2025/09/SM-RiverPark.jpg" alt="San Miguel">
+      <img src="/~happyimartph/wp-content/uploads/2025/09/SM-bridge.jpg" alt="San Miguel">
+      <img src="/~happyimartph/wp-content/uploads/2025/09/SM-Solong.jpg" alt="San Miguel">
+      <img src="/~happyimartph/wp-content/uploads/2025/09/SM-Church.jpg" alt="San Miguel">
+    </div>
+
+    <button class="slide-btn prev" onclick="changeSlide_SM(-1)">❮</button>
+    <button class="slide-btn next" onclick="changeSlide_SM(1)">❯</button>
+  </div>
+  <h3>San Miguel Featured Places</h3>
+</div>
+
+<script>
+let slideIndex_SM = 1;
+let slideInterval_SM;
+
+function showSlides_SM(n) {
+  const slides = document.getElementById('tourismSlides_SM');
+  const totalSlides = slides.children.length;
+  if (n > totalSlides) { slideIndex_SM = 1; }
+  if (n < 1) { slideIndex_SM = totalSlides; }
+  slides.style.transform = `translateX(-${(slideIndex_SM - 1) * 100}%)`;
+}
+
+function changeSlide_SM(n) {
+  clearInterval(slideInterval_SM);
+  slideIndex_SM += n;
+  showSlides_SM(slideIndex_SM);
+  startAutoSlide_SM();
+}
+
+function startAutoSlide_SM() {
+  slideInterval_SM = setInterval(() => {
+    slideIndex_SM++;
+    showSlides_SM(slideIndex_SM);
+  }, 4500);
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  showSlides_SM(slideIndex_SM);
+  startAutoSlide_SM();
+});
+</script>
+<!-- /wp:html -->
+
+<!-- wp:social-links {"size":"has-small-icon-size","align":"center"} -->
+<ul class="wp-block-social-links aligncenter has-small-icon-size"><!-- wp:social-link {"url":"https://www.facebook.com/lgu.san.miguel.2025/","service":"facebook"} /--></ul>
+<!-- /wp:social-links --></div>
+<!-- /wp:column -->
+
+<!-- wp:column {"width":"50%"} -->
+<div class="wp-block-column" style="flex-basis:50%"><!-- wp:html -->
+<div class="cell large-6 municipality__tabs-container">
+  <ul class="tabs" data-tabs="" id="example-tabs">
+      <li class="tabs-title is-active">
+          <a href="#panel1" aria-selected="true" class="municipality__panel-tab">About</a>
+      </li>
+      <li class="tabs-title">
+          <a href="#panel2" class="municipality__panel-tab">Barangays</a>
+      </li>
+      <li class="tabs-title">
+          <a href="#panel3" class="municipality__panel-tab">Previous Officials</a>
+      </li>
+  </ul>
+  <div class="tabs-content" data-tabs-content="example-tabs" style="text-align: justify;">
+      <div class="tabs-panel is-active" id="panel1">
+        <p><strong>BACKGROUND</strong></p>
+        <p>San Miguel, according to the pioneers was a sitio known as “Aguas”, named after a fish specie. Later, in 1930’s during the celebration of the feast in honor of  Santa Cruz the Patron Saint, Aguas was changed to San Miguel in grateful recognition and commendation to the invaluable services of Don Miguel Triumfante, Juez de Ganado of Bato. This was done so since the first pioneer grade school teacher assigned in the barrio was a certain Miguel Mendez of Virac also.</p>
+        <p><strong>HISTORY</strong></p>
+        <p>San Miguel, which is once, a part of the Municipality of Bato, first inhabited by the early mountaineers and the part of the Malayan race that were pushed to the open valley with the coming of the <a href = "https://www.jstor.org/stable/j.ctv12pnqbf">Spanish Colonizers</a>.</p>
+        <p>There are myths and fables about how the town got its name. According to a pioneer, San Miguel was once a sitio known as “Aguas” named after fish species bigger than the “Balanak”. In the 1930’s during the celebration of the feast in honor of Santa Cruz the former Patron Saint; Aguas was changed to San Miguel in grateful recognition and commendation to the invaluable services of Don Miguel Triumfante and Juez de Cnado of Bato who were present then during the celebration.</p>
+        <p>There was also an event handed down to the present generation that once upon a time the chapel caretaker in the person of Marcelo Tapanan, in one early morning heard a long and loud ringing of bells. He hurried to the chapel and was surprised to see the image of Saint Michael the Archangel in the altar. The story passed on every ear of the residents and finally made a common move of changing the name of the place from Aguas to San Miguel.</p>
+        <p>Formerly, a barrio of San Miguel, Bato become a full pledge municipality through then President Elpidio Quirino’s Executive Order No. 803 dated August 23, 1952 comprising previously twelve (12) barangays.</p>
+<p>Since its emancipation in 1952, San Miguel Municipality is now forty-four years old. The reign of government was handed down through political choice; the first town mayor was Torribio Taopa who was chosen through a plebiscite in 1952 until the first local elections in 1953 where he won. </p>
+<p>Living memory testifies that San Miguel was once upon a time a forlorn and poor orphan of its mother town of Bato. Its life was filled with lonely chapters, too, with its pain and headache, longing and privations. Now, it presents a brighter picture. Past and present administrators with the aid of support of the National, Regional and Provincial Government had transformed the town from the limbo of backwardness into the light and aura of dynamic activities and achievements. </p>
+<p> The Municipality of San Miguel is located at the Mid-south part of the province of Catanduanes. It is bounded on the north by the municipality of Caramoran, on the east by the municipality of Baras and Gigmoto, on the west by the municipality of Virac and on the south by the municipality of Bato. </p>
+<p> Presently, the municipality of San Miguel has 24 barangays. It has a total land area of 18,372.5 hectares. San Miguel geographical location has the following orientation in terms of coordinate: 124o21’-124.9o21’ longitude and 13o37’-13o47’ latitude </p>
+<p> The present mayor is Edna Bernal who had beaten out Lorna Camano, the wife of the former Mayor and now SP Francisco Camano Jr. </p>
+      </div>
+
+<div class="tabs-panel" id="panel2">
+    <table class="styled-table">
+  <thead>
+        <tr>
+    <th style="text-align: left; padding: 8px; border-bottom: 1px solid #ccc;">
+      Barangay
+    </th>
+    <th style="text-align: center; padding: 8px; border-bottom: 1px solid #ccc;">
+      Fiesta Date
+    </th>
+  </tr>
+   
+  </thead>
+  <tbody>
+     <tr class="barangayRow">
+  <td>
+    <div class="hover-target" style="position: relative; display: inline-block;">
+      Balatohan
+      <div class="barangay-modal top-right">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <img src="/~happyimartph/wp-content/uploads/2025/09/SAN-MIGUEL-Balatohan.png"
+               style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+          <div style="font-size: 13px; line-height: 1.3;">
+           
+             <div style="text-align:center;">
+              <h4 style="margin: 0; color: #0073aa;">St. Joseph the Baptist</h4>
+        </div>
+            <p style="text-align: justify; font-size: 12px; color: #555;">
+              The barangay celebrates its fiesta in honor of 
+              <b>St. Joseph the Baptist</b> with religious and cultural activities.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </td>
+  <td style="text-align: center;">June 23 - &#8203; 24</td>
+</tr>
+<tr class="barangayRow">
+  <td>
+    <div class="hover-target" style="position: relative; display: inline-block;">
+       Salvacion (Patagan) 
+      <div class="barangay-modal top-right">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <img src="/~happyimartph/wp-content/uploads/2025/09/SAN-MIGUEL-Salvacion-Patagan-Buhi.png"
+               style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+          <div style="font-size: 13px; line-height: 1.3;">
+            
+             <div style="text-align:center;">
+              <h4 style="margin: 0; color: #0073aa;">Nuestra Señora De Salvacion</h4>
+        </div>
+            <p style="text-align: justify; font-size: 12px; color: #555;">
+              The barangay celebrates its fiesta in honor of 
+              <b>Nuestra Señora De Salvacion</b> with religious and cultural activities.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </td>
+  <td style="text-align: center;">May 4 - 5</td>
+</tr>
+
+
+<tr class="barangayRow">
+  <td>
+    <div class="hover-target" style="position: relative; display: inline-block;">
+      Boton  
+      <div class="barangay-modal top-right">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <img src="/~happyimartph/wp-content/uploads/2025/09/SAN-MIGUEL-Boton.png"
+               style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+          <div style="font-size: 13px; line-height: 1.3;">
+           
+             <div style="text-align:center;">
+              <h4 style="margin: 0; color: #0073aa;">St. Gabriel the Archangel</h4>
+        </div>
+            <p style="text-align: justify; font-size: 12px; color: #555;">
+              The barangay celebrates its fiesta in honor of 
+              <b>St. Gabriel the Archangel</b> with religious and cultural activities.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </td>
+  <td style="text-align: center;">March 23 - 24</td>
+</tr>
+<tr class="barangayRow">
+  <td>
+    <div class="hover-target" style="position: relative; display: inline-block;">
+      Buhi
+      <div class="barangay-modal top-right">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <img src="/~happyimartph/wp-content/uploads/2025/09/SAN-MIGUEL-Salvacion-Patagan-Buhi.png"
+               style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+          <div style="font-size: 13px; line-height: 1.3;">
+           
+             <div style="text-align:center;">
+              <h4 style="margin: 0; color: #0073aa;">Nuestra Señora De Salvacion</h4>
+        </div>
+            <p style="text-align: justify; font-size: 12px; color: #555;">
+              The barangay celebrates its fiesta in honor of 
+              <b>Nuestra Señora De Salvacion</b> with religious and cultural activities.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </td>
+  <td style="text-align: center;">May 28 - 29</td>
+</tr>
+<tr class="barangayRow">
+  <td>
+    <div class="hover-target" style="position: relative; display: inline-block;">
+      Dayawa
+      <div class="barangay-modal top-right">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <img src="/~happyimartph/wp-content/uploads/2025/09/SAN-MIGUEL-Dayawa.png"
+               style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+          <div style="font-size: 13px; line-height: 1.3;">
+           
+             <div style="text-align:center;">
+              <h4 style="margin: 0; color: #0073aa;">San Ramon Nonato</h4>
+        </div>
+            <p style="text-align: justify; font-size: 12px; color: #555;">
+              The barangay celebrates its fiesta in honor of 
+              <b>San Ramon Nonato</b> with religious and cultural activities.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </td>
+  <td style="text-align: center;">August 30 -31</td>
+</tr>
+<tr class="barangayRow">
+  <td>
+    <div class="hover-target" style="position: relative; display: inline-block;">
+      Atsan (District I)
+      <div class="barangay-modal top-right">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <img src="/~happyimartph/wp-content/uploads/2025/09/SAN-MIGUEL-AtsanDistric-I-Poblacion-District-II-Poblacion-District-III.png"
+               style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+          <div style="font-size: 13px; line-height: 1.3;">
+           
+             <div style="text-align:center;">
+              <h4 style="margin: 0; color: #0073aa;">Saint Michael the Archangel</h4>
+        </div>
+            <p style="text-align: justify; font-size: 12px; color: #555;">
+              The barangay celebrates its fiesta in honor of 
+              <b>Saint Michael the Archangel</b> with religious and cultural activities.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </td>
+  <td style="text-align: center;">May 7 - 8</td>
+</tr>
+<tr class="barangayRow">
+  <td>
+    <div class="hover-target" style="position: relative; display: inline-block;">
+      Poblacion District II
+      <div class="barangay-modal top-right">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <img src="/~happyimartph/wp-content/uploads/2025/09/SAN-MIGUEL-AtsanDistric-I-Poblacion-District-II-Poblacion-District-III.png"
+               style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+          <div style="font-size: 13px; line-height: 1.3;">
+           
+             <div style="text-align:center;">
+              <h4 style="margin: 0; color: #0073aa;">Saint Michael the Archangel</h4>
+        </div>
+            <p style="text-align: justify; font-size: 12px; color: #555;">
+              The barangay celebrates its fiesta in honor of 
+              <b>Saint Michael the Archangel</b> with religious and cultural activities.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </td>
+  <td style="text-align: center;">May 7 - 8</td>
+</tr>
+<tr class="barangayRow">
+  <td>
+    <div class="hover-target" style="position: relative; display: inline-block;">
+      Poblacion District III
+      <div class="barangay-modal top-right">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <img src="/~happyimartph/wp-content/uploads/2025/09/SAN-MIGUEL-AtsanDistric-I-Poblacion-District-II-Poblacion-District-III.png"
+               style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+          <div style="font-size: 13px; line-height: 1.3;">
+           
+             <div style="text-align:center;">
+              <h4 style="margin: 0; color: #0073aa;">Saint Michael the Archangel</h4>
+        </div>
+            <p style="text-align: justify; font-size: 12px; color: #555;">
+              The barangay celebrates its fiesta in honor of 
+              <b>Saint Michael the Archangel</b> with religious and cultural activities.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </td>
+  <td style="text-align: center;">May 7 - 8</td>
+</tr>
+<tr class="barangayRow">
+  <td>
+    <div class="hover-target" style="position: relative; display: inline-block;">
+      J.M. Alberto Tucao
+      <div class="barangay-modal top-right">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <img src="/~happyimartph/wp-content/uploads/2025/09/SAN-MIGUEL-J.M.-Alberto-Tucao.png"
+               style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+          <div style="font-size: 13px; line-height: 1.3;">
+           
+             <div style="text-align:center;">
+              <h4 style="margin: 0; color: #0073aa;">Saint Mary</h4>
+        </div>
+            <p style="text-align: justify; font-size: 12px; color: #555;">
+              The barangay celebrates its fiesta in honor of 
+              <b>Saint Mary</b> with religious and cultural activities.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </td>
+  <td style="text-align: center;">May 9 - 10</td>
+</tr>
+
+<tr class="barangayRow">
+  <td>
+    <div class="hover-target" style="position: relative; display: inline-block;">
+      Katipunan
+      <div class="barangay-modal top-right">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <img src="/~happyimartph/wp-content/uploads/2025/09/SAN-MIGUEL-Katipunan.png"
+               style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+          <div style="font-size: 13px; line-height: 1.3;">
+           
+             <div style="text-align:center;">
+              <h4 style="margin: 0; color: #0073aa;">Mary, Mother of Life</h4>
+        </div>
+            <p style="text-align: justify; font-size: 12px; color: #555;">
+              The barangay celebrates its fiesta in honor of 
+              <b>Mary, Mother of Life</b> with religious and cultural activities.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </td>
+  <td style="text-align: center;">May 14 – 15</td>
+</tr>
+<tr class="barangayRow">
+  <td>
+    <div class="hover-target" style="position: relative; display: inline-block;">
+      Kilikilihan
+      <div class="barangay-modal top-right">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <img src="/~happyimartph/wp-content/uploads/2025/09/SAN-MIGUEL-Kilikilihan.png"
+               style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+          <div style="font-size: 13px; line-height: 1.3;">
+           
+             <div style="text-align:center;">
+              <h4 style="margin: 0; color: #0073aa;">San Roque</h4>
+        </div>
+            <p style="text-align: justify; font-size: 12px; color: #555;">
+              The barangay celebrates its fiesta in honor of 
+              <b>San Roque</b> with religious and cultural activities.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </td>
+  <td style="text-align: center;">August 24 - 25</td>
+</tr>
+<tr class="barangayRow">
+  <td>
+    <div class="hover-target" style="position: relative; display: inline-block;">
+      Mabato
+      <div class="barangay-modal top-right">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <img src="/~happyimartph/wp-content/uploads/2025/09/SAN-MIGUEL-Mabato.png"
+               style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+          <div style="font-size: 13px; line-height: 1.3;">
+           
+             <div style="text-align:center;">
+              <h4 style="margin: 0; color: #0073aa;">St. Louis and Zellie Martin</h4>
+        </div>
+            <p style="text-align: justify; font-size: 12px; color: #555;">
+              The barangay celebrates its fiesta in honor of 
+              <b>St. Louis and Zellie Martin</b> with religious and cultural activities.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </td>
+  <td style="text-align: center;">August 7 - 8</td>
+</tr>
+<tr class="barangayRow">
+  <td>
+    <div class="hover-target" style="position: relative; display: inline-block;">
+      Obo
+      <div class="barangay-modal top-right">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <img src="/~happyimartph/wp-content/uploads/2025/09/SAN-MIGUEL-Obo.png"
+               style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+          <div style="font-size: 13px; line-height: 1.3;">
+           
+             <div style="text-align:center;">
+              <h4 style="margin: 0; color: #0073aa;">St. Josemaria Escriva</h4>
+        </div>
+            <p style="text-align: justify; font-size: 12px; color: #555;">
+              The barangay celebrates its fiesta in honor of 
+              <b>St. Josemaria Escriva</b> with religious and cultural activities.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </td>
+  <td style="text-align: center;">April 18 - 19</td>
+</tr>
+<tr class="barangayRow">
+  <td>
+    <div class="hover-target" style="position: relative; display: inline-block;">
+      Pacogon
+      <div class="barangay-modal top-right">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <img src="/~happyimartph/wp-content/uploads/2025/09/SAN-MIGUEL-Pacogon.png"
+               style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+          <div style="font-size: 13px; line-height: 1.3;">
+           
+             <div style="text-align:center;">
+              <h4 style="margin: 0; color: #0073aa;">St. Lawrence, Deacon and Martyr</h4>
+        </div>
+            <p style="text-align: justify; font-size: 12px; color: #555;">
+              The barangay celebrates its fiesta in honor of 
+              <b>St. Lawrence, Deacon and Martyr</b> with religious and cultural activities.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </td>
+  <td style="text-align: center;">August 9 - 10</td>
+</tr>
+<tr class="barangayRow">
+  <td>
+    <div class="hover-target" style="position: relative; display: inline-block;">
+      Pagsangahan
+      <div class="barangay-modal top-right">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <img src="/~happyimartph/wp-content/uploads/2025/09/SAN-MIGUEL-Pagsangahan.png"
+               style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+          <div style="font-size: 13px; line-height: 1.3;">
+           
+             <div style="text-align:center;">
+              <h4 style="margin: 0; color: #0073aa;">St. Claire of Asisi</h4>
+        </div>
+            <p style="text-align: justify; font-size: 12px; color: #555;">
+              The barangay celebrates its fiesta in honor of 
+              <b>St. Claire of Asisi</b> with religious and cultural activities.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </td>
+  <td style="text-align: center;">August 10 - 11</td>
+</tr>
+<tr class="barangayRow">
+  <td>
+    <div class="hover-target" style="position: relative; display: inline-block;">
+      Pangilao
+      <div class="barangay-modal top-right">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <img src="/~happyimartph/wp-content/uploads/2025/09/SAN-MIGUEL-Pangilao-Tobrehon.png"
+               style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+          <div style="font-size: 13px; line-height: 1.3;">
+           
+             <div style="text-align:center;">
+              <h4 style="margin: 0; color: #0073aa;">San Isidro Labrador</h4>
+        </div>
+            <p style="text-align: justify; font-size: 12px; color: #555;">
+              The barangay celebrates its fiesta in honor of 
+              <b>San Isidro Labrador</b> with religious and cultural activities.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </td>
+  <td style="text-align: center;">May 21 – 22</td>
+</tr>
+<tr class="barangayRow">
+  <td>
+    <div class="hover-target" style="position: relative; display: inline-block;">
+      Paraiso
+      <div class="barangay-modal top-right">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <img src="/~happyimartph/wp-content/uploads/2025/09/SAN-MIGUEL-Paraiso.png"
+               style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+          <div style="font-size: 13px; line-height: 1.3;">
+           
+             <div style="text-align:center;">
+              <h4 style="margin: 0; color: #0073aa;">Sagrada Familia</h4>
+        </div>
+            <p style="text-align: justify; font-size: 12px; color: #555;">
+              The barangay celebrates its fiesta in honor of 
+              <b>Sagrada Familia</b> with religious and cultural activities.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </td>
+  <td style="text-align: center;">May 19 - 20</td>
+</tr>
+<tr class="barangayRow">
+  <td>
+    <div class="hover-target" style="position: relative; display: inline-block;">
+      Santa Elena (Patagan)
+      <div class="barangay-modal top-right">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <img src="/~happyimartph/wp-content/uploads/2025/09/SAN-MIGUEL-Santa-Elena-Patagan.png"
+               style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+          <div style="font-size: 13px; line-height: 1.3;">
+           
+             <div style="text-align:center;">
+              <h4 style="margin: 0; color: #0073aa;">Sta. Elena</h4>
+        </div>
+            <p style="text-align: justify; font-size: 12px; color: #555;">
+              The barangay celebrates its fiesta in honor of 
+              <b>Sta. Elena</b> with religious and cultural activities.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </td>
+  <td style="text-align: center;">May 2 - 3</td>
+</tr>
+<tr class="barangayRow">
+  <td>
+    <div class="hover-target" style="position: relative; display: inline-block;">
+      Progreso
+      <div class="barangay-modal top-right">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <img src="/~happyimartph/wp-content/uploads/2025/09/SAN-MIGUEL-Progreso.png"
+               style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+          <div style="font-size: 13px; line-height: 1.3;">
+           
+             <div style="text-align:center;">
+              <h4 style="margin: 0; color: #0073aa;">Mary, Mother of Divine Love</h4>
+        </div>
+            <p style="text-align: justify; font-size: 12px; color: #555;">
+              The barangay celebrates its fiesta in honor of 
+              <b>Mary, Mother of Divine Love</b> with religious and cultural activities.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </td>
+  <td style="text-align: center;">April 30</td>
+</tr>
+<tr class="barangayRow">
+  <td>
+    <div class="hover-target" style="position: relative; display: inline-block;">
+      San Juan (Aroyao)
+      <div class="barangay-modal top-right">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <img src="/~happyimartph/wp-content/uploads/2025/09/SAN-MIGUEL-San-Juan-Aroyao.png"
+               style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+          <div style="font-size: 13px; line-height: 1.3;">
+           
+             <div style="text-align:center;">
+              <h4 style="margin: 0; color: #0073aa;">Saint John the Baptist</h4>
+        </div>
+            <p style="text-align: justify; font-size: 12px; color: #555;">
+              The barangay celebrates its fiesta in honor of 
+              <b>Saint John the Baptist</b> with religious and cultural activities.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </td>
+  <td style="text-align: center;">May 26 – 27</td>
+</tr>
+<tr class="barangayRow">
+  <td>
+    <div class="hover-target" style="position: relative; display: inline-block;">
+      San Marcos
+      <div class="barangay-modal top-right">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <img src="/~happyimartph/wp-content/uploads/2025/09/SAN-MIGUEL-San-Marcos.png"
+               style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+          <div style="font-size: 13px; line-height: 1.3;">
+           
+             <div style="text-align:center;">
+              <h4 style="margin: 0; color: #0073aa;">Nuestra Señora De La Milagrosa</h4>
+        </div>
+            <p style="text-align: justify; font-size: 12px; color: #555;">
+              The barangay celebrates its fiesta in honor of 
+              <b>Nuestra Señora De La Milagrosa</b> with religious and cultural activities.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </td>
+  <td style="text-align: center;">August 16 - 17</td>
+</tr>
+<tr class="barangayRow">
+  <td>
+    <div class="hover-target" style="position: relative; display: inline-block;">
+      Siay
+      <div class="barangay-modal top-right">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <img src="/~happyimartph/wp-content/uploads/2025/09/SAN-MIGUEL-Siay.png"
+               style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+          <div style="font-size: 13px; line-height: 1.3;">
+           
+             <div style="text-align:center;">
+              <h4 style="margin: 0; color: #0073aa;">San Vicente Ferrer</h4>
+        </div>
+            <p style="text-align: justify; font-size: 12px; color: #555;">
+              The barangay celebrates its fiesta in honor of 
+              <b>San Vicente Ferrer</b> with religious and cultural activities.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </td>
+  <td style="text-align: center;">April 4 - 5</td>
+</tr>
+<tr class="barangayRow">
+  <td>
+    <div class="hover-target" style="position: relative; display: inline-block;">
+      Solong
+      <div class="barangay-modal top-right">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <img src="/~happyimartph/wp-content/uploads/2025/09/SAN-MIGUEL-Solong.png"
+               style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+          <div style="font-size: 13px; line-height: 1.3;">
+           
+             <div style="text-align:center;">
+              <h4 style="margin: 0; color: #0073aa;">St. Raphael the Archangel</h4>
+        </div>
+            <p style="text-align: justify; font-size: 12px; color: #555;">
+              The barangay celebrates its fiesta in honor of 
+              <b>St. Raphael the Archangel</b> with religious and cultural activities.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </td>
+  <td style="text-align: center;">October 23 - 24</td>
+</tr>
+<tr class="barangayRow">
+  <td>
+    <div class="hover-target" style="position: relative; display: inline-block;">
+      Tobrehon
+      <div class="barangay-modal top-right">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <img src="/~happyimartph/wp-content/uploads/2025/09/SAN-MIGUEL-Pangilao-Tobrehon.png"
+               style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+          <div style="font-size: 13px; line-height: 1.3;">
+           
+             <div style="text-align:center;">
+              <h4 style="margin: 0; color: #0073aa;">San Isidro Labrador</h4>
+        </div>
+            <p style="text-align: justify; font-size: 12px; color: #555;">
+              The barangay celebrates its fiesta in honor of 
+              <b>San Isidro Labrador</b> with religious and cultural activities.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </td>
+  <td style="text-align: center;">May 14 - 15</td>
+</tr>
+  
+        </tbody>
+    </table>
+
+
+    <div class="pagination-wrapper" style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
+        <p id="barangayPageInfo" style="margin: 0; font-weight: bold; font-size: 14px;">This is page 1 out of X</p>
+        <div id="barangayPagination" class="pagination" style="display: flex; gap: 5px;"></div>
+    </div>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const TOUCH_BREAKPOINT = 782; // <= this is accordion (tablet+mobile), > is desktop (hover)
+  const MODAL_SELECTORS = [".barangay-modal", ".profile-modal"];
+  const HOVER_TARGET_SELECTOR = ".hover-target";
+  let initialized = new WeakSet();
+
+  const isDesktopView = () => window.innerWidth > TOUCH_BREAKPOINT;
+
+  function closeAllAccordions() {
+    MODAL_SELECTORS.forEach(sel => {
+      document.querySelectorAll(sel + ".open").forEach(m => m.classList.remove("open"));
+    });
+  }
+
+  function removeDesktopVisible() {
+    MODAL_SELECTORS.forEach(sel => {
+      document.querySelectorAll(sel + ".visible-desktop").forEach(m => m.classList.remove("visible-desktop"));
+    });
+  }
+
+  function attachToTarget(target) {
+    if (initialized.has(target)) return;
+    initialized.add(target);
+
+    // find either modal type inside this target
+    const modal = MODAL_SELECTORS.map(s => target.querySelector(s)).find(Boolean);
+    if (!modal) return;
+
+    // Hover behavior for desktop (use pointer events so touch devices don't fire hover)
+    target.addEventListener("pointerenter", (e) => {
+      if (isDesktopView()) {
+        // ensure other desktop-only visible modals are cleared for cleanliness
+        removeDesktopVisible();
+        modal.classList.add("visible-desktop");
+      }
+    });
+
+    target.addEventListener("pointerleave", (e) => {
+      if (isDesktopView()) {
+        modal.classList.remove("visible-desktop");
+      }
+    });
+
+    // Click/tap behavior for tablet/mobile (accordion)
+    target.addEventListener("click", (e) => {
+      if (!isDesktopView()) {
+        // prevent the document click handler from immediately closing it
+        e.stopPropagation();
+        const wasOpen = modal.classList.contains("open");
+
+        // close any other open accordions (both types)
+        closeAllAccordions();
+
+        if (!wasOpen) {
+          modal.classList.add("open");
+          // optionally ensure any desktop-visible class removed
+          modal.classList.remove("visible-desktop");
+        }
+      }
+    });
+
+    // Prevent clicks inside modal from bubbling out (so clicking inside doesn't close it)
+    modal.addEventListener("click", (e) => {
+      e.stopPropagation();
+    });
+  }
+
+  function setupAllTargets() {
+    document.querySelectorAll(HOVER_TARGET_SELECTOR).forEach(attachToTarget);
+  }
+
+  // Close accordions when clicking outside (only when accordion mode)
+  document.addEventListener("click", () => {
+    if (!isDesktopView()) closeAllAccordions();
+  });
+
+  // Close visible-desktop when pressing Escape (helpful for keyboard/UX)
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      removeDesktopVisible();
+      closeAllAccordions();
+    }
+  });
+
+  // Smart resize handling: on resize reset classes, re-run setup (debounced)
+  let resizeTimer = null;
+  window.addEventListener("resize", () => {
+    if (resizeTimer) clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+      // remove desktop-only visible flags and remove open when switching to desktop
+      removeDesktopVisible();
+      if (isDesktopView()) closeAllAccordions();
+
+      // re-initialize targets (we don't rebind listeners thanks to WeakSet guard)
+      setupAllTargets();
+    }, 120);
+  });
+
+  // Initial setup
+  setupAllTargets();
+});
+</script>
+
+
+<script>
+(function(){
+    const rowsPerPage = 24;
+    let currentPage = 1;
+
+    function updateBarangayTable() {
+        const rows = document.querySelectorAll("#panel2 .barangayRow");
+        const totalPages = Math.ceil(rows.length / rowsPerPage);
+
+        rows.forEach((row, index) => {
+            row.style.display = (
+                index >= (currentPage - 1) * rowsPerPage &&
+                index < currentPage * rowsPerPage
+            ) ? '' : 'none';
+        });
+
+        renderPagination(totalPages);
+    }
+
+    function changeBarangayPage(page) {
+        const rows = document.querySelectorAll("#panel2 .barangayRow");
+        const totalPages = Math.ceil(rows.length / rowsPerPage);
+
+        if (page < 1) page = 1;
+        if (page > totalPages) page = totalPages;
+
+        currentPage = page;
+        updateBarangayTable();
+    }
+
+    function renderPagination(totalPages) {
+        document.getElementById("barangayPageInfo").textContent = `This is page ${currentPage} out of ${totalPages}`;
+
+        const container = document.getElementById("barangayPagination");
+        container.innerHTML = "";
+
+        const prevBtn = document.createElement("button");
+        prevBtn.textContent = "<< Prev";
+        prevBtn.disabled = currentPage === 1;
+        if (currentPage === 1) prevBtn.classList.add("disabled");
+        prevBtn.onclick = () => changeBarangayPage(currentPage - 1);
+        container.appendChild(prevBtn);
+
+        const maxPagesToShow = 7;
+        let startPage = 1;
+        let endPage = totalPages;
+
+        if (totalPages > maxPagesToShow) {
+            if (currentPage <= 4) {
+                endPage = 5;
+            } else if (currentPage >= totalPages - 3) {
+                startPage = totalPages - 4;
+            } else {
+                startPage = currentPage - 2;
+                endPage = currentPage + 2;
+            }
+        }
+
+        if (startPage > 1) {
+            addPageButton(container, 1);
+            if (startPage > 2) {
+                addEllipsis(container);
+            }
+        }
+
+        for (let i = startPage; i <= endPage; i++) {
+            addPageButton(container, i);
+        }
+
+        if (endPage < totalPages) {
+            if (endPage < totalPages - 1) {
+                addEllipsis(container);
+            }
+            addPageButton(container, totalPages);
+        }
+
+        const nextBtn = document.createElement("button");
+        nextBtn.textContent = "Next >>";
+        nextBtn.disabled = currentPage === totalPages;
+        if (currentPage === totalPages) nextBtn.classList.add("disabled");
+        nextBtn.onclick = () => changeBarangayPage(currentPage + 1);
+        container.appendChild(nextBtn);
+    }
+
+    function addPageButton(container, pageNumber) {
+        const btn = document.createElement("button");
+        btn.textContent = pageNumber;
+        if (currentPage === pageNumber) {
+            btn.classList.add("active");
+        }
+        btn.onclick = () => changeBarangayPage(pageNumber);
+        container.appendChild(btn);
+    }
+
+    function addEllipsis(container) {
+        const ellipsis = document.createElement("span");
+        ellipsis.textContent = "...";
+        ellipsis.className = "ellipsis";
+        container.appendChild(ellipsis);
+    }
+
+    updateBarangayTable();
+})();
+</script>
+
+
+        <div class="tabs-panel" id="panel3">
+
+
+            <h4 style="margin-top: 0;">Mayors</h4>
+
+            <div id="mayorTableContainer" style="position: relative;">
+                <table id="mayorTable"
+                    style="width: 100%; border-collapse: collapse; font-size: 14px; margin-bottom: 20px;">
+<thead>
+  <tr style="background-color: #f1f1f1;">
+    <th class="sortable" style="text-align: left; padding: 8px; border-bottom: 1px solid #ccc;" data-column="name" data-type="string">
+      Name <span class="sort-arrow"></span>
+    </th>
+<th class="sortable desc" style="text-align: center; padding: 8px; border-bottom: 1px solid #ccc;" data-column="termStart" data-type="number">
+  Term Start<span class="sort-arrow"></span>
+</th>
+
+    <th class="sortable" style="text-align: center; padding: 8px; border-bottom: 1px solid #ccc;" data-column="termEnd" data-type="number">
+      Term End <span class="sort-arrow"></span>
+    </th>
+  </tr>
+</thead>
+                    <tbody id="mayorTableBody">
+                        <tr class="mayorRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Antonio T. Teves
+                                    <div class="profile-modal top-right">
+                                        <div style="display: flex; align-items: center; gap: 10px;">
+                                            <img src="/~happyimartph/wp-content/uploads/2025/08/Mayor-Antonio-Teves-San-Miguel.png"
+                                                style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                            <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                                <h4 style="margin: 0;">Antonio Tapanan Teves</h4>
+                                                <p style="text-align: justify;">Looking back on the past year, I am proud of the progress we’ve made together.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                        </tr>
+                        <tr class="mayorRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Francisco T. Camano Jr
+                                    <div class="profile-modal top-right">
+                                        <div style="display: flex; align-items: center; gap: 10px;">
+                                            <img src="/~happyimartph/wp-content/uploads/2025/08/Mayor-Francisco-T.-Camano.png"
+                                                style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                            <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                                <h4 style="margin: 0;">Francisco Ted Caman Jr. (PDPLBN)</h4>
+                                                <p style="text-align: center;">Date of Birth: January 28, 1955</p>
+                                                <p style="text-align: justify;">Looking back on the past year, I am proud of the progress we’ve made together.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2019</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                        </tr>
+                        <tr class="mayorRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Francisco T. Camano Jr
+                                    <div class="profile-modal top-right">
+                                        <div style="display: flex; align-items: center; gap: 10px;">
+                                            <img src="/~happyimartph/wp-content/uploads/2025/08/Mayor-Francisco-T.-Camano.png"
+                                                style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                            <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                                <h4 style="margin: 0;">Francisco Ted Caman Jr. (PDPLBN)</h4>
+                                                <p style="text-align: center;">Date of Birth: January 28, 1955</p>
+                                                <p style="text-align: justify;">Looking back on the past year, I am proud of the progress we’ve made together.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2019</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2016</td>
+                        </tr>
+
+                        <script>
+                            const totalRows = 30;
+                            for (let i = 1; i <= totalRows; i++) {
+                                document.write(`
+              
+                  `);
+                            }
+                        </script>
+                    </tbody>
+                </table>
+                <div class="pagination-wrapper"
+                    style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
+                    <p id="pageInfo" style="margin: 0; font-weight: bold; font-size: 14px;">This is page 1 out of X</p>
+                    <div id="mayorPagination" class="pagination" style="display: flex; gap: 5px;"></div>
+                </div>
+                <hr style="margin: 15px 0; border-top: 1px solid #ccc;">
+
+                <script>
+                    const rowsPerPage = 10;
+                    let currentPage = 1;
+
+                    function updateMayorTable() {
+                        const rows = document.querySelectorAll(".mayorRow");
+                        const totalPages = Math.ceil(rows.length / rowsPerPage);
+
+                        rows.forEach((row, index) => {
+                            row.style.display = (
+                                index >= (currentPage - 1) * rowsPerPage &&
+                                index < currentPage * rowsPerPage
+                            ) ? '' : 'none';
+                        });
+
+                        renderPagination(totalPages);
+                    }
+
+                    function changeMayorPage(page) {
+                        const rows = document.querySelectorAll(".mayorRow");
+                        const totalPages = Math.ceil(rows.length / rowsPerPage);
+
+                        if (page < 1) page = 1;
+                        if (page > totalPages) page = totalPages;
+
+                        currentPage = page;
+                        updateMayorTable();
+                    }
+
+                    function renderPagination(totalPages) {
+                        document.getElementById("pageInfo").textContent = `This is page ${currentPage} out of ${totalPages}`;
+
+
+                        const pageInfo = document.getElementById("pageInfo");
+                        const container = document.getElementById("mayorPagination");
+
+                        // Update the text
+                        pageInfo.textContent = `This is page ${currentPage} out of ${totalPages}`;
+                        container.innerHTML = "";
+
+                        // ← Prev button
+                        const prevBtn = document.createElement("button");
+                        prevBtn.textContent = "<< Prev";
+                        prevBtn.className = currentPage === 1 ? "disabled" : "";
+                        prevBtn.disabled = currentPage === 1;
+                        prevBtn.onclick = () => changeMayorPage(currentPage - 1);
+                        container.appendChild(prevBtn);
+
+                        const maxPagesToShow = 7;
+                        let startPage = 1;
+                        let endPage = totalPages;
+
+                        if (totalPages > maxPagesToShow) {
+                            if (currentPage <= 4) {
+                                endPage = 5;
+                            } else if (currentPage >= totalPages - 3) {
+                                startPage = totalPages - 4;
+                            } else {
+                                startPage = currentPage - 2;
+                                endPage = currentPage + 2;
+                            }
+                        }
+
+                        if (startPage > 1) {
+                            addPageButton(container, 1);
+                            if (startPage > 2) {
+                                addEllipsis(container);
+                            }
+                        }
+
+                        for (let i = startPage; i <= endPage; i++) {
+                            addPageButton(container, i);
+                        }
+
+                        if (endPage < totalPages) {
+                            if (endPage < totalPages - 1) {
+                                addEllipsis(container);
+                            }
+                            addPageButton(container, totalPages);
+                        }
+
+                        // → Next button
+                        const nextBtn = document.createElement("button");
+                        nextBtn.textContent = "Next >>";
+                        nextBtn.className = currentPage === totalPages ? "disabled" : "";
+                        nextBtn.disabled = currentPage === totalPages;
+                        nextBtn.onclick = () => changeMayorPage(currentPage + 1);
+                        container.appendChild(nextBtn);
+                    }
+
+
+
+                    function addPageButton(container, pageNumber) {
+                        const btn = document.createElement("button");
+                        btn.textContent = pageNumber;
+                        if (currentPage === pageNumber) {
+                            btn.className = "active";
+                        }
+                        btn.onclick = () => changeMayorPage(pageNumber);
+                        container.appendChild(btn);
+                    }
+
+                    function addEllipsis(container) {
+                        const ellipsis = document.createElement("span");
+                        ellipsis.textContent = "...";
+                        ellipsis.className = "ellipsis";
+                        container.appendChild(ellipsis);
+                    }
+
+
+                    updateMayorTable();
+
+
+                </script>
+
+
+                <script>
+                    document.addEventListener("DOMContentLoaded", () => {
+                        document.querySelectorAll(".hover-target").forEach(target => {
+                            target.addEventListener("mouseenter", () => {
+                                const modal = target.querySelector(".profile-modal");
+                                if (modal) modal.style.display = "block";
+                            });
+                            target.addEventListener("mouseleave", () => {
+                                const modal = target.querySelector(".profile-modal");
+                                if (modal) modal.style.display = "none";
+                            });
+                        });
+                    });
+                </script>
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+
+<div class="chart-header">
+  <div class="zoom-controls">
+    <div class="zoom-btn" onclick="zoomIn()">+</div>
+    <div class="zoom-btn" onclick="zoomOut()">−</div>
+  </div>
+</div>
+<div class="chart-wrapper" id="chartWrapper">
+    <div id="chart-container" class="chart-scale">
+      <div id="example2_1"></div>
+    </div>
+  </div>
+
+  <script>
+    
+    const chartWrapper = document.getElementById("chartWrapper");
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+  
+    chartWrapper.addEventListener("mousedown", (e) => {
+      isDown = true;
+      chartWrapper.classList.add("active");
+      startX = e.pageX - chartWrapper.offsetLeft;
+      scrollLeft = chartWrapper.scrollLeft;
+    });
+  
+    chartWrapper.addEventListener("mouseleave", () => {
+      isDown = false;
+    });
+  
+    chartWrapper.addEventListener("mouseup", () => {
+      isDown = false;
+    });
+  
+    chartWrapper.addEventListener("mousemove", (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - chartWrapper.offsetLeft;
+      const walk = (x - startX) * 1; // multiply for speed
+      chartWrapper.scrollLeft = scrollLeft - walk;
+    });
+  </script>
+<script type="text/javascript">
+  google.charts.load("current", { packages: ["timeline"] });
+  google.charts.setOnLoadCallback(init);
+
+  let chart, dataTable;
+  let minDate, maxDate;
+  let zoomFactor = 1; 
+function init() {
+  const container = document.getElementById("example2_1");
+  chart = new google.visualization.Timeline(container);
+  dataTable = new google.visualization.DataTable();
+
+  dataTable.addColumn({ type: "string", id: "Term" });
+  dataTable.addColumn({ type: "string", id: "Name" });
+  dataTable.addColumn({ type: "date", id: "Start" });
+  dataTable.addColumn({ type: "date", id: "End" });
+
+ dataTable.addRows([
+  ["1", "Francisco Ted Caman Jr", new Date(2016, 0, 1), new Date(2019, 0, 2)],
+  ["2", "Francisco Ted Caman Jr	", new Date(2019, 0, 1), new Date(2022, 0, 2)],
+  ["3", "Antonio Tapanan Teves", new Date(2022, 0, 1), new Date(2025, 0, 2)]
+]);
+
+// Limit chart view from 2016 to 2025
+minDate = new Date(2016, 0, 1);
+maxDate = new Date(2025, 11, 31);
+
+  drawChart();
+}function drawChart() {
+  let ticks = [];
+  let startYear = minDate.getFullYear();
+  let endYear = maxDate.getFullYear();
+  for (let y = startYear; y <= endYear; y++) {
+    ticks.push(new Date(y, 0, 1));
+  }
+
+  const baseRowHeight = zoomFactor === 1 ? 35 : 45;
+  const rowHeight = baseRowHeight * zoomFactor;
+  const chartHeight = dataTable.getNumberOfRows() * rowHeight + 30;
+
+  let years = endYear - startYear + 1;
+  let baseWidth = zoomFactor === 1 ? 80 : 100; 
+  let chartWidth = years * baseWidth * zoomFactor;
+
+  
+  let finalWidth = Math.max(chartWidth, 550);
+
+  chart.draw(dataTable, {
+    height: chartHeight,
+    width: finalWidth,
+    timeline: {
+      rowLabelStyle: { fontSize: 12 * zoomFactor, color: '#444' },
+      barLabelStyle: { fontSize: 12 * zoomFactor, color: '#222' }
+    },
+    avoidOverlappingGridLines: true,
+   hAxis: {
+  format: 'yyyy',
+  ticks: ticks,
+  gridlines: { count: ticks.length },
+  minorGridlines: { count: 0 },
+  viewWindowMode: 'explicit',
+  viewWindow: { min: minDate, max: maxDate }
+}
+
+  });
+}
+
+
+
+function zoomIn() {
+  zoomFactor = Math.min(zoomFactor * 1.25, 5); 
+  drawChart();
+}
+
+function zoomOut() {
+  zoomFactor = Math.max(zoomFactor / 1.25, 0.5); 
+  drawChart();
+}
+
+</script>
+
+            </div>
+
+
+            <hr style="margin: 15px 0; border-top: 1px solid #ccc;">
+            <h4 style="margin-top: 0;">Vice Mayors</h4>
+
+            <div id="viceMayorTableContainer" style="position: relative;">
+                <table id="viceMayorTable"
+                    style="width: 100%; border-collapse: collapse; font-size: 14px; margin-bottom: 20px;">
+<thead>
+  <tr style="background-color: #f1f1f1;">
+    <th class="sortable" style="text-align: left; padding: 8px; border-bottom: 1px solid #ccc;" data-column="name" data-type="string">
+      Name <span class="sort-arrow"></span>
+    </th>
+<th class="sortable desc" style="text-align: center; padding: 8px; border-bottom: 1px solid #ccc;" data-column="termStart" data-type="number">
+  Term Start<span class="sort-arrow"></span>
+</th>
+
+    <th class="sortable" style="text-align: center; padding: 8px; border-bottom: 1px solid #ccc;" data-column="termEnd" data-type="number">
+      Term End <span class="sort-arrow"></span>
+    </th>
+  </tr>
+                  </thead>
+                    <tbody id="viceMayorTableBody">
+                        <tr class="viceMayorRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Noel S. Morales 
+                                    <div class="profile-modal top-right">
+                                        <div style="display: flex; align-items: center; gap: 10px;">
+                                            <img src="/~happyimartph/wp-content/uploads/2025/08/Vice-Mayor-NOEL-SERILO-MORALES.png"
+                                                style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                            <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                                <h4 style="margin: 0;">Noel Serilo Morales (IND)</h4>
+                                                <p style="text-align: center;">Date of Birth: August 3, 1966</p>
+                                                <p style="text-align: justify;">Looking back on the past year, I am proud of the progress we’ve made together.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="pagination-wrapper-vice" style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
+                    <p id="vicePageInfo" style="margin: 0; font-weight: bold; font-size: 14px;">This is page 1 out of X</p>
+                    <div id="vicePagination" class="pagination" style="display: flex; gap: 5px;"></div>
+                  </div>
+                  
+            </div>
+            <script>
+                const rowsPerPageVice = 10;
+                let currentPageVice = 1;
+              
+                function updateViceMayorTable() {
+                  const rows = document.querySelectorAll(".viceMayorRow");
+                  const totalPages = Math.ceil(rows.length / rowsPerPageVice);
+              
+                  rows.forEach((row, index) => {
+                    row.style.display = (
+                      index >= (currentPageVice - 1) * rowsPerPageVice &&
+                      index < currentPageVice * rowsPerPageVice
+                    ) ? '' : 'none';
+                  });
+              
+                  renderVicePagination(totalPages);
+                }
+              
+                function changeVicePage(page) {
+                  const rows = document.querySelectorAll(".viceMayorRow");
+                  const totalPages = Math.ceil(rows.length / rowsPerPageVice);
+              
+                  if (page < 1) page = 1;
+                  if (page > totalPages) page = totalPages;
+              
+                  currentPageVice = page;
+                  updateViceMayorTable();
+                }
+              
+                function renderVicePagination(totalPages) {
+                  document.getElementById("vicePageInfo").textContent = `This is page ${currentPageVice} out of ${totalPages}`;
+                  const container = document.getElementById("vicePagination");
+                  container.innerHTML = "";
+              
+                  const prevBtn = document.createElement("button");
+                  prevBtn.textContent = "<< Prev";
+                  prevBtn.className = currentPageVice === 1 ? "disabled" : "";
+                  prevBtn.disabled = currentPageVice === 1;
+                  prevBtn.onclick = () => changeVicePage(currentPageVice - 1);
+                  container.appendChild(prevBtn);
+              
+                  const maxPagesToShow = 7;
+                  let startPage = 1;
+                  let endPage = totalPages;
+              
+                  if (totalPages > maxPagesToShow) {
+                    if (currentPageVice <= 4) {
+                      endPage = 5;
+                    } else if (currentPageVice >= totalPages - 3) {
+                      startPage = totalPages - 4;
+                    } else {
+                      startPage = currentPageVice - 2;
+                      endPage = currentPageVice + 2;
+                    }
+                  }
+              
+                  if (startPage > 1) {
+                    addVicePageButton(container, 1);
+                    if (startPage > 2) {
+                      addViceEllipsis(container);
+                    }
+                  }
+              
+                  for (let i = startPage; i <= endPage; i++) {
+                    addVicePageButton(container, i);
+                  }
+              
+                  if (endPage < totalPages) {
+                    if (endPage < totalPages - 1) {
+                      addViceEllipsis(container);
+                    }
+                    addVicePageButton(container, totalPages);
+                  }
+              
+                  const nextBtn = document.createElement("button");
+                  nextBtn.textContent = "Next >>";
+                  nextBtn.className = currentPageVice === totalPages ? "disabled" : "";
+                  nextBtn.disabled = currentPageVice === totalPages;
+                  nextBtn.onclick = () => changeVicePage(currentPageVice + 1);
+                  container.appendChild(nextBtn);
+                }
+              
+                function addVicePageButton(container, pageNumber) {
+                  const btn = document.createElement("button");
+                  btn.textContent = pageNumber;
+                  if (currentPageVice === pageNumber) {
+                    btn.className = "active";
+                  }
+                  btn.onclick = () => changeVicePage(pageNumber);
+                  container.appendChild(btn);
+                }
+              
+                function addViceEllipsis(container) {
+                  const ellipsis = document.createElement("span");
+                  ellipsis.textContent = "...";
+                  ellipsis.className = "ellipsis";
+                  container.appendChild(ellipsis);
+                }
+              
+                updateViceMayorTable();
+              </script>
+              
+            <hr style="margin: 15px 0; border-top: 1px solid #ccc;">
+            <h4 style="margin-top: 0;">Councilors</h4>
+
+            <div id="councilorTableContainer" style="position: relative;">
+                <table id="councilorTable"
+                    style="width: 100%; border-collapse: collapse; font-size: 14px; margin-bottom: 20px;">
+                    <thead>
+  <tr style="background-color: #f1f1f1;">
+    <th class="sortable" style="text-align: left; padding: 8px; border-bottom: 1px solid #ccc;" data-column="name" data-type="string">
+      Name <span class="sort-arrow"></span>
+    </th>
+<th class="sortable desc" style="text-align: center; padding: 8px; border-bottom: 1px solid #ccc;" data-column="termStart" data-type="number">
+  Term Start<span class="sort-arrow"></span>
+</th>
+
+    <th class="sortable" style="text-align: center; padding: 8px; border-bottom: 1px solid #ccc;" data-column="termEnd" data-type="number">
+      Term End <span class="sort-arrow"></span>
+    </th>
+  </tr>
+                  </thead>
+                    <tbody id="councilorTableBody">
+
+                        <tr class="councilorRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Manuel T. Sumulat 
+                                    <div class="profile-modal top-right">
+                                        <div style="display: flex; align-items: center; gap: 10px;">
+                                            <img src="/~happyimartph/wp-content/uploads/2025/08/Mayor-Border-male.png"
+                                                style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                            <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                                <h4 style="margin: 0;">Manuel Teves Sumulat (Awe)(PDPLBN)</h4>
+                                                <p style="text-align: justify;">Looking back on the past year, I am proud of the progress we’ve made together.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                        </tr>
+                        <tr class="councilorRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Miguel M. Sacris 
+                                    <div class="profile-modal top-right">
+                                        <div style="display: flex; align-items: center; gap: 10px;">
+                                            <img src="/~happyimartph/wp-content/uploads/2025/08/Mayor-Border-male.png"
+                                                style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                            <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                                <h4 style="margin: 0;">Miguel Manibale Sacris (Mike) (PDPLBN)</h4>
+                                                <p style="text-align: justify;">Looking back on the past year, I am proud of the progress we’ve made together.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                        </tr>
+                        <tr class="councilorRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Antonio I. Tuazon 
+                                    <div class="profile-modal top-right">
+                                        <div style="display: flex; align-items: center; gap: 10px;">
+                                            <img src="/~happyimartph/wp-content/uploads/2025/08/Mayor-Border-male.png"
+                                                style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                            <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                                <h4 style="margin: 0;">Antonio Isuga Tuazon (Tony) (PDPLBN)</h4>
+                                                <p style="text-align: justify;">Looking back on the past year, I am proud of the progress we’ve made together.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                        </tr>
+                        <tr class="councilorRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Susan B. Bernal 
+                                    <div class="profile-modal top-right">
+                                        <div style="display: flex; align-items: center; gap: 10px;">
+                                            <img src="/~happyimartph/wp-content/uploads/2025/08/Mayor-Border-female.png"
+                                                style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                            <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                                <h4 style="margin: 0;">Susan Bernal Bernal (IND)</h4>
+                                                <p style="text-align: justify;">Looking back on the past year, I am proud of the progress we’ve made together.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                        </tr>
+                        <tr class="councilorRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Antonio T. Torrenueva 
+                                    <div class="profile-modal top-right">
+                                        <div style="display: flex; align-items: center; gap: 10px;">
+                                            <img src="/~happyimartph/wp-content/uploads/2025/08/Mayor-Border-male.png"
+                                                style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                            <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                                <h4 style="margin: 0;">Antonio Teves Torrenueva (Tony) (PDPLBN)</h4>
+                                                <p style="text-align: justify;">Looking back on the past year, I am proud of the progress we’ve made together.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                        </tr>
+                        <tr class="councilorRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Rommel T. Tapel 
+                                    <div class="profile-modal top-right">
+                                        <div style="display: flex; align-items: center; gap: 10px;">
+                                            <img src="/~happyimartph/wp-content/uploads/2025/08/Mayor-Border-male.png"
+                                                style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                            <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                                <h4 style="margin: 0;">Rommel Telar Tapel (Kwatro) (Lakas)</h4>
+                                                <p style="text-align: justify;">Looking back on the past year, I am proud of the progress we’ve made together.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                        </tr>
+                        <tr class="councilorRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Delia B. Soria 
+                                    <div class="profile-modal top-right">
+                                        <div style="display: flex; align-items: center; gap: 10px;">
+                                            <img src="/~happyimartph/wp-content/uploads/2025/08/Mayor-Border-female.png"
+                                                style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                            <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                                <h4 style="margin: 0;">Delia Bernal Soria (PDPLBN)</h4>
+                                                <p style="text-align: justify;">Looking back on the past year, I am proud of the progress we’ve made together.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                        </tr>
+                        <tr class="councilorRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Nestor G. Teves 
+                                    <div class="profile-modal top-right">
+                                        <div style="display: flex; align-items: center; gap: 10px;">
+                                            <img src="/~happyimartph/wp-content/uploads/2025/08/Mayor-Border-male.png"
+                                                style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                            <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                                <h4 style="margin: 0;">Nestor Gonzales Teves (Entoy) (IND)</h4>
+                                                <p style="text-align: justify;">Looking back on the past year, I am proud of the progress we’ve made together.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="pagination-wrapper" style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
+                    <p id="councilorPageInfo" style="margin: 0; font-weight: bold; font-size: 14px;">This is page 1 out of X</p>
+                    <div id="councilorPagination" class="pagination" style="display: flex; gap: 5px;"></div>
+                  </div>
+                  
+            </div>
+
+            <script>
+                const rowsPerPageCouncilor = 10;
+                let currentPageCouncilor = 1;
+              
+                function updateCouncilorTable() {
+                  const rows = document.querySelectorAll(".councilorRow");
+                  const totalPages = Math.ceil(rows.length / rowsPerPageCouncilor);
+              
+                  rows.forEach((row, index) => {
+                    row.style.display = (
+                      index >= (currentPageCouncilor - 1) * rowsPerPageCouncilor &&
+                      index < currentPageCouncilor * rowsPerPageCouncilor
+                    ) ? '' : 'none';
+                  });
+              
+                  renderCouncilorPagination(totalPages);
+                }
+              
+                function changeCouncilorPage(page) {
+                  const rows = document.querySelectorAll(".councilorRow");
+                  const totalPages = Math.ceil(rows.length / rowsPerPageCouncilor);
+              
+                  if (page < 1) page = 1;
+                  if (page > totalPages) page = totalPages;
+              
+                  currentPageCouncilor = page;
+                  updateCouncilorTable();
+                }
+              
+                function renderCouncilorPagination(totalPages) {
+                  document.getElementById("councilorPageInfo").textContent = `This is page ${currentPageCouncilor} out of ${totalPages}`;
+                  const container = document.getElementById("councilorPagination");
+                  container.innerHTML = "";
+              
+                  const prevBtn = document.createElement("button");
+                  prevBtn.textContent = "<< Prev";
+                  prevBtn.className = currentPageCouncilor === 1 ? "disabled" : "";
+                  prevBtn.disabled = currentPageCouncilor === 1;
+                  prevBtn.onclick = () => changeCouncilorPage(currentPageCouncilor - 1);
+                  container.appendChild(prevBtn);
+              
+                  const maxPagesToShow = 7;
+                  let startPage = 1;
+                  let endPage = totalPages;
+              
+                  if (totalPages > maxPagesToShow) {
+                    if (currentPageCouncilor <= 4) {
+                      endPage = 5;
+                    } else if (currentPageCouncilor >= totalPages - 3) {
+                      startPage = totalPages - 4;
+                    } else {
+                      startPage = currentPageCouncilor - 2;
+                      endPage = currentPageCouncilor + 2;
+                    }
+                  }
+              
+                  if (startPage > 1) {
+                    addCouncilorPageButton(container, 1);
+                    if (startPage > 2) {
+                      addCouncilorEllipsis(container);
+                    }
+                  }
+              
+                  for (let i = startPage; i <= endPage; i++) {
+                    addCouncilorPageButton(container, i);
+                  }
+              
+                  if (endPage < totalPages) {
+                    if (endPage < totalPages - 1) {
+                      addCouncilorEllipsis(container);
+                    }
+                    addCouncilorPageButton(container, totalPages);
+                  }
+              
+                  const nextBtn = document.createElement("button");
+                  nextBtn.textContent = "Next >>";
+                  nextBtn.className = currentPageCouncilor === totalPages ? "disabled" : "";
+                  nextBtn.disabled = currentPageCouncilor === totalPages;
+                  nextBtn.onclick = () => changeCouncilorPage(currentPageCouncilor + 1);
+                  container.appendChild(nextBtn);
+                }
+              
+                function addCouncilorPageButton(container, pageNumber) {
+                  const btn = document.createElement("button");
+                  btn.textContent = pageNumber;
+                  if (currentPageCouncilor === pageNumber) {
+                    btn.className = "active";
+                  }
+                  btn.onclick = () => changeCouncilorPage(pageNumber);
+                  container.appendChild(btn);
+                }
+              
+                function addCouncilorEllipsis(container) {
+                  const ellipsis = document.createElement("span");
+                  ellipsis.textContent = "...";
+                  ellipsis.className = "ellipsis";
+                  container.appendChild(ellipsis);
+                }
+              
+                updateCouncilorTable();
+              </script>
+              <script>
+/**
+ * Generic table sorter
+ * @param {string} tbodyId - ID ng tbody (e.g.,"viceMayorTableBody", "councilorTableBody")
+ * @param {string} rowClass - class ng row (e.g., "viceMayorRow", "councilorRow")
+ * @param {number} columnIndex - index ng column to sort
+ * @param {string} type - "string" o "number"
+ * @param {boolean} asc - ascending or descending
+ */
+function sortGenericTable(tbodyId, rowClass, columnIndex, type, asc) {
+  const tbody = document.getElementById(tbodyId);
+  const rowsArray = Array.from(tbody.querySelectorAll("." + rowClass));
+
+  rowsArray.sort((a, b) => {
+    let valA, valB;
+    if(type === "string") {
+      // For Name column or text
+      valA = a.children[columnIndex].innerText.trim().toLowerCase();
+      valB = b.children[columnIndex].innerText.trim().toLowerCase();
+      if(valA < valB) return asc ? -1 : 1;
+      if(valA > valB) return asc ? 1 : -1;
+      return 0;
+    } else if(type === "number") {
+      // For Term Start / Term End
+      valA = parseInt(a.children[columnIndex].innerText.trim(), 10);
+      valB = parseInt(b.children[columnIndex].innerText.trim(), 10);
+      return asc ? valA - valB : valB - valA;
+    }
+    return 0;
+  });
+
+  tbody.innerHTML = "";
+  rowsArray.forEach(row => tbody.appendChild(row));
+}
+
+// Apply sorting to all tables
+document.querySelectorAll("table").forEach(table => {
+  const tbodyId = table.querySelector("tbody").id;
+  const rowClass = table.querySelector("tbody tr").className;
+
+  table.querySelectorAll("th.sortable").forEach((th, idx) => {
+    th.addEventListener("click", () => {
+      // Remove asc/desc from other headers
+      table.querySelectorAll("th.sortable").forEach(header => {
+        if(header !== th) header.classList.remove("asc", "desc");
+      });
+
+      // Toggle direction
+      const asc = !th.classList.contains("asc");
+      th.classList.toggle("asc", asc);
+      th.classList.toggle("desc", !asc);
+
+      // Sort table
+      const type = th.dataset.type;
+      sortGenericTable(tbodyId, rowClass, idx, type, asc);
+    });
+  });
+});
+</script>
+
+        </div>
+
+    </div>
+</div>
+</div>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+
+
+<div class="officials-section">
+    <div class="officials-wrapper">
+
+
+    <div class="municipal-officials" style="padding: 20px;">
+        <div style="text-align: center; margin-bottom: 25px;">
+            <img src="/~happyimartph/wp-content/uploads/2025/08/Antonio-Teves-San-Miguel.png"
+                alt="Mayor"
+                style="width: 160px; height: 160px; border-radius: 50%; object-fit: cover; margin-bottom: 10px;">
+            <p style="margin: 0; padding: 0; line-height: 1.2;"><strong>Antonio Tapanan Teves</strong></p>
+            <p style="margin: 0 0 30px 0; padding: 0; line-height: 1;">Mayor</p>
+        </div>
+        <div style="text-align: center; margin-bottom: 30px;">
+            <p style="margin: 0; padding: 0; line-height: 1.2;"><strong>Noel Serilo Morales</strong></p>
+            <p style="margin: 0 0 10px 0; padding: 0; line-height: 1;">Vice Mayor</p>
+        </div>
+        <hr style="border: none; border-top: 1px solid #ddd; margin: 0 0 30px 0;">
+        <div style="text-align: center;">
+            <p style="margin: 0 0 15px 0; padding: 0; font-weight: bold; font-size: 14px;">MUNICIPAL COUNCILORS</p>
+            <p style="margin: 0; padding: 0; line-height: 1.2;">Rizaldy Avila</p>
+                        <p style="margin: 0; padding: 0; line-height: 1.2;">Delia Bernal Soriao</p>
+            <p style="margin: 0; padding: 0; line-height: 1.2;">Rudy Tapel Torrente</p>
+            <p style="margin: 0; padding: 0; line-height: 1.2;">Antonio Isoga Tuazon</p>
+                        <p style="margin: 0; padding: 0; line-height: 1.2;">Jose Padilla Tesorero</p>
+
+                                    <p style="margin: 0; padding: 0; line-height: 1.2;">Miguel Manibale Sacris</p>
+                        <p style="margin: 0; padding: 0; line-height: 1.2;">Antonio Teves Torrenueva</p>
+            <p style="margin: 0; padding: 0; line-height: 1.2;">Daniel Karlo Tapel Asanza</p>
+        </div>
+      </div>
+ 
+      <div class="emergency-wrapper">
+          <div class="wp-emergency-card">
+            <div class="header">
+              <img src="/~happyimartph/wp-content/uploads/2025/08/San-Miguel-1.png" alt="Emergency Icon" class="header-icon">
+             EMERGENCY HOTLINES
+            </div>
+           
+            <div class="list">
+              
+                <div class="item">
+                  <div class="icon"><img src="/~happyimartph/wp-content/uploads/2025/09/San-Miguel-MDRRMO.png" alt="PDRRMO"></div>
+                  <div class="line"><span class="number">0908-127-9612</span><span class="sub">MDRRMO</span></div>
+                </div>
+        
+                <div class="item">
+                  <div class="icon"><img src="/~happyimartph/wp-content/uploads/2025/09/PNP-1.png" alt="PDRRMO"></div>
+                  <div class="line"><span class="number">0999-444-0885</span><span class="sub">Police Station</span></div>
+                </div>
+        
+                <div class="item">
+                  <div class="icon"><img src="/~happyimartph/wp-content/uploads/2025/09/San-Miguel-Fire-Station.png" alt="PDRRMO"></div>
+                  <div class="line"><span class="number">0938-358-8690</span><span class="sub">Fire Station</span></div>
+                </div>
+        
+          
+        
+    
+                <div class="item">
+                  <div class="icon"><img src="/~happyimartph/wp-content/uploads/2025/09/Baras-PNP.png" alt="PDRRMO"></div>
+                  <div class="line"><span class="number">0998-598-6025</span><span class="sub">CAT PRO
+                  </span></div>
+                </div>
+        
+        
+                <div class="item">
+                  <div class="icon"><img src="/~happyimartph/wp-content/uploads/2025/09/San-Miguel-RHU.png" alt="PDRRMO"></div>
+                  <div class="line"><span class="number">0919-865-6159</span><span class="sub">Rural Health Unit</span></div>
+                </div>
+        
+              
+        
+        </div>
+        
+        
+                <div class="footer">
+                  <img src="/~happyimartph/wp-content/uploads/2025/08/Capitol.png" alt="Capitol Logo">
+                  <strong>REPUBLIC OF THE PHILIPPINES<br>PROVINCE OF CATANDUANES</strong>
+                </div>
+
+
+
+
+    </div>
+</div>
+<!-- /wp:html --></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns -->
