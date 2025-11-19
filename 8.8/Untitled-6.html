@@ -1,0 +1,683 @@
+    <style>
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .main-content {
+            display: flex;
+            min-height: 600px;
+        }
+
+        .tabs-section {
+            flex: 1;
+            padding: 30px;
+        }
+
+        .sidebar {
+            flex: 0 0 300px;
+            padding: 20px;
+        }
+
+        /* Tab Styles */
+        .tabs {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0 0 20px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .tab-link {
+            display: block;
+            padding: 12px 20px;
+            text-decoration: none;
+            color: #666;
+            transition: all 0.3s ease;
+        }
+
+        .tab-link:hover {
+            background: #f0f0f0;
+            color: #333;
+        }
+
+        .tab-link.active {
+            background: #185abc;
+            color: white;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        /* Table Styles */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 14px;
+            background: white;
+            overflow: hidden;
+        }
+
+        th {
+            background: #f1f1f1;
+            padding: 12px 8px;
+            text-align: left;
+            border-bottom: 2px solid #ddd;
+            font-weight: 600;
+        }
+
+        td {
+            padding: 10px 8px;
+            border-bottom: 1px solid #eee;
+            vertical-align: middle;
+        }
+
+        tr:hover {
+            background: #f9f9f9;
+        }
+
+        /* Profile Modal Styles */
+        .hover-target {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+            color: #185abc;
+            font-weight: 500;
+        }
+
+        .profile-modal {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            margin-top: 10px;
+            background: white;
+            padding: 20px;
+            width: 350px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            z-index: 1000;
+            display: none;
+        }
+
+        .profile-modal img {
+            width: 80px;
+            height: 80px;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+
+        .profile-modal h4 {
+            margin: 0 0 8px 0;
+            color: #333;
+            font-size: 16px;
+        }
+
+        .profile-modal p {
+            margin: 4px 0;
+            color: #666;
+            font-size: 13px;
+            line-height: 1.4;
+        }
+
+        /* Pagination Styles */
+        .pagination {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 5px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+
+        .pagination button {
+            padding: 8px 14px;
+            border: 1px solid #ddd;
+            background: white;
+            color: #333;
+            cursor: pointer;
+            font-size: 14px;
+            border-radius: 4px;
+            transition: all 0.2s ease;
+            min-width: 40px;
+        }
+
+        .pagination button:hover:not(:disabled) {
+            background: #f0f0f0;
+        }
+
+        .pagination button.active {
+            background: #185abc;
+            color: white;
+            border-color: #185abc;
+        }
+
+        .pagination button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .pagination .ellipsis {
+            padding: 8px 10px;
+            color: #888;
+        }
+
+        /* Barangay List */
+        .barangay-list {
+            columns: 1;
+            list-style: disc;
+            padding: 0;
+            padding-left: 20px;
+        }
+
+        .barangay-list li {
+            padding: 12px 16px;
+            margin-left: -10px;
+            break-inside: avoid;
+        }
+
+        /* Sidebar Styles */
+        .sidebar h3 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .mayor-photo {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 15px;
+            display: block;
+        }
+
+        .sidebar .current-officials {
+            text-align: center;
+        }
+
+        .sidebar .current-officials strong {
+            font-size: 16px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .sidebar li {
+            padding: 4px 0;
+            font-size: 14px;
+        }
+
+        .sidebar li:last-child {
+            border-bottom: none;
+        }
+
+        /* Section Headers */
+        h4 {
+            padding-bottom: 8px;
+            margin: 30px 0 15px 0;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px dashed #ccc;
+            margin: 25px 0;
+        }
+
+        /* About Section */
+        .about-content p {
+            text-align: justify;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+            
+            .sidebar {
+                flex: none;
+                border-left: none;
+                border-top: 1px solid #eee;
+            }
+            
+            .barangay-list {
+                columns: 1;
+            }
+            
+            .profile-modal {
+                left: 50%;
+                transform: translateX(-50%);
+                width: 300px;
+            }
+    </style>
+
+<body>
+    <div class="container">
+        <div class="main-content">
+            <div class="tabs-section">
+                <ul class="tabs">
+                    <li><a href="#" class="tab-link active" data-tab="about">About</a></li>
+                    <li><a href="#" class="tab-link" data-tab="barangays">Barangays</a></li>
+                    <li><a href="#" class="tab-link" data-tab="officials">Previous Officials</a></li>
+                </ul>
+
+                <!-- About Tab-->                
+                <div id="about" class="tab-content active">
+                    <div class="about-content"> 
+                        <p><strong>Historical Background</strong></p>
+                        <p>The first actual founding of Virac as a distinct political unit is closely associated with the evangelization of its original inhabitants by the Spanish conquistadores in the middle of the 16th century. Records of the past are so fragile, inconsistent and incomplete that events presented are an admixture of facts and folklore. Virac became officially recognized as a unit of governance only in 1755 as it was only during that year when records were started to be faithfully kept.</p>
+                        
+                        <p><strong>Pre-Hispanic Era</strong></p>
+                        <p>The first settlers to have set foot in the island province of Catanduanes were the scions of Bornean datus who came to the island of Panay and spread through the length and breadth of the Philippine archipelago in the 13th century. The first signs of human activity which began to be manifested in the middle of the 14th century were presumed to be that of the Malays who populated and developed some parts of Southern Luzon during the period.</p>
+                        
+                        <p>Other adventurers in search of better opportunities for trade and commerce eventually stayed and established settlements along the coastal confines of this tiny island during the 11th century.</p>
+                        
+                        <p><strong>The Naming of Virac</strong></p>
+                        <p>From the exploits of Juan de Salcedo, Virac was first visited in 1573 by his own men in pursuit of pirates operating in the Bicol Peninsula. In Virac, the Spanish found a tribe under the leadership of one Datu Lumibao, scion of Datu Dumaguil who came to the Philippines with the 13 Malay datus and his wife Melbigan and son Macaco who settled near Vidak spring and founded the first civilized settlement with a score of servant followers and their wives. Some say Virac is a derivation of the word "Vidac" while others claim it is a contraction of the Spanish version of the word burac, meaning flower.</p>
+                        
+                        <p><strong>Christianization</strong></p>
+                        <p>A few weeks after the suppression of the pirates, the Spaniards returned with Dominican missionaries. Offering friendship and gifts, they were able to convert the tribe into the fold of Christendom. The first tribe conversion thus became Spain's initial foothold to the island's eventual Christianization.</p>
+                        
+                        <p><strong>Spanish Era</strong></p>
+                        <p>In the 16th to 17th century, after establishing and Christianizing settlements, a form of governance called "Encommiendas" was subsequently introduced as a guide to the socio-political development of each community.</p>
+                        
+                        <p>The turbulent years of the late 18th century brought about by the sporadic incursions of the non-Christians on the prosperous settlements along the coast spawned myths about local heroes and essentially hastened the unification of Virac into a strong bastion against the forces opposed to Christianity. Stone chapels which proliferated along the coastal barangays had for years alternately served as places of refuge and worship of its people.</p>
+                        
+                        <p><strong>Local Insurrection</strong></p>
+                        <p>The growing concern for better recognition and more participation of the natives in government affairs gave rise to rebellion. The nationwide uprising was upheld but lacked the necessary support due to the fairer treatment obtained locally.</p>
+                        
+                        <p><strong>American Regime</strong></p>
+                        <p>Local resistance to the abrupt change of masters was more vigorous and gained wider acceptance. Not as eager to relinquish their hard-fought freedom, the "Katipuneros" refused to recognize the sovereignty of the new masters and fled to the mountains. The Americans' might however, proved too formidable and quickly, all oppositions were subdued.</p>
+                        
+                        <p>The American occupation ended in 1934 with the establishment of the Philippine Commonwealth.</p>
+                        
+                        <p><strong>Japanese Occupation</strong></p>
+                        <p>With hardly a brief respite from foreign occupation, World War II brought new and untold woes, hardship and anxieties. Catanduanes was not spared from the Japanese onslaught. The Kamikura Regime established a puppet government centered on the capital town of Virac. All economic activities virtually stood at standstill. Even schools were temporarily closed.</p>
+                        
+                        <p>The liberation of Catanduanes took place at what is now the present municipal building and the Virac Parish Cathedral. On February 8, 1945, the local guerrillas gained full control of the Japanese barracks.</p>
+                        
+                        <p>On April 22, 1945, Virac resumed its normal operations under the regime of the Philippine Civil Affairs Unit.</p>
+                        
+                        <p><strong>Post American Liberation</strong></p>
+                        <p>The challenge of rebuilding the municipality from the ravages of the war was put on the shoulders of Florencio Tacorda, Geronimo Tabuzo and Primo Panti who, among themselves, held the stewardship of Virac from 1945 to 1957.</p>
+                        
+                        <p><strong>Pre and Martial Law Era</strong></p>
+                        <p>From 1958-1970, Salvador Surtida took over followed by Jorge Arcilla from 1970-1986, two of the longest reigning local executives in the history of Virac. This period witnessed the ascendancy to national prominence of the Alberto brothers, Juan, Jose and Vicente, who doubtlessly brought progress and influenced the massive physical transformation of the municipality when Salvador Surtida and Jorge Arcilla were mayors. Foremost among the many infrastructure projects were the Catanduanes State Colleges and the Eastern Bicol Medical Center which placed Virac in the map as a major educational and health center in the Bicol Region.</p>
+                        
+                        <p>The growth of Virac in terms of governance peaked in 1972. From the original 34 barangays in 1960, Virac was able to establish 29 new communities to upgrade to the present composition of 63 barangays. The declaration of martial law on September 21, 1972, despite the alleged rampant atrocities, had, by and large, no ill effects on the lives of the constituency, who by nature are peace-loving and law-abiding citizens.</p>
+                        
+                        <p><strong>EDSA Revolution</strong></p>
+                        <p>The EDSA Revolution in 1986 which toppled down the more than two decades of Marcos regime had a domino effect on the political structure of Virac. The replacement of the elected officials by appointed officials was in accordance with the Freedom Constitution which predominated during the revolutionary government from 1986 to 1992. Rodulfo Sarmiento, a doctor by profession held the reins of the municipal government.</p>
+                        
+                        <p><strong>Post EDSA</strong></p>
+                        <p>The early nineties and onward saw the alternate changing of guard at the helm of local governance between Rodulfo Sarmiento and Jose "Cito" Alberto II, the son of Congressman Jose Alberto. The operation of the ferry boat which facilitates the transfer of goods and services from the Bicol mainland to Virac ushered in the vibrance in trade and commerce as manifested by the modern unseen before but now dotting the commercial centers and the bee-line of private and public conveyances plying the streets. Growing political maturity has been apparent in barangay affairs operation and so with the swell in the number of non-government organizations which is an indication of growing people empowerment.</p>
+                        
+                        <p>With the advent of the third millennium came the resurgence of the physical face lift of Virac as more public structures have been erected and upgraded during the second "tour of duty" of incumbent Mayor Jose "Cito" Alberto.</p>
+                        
+                        <p>The socio-political annals of Virac shall continue to increase its pages and one thing is certain: the municipality stands to gain – physically, economically and socially in its self-waged battle for progress.</p>
+                    </div>
+                </div>
+
+                <!-- Barangays Tab -->
+                <div id="barangays" class="tab-content">
+                    <ul class="barangay-list">
+                        <li>Antipolo Del Sur</li>
+                        <li>Balite</li>
+                        <li>Batag</li>
+                        <li>Bigaa</li>
+                        <li>Buenavista</li>
+                        <li>Buyo</li>
+                        <li>Cabihian</li>
+                        <li>Calabnigan</li>
+                        <li>Calampong</li>
+                        <li>Calatagan Proper</li>
+                        <li>Calatagan Tibang</li>
+                        <li>Capilihan</li>
+                        <li>Casoocan</li>
+                        <li>Cavinitan</li>
+                        <li>Concepcion (Poblacion)</li>
+                        <li>Constantino (Poblacion)</li>
+                        <li>Danicop</li>
+                        <li>Dugui San Isidro</li>
+                        <li>Dugui San Vicente</li>
+                        <li>Dugui Too</li>
+                        <li>F. Tacorda Village</li>
+                        <li>Francia (Poblacion)</li>
+                        <li>Gogon Centro</li>
+                        <li>Gogon Sirangan</li>
+                        <li>Hawan Grande</li>
+                        <li>Hawan Ilaya</li>
+                        <li>Hicming</li>
+                        <li>Igang</li>
+                        <li>Juan M. Alberto (Poniton)</li>
+                        <li>Lanao (Poblacion)</li>
+                        <li>Magnesia Del Norte</li>
+                        <li>Magnesia Del Sur</li>
+                        <li>Marcelo Alberto (Poblacion)</li>
+                        <li>Marilima</li>
+                        <li>Pajo Baguio</li>
+                        <li>Pajo San Isidro</li>
+                        <li>Palnab Del Norte</li>
+                        <li>Palnab Del Sur</li>
+                        <li>Palta Big</li>
+                        <li>Palta Salvacion</li>
+                        <li>Palta Small</li>
+                        <li>Rawis (Poblacion)</li>
+                        <li>Salvacion</li>
+                        <li>San Isidro Village</li>
+                        <li>San Jose (Poblacion)</li>
+                        <li>San Juan (Poblacion)</li>
+                        <li>San Pablo (Poblacion)</li>
+                        <li>San Pedro (Poblacion)</li>
+                        <li>San Roque (Poblacion)</li>
+                        <li>San Vicente</li>
+                        <li>Ibong Sapa (San Vicente Sur)</li>
+                        <li>Santa Cruz</li>
+                        <li>Santa Elena (Poblacion)</li>
+                        <li>Santo Cristo</li>
+                        <li>Santo Domingo</li>
+                        <li>Santo Niño</li>
+                        <li>Simamla</li>
+                        <li>Sogod-Simamla</li>
+                        <li>Sogod-Tibgao</li>
+                        <li>Talisoy</li>
+                        <li>Tubaon</li>
+                        <li>Valencia</li>
+                    </ul>
+                </div>
+
+                <!-- Previous Officials Tab -->
+                <div id="officials" class="tab-content">
+                    <h4>Mayors</h4>
+                    <table id="mayorTable">
+                        <thead>
+                            <tr>
+                                <th style="width: 50%">Name</th>
+                                <th style="width: 25%; text-align: center">Term Start</th>
+                                <th style="width: 25%; text-align: center">Term End</th>
+                            </tr>
+                        </thead>
+                        <tbody id="mayorTableBody">
+                            <!-- Mayor data will be populated by JavaScript -->
+                        </tbody>
+                    </table>
+                    <div class="pagination" id="mayorPagination"></div>
+
+                    <hr>
+
+                    <h4>Vice Mayors</h4>
+                    <table id="viceMayorTable">
+                        <thead>
+                            <tr>
+                                <th style="width: 50%">Name</th>
+                                <th style="width: 25%; text-align: center">Term Start</th>
+                                <th style="width: 25%; text-align: center">Term End</th>
+                            </tr>
+                        </thead>
+                        <tbody id="viceMayorTableBody">
+                            <!-- Vice Mayor data will be populated by JavaScript -->
+                        </tbody>
+                    </table>
+                    <div class="pagination" id="viceMayorPagination"></div>
+
+                    <hr>
+
+                    <h4>Councilors</h4>
+                    <table id="councilorTable">
+                        <thead>
+                            <tr>
+                                <th style="width: 50%">Name</th>
+                                <th style="width: 25%; text-align: center">Term Start</th>
+                                <th style="width: 25%; text-align: center">Term End</th>
+                            </tr>
+                        </thead>
+                        <tbody id="councilorTableBody">
+                            <!-- Councilor data will be populated by JavaScript -->
+                        </tbody>
+                    </table>
+                    <div class="pagination" id="councilorPagination"></div>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <div class="current-officials">
+                    <img src="http://wp-local.com/wp-content/uploads/2025/08/Sinforoso-Sarmiento-Virac.png" alt="Mayor" class="mayor-photo">
+                    <p><strong>Sinforoso Jr. Magallanes Sarmiento</strong></p>
+                    <p>Mayor</p>
+                </div>
+
+                <div class="current-officials">
+                    <p><strong>Lemuel Padua Surtida</strong></p>
+                    <p>Vice Mayor</p>
+                </div>
+
+                <p="margin: 20px 0 10px 0; border: none; text-align: center;><strong>Councilors</strong><p>
+                <ul style="list-style-type: none; margin: 0; text-align: center;">
+                    <li>Hazel Cipriano Isidoro</li>
+                    <li>Fredeswindo Jr. Arcilla</li>
+                    <li>Joseph De Leon Mendoza</li>
+                    <li>Anthony Agunday Arcilla</li>
+                    <li>Angelo Piolo Molod Laynes</li>
+                    <li>Ariel Guerrero Molina</li>
+                    <li>Rafael Creo Zunieg</li>
+                    <li>Alexander Sarmiento Abundo</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Sample data for previous officials
+        const sampleData = {
+            mayors: [],
+            viceMayors: [],
+            councilors: []
+        };
+
+        // Generate sample data
+        for (let i = 1; i <= 45; i++) {
+            sampleData.mayors.push({
+                name: `Mayor ${i}`,
+                termStart: 1980 + Math.floor(i / 2),
+                termEnd: 1983 + Math.floor(i / 2),
+                bio: `A dedicated public servant who served with distinction during their term. Known for their commitment to community development and public welfare.`,
+                birthDate: `January ${(i % 30) + 1}, 195${i % 10}`
+            });
+        }
+
+        for (let i = 1; i <= 25; i++) {
+            sampleData.viceMayors.push({
+                name: `Vice Mayor ${i}`,
+                termStart: 1980 + Math.floor(i / 2),
+                termEnd: 1983 + Math.floor(i / 2),
+                bio: `Served as vice mayor with dedication and helped support municipal governance initiatives.`,
+                birthDate: `February ${(i % 28) + 1}, 196${i % 10}`
+            });
+        }
+
+        for (let i = 1; i <= 35; i++) {
+            sampleData.councilors.push({
+                name: `Councilor ${i}`,
+                termStart: 1980 + Math.floor(i / 3),
+                termEnd: 1983 + Math.floor(i / 3),
+                bio: `A council member who actively participated in local legislation and community programs.`,
+                birthDate: `March ${(i % 30) + 1}, 197${i % 10}`
+            });
+        }
+
+        // Pagination system
+        class TablePagination {
+            constructor(tableId, paginationId, data, rowsPerPage = 10) {
+                this.tableBody = document.getElementById(tableId).querySelector('tbody');
+                this.paginationContainer = document.getElementById(paginationId);
+                this.data = data;
+                this.rowsPerPage = rowsPerPage;
+                this.currentPage = 1;
+                this.totalPages = Math.ceil(data.length / rowsPerPage);
+                
+                this.render();
+                this.renderPagination();
+            }
+
+            render() {
+                const startIndex = (this.currentPage - 1) * this.rowsPerPage;
+                const endIndex = startIndex + this.rowsPerPage;
+                const currentData = this.data.slice(startIndex, endIndex);
+
+                this.tableBody.innerHTML = currentData.map(item => `
+                    <tr>
+                        <td>
+                            <div class="hover-target">
+                                ${item.name}
+                                <div class="profile-modal">
+                                    <div style="display: flex; align-items: center; gap: 15px;">
+                                        <img src="https://cdn-icons-png.flaticon.com/512/4850/4850493.png" alt="Profile">
+                                        <div>
+                                            <h4>${item.name}</h4>
+                                            <p><strong>Date of Birth:</strong> ${item.birthDate}</p>
+                                            <p style="text-align: justify;">${item.bio}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td style="text-align: center;">${item.termStart}</td>
+                        <td style="text-align: center;">${item.termEnd}</td>
+                    </tr>
+                `).join('');
+
+                // Reattach hover events
+                this.attachHoverEvents();
+            }
+
+            attachHoverEvents() {
+                this.tableBody.querySelectorAll('.hover-target').forEach(target => {
+                    const modal = target.querySelector('.profile-modal');
+                    
+                    target.addEventListener('mouseenter', () => {
+                        modal.style.display = 'block';
+                    });
+                    
+                    target.addEventListener('mouseleave', () => {
+                        modal.style.display = 'none';
+                    });
+                });
+            }
+
+            renderPagination() {
+                if (this.totalPages <= 1) {
+                    this.paginationContainer.style.display = 'none';
+                    return;
+                }
+
+                this.paginationContainer.style.display = 'flex';
+                this.paginationContainer.innerHTML = '';
+
+                // Previous button
+                const prevBtn = document.createElement('button');
+                prevBtn.textContent = '← Previous';
+                prevBtn.disabled = this.currentPage === 1;
+                prevBtn.addEventListener('click', () => this.goToPage(this.currentPage - 1));
+                this.paginationContainer.appendChild(prevBtn);
+
+                // Page numbers
+                const maxPagesToShow = 5;
+                let startPage = Math.max(1, this.currentPage - 2);
+                let endPage = Math.min(this.totalPages, startPage + maxPagesToShow - 1);
+
+                if (endPage - startPage < maxPagesToShow - 1) {
+                    startPage = Math.max(1, endPage - maxPagesToShow + 1);
+                }
+
+                if (startPage > 1) {
+                    this.addPageButton(1);
+                    if (startPage > 2) {
+                        this.addEllipsis();
+                    }
+                }
+
+                for (let i = startPage; i <= endPage; i++) {
+                    this.addPageButton(i);
+                }
+
+                if (endPage < this.totalPages) {
+                    if (endPage < this.totalPages - 1) {
+                        this.addEllipsis();
+                    }
+                    this.addPageButton(this.totalPages);
+                }
+
+                // Next button
+                const nextBtn = document.createElement('button');
+                nextBtn.textContent = 'Next →';
+                nextBtn.disabled = this.currentPage === this.totalPages;
+                nextBtn.addEventListener('click', () => this.goToPage(this.currentPage + 1));
+                this.paginationContainer.appendChild(nextBtn);
+            }
+
+            addPageButton(pageNumber) {
+                const btn = document.createElement('button');
+                btn.textContent = pageNumber;
+                if (this.currentPage === pageNumber) {
+                    btn.className = 'active';
+                }
+                btn.addEventListener('click', () => this.goToPage(pageNumber));
+                this.paginationContainer.appendChild(btn);
+            }
+
+            addEllipsis() {
+                const ellipsis = document.createElement('span');
+                ellipsis.textContent = '...';
+                ellipsis.className = 'ellipsis';
+                this.paginationContainer.appendChild(ellipsis);
+            }
+
+            goToPage(page) {
+                if (page < 1 || page > this.totalPages || page === this.currentPage) return;
+                
+                this.currentPage = page;
+                this.render();
+                this.renderPagination();
+            }
+        }
+
+        // Initialize pagination objects to be available globally
+        let mayorPagination, viceMayorPagination, councilorPagination;
+
+        // Tab functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabLinks = document.querySelectorAll('.tab-link');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            tabLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                const targetTab = this.getAttribute('data-tab');
+                    
+                    // Remove active class from all tabs and contents
+                    tabLinks.forEach(tl => tl.classList.remove('active'));
+                    tabContents.forEach(tc => tc.classList.remove('active'));
+                    
+                    // Add active class to clicked tab and corresponding content
+                    this.classList.add('active');
+                    document.getElementById(targetTab).classList.add('active');
+
+                    // Initialize tables when Officials tab is shown
+                    if (targetTab === 'officials') {
+                        setTimeout(() => {
+                            new TablePagination('mayorTable', 'mayorPagination', sampleData.mayors);
+                            new TablePagination('viceMayorTable', 'viceMayorPagination', sampleData.viceMayors);
+                            new TablePagination('councilorTable', 'councilorPagination', sampleData.councilors);
+                        }, 100);
+                    }
+                });
+            });
+        });
+    </script>

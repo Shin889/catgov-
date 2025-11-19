@@ -1,0 +1,1479 @@
+<p class="has-text-align-center has-large-font-size"><strong>PROVINCIAL BOARD MEMBERS</strong></p>
+<h2 class="wp-block-heading has-text-align-center">West District</h2>
+
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    .team-container {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 30px;
+        max-width: 1500px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .team-member {
+        position: relative;
+        background: #fff;
+        border-radius: 20px;
+        border: 1px solid rgba(0, 0, 0, 0.05);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+        overflow: hidden;
+        text-align: center;
+        padding-bottom: 25px;
+    }
+
+
+    .team-member img {
+        width: 100%;
+        height: 200px;
+        object-fit: contain;
+        display: block;
+        background-color: #f8f9fa;
+        padding: 10px;
+    }
+
+    .team-member .caption {
+        margin-top: 15px;
+        padding: 0 25px;
+        font-size: 0.95rem;
+        color: #5a6c7d;
+        line-height: 1.7;
+    }
+
+    .team-member .name {
+        font-weight: 600;
+        font-size: 1rem;
+        color: #2c3e50;
+        display: block;
+        margin-bottom: 5px;
+        line-height: 1.3;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 1200px) {
+        .team-container {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .team-container {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            padding: 10px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .team-container {
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+    }
+</style>
+
+<div class="team-container">
+    <div class="team-member">
+        <img src="http://wp-local.com/wp-content/uploads/2025/08/Capitol.png" alt="Santos V. Zafe">
+        <div class="caption">
+            <div class="name">Santos V. Zafe</div>
+        </div>
+    </div>
+
+    <div class="team-member">
+        <img src="http://wp-local.com/wp-content/uploads/2025/08/Capitol.png" alt="Fred Gianan">
+        <div class="caption">
+            <div class="name">Fred Gianan</div>
+        </div>
+    </div>
+
+    <div class="team-member">
+        <img src="http://wp-local.com/wp-content/uploads/2025/08/Capitol.png" alt="Sonny Francisco">
+        <div class="caption">
+            <div class="name">Sonny Francisco</div>
+        </div>
+    </div>
+
+    <div class="team-member">
+        <img src="http://wp-local.com/wp-content/uploads/2025/08/Capitol.png" alt="Boboy Albaniel">
+        <div class="caption">
+            <div class="name">Boboy Albaniel</div>
+        </div>
+    </div>
+
+    <div class="team-member">
+        <img src="http://wp-local.com/wp-content/uploads/2025/08/Capitol.png" alt="Bani Balmadrid">
+        <div class="caption">
+            <div class="name">Bani Balmadrid</div>
+        </div>
+    </div>
+</div>
+
+        <style>
+            hr {
+                margin: 20px 0;
+                border: none;
+                border-top: 1px dashed #aaa;
+            }
+
+            .pagination {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                gap: 4px;
+                margin-top: 20px;
+                flex-wrap: wrap;
+            }
+
+            .pagination button {
+                padding: 0 2px; 
+                background-color: #f0f0f0;
+                border: 1px solid #ccc;
+                color: #333;
+                cursor: pointer;
+                transition: background-color 0.3s;
+                border-radius: 0;
+                min-width: 20px; 
+                min-height: 24px; 
+                text-align: center;
+                font-weight: bold;
+                font-size: 10px; 
+                }
+            .pagination button:hover {
+                background-color: #dcdcdc;
+            }
+
+            .pagination button.active {
+                background-color: #004499cc;
+                color: white;
+                border-color: #004499cc;
+            }
+
+            .pagination-wrapper {
+                text-align: right;
+                margin-top: 10px;
+            }
+
+            .pagination {
+                display: inline-flex;
+                gap: 4px;
+            }
+
+            table {
+                table-layout: fixed;
+            }
+
+            th,
+            td {
+                padding: 8px;
+                border-bottom: 1px solid #ccc;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+
+            td {
+                position: relative;
+                overflow: visible !important;
+            }
+                th.sortable {
+                cursor: pointer;
+                user-select: none;
+                text-align: center; 
+                position: relative;
+                padding: 8px;
+                border-bottom: 1px solid #ccc;
+                }
+
+                th.sortable .sort-arrow {
+                font-size: 12px;
+                color: #888;
+                display: inline-block;
+                vertical-align: middle;
+                margin-left: 2px;
+                width: 12px;
+                height: 12px;
+                line-height: 12px;
+                text-align: center;
+                }
+
+                th.sortable .sort-arrow::after {
+                content: "▲";         
+                color: #888;         
+                }
+
+                th.sortable.asc .sort-arrow::after {
+                content: "▲";
+                color: #000;         
+                }
+
+
+                th.sortable.desc .sort-arrow::after {
+                content: "▼";
+                color: #000;           
+                }
+
+                th.sortable[data-type="string"] {
+                text-align: left;      
+                }
+
+                th.sortable[data-type="number"] {
+                text-align: center;     
+                }
+            </style>
+    <div>
+        <hr style="border: none; border-top: 2px solid black; margin-bottom: 30px;">
+        <h4 style="margin-top: 0;">Previous PBM</h4>
+
+          <div id="westTableContainer" style="position: relative;">
+              <table id="westTable"
+                  style="width: 100%; border-collapse: collapse; font-size: 14px; margin-bottom: 20px;">
+                  <thead>
+                    <tr style="background-color: #f1f1f1;">
+                        <th class="sortable" style="text-align: left; padding: 8px; border-bottom: 1px solid #ccc;" data-column="name" data-type="string">
+                        Name <span class="sort-arrow"></span>
+                        </th>
+                        <th class="sortable" style="text-align: center; padding: 8px; border-bottom: 1px solid #ccc;" data-column="name" data-type="string">
+                        Partylist <span class="sort-arrow"></span>
+                        </th>
+                    <th class="sortable desc" style="text-align: center; padding: 8px; border-bottom: 1px solid #ccc;" data-column="termStart" data-type="number">
+                    Term Start<span class="sort-arrow"></span>
+                    </th>
+
+                        <th class="sortable" style="text-align: center; padding: 8px; border-bottom: 1px solid #ccc;" data-column="termEnd" data-type="number">
+                        Term End <span class="sort-arrow"></span>
+                        </th>
+                    </tr>
+                  </thead>
+                  <tbody id="westTableBody">
+
+                      <tr class="westRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                  Alfred Aquino 
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">LDP</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1992</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1998</td>
+                      </tr>
+                      <tr class="westRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                  Fredeswindo Gianan
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">LDP</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1992</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1995</td>
+                      </tr>
+                      <tr class="westRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                  Catalino Gabao Jr.
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">NPC</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1995</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1998</td>
+                      </tr>
+                      <tr class="westRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                  Jesus Tacorda
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">PDP-Laban</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1992</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1995</td>
+                      </tr>
+                      <tr class="westRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                  Evelyn Lucero-Guttieres 
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">LP</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1995</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1998</td>
+                      </tr>
+                      <tr class="westRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                  Rafael Zuniega 
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">Lakas-NUCD</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1998</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2001</td>
+                      </tr>
+                      <tr class="westRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                  Catalino Gabao Jr.
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">Lakas-NUCD</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1998</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2001</td>
+                      </tr><tr class="westrRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                  Evelyn Lucero-Guttieres 
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">Lakas-NUCD</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1998</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2001</td>
+                      </tr>
+                      <tr class="westRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                  Fredeswindo Gianan
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">Lakas-NUCD</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1998</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2001</td>
+                      </tr>
+                      <tr class="westRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                  Rafael Zuniega
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">Aksyon</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2001</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2004</td>
+                      </tr>
+                      <tr class="westRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                  Natalio Popa, Jr.
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">Independent</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2001</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2004</td>
+                      </tr>
+                      <tr class="westRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                  Angeles Tablizo, Jr. 
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">Reporma</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2001</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2004</td>
+                      </tr>
+                      <tr class="westRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                  Fredeswindo Gianan 
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">Aksyon</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2001</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2004</td>
+                      </tr>
+                      <tr class="westRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                  Rafael Zuniega 
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">Reporma</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2004</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2007</td>
+                      </tr>
+                      <tr class="westRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                  Shirley Abundo 
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">Lakas</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2004</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2013</td>
+                      </tr>
+                      <tr class="westRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                  Rosemarie Zafe
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">Kampi</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2004</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2007</td>
+                      </tr>
+                      <tr class="westRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                  Fredeswindo Gianan
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">NPC</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2004</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2007</td>
+                      </tr>
+                      <tr class="westRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                  Nel Asanza 
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">NPC</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2007</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2010</td>
+                      </tr>
+                      <tr class="westRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                  Ariel Molina 
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">NPC</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2007</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2010</td>
+                      </tr>
+                      <tr class="westRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                  Natalio Popa, Jr. 
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">Lakas</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2007</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2010</td>
+                      </tr>
+                      <tr class="westRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                  Nel Asanza 
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">Independent</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2010</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2016</td>
+                      </tr>
+                      <tr class="westRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                  Rafael Zuniega
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">Nacionalista</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2010</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2013</td>
+                      </tr>
+                      <tr class="westRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                  Jose Romeo Francisco
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">NPC</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2010</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2013</td>
+                      </tr>
+                      <tr class="westRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                  Jorge Reyes
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">Liberal</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2013</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2016</td>
+                      </tr>
+                      <tr class="westRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                  Giovanni Balmadrid
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">Liberal</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2013</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2016</td>
+                      </tr>
+                      <tr class="westRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                  Jose Romeo Francisco
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">Liberal</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2013</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2016</td>
+                      </tr>
+                      <tr class="westRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                  Rafael Zuniega 
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">UNA</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2016</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                      </tr>
+                      <tr class="westRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                  Natalio Popa, Jr.
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">Independent</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2016</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2019</td>
+                      </tr>
+                      <tr class="westRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                  Giovanni Balmadrid
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">NPC</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2016</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                      </tr>
+                      <tr class="westRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                  Jose Romeo Francisco
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">NPC</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2016</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2019</td>
+                      </tr>
+                      <tr class="westRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                  Natalio Popa, Jr.
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">PFP</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2019</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                      </tr>
+                      <tr class="westRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                  Santos Zafe
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">PDP-Laban</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2019</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                      </tr>
+                      <tr class="westRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                   Rafael Zuniega
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">NPC</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                      </tr>
+                      <tr class="westRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                  Jan Ferdinand Alberto
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">Independent</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                      </tr>
+                      <tr class="westRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                   Jose Romeo Francisco
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">Lakas</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                      </tr>
+                      <tr class="westRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                  Santos Zafe
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">Lakas</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                      </tr>
+                      <tr class="westRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                  Giovanni Balmadrid
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">NPC</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                      </tr>
+                      <tr class="westRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                  Xyrell Albaniel
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">Lakas</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                      </tr>
+                      <tr class="westRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                 Fred Benedict Gianan
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">Lakas</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                      </tr>
+                  </tbody>
+              </table>
+
+              <div class="pagination-wrapper" style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
+                  <p id="westPageInfo" style="margin: 0; font-weight: bold; font-size: 14px;">This is page 1 out of X</p>
+                  <div id="westPagination" class="pagination" style="display: flex; gap: 5px;"></div>
+                </div>
+            </div>
+        </div>
+
+            <script>
+              const rowsPerPagewest = 10;
+              let currentPagewest = 1;
+            
+              function updatewestTable() {
+                const rows = document.querySelectorAll(".westRow");
+                const totalPages = Math.ceil(rows.length / rowsPerPagewest);
+            
+                rows.forEach((row, index) => {
+                  row.style.display = (
+                    index >= (currentPagewest - 1) * rowsPerPagewest &&
+                    index < currentPagewest * rowsPerPagewest
+                  ) ? '' : 'none';
+                });
+            
+                renderwestPagination(totalPages);
+              }
+            
+              function changewestPage(page) {
+                const rows = document.querySelectorAll(".westRow");
+                const totalPages = Math.ceil(rows.length / rowsPerPagewest);
+            
+                if (page < 1) page = 1;
+                if (page > totalPages) page = totalPages;
+            
+                currentPagewest = page;
+                updatewestTable();
+              }
+            
+              function renderwestPagination(totalPages) {
+                document.getElementById("westPageInfo").textContent = `This is page ${currentPagewest} out of ${totalPages}`;
+                const container = document.getElementById("westPagination");
+                container.innerHTML = "";
+            
+                const prevBtn = document.createElement("button");
+                prevBtn.textContent = "<< Prev";
+                prevBtn.className = currentPagewest === 1 ? "disabled" : "";
+                prevBtn.disabled = currentPagewest === 1;
+                prevBtn.onclick = () => changewestPage(currentPagewest - 1);
+                container.appendChild(prevBtn);
+            
+                const maxPagesToShow = 7;
+                let startPage = 1;
+                let endPage = totalPages;
+            
+                if (totalPages > maxPagesToShow) {
+                  if (currentPagewest <= 4) {
+                    endPage = 5;
+                  } else if (currentPagewest >= totalPages - 3) {
+                    startPage = totalPages - 4;
+                  } else {
+                    startPage = currentPagewest - 2;
+                    endPage = currentPagewest + 2;
+                  }
+                }
+            
+                if (startPage > 1) {
+                  addwestPageButton(container, 1);
+                  if (startPage > 2) {
+                    addwestEllipsis(container);
+                  }
+                }
+            
+                for (let i = startPage; i <= endPage; i++) {
+                  addwestPageButton(container, i);
+                }
+            
+                if (endPage < totalPages) {
+                  if (endPage < totalPages - 1) {
+                    addwestEllipsis(container);
+                  }
+                  addwestPageButton(container, totalPages);
+                }
+            
+                const nextBtn = document.createElement("button");
+                nextBtn.textContent = "Next >>";
+                nextBtn.className = currentPagewest === totalPages ? "disabled" : "";
+                nextBtn.disabled = currentPagewest === totalPages;
+                nextBtn.onclick = () => changewestPage(currentPagewest + 1);
+                container.appendChild(nextBtn);
+              }
+            
+              function addwestPageButton(container, pageNumber) {
+                const btn = document.createElement("button");
+                btn.textContent = pageNumber;
+                if (currentPagewest === pageNumber) {
+                  btn.className = "active";
+                }
+                btn.onclick = () => changewestPage(pageNumber);
+                container.appendChild(btn);
+              }
+            
+              function addwestEllipsis(container) {
+                const ellipsis = document.createElement("span");
+                ellipsis.textContent = "...";
+                ellipsis.className = "ellipsis";
+                container.appendChild(ellipsis);
+              }
+            
+              updatewestTable();
+            </script>
+<div>
+    <h2 class="wp-block-heading has-text-align-center">East District</h2>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .team-container {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 30px;
+            max-width: 1500px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .team-member {
+            position: relative;
+            background: #fff;
+            border-radius: 20px;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+            text-align: center;
+            padding-bottom: 25px;
+        }
+
+
+        .team-member img {
+            width: 100%;
+            height: 200px;
+            object-fit: contain;
+            display: block;
+            background-color: #f8f9fa;
+            padding: 10px;
+        }
+
+        .team-member .caption {
+            margin-top: 15px;
+            padding: 0 25px;
+            font-size: 0.95rem;
+            color: #5a6c7d;
+            line-height: 1.7;
+        }
+
+        .team-member .name {
+            font-weight: 600;
+            font-size: 1rem;
+            color: #2c3e50;
+            display: block;
+            margin-bottom: 5px;
+            line-height: 1.3;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 1200px) {
+            .team-container {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 20px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .team-container {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+                padding: 10px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .team-container {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+        }
+    </style>
+
+    <div class="team-container">
+        <div class="team-member">
+            <img src="http://wp-local.com/wp-content/uploads/2025/08/Capitol.png" alt="Edwin Tanael">
+            <div class="caption">
+                <div class="name">Edwin Tanael</div>
+            </div>
+        </div>
+
+        <div class="team-member">
+            <img src="http://wp-local.com/wp-content/uploads/2025/08/Capitol.png" alt="Bolotoy Templonuevo">
+            <div class="caption">
+                <div class="name">Bolotoy Templonuevo</div>
+            </div>
+        </div>
+
+        <div class="team-member">
+            <img src="http://wp-local.com/wp-content/uploads/2025/08/Capitol.png" alt="Boy Balidoy">
+            <div class="caption">
+                <div class="name">Boy Balidoy</div>
+            </div>
+        </div>
+
+        <div class="team-member">
+            <img src="http://wp-local.com/wp-content/uploads/2025/08/Capitol.png" alt="Dean Vergara">
+            <div class="caption">
+                <div class="name">Dean Vergara</div>
+            </div>
+        </div>
+
+        <div class="team-member">
+            <img src="http://wp-local.com/wp-content/uploads/2025/08/Capitol.png" alt="Arnel Turado">
+            <div class="caption">
+                <div class="name">Arnel Turado</div>
+            </div>
+        </div>
+    </div>
+
+            <hr style="border: none; border-top: 2px solid black; margin-bottom: 30px;">
+            <h4 style="margin-top: 0;">Previous PBM</h4>
+
+            <div id="PBMTableContainer" style="position: relative;">
+                <table id="PBMTable"
+                    style="width: 100%; border-collapse: collapse; font-size: 14px; margin-bottom: 20px;">
+                    <thead>
+                        <tr style="background-color: #f1f1f1;">
+                            <th class="sortable" style="text-align: left; padding: 8px; border-bottom: 1px solid #ccc;" data-column="name" data-type="string">
+                            Name <span class="sort-arrow"></span>
+                            </th>
+                            <th class="sortable" style="text-align: center; padding: 8px; border-bottom: 1px solid #ccc;" data-column="name" data-type="string">
+                            Partylist <span class="sort-arrow"></span>
+                            </th>
+                        <th class="sortable desc" style="text-align: center; padding: 8px; border-bottom: 1px solid #ccc;" data-column="termStart" data-type="number">
+                        Term Start<span class="sort-arrow"></span>
+                        </th>
+
+                            <th class="sortable" style="text-align: center; padding: 8px; border-bottom: 1px solid #ccc;" data-column="termEnd" data-type="number">
+                            Term End <span class="sort-arrow"></span>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody id="PBMTableBody">
+
+                        <tr class="PBMRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Carlos Aguilar 
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">Lakas-NUCD</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1992</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2001</td>
+                        </tr>
+                        <tr class="PBMRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Lilia Evangelista 
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">Lakas-NUCD</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1992</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2001</td>
+                        </tr>
+                        <tr class="PBMRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Francisco De Los Santos
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">LDP</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1992</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1995</td>
+                        </tr>
+                        <tr class="PBMRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Edwin Tanael
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">Independent</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1995</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1998</td>
+                        </tr>
+                        <tr class="PBMRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                        Edwin Tanael
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">Reporma</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1998</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2004</td>
+                        </tr>
+                        <tr class="PBMRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Edgar Tapel
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">Lakas-NUCD</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1998</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2001</td>
+                        </tr>
+                        <tr class="PBMRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Julieto Barceta
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">Reporma</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2001</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2004</td>
+                        </tr>
+                        <tr class="PBMRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Romeo Tuplano
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">Lakas</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2001</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2010</td>
+                        </tr>
+                        <tr class="PBMRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Pio Tubalinal
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">Lakas-NUCD</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2001</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2004</td>
+                        </tr>
+                        <tr class="PBMRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Rene Vega 
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">NPC</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2004</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2007</td>
+                        </tr>
+                        <tr class="PBMRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Roger Pereyra
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">Lakas</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2004</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2010</td>
+                        </tr>
+                        <tr class="PBMRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Edgar Tapel
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">Reporma</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2004</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2007</td>
+                        </tr>
+                        <tr class="PBMRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Edwin Tanael 
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">Lakas</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2007</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2010</td>
+                        </tr>
+                        <tr class="PBMRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Francisco Camano, Jr.
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">NPC</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2007</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2010</td>
+                        </tr>
+                        <tr class="PBMRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Edwin Tanael
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">UNA</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2010</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2013</td>
+                        </tr>
+                        <tr class="PBMRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Wilfredo Santelices 
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">Nacionalista</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2010</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2013</td>
+                        </tr>
+                        <tr class="PBMRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Roger Pereyra 
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">Nacionalista</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2010</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2013</td>
+                        </tr>
+                        <tr class="PBMRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Marilyn Tatel
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">NPC</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2010</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2013</td>
+                        </tr>
+                        <tr class="PBMRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Edwin Tanael 
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">UNA</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2013</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2016</td>
+                        </tr>
+                        <tr class="PBMRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Lorenzo Templonuevo, Jr.
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">NPC</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2013</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                        </tr>
+                        <tr class="PBMRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Arnel Turado 
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">Lakas</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2013</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2016</td>
+                        </tr>
+                        <tr class="PBMRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Marilyn Tatel 
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">Liberal</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2013</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2016</td>
+                        </tr>
+                        <tr class="PBMRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Vincent Villaluna 
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">NPC</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2016</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2019</td>
+                        </tr>
+                        <tr class="PBMRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Arnel Turado 
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">NPC</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2016</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                        </tr>
+                        <tr class="PBMRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Joseph Al Randie Wong 
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">Liberal</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2016</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2019</td>
+                        </tr>
+                        <tr class="PBMRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Edwin Tanael  
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">Independent</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2019</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                        </tr>
+                        <tr class="PBMRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Robert Fernandez 
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">UNA</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2019</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                        </tr>
+                        <tr class="PBMRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Edwin Tanael 
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">Lakas</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                        </tr>
+                        <tr class="PBMRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Josevan Balidoy  
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">PDP-Laban</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                        </tr>
+                        <tr class="PBMRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Dean Roberto Vergara 
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">Lakas</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                        </tr>
+                        <tr class="PBMRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Robert Fernandez  
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">PDR</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                        </tr>
+                        <tr class="PBMRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Josevan Balidoy  
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">Lakas</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                        </tr>
+                        <tr class="PBMRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Lorenzo Templonuevo, Jr.
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">NPC</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                        </tr>
+                        <tr class="PBMRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                        Arnel Turado
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">NPC</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="pagination-wrapper" style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
+                    <p id="PBMPageInfo" style="margin: 0; font-weight: bold; font-size: 14px;">This is page 1 out of X</p>
+                    <div id="PBMPagination" class="pagination" style="display: flex; gap: 5px;"></div>
+                    </div>
+                </div>
+            </div>
+
+
+          <script>
+              const rowsPerPagePBM = 10;
+              let currentPagePBM = 1;
+            
+              function updatePBMTable() {
+                const rows = document.querySelectorAll(".PBMRow");
+                const totalPages = Math.ceil(rows.length / rowsPerPagePBM);
+            
+                rows.forEach((row, index) => {
+                  row.style.display = (
+                    index >= (currentPagePBM - 1) * rowsPerPagePBM &&
+                    index < currentPagePBM * rowsPerPagePBM
+                  ) ? '' : 'none';
+                });
+            
+                renderPBMPagination(totalPages);
+              }
+            
+              function changePBMPage(page) {
+                const rows = document.querySelectorAll(".PBMRow");
+                const totalPages = Math.ceil(rows.length / rowsPerPagePBM);
+            
+                if (page < 1) page = 1;
+                if (page > totalPages) page = totalPages;
+            
+                currentPagePBM = page;
+                updatePBMTable();
+              }
+            
+              function renderPBMPagination(totalPages) {
+                document.getElementById("PBMPageInfo").textContent = `This is page ${currentPagePBM} out of ${totalPages}`;
+                const container = document.getElementById("PBMPagination");
+                container.innerHTML = "";
+            
+                const prevBtn = document.createElement("button");
+                prevBtn.textContent = "<< Prev";
+                prevBtn.className = currentPagePBM === 1 ? "disabled" : "";
+                prevBtn.disabled = currentPagePBM === 1;
+                prevBtn.onclick = () => changePBMPage(currentPagePBM - 1);
+                container.appendChild(prevBtn);
+            
+                const maxPagesToShow = 7;
+                let startPage = 1;
+                let endPage = totalPages;
+            
+                if (totalPages > maxPagesToShow) {
+                  if (currentPagePBM <= 4) {
+                    endPage = 5;
+                  } else if (currentPagePBM >= totalPages - 3) {
+                    startPage = totalPages - 4;
+                  } else {
+                    startPage = currentPagePBM - 2;
+                    endPage = currentPagePBM + 2;
+                  }
+                }
+            
+                if (startPage > 1) {
+                  addPBMPageButton(container, 1);
+                  if (startPage > 2) {
+                    addPBMEllipsis(container);
+                  }
+                }
+            
+                for (let i = startPage; i <= endPage; i++) {
+                  addPBMPageButton(container, i);
+                }
+            
+                if (endPage < totalPages) {
+                  if (endPage < totalPages - 1) {
+                    addPBMEllipsis(container);
+                  }
+                  addPBMPageButton(container, totalPages);
+                }
+            
+                const nextBtn = document.createElement("button");
+                nextBtn.textContent = "Next >>";
+                nextBtn.className = currentPagePBM === totalPages ? "disabled" : "";
+                nextBtn.disabled = currentPagePBM === totalPages;
+                nextBtn.onclick = () => changePBMPage(currentPagePBM + 1);
+                container.appendChild(nextBtn);
+              }
+            
+              function addPBMPageButton(container, pageNumber) {
+                const btn = document.createElement("button");
+                btn.textContent = pageNumber;
+                if (currentPagePBM === pageNumber) {
+                  btn.className = "active";
+                }
+                btn.onclick = () => changePBMPage(pageNumber);
+                container.appendChild(btn);
+              }
+            
+              function addPBMEllipsis(container) {
+                const ellipsis = document.createElement("span");
+                ellipsis.textContent = "...";
+                ellipsis.className = "ellipsis";
+                container.appendChild(ellipsis);
+              }
+            
+              updatePBMTable();
+            </script>
+                      
+<script>
+/**
+ * Generic table sorter
+ * @param {string} tbodyId - ID ng tbody (e.g., "westTableBody", "PBMTableBody")
+ * @param {string} rowClass - class ng row (e.g.,  "westRow", "PBMRow")
+ * @param {number} columnIndex - index ng column to sort
+ * @param {string} type - "string" o "number"
+ * @param {boolean} asc - ascending or descending
+ */
+function sortGenericTable(tbodyId, rowClass, columnIndex, type, asc) {
+  const tbody = document.getElementById(tbodyId);
+  const rowsArray = Array.from(tbody.querySelectorAll("." + rowClass));
+
+  rowsArray.sort((a, b) => {
+    let valA, valB;
+    if(type === "string") {
+      // For Name column or text
+      valA = a.children[columnIndex].innerText.trim().toLowerCase();
+      valB = b.children[columnIndex].innerText.trim().toLowerCase();
+      if(valA < valB) return asc ? -1 : 1;
+      if(valA > valB) return asc ? 1 : -1;
+      return 0;
+    } else if(type === "number") {
+      // For Term Start / Term End
+      valA = parseInt(a.children[columnIndex].innerText.trim(), 10);
+      valB = parseInt(b.children[columnIndex].innerText.trim(), 10);
+      return asc ? valA - valB : valB - valA;
+    }
+    return 0;
+  });
+
+  tbody.innerHTML = "";
+  rowsArray.forEach(row => tbody.appendChild(row));
+}
+
+// Apply sorting to all tables
+document.querySelectorAll("table").forEach(table => {
+  const tbodyId = table.querySelector("tbody").id;
+  const rowClass = table.querySelector("tbody tr").className;
+
+  table.querySelectorAll("th.sortable").forEach((th, idx) => {
+    th.addEventListener("click", () => {
+      // Remove asc/desc from other headers
+      table.querySelectorAll("th.sortable").forEach(header => {
+        if(header !== th) header.classList.remove("asc", "desc");
+      });
+
+      // Toggle direction
+      const asc = !th.classList.contains("asc");
+      th.classList.toggle("asc", asc);
+      th.classList.toggle("desc", !asc);
+
+      // Sort table
+      const type = th.dataset.type;
+      sortGenericTable(tbodyId, rowClass, idx, type, asc);
+    });
+  });
+});
+</script>

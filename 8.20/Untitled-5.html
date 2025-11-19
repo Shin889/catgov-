@@ -1,0 +1,611 @@
+<style>
+    hr {
+                margin: 20px 0;
+                border: none;
+                border-top: 1px dashed #aaa;
+            }
+
+            .pagination {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                gap: 4px;
+                margin-top: 20px;
+                flex-wrap: wrap;
+            }
+
+            .pagination button {
+                padding: 0 2px; 
+                background-color: #f0f0f0;
+                border: 1px solid #ccc;
+                color: #333;
+                cursor: pointer;
+                transition: background-color 0.3s;
+                border-radius: 0;
+                min-width: 20px; 
+                min-height: 24px; 
+                text-align: center;
+                font-weight: bold;
+                font-size: 10px; 
+                }
+            .pagination button:hover {
+                background-color: #dcdcdc;
+            }
+
+            .pagination button.active {
+                background-color: #004499cc;
+                color: white;
+                border-color: #004499cc;
+            }
+
+            .pagination-wrapper {
+                text-align: right;
+                margin-top: 10px;
+            }
+
+            .pagination {
+                display: inline-flex;
+                gap: 4px;
+            }
+
+            table {
+                table-layout: fixed;
+            }
+
+            th,
+            td {
+                padding: 8px;
+                border-bottom: 1px solid #ccc;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+
+            td {
+                position: relative;
+                overflow: visible !important;
+            }
+                th.sortable {
+                cursor: pointer;
+                user-select: none;
+                text-align: center; 
+                position: relative;
+                padding: 8px;
+                border-bottom: 1px solid #ccc;
+                }
+
+                th.sortable .sort-arrow {
+                font-size: 12px;
+                color: #888;
+                display: inline-block;
+                vertical-align: middle;
+                margin-left: 2px;
+                width: 12px;
+                height: 12px;
+                line-height: 12px;
+                text-align: center;
+                }
+
+                th.sortable .sort-arrow::after {
+                content: "▲";         
+                color: #888;         
+                }
+
+                th.sortable.asc .sort-arrow::after {
+                content: "▲";
+                color: #000;         
+                }
+
+
+                th.sortable.desc .sort-arrow::after {
+                content: "▼";
+                color: #000;           
+                }
+
+                th.sortable[data-type="string"] {
+                text-align: left;      
+                }
+
+                th.sortable[data-type="number"] {
+                text-align: center;     
+                }
+            </style>
+        <hr>
+        <hr style="margin: 15px 0; border-top: 1px solid #ccc;">
+        <h4 style="margin-top: 0;">Previous PBM</h4>
+
+          <div id="councilorTableContainer" style="position: relative;">
+              <table id="councilorTable"
+                  style="width: 100%; border-collapse: collapse; font-size: 14px; margin-bottom: 20px;">
+                  <thead>
+                    <tr style="background-color: #f1f1f1;">
+                        <th class="sortable" style="text-align: left; padding: 8px; border-bottom: 1px solid #ccc;" data-column="name" data-type="string">
+                        Name <span class="sort-arrow"></span>
+                        </th>
+                        <th class="sortable" style="text-align: center; padding: 8px; border-bottom: 1px solid #ccc;" data-column="name" data-type="string">
+                        Partylist <span class="sort-arrow"></span>
+                        </th>
+                    <th class="sortable desc" style="text-align: center; padding: 8px; border-bottom: 1px solid #ccc;" data-column="termStart" data-type="number">
+                    Term Start<span class="sort-arrow"></span>
+                    </th>
+
+                        <th class="sortable" style="text-align: center; padding: 8px; border-bottom: 1px solid #ccc;" data-column="termEnd" data-type="number">
+                        Term End <span class="sort-arrow"></span>
+                        </th>
+                    </tr>
+                  </thead>
+                  <tbody id="councilorTableBody">
+
+                    <tr class="councilorRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                  Carlos Aguilar 
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">Lakas-NUCD</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1992</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2001</td>
+                      </tr>
+                      <tr class="councilorRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                  Lilia Evangelista 
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">Lakas-NUCD</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1992</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2001</td>
+                      </tr>
+                      <tr class="councilorRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                  Francisco De Los Santos
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">LDP</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1992</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1995</td>
+                      </tr>
+                      <tr class="councilorRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                   Edwin Tanael
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">Independent</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1995</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1998</td>
+                      </tr>
+                      <tr class="councilorRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Edwin Tanael
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">Reporma</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1998</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2004</td>
+                      </tr>
+                      <tr class="councilorRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                   Edgar Tapel
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">Lakas-NUCD</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1998</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2001</td>
+                      </tr>
+                      <tr class="councilorRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                   Julieto Barceta
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">Reporma</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2001</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2004</td>
+                      </tr>
+                      <tr class="councilorRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                   Romeo Tuplano
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">Lakas</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2001</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2010</td>
+                      </tr>
+                      <tr class="councilorRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                   Pio Tubalinal
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">Lakas-NUCD</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2001</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2004</td>
+                      </tr>
+                      <tr class="councilorRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                  Rene Vega 
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">NPC</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2004</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2007</td>
+                      </tr>
+                      <tr class="councilorRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                   Roger Pereyra
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">Lakas</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2004</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2010</td>
+                      </tr>
+                      <tr class="councilorRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                   Edgar Tapel
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">Reporma</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2004</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2007</td>
+                      </tr>
+                      <tr class="councilorRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                  Edwin Tanael 
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">Lakas</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2007</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2010</td>
+                      </tr>
+                      <tr class="councilorRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                   Francisco Camano, Jr.
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">NPC</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2007</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2010</td>
+                      </tr>
+                      <tr class="councilorRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                   Edwin Tanael
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">UNA</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2010</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2013</td>
+                      </tr>
+                      <tr class="councilorRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                  Wilfredo Santelices 
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">Nacionalista</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2010</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2013</td>
+                      </tr>
+                      <tr class="councilorRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                  Roger Pereyra 
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">Nacionalista</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2010</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2013</td>
+                      </tr>
+                      <tr class="councilorRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                   Marilyn Tatel
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">NPC</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2010</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2013</td>
+                      </tr>
+                      <tr class="councilorRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                  Edwin Tanael 
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">UNA</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2013</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2016</td>
+                      </tr>
+                      <tr class="councilorRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                   Lorenzo Templonuevo, Jr.
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">NPC</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2013</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                      </tr>
+                      <tr class="councilorRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                  Arnel Turado 
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">Lakas</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2013</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2016</td>
+                      </tr>
+                      <tr class="councilorRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                  Marilyn Tatel 
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">Liberal</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2013</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2016</td>
+                      </tr>
+                      <tr class="councilorRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                  Vincent Villaluna 
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">NPC</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2016</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2019</td>
+                      </tr>
+                      <tr class="councilorRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                  Arnel Turado 
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">NPC</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2016</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                      </tr>
+                      <tr class="councilorRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                  Joseph Al Randie Wong 
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">Liberal</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2016</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2019</td>
+                      </tr>
+                      <tr class="councilorRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                  Edwin Tanael  
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">Independent</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2019</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                      </tr>
+                      <tr class="councilorRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                  Robert Fernandez 
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">UNA</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2019</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                      </tr>
+                      <tr class="councilorRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                  Edwin Tanael 
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">Lakas</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                      </tr>
+                      <tr class="councilorRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                 Josevan Balidoy  
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">PDP-Laban</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                      </tr>
+                      <tr class="councilorRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                  Dean Roberto Vergara 
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">Lakas</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                      </tr>
+                      <tr class="councilorRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                 Robert Fernandez  
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">PDR</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                      </tr>
+                      <tr class="councilorRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                 Josevan Balidoy  
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">Lakas</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                      </tr>
+                      <tr class="councilorRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                 Lorenzo Templonuevo, Jr.
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">NPC</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                      </tr>
+                      <tr class="councilorRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Arnel Turado
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">NPC</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                      </tr>
+                  </tbody>
+              </table>
+
+<div class="pagination-wrapper" style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
+    <p id="councilorPageInfo" style="margin: 0; font-weight: bold; font-size: 14px;"></p>
+    <div id="councilorPagination" class="pagination"></div>
+</div>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const table = document.getElementById("councilorTable");
+    const tbody = document.getElementById("councilorTableBody");
+    const headers = table.querySelectorAll("th.sortable");
+    const rows = Array.from(tbody.querySelectorAll("tr.councilorRow"));
+
+    let currentSort = { index: null, order: "asc" };
+
+    // ========== SORTING ==========
+    headers.forEach((header, index) => {
+        header.addEventListener("click", function () {
+            const type = header.getAttribute("data-type");
+            let order = "asc";
+
+            if (currentSort.index === index && currentSort.order === "asc") {
+                order = "desc";
+            }
+
+            currentSort = { index, order };
+
+            // Remove old sort classes
+            headers.forEach(h => h.classList.remove("asc", "desc"));
+            header.classList.add(order);
+
+            // Sort rows
+            const sorted = rows.slice().sort((a, b) => {
+                const cellA = a.children[index].innerText.trim();
+                const cellB = b.children[index].innerText.trim();
+
+                if (type === "number") {
+                    return order === "asc"
+                        ? Number(cellA) - Number(cellB)
+                        : Number(cellB) - Number(cellA);
+                } else {
+                    return order === "asc"
+                        ? cellA.localeCompare(cellB)
+                        : cellB.localeCompare(cellA);
+                }
+            });
+
+            // Re-append sorted rows
+            tbody.innerHTML = "";
+            sorted.forEach(r => tbody.appendChild(r));
+
+            // Reset pagination after sort
+            paginate(1);
+        });
+    });
+
+    // ========== PAGINATION ==========
+    const rowsPerPage = 10;
+    let currentPage = 1;
+
+    function paginate(page) {
+        const totalRows = rows.length;
+        const totalPages = Math.ceil(totalRows / rowsPerPage);
+        currentPage = page;
+
+        rows.forEach((row, i) => {
+            row.style.display =
+                i >= (page - 1) * rowsPerPage && i < page * rowsPerPage
+                    ? ""
+                    : "none";
+        });
+
+        // Page info text
+        const pageInfo = document.getElementById("councilorPageInfo");
+        if (pageInfo) {
+            pageInfo.textContent = `This is page ${page} out of ${totalPages}`;
+        }
+
+        // Pagination buttons
+        const paginationContainer = document.getElementById("councilorPagination");
+        if (paginationContainer) {
+            paginationContainer.innerHTML = "";
+            for (let p = 1; p <= totalPages; p++) {
+                const btn = document.createElement("button");
+                btn.textContent = p;
+                btn.className = p === page ? "active" : "";
+                btn.addEventListener("click", () => paginate(p));
+                paginationContainer.appendChild(btn);
+            }
+        }
+    }
+
+    // Initial paginate
+    paginate(1);
+});
+</script>

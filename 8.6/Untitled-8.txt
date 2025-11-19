@@ -1,0 +1,56 @@
+<aside id="sidebar-left" class="large-4 medium-4 large-pull-8 medium-pull-8 columns" role="complementary">
+	<aside id="govph_widget_transparency-2" class="widget callout secondary transparency_widget"><a
+			href="https://op-proper.gov.ph/transparency-seal-2/"><img id="tp-seal"
+				src="https://op-proper.gov.ph/wp-content/themes/gwt-wordpress-25.3.3/images/transparency-seal-160x160.png"
+				alt="transparency seal logo" title="Transparency Seal"></a></aside>
+	<aside id="custom_html-3" class="widget_text widget callout secondary widget_custom_html">
+		<div class="textwidget custom-html-widget">
+			<div style="text-align:center">
+				<a href="#"><img id="pp-seal"
+						src="http://wp-local.com/wp-content/uploads/2025/07/cropped-logo_catanduanesgov.png"
+						alt="sagissag ng pangulo" title="Sagisag ng Pangulo"></a>
+			</div>
+		</div>
+	</aside>
+	<aside id="custom_html-4" class="widget_text widget callout secondary widget_custom_html">
+		<div class="textwidget custom-html-widget">
+			<div style="text-align:center">
+				<a href="https://www.foi.gov.ph/"><img id="foi-logo"
+						src="https://op-proper.gov.ph/wp-content/uploads/2018/09/FOI-logo-1.png" alt="foi logo"
+						title="FOI"></a>
+			</div>
+		</div>
+
+
+
+
+
+		<div class="rfq-left"
+			style="background:#fff;border:1px solid #ddd;border-radius:1px;padding:20px;text-align:center;box-sizing:border-box;">
+			<img src="https://op-proper.gov.ph/wp-content/themes/gwt-wordpress-25.3.3/images/transparency-seal-160x160.png"
+				alt="Seal"
+				style="max-width:160px;width:100%;height:auto;border-radius:1px;display:block;margin:0 auto 15px auto;">
+			style="background:#fff;border:1px solid #ddd;border-radius:1px;padding:20px;text-align:center;box-sizing:border-box;">	
+				<img src="http://wp-local.com/wp-content/uploads/2025/07/cropped-logo_catanduanesgov.png" alt="Seal"
+				style="max-width:160px;width:100%;height:auto;border-radius:1px;display:block;margin:0 auto 15px auto;">
+			style="background:#fff;border:1px solid #ddd;border-radius:1px;padding:20px;text-align:center;box-sizing:border-box;">	
+				<img src="https://op-proper.gov.ph/wp-content/uploads/2018/09/FOI-logo-1.png" alt="Seal"
+				style="max-width:160px;width:100%;height:auto;border-radius:1px;display:block;margin:0 auto;">
+		</div>
+
+
+
+
+
+
+		<div class="rfq-left" style="width: 100%; display: flex; flex-direction: column; gap: 15px;">
+    <div style="background: #fff; border: 1px solid #ddd; border-radius: 1px; padding: 20px; text-align: center; width: 100%; box-sizing: border-box;">
+        <img src="https://op-proper.gov.ph/wp-content/themes/gwt-wordpress-25.3.3/images/transparency-seal-160x160.png" alt="Seal" style="max-width: 160px; width: 100%; height: auto; border-radius: 1px; display: block; margin: 0 auto;">
+    </div>
+    <div style="background: #fff; border: 1px solid #ddd; border-radius: 1px; padding: 20px; text-align: center; width: 100%; box-sizing: border-box;">
+        <img src="http://wp-local.com/wp-content/uploads/2025/07/cropped-logo_catanduanesgov.png" alt="Seal" style="max-width: 160px; width: 100%; height: auto; border-radius: 1px; display: block; margin: 0 auto;">
+    </div>
+    <div style="background: #fff; border: 1px solid #ddd; border-radius: 1px; padding: 20px; text-align: center; width: 100%; box-sizing: border-box;">
+        <img src="https://op-proper.gov.ph/wp-content/uploads/2018/09/FOI-logo-1.png" alt="Seal" style="max-width: 160px; width: 100%; height: auto; border-radius: 1px; display: block; margin: 0 auto;">
+    </div>
+</div>

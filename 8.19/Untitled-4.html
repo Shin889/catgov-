@@ -1,0 +1,112 @@
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    .team-container {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 30px;
+        max-width: 1500px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .team-member {
+        position: relative;
+        background: #fff;
+        border-radius: 20px;
+        border: 1px solid rgba(0, 0, 0, 0.05);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+        overflow: hidden;
+        text-align: center;
+        padding-bottom: 25px;
+    }
+
+
+    .team-member img {
+        width: 100%;
+        height: 200px;
+        object-fit: contain;
+        display: block;
+        background-color: #f8f9fa;
+        padding: 10px;
+    }
+
+    .team-member .caption {
+        margin-top: 15px;
+        padding: 0 25px;
+        font-size: 0.95rem;
+        color: #5a6c7d;
+        line-height: 1.7;
+    }
+
+    .team-member .name {
+        font-weight: 600;
+        font-size: 1rem;
+        color: #2c3e50;
+        display: block;
+        margin-bottom: 5px;
+        line-height: 1.3;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 1200px) {
+        .team-container {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .team-container {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            padding: 10px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .team-container {
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+    }
+</style>
+
+<div class="team-container">
+    <div class="team-member">
+        <img src="http://wp-local.com/wp-content/uploads/2025/08/Capitol.png" alt="Edwin Tanael">
+        <div class="caption">
+            <div class="name">Edwin Tanael</div>
+        </div>
+    </div>
+
+    <div class="team-member">
+        <img src="http://wp-local.com/wp-content/uploads/2025/08/Capitol.png" alt="Bolotoy Templonuevo">
+        <div class="caption">
+            <div class="name">Bolotoy Templonuevo</div>
+        </div>
+    </div>
+
+    <div class="team-member">
+        <img src="http://wp-local.com/wp-content/uploads/2025/08/Capitol.png" alt="Boy Balidoy">
+        <div class="caption">
+            <div class="name">Boy Balidoy</div>
+        </div>
+    </div>
+
+    <div class="team-member">
+        <img src="http://wp-local.com/wp-content/uploads/2025/08/Capitol.png" alt="Dean Vergara">
+        <div class="caption">
+            <div class="name">Dean Vergara</div>
+        </div>
+    </div>
+
+    <div class="team-member">
+        <img src="http://wp-local.com/wp-content/uploads/2025/08/Capitol.png" alt="Arnel Turado">
+        <div class="caption">
+            <div class="name">Arnel Turado</div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,1174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catanduanes Provincial Capitol - Contact</title>
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+        }
+
+        /* Provincial color scheme */
+        :root {
+            --provincial-green: hsl(142, 76%, 36%);
+            --provincial-gold: hsl(34, 100%, 50%);
+            --provincial-blue: hsl(217, 91%, 59%);
+            --provincial-navy: hsl(220, 26%, 14%);
+            --provincial-cream: hsl(48, 89%, 96%);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* Main wrapper */
+        .page-wrapper {
+            min-height: 100vh;
+            background: linear-gradient(135deg, var(--provincial-cream) 0%, #ffffff 50%, var(--provincial-cream) 100%);
+        }
+
+        /* Hero section */
+        .hero-section {
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(90deg, var(--provincial-green) 0%, var(--provincial-blue) 50%, var(--provincial-navy) 100%);
+            padding: 6rem 0 8rem;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        .hero-content {
+            position: relative;
+            text-align: center;
+            color: white;
+            opacity: 0;
+            transform: translateY(2rem);
+            animation: fadeInUp 1s ease-out forwards;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(8px);
+            border-radius: 9999px;
+            padding: 0.5rem 1.5rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .hero-badge:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .hero-title {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(90deg, #ffffff 0%, var(--provincial-cream) 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: slideInUp 0.7s ease-out forwards;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 768px;
+            margin-left: auto;
+            margin-right: auto;
+            animation: slideInUp 0.7s ease-out 0.2s forwards;
+            opacity: 0;
+            transform: translateY(1.5rem);
+        }
+
+        .hero-contact-info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            color: rgba(255, 255, 255, 0.8);
+            animation: slideInUp 0.7s ease-out 0.3s forwards;
+            opacity: 0;
+            transform: translateY(2rem);
+        }
+
+        .hero-contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: color 0.2s ease;
+        }
+
+        .hero-contact-item:hover {
+            color: white;
+        }
+
+        .hero-gradient {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 6rem;
+            background: linear-gradient(to top, var(--provincial-cream), transparent);
+        }
+
+        /* Services section */
+        .services-section {
+            padding: 4rem 0 6rem;
+        }
+
+        .services-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .services-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--provincial-navy);
+            margin-bottom: 1rem;
+        }
+
+        .services-subtitle {
+            font-size: 1.125rem;
+            color: #6b7280;
+            max-width: 512px;
+            margin: 0 auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 0.5rem;
+            border: 2px solid #f3f4f6;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+
+        .service-card:hover {
+            border-color: var(--provincial-green);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-card-header {
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .service-icon {
+            width: 4rem;
+            height: 4rem;
+            background: linear-gradient(135deg, var(--provincial-green), var(--provincial-blue));
+            border-radius: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover .service-icon {
+            transform: scale(1.1);
+        }
+
+        .service-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--provincial-navy);
+        }
+
+        .service-card-content {
+            padding: 0 1.5rem 1.5rem;
+        }
+
+        .service-description {
+            color: #6b7280;
+            text-align: center;
+        }
+
+        /* Contact section */
+        .contact-section {
+            padding: 4rem 0 6rem;
+            background: white;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+        }
+
+        .contact-info {
+            order: 2;
+        }
+
+        .contact-form-wrapper {
+            order: 1;
+        }
+
+        .contact-title {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--provincial-navy);
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-description {
+            font-size: 1rem;
+            color: #6b7280;
+            margin-bottom: 2rem;
+        }
+
+        .contact-info-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .contact-info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+        }
+
+        .contact-info-icon {
+            width: 2.5rem;
+            height: 2.5rem;
+            background: linear-gradient(135deg, #f9fafb, #f3f4f6);
+            border-radius: 0.75rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            transition: transform 0.3s ease;
+        }
+
+        .contact-info-item:hover .contact-info-icon {
+            transform: scale(1.1);
+        }
+
+        .contact-info-content {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .contact-info-title {
+            font-weight: 600;
+            color: var(--provincial-navy);
+            margin-bottom: 0.25rem;
+            font-size: 0.9rem;
+        }
+
+        .contact-info-text {
+            color: #6b7280;
+            font-size: 0.9rem;
+            word-wrap: break-word;
+        }
+
+        .map-placeholder {
+            margin-top: 2rem;
+            height: 12rem;
+            background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
+            border-radius: 1rem;
+            border: 2px solid #e5e7eb;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .map-content {
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .map-icon {
+            margin: 0 auto 0.75rem;
+            color: var(--provincial-green);
+        }
+
+        .map-title {
+            color: #6b7280;
+            font-weight: 500;
+            margin-bottom: 0.25rem;
+        }
+
+        .map-subtitle {
+            color: #9ca3af;
+            font-size: 0.875rem;
+        }
+
+        /* Form styles */
+        .form-card {
+            background: white;
+            border-radius: 0.5rem;
+            border: 2px solid #f3f4f6;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+        }
+
+        .form-header {
+            padding: 1.5rem 1.5rem 0;
+        }
+
+        .form-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--provincial-navy);
+            margin-bottom: 0.5rem;
+        }
+
+        .form-description {
+            color: #6b7280;
+            font-size: 0.9rem;
+        }
+
+        .form-content {
+            padding: 1.5rem;
+        }
+
+        .form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .form-label {
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--provincial-navy);
+        }
+
+        .form-input, .form-textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #d1d5db;
+            border-radius: 0.375rem;
+            font-size: 0.875rem;
+            transition: all 0.2s ease;
+            background: white;
+        }
+
+        .form-input:focus, .form-textarea:focus {
+            outline: none;
+            border-color: var(--provincial-green);
+            box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.1);
+        }
+
+        .form-input.error, .form-textarea.error {
+            border-color: #ef4444;
+        }
+
+        .form-input.error:focus, .form-textarea.error:focus {
+            border-color: #ef4444;
+            box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+        }
+
+        .form-textarea {
+            resize: none;
+            min-height: 5rem;
+        }
+
+        .form-error {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+            color: #ef4444;
+            font-size: 0.75rem;
+            margin-top: 0.25rem;
+            opacity: 0;
+            transform: translateY(-0.5rem);
+            transition: all 0.2s ease;
+        }
+
+        .form-error.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .form-button {
+            width: 100%;
+            background: linear-gradient(90deg, var(--provincial-green), var(--provincial-blue));
+            color: white;
+            border: none;
+            border-radius: 0.375rem;
+            padding: 0.875rem 1.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .form-button:hover:not(:disabled) {
+            background: linear-gradient(90deg, var(--provincial-blue), var(--provincial-green));
+            transform: scale(1.02);
+        }
+
+        .form-button:active {
+            transform: scale(0.98);
+        }
+
+        .form-button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .spinner {
+            width: 1rem;
+            height: 1rem;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-top: 2px solid white;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--provincial-navy);
+            color: white;
+            padding: 3rem 0;
+        }
+
+        .footer-content {
+            text-align: center;
+        }
+
+        .footer-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .footer-description {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-copyright {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+            font-size: 0.875rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* Icons */
+        .icon {
+            width: 1.5rem;
+            height: 1.5rem;
+            fill: currentColor;
+        }
+
+        .icon-sm {
+            width: 1.25rem;
+            height: 1.25rem;
+        }
+
+        .icon-lg {
+            width: 2rem;
+            height: 2rem;
+        }
+
+        .icon-xl {
+            width: 3rem;
+            height: 3rem;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(2rem);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(1.5rem);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Responsive design */
+        @media (min-width: 640px) {
+            .container {
+                padding: 0 2rem;
+            }
+
+            .hero-title {
+                font-size: 4rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.75rem;
+            }
+
+            .hero-contact-info {
+                flex-direction: row;
+                gap: 2rem;
+            }
+
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .form-row {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .contact-title {
+                font-size: 2.25rem;
+            }
+
+            .contact-description {
+                font-size: 1.125rem;
+            }
+
+            .contact-info-title, .contact-info-text {
+                font-size: 1rem;
+            }
+
+            .form-title {
+                font-size: 1.75rem;
+            }
+
+            .form-description {
+                font-size: 1rem;
+            }
+
+            .map-placeholder {
+                height: 14rem;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .hero-section {
+                padding: 8rem 0 10rem;
+            }
+
+            .hero-title {
+                font-size: 6rem;
+            }
+
+            .services-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 2.5rem;
+            }
+
+            .services-section {
+                padding: 6rem 0;
+            }
+
+            .contact-section {
+                padding: 6rem 0;
+            }
+
+            .contact-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 4rem;
+            }
+
+            .contact-info {
+                order: 1;
+            }
+
+            .contact-form-wrapper {
+                order: 2;
+            }
+
+            .contact-title {
+                font-size: 3rem;
+            }
+
+            .map-placeholder {
+                height: 16rem;
+            }
+        }
+
+        /* Toast notification styles */
+        .toast {
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+            z-index: 1000;
+        }
+
+        .toast.show {
+            transform: translateX(0);
+        }
+
+        .toast.success {
+            border-left: 4px solid var(--provincial-green);
+        }
+
+        .toast.error {
+            border-left: 4px solid #ef4444;
+        }
+
+        .toast-title {
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .toast-description {
+            color: #6b7280;
+            font-size: 0.875rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="page-wrapper">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-overlay"></div>
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/>
+                            <path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/>
+                            <path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/>
+                            <path d="M10 6h4"/>
+                            <path d="M10 10h4"/>
+                            <path d="M10 14h4"/>
+                            <path d="M10 18h4"/>
+                        </svg>
+                        <span>Provincial Government</span>
+                    </div>
+                    <h1 class="hero-title">CATANDUANES</h1>
+                    <p class="hero-subtitle">Provincial Capitol Contact Center</p>
+                    <div class="hero-contact-info">
+                        <div class="hero-contact-item">
+                            <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                            <span>provincialcapitol@gmail.com</span>
+                        </div>
+                        <div class="hero-contact-item">
+                            <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                            </svg>
+                            <span>0912 345 6789</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-gradient"></div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services-section">
+            <div class="container">
+                <div class="services-header">
+                    <h2 class="services-title">How We Serve You</h2>
+                    <p class="services-subtitle">Committed to providing exceptional public service to the citizens of Catanduanes</p>
+                </div>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-card-header">
+                            <div class="service-icon">
+                                <svg class="icon-lg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                                    <circle cx="9" cy="7" r="4"/>
+                                    <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                                </svg>
+                            </div>
+                            <h3 class="service-title">Public Services</h3>
+                        </div>
+                        <div class="service-card-content">
+                            <p class="service-description">Serving the people of Catanduanes with excellence and integrity</p>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-card-header">
+                            <div class="service-icon">
+                                <svg class="icon-lg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                </svg>
+                            </div>
+                            <h3 class="service-title">Government Affairs</h3>
+                        </div>
+                        <div class="service-card-content">
+                            <p class="service-description">Transparent and accountable governance for all citizens</p>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-card-header">
+                            <div class="service-icon">
+                                <svg class="icon-lg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <polyline points="12,6 12,12 16,14"/>
+                                </svg>
+                            </div>
+                            <h3 class="service-title">24/7 Support</h3>
+                        </div>
+                        <div class="service-card-content">
+                            <p class="service-description">Emergency services and critical support available round the clock</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-grid">
+                    <!-- Contact Information -->
+                    <div class="contact-info">
+                        <h2 class="contact-title">Get in Touch</h2>
+                        <p class="contact-description">We're here to assist you with any inquiries or services you need. Contact us through any of the channels below.</p>
+                        
+                        <div class="contact-info-list">
+                            <div class="contact-info-item">
+                                <div class="contact-info-icon">
+                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="var(--provincial-navy)" stroke-width="2">
+                                        <path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/>
+                                        <path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/>
+                                        <path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/>
+                                        <path d="M10 6h4"/>
+                                        <path d="M10 10h4"/>
+                                        <path d="M10 14h4"/>
+                                        <path d="M10 18h4"/>
+                                    </svg>
+                                </div>
+                                <div class="contact-info-content">
+                                    <h3 class="contact-info-title">Provincial Information Office</h3>
+                                    <p class="contact-info-text">Catanduanes Provincial Information Office</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-info-item">
+                                <div class="contact-info-icon">
+                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="var(--provincial-green)" stroke-width="2">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                        <circle cx="12" cy="10" r="3"/>
+                                    </svg>
+                                </div>
+                                <div class="contact-info-content">
+                                    <h3 class="contact-info-title">Address</h3>
+                                    <p class="contact-info-text">Catanduanes Provincial Capitol, Virac, Catanduanes</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-info-item">
+                                <div class="contact-info-icon">
+                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="var(--provincial-blue)" stroke-width="2">
+                                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                                    </svg>
+                                </div>
+                                <div class="contact-info-content">
+                                    <h3 class="contact-info-title">Phone</h3>
+                                    <p class="contact-info-text">0912 345 6789</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-info-item">
+                                <div class="contact-info-icon">
+                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="var(--provincial-gold)" stroke-width="2">
+                                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                        <polyline points="22,6 12,13 2,6"/>
+                                    </svg>
+                                </div>
+                                <div class="contact-info-content">
+                                    <h3 class="contact-info-title">Email</h3>
+                                    <p class="contact-info-text">provincialcapitol@gmail.com</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Interactive Map -->
+                        <div class="map-placeholder">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3920.2945647894854!2d124.22916731479368!3d13.576665990375734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a0215fb2b59659%3A0x3e36c1f8a5e8a0c0!2sCatanduanes%20Provincial%20Capitol!5e0!3m2!1sen!2sph!4v1637845123456!5m2!1sen!2sph"
+                                width="100%"
+                                height="100%"
+                                style="border:0; border-radius: 1rem;"
+                                allowfullscreen=""
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"
+                                title="Catanduanes Provincial Capitol Location">
+                            </iframe>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="contact-form-wrapper">
+                        <div class="form-card">
+                            <div class="form-header">
+                                <h3 class="form-title">Send us a Message</h3>
+                                <p class="form-description">Fill out the form below and we'll get back to you as soon as possible.</p>
+                            </div>
+                            <div class="form-content">
+                                <form class="form" id="contactForm">
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label class="form-label" for="name">Full Name *</label>
+                                            <input class="form-input" type="text" id="name" name="name" placeholder="Enter your full name" required>
+                                            <div class="form-error" id="nameError">
+                                                <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                    <circle cx="12" cy="12" r="10"/>
+                                                    <line x1="12" y1="8" x2="12" y2="12"/>
+                                                    <line x1="12" y1="16" x2="12.01" y2="16"/>
+                                                </svg>
+                                                <span></span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label" for="phone">Phone Number</label>
+                                            <input class="form-input" type="tel" id="phone" name="phone" placeholder="09XX XXX XXXX">
+                                            <div class="form-error" id="phoneError">
+                                                <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                    <circle cx="12" cy="12" r="10"/>
+                                                    <line x1="12" y1="8" x2="12" y2="12"/>
+                                                    <line x1="12" y1="16" x2="12.01" y2="16"/>
+                                                </svg>
+                                                <span></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label class="form-label" for="email">Email Address *</label>
+                                        <input class="form-input" type="email" id="email" name="email" placeholder="your.email@example.com" required>
+                                        <div class="form-error" id="emailError">
+                                            <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <circle cx="12" cy="12" r="10"/>
+                                                <line x1="12" y1="8" x2="12" y2="12"/>
+                                                <line x1="12" y1="16" x2="12.01" y2="16"/>
+                                            </svg>
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label class="form-label" for="subject">Subject *</label>
+                                        <input class="form-input" type="text" id="subject" name="subject" placeholder="What is this regarding?" required>
+                                        <div class="form-error" id="subjectError">
+                                            <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <circle cx="12" cy="12" r="10"/>
+                                                <line x1="12" y1="8" x2="12" y2="12"/>
+                                                <line x1="12" y1="16" x2="12.01" y2="16"/>
+                                            </svg>
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label class="form-label" for="message">Message *</label>
+                                        <textarea class="form-textarea" id="message" name="message" rows="5" placeholder="Please provide details about your inquiry..." required></textarea>
+                                        <div class="form-error" id="messageError">
+                                            <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <circle cx="12" cy="12" r="10"/>
+                                                <line x1="12" y1="8" x2="12" y2="12"/>
+                                                <line x1="12" y1="16" x2="12.01" y2="16"/>
+                                            </svg>
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                    
+                                    <button class="form-button" type="submit" id="submitBtn">
+                                        <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <line x1="22" y1="2" x2="11" y2="13"/>
+                                            <polygon points="22,2 15,22 11,13 2,9 22,2"/>
+                                        </svg>
+                                        Send Message
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <h3 class="footer-title">Catanduanes Provincial Capitol</h3>
+                    <p class="footer-description">Serving the people of Catanduanes with excellence, transparency, and integrity</p>
+                    <div class="footer-copyright">
+                        <span>© 2024 Provincial Government of Catanduanes</span>
+                        <span>•</span>
+                        <span>All rights reserved</span>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Toast notification container -->
+    <div id="toastContainer"></div>
+
+    <script>
+        // Form validation and submission
+        class FormValidator {
+            constructor() {
+                this.form = document.getElementById('contactForm');
+                this.fields = {
+                    name: { 
+                        element: document.getElementById('name'),
+                        error: document.getElementById('nameError'),
+                        rules: { required: true, minLength: 2, maxLength: 50 }
+                    },
+                    email: { 
+                        element: document.getElementById('email'),
+                        error: document.getElementById('emailError'),
+                        rules: { required: true, email: true }
+                    },
+                    phone: { 
+                        element: document.getElementById('phone'),
+                        error: document.getElementById('phoneError'),
+                        rules: { phone: true }
+                    },
+                    subject: { 
+                        element: document.getElementById('subject'),
+                        error: document.getElementById('subjectError'),
+                        rules: { required: true, minLength: 5, maxLength: 100 }
+                    },
+                    message: { 
+                        element: document.getElementById('message'),
+                        error: document.getElementById('messageError'),
+                        rules: { required: true, minLength: 10, maxLength: 1000 }
+                    }
+                };
+                this.submitBtn = document.getElementById('submitBtn');
+                
+                this.init();
+            }
+
+            init() {
+                // Add event listeners
+                Object.keys(this.fields).forEach(fieldName => {
+                    const field = this.fields[fieldName];
+                    field.element.addEventListener('blur', () => this.validateField(fieldName));
+                    field.element.addEventListener('input', () => this.clearError(fieldName));
+                });
+
+                this.form.addEventListener('submit', (e) => this.handleSubmit(e));
+            }
+
+            validateField(fieldName) {
+                const field = this.fields[fieldName];
+                const value = field.element.value.trim();
+                const rules = field.rules;
+
+                let error = '';
+
+                if (rules.required && !value) {
+                    error = 'This field is required';
+                } else if (rules.email && value && !this.isValidEmail(value)) {
+                    error = 'Please enter a valid email address';
+                } else if (rules.phone && value && !this.isValidPhone(value)) {
+                    error = 'Please enter a valid Philippine phone number';
+                } else if (rules.minLength && value.length < rules.minLength) {
+                    error = `Minimum ${rules.minLength} characters required`;
+                } else if (rules.maxLength && value.length > rules.maxLength) {
+                    error = `Maximum ${rules.maxLength} characters allowed`;
+                }
+
+                this.showError(fieldName, error);
+                return !error;
+            }
+
+            isValidEmail(email) {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return emailRegex.test(email);
+            }
+
+            isValidPhone(phone) {
+                const phoneRegex = /^(09|\+639)\d{9}$/;
+                return phoneRegex.test(phone.replace(/\s/g, ''));
+            }
+
+            showError(fieldName, error) {
+                const field = this.fields[fieldName];
+                const errorElement = field.error;
+                const inputElement = field.element;
+
+                if (error) {
+                    errorElement.querySelector('span').textContent = error;
+                    errorElement.classList.add('show');
+                    inputElement.classList.add('error');
+                } else {
+                    errorElement.classList.remove('show');
+                    inputElement.classList.remove('error');
+                }
+            }
+
+            clearError(fieldName) {
+                const field = this.fields[fieldName];
+                field.error.classList.remove('show');
+                field.element.classList.remove('error');
+            }
+
+            validateAll() {
+                let isValid = true;
+                Object.keys(this.fields).forEach(fieldName => {
+                    if (!this.validateField(fieldName)) {
+                        isValid = false;
+                    }
+                });
+                return isValid;
+            }
+
+            async handleSubmit(e) {
+                e.preventDefault();
+
+                if (!this.validateAll()) {
+                    this.showToast('Please fix the errors', 'Please correct the highlighted fields before submitting.', 'error');
+                    return;
+                }
+
+                // Show loading state
+                this.setSubmitting(true);
+
+                try {
+                    // Simulate API call
+                    await this.simulateSubmission();
+                    
+                    // Show success message
+                    this.showToast('Message Sent Successfully!', 'Thank you for contacting us. We\'ll get back to you within 24 hours.', 'success');
+                    
+                    // Reset form
+                    this.resetForm();
+                } catch (error) {
+                    this.showToast('Error', 'Something went wrong. Please try again.', 'error');
+                } finally {
+                    this.setSubmitting(false);
+                }
+            }
+
+            setSubmitting(isSubmitting) {
+                if (isSubmitting) {
+                    this.submitBtn.disabled = true;
+                    this.submitBtn.innerHTML = `
+                        <div class="spinner"></div>
+                        Sending Message...
+                    `;
+                } else {
+                    this.submitBtn.disabled = false;
+                    this.submitBtn.innerHTML = `
+                        <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="22" y1="2" x2="11" y2="13"/>
+                            <polygon points="22,2 15,22 11,13 2,9 22,2"/>
+                        </svg>
+                        Send Message
+                    `;
+                }
+            }
+
+            async simulateSubmission() {
+                return new Promise(resolve => setTimeout(resolve, 2000));
+            }
+
+            resetForm() {
+                this.form.reset();
+                Object.keys(this.fields).forEach(fieldName => {
+                    this.clearError(fieldName);
+                });
+            }
+
+            showToast(title, description, type = 'success') {
+                const toast = document.createElement('div');
+                toast.className = `toast ${type}`;
+                toast.innerHTML = `
+                    <div class="toast-title">${title}</div>
+                    <div class="toast-description">${description}</div>
+                `;
+
+                const container = document.getElementById('toastContainer');
+                container.appendChild(toast);
+
+                // Show toast
+                setTimeout(() => toast.classList.add('show'), 100);
+
+                // Hide toast after 5 seconds
+                setTimeout(() => {
+                    toast.classList.remove('show');
+                    setTimeout(() => container.removeChild(toast), 300);
+                }, 5000);
+            }
+        }
+
+        // Initialize form validation when DOM is loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            new FormValidator();
+        });
+    </script>
+</body>
+</html>

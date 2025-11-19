@@ -1,0 +1,37 @@
+<style>
+.file-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: 40px 20px;
+}
+
+.file-item {
+  background: #0066cc;
+  border-radius: 6px;
+  width: 50%;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  overflow: hidden;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.file-item:hover {
+  background: #005bb5;
+}
+
+.file-header {
+  padding: 15px;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  text-decoration: underline;
+}
+</style>
+
+<div class="file-grid">
+  <div class="file-item" data-url="https://docs.google.com/document/d/1p4iD-weYXhcap5i7TRiJKpqTugpw6MBoEvp-WpsIk3A/edit?tab=t.0">
+    <div class="file-header">COLLECTIVE NEGOTIATION AGREEMENT</div>
+  </div>
+</div>

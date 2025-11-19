@@ -1,0 +1,375 @@
+<style>
+    .leadership-section {
+        background: linear-gradient(135deg, #f3e9f2 0%, #ffffff 100%);
+        padding: 60px 20px;
+        text-align: center;
+    }
+
+    .leadership-section p {
+        max-width: 800px;
+        margin: 0 auto 30px;
+        color: #555;
+    }
+
+    .hero-images {
+        background: linear-gradient(135deg, #0066cc, #004499);
+        padding: 60px 20px;
+        color: white;
+        text-align: center;
+    }
+
+    .hero-image {
+        max-width: 800px;
+        width: 100%;
+        height: auto;
+        margin: 20px auto;
+    }
+
+    .image-caption {
+        margin: 20px auto;
+        max-width: 600px;
+        line-height: 1.6;
+    }
+
+    .team-intro {
+        background: linear-gradient(135deg, #f3e9f2 0%, #ffffff 100%);
+        padding: 60px 20px;
+        text-align: center;
+    }
+
+    .team-intro h2 {
+        color: #333;
+        margin-bottom: 30px;
+    }
+
+    .team-intro p {
+        max-width: 800px;
+        margin: 0 auto;
+        color: #555;
+    }
+
+    .team-grid {
+        background-color: #0066cc;
+        padding: 60px 0;
+    }
+
+    .team-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .team-section {
+        width: 100%;
+    }
+
+    .section-title {
+        text-align: center;
+        font-size: 2em;
+        color: #333;
+        margin-bottom: 40px;
+        position: relative;
+    }
+
+    .section-title:after {
+        content: '';
+        display: block;
+        width: 80px;
+        height: 3px;
+        background: #6aa84f;
+        margin: 10px auto;
+    }
+
+    .team-row {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        /*gap: 32px 16px;*/
+        justify-items: center;
+        margin-bottom: 24px;
+    }
+
+    .team-member {
+        background: #0066cc;
+        padding: 24px 10px 15px 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 255px;
+        width: 215px;
+        margin: auto;
+        color: #fff;
+    }
+
+    .member-photo {
+        width: 160px;
+        height: 160px;
+        object-fit: cover;
+        margin-bottom: 14px;
+        border: 3.5px solid #0066cc;
+        box-shadow: 0 2px 8px rgba(60, 90, 140, 0.12);
+        background: #b3bfd2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2em;
+        font-weight: bold;
+        color: #fff;
+        letter-spacing: 1px;
+    }
+
+    .member-photo-placeholder {
+        width: 160px;
+        height: 160px;
+        margin-bottom: 14px;
+        background: #b3bfd2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2em;
+        font-weight: bold;
+        color: #fff;
+        letter-spacing: 1px;
+    }
+
+    .member-name {
+        color: #fff;
+        font-size: 1.09em;
+        font-weight: bold;
+        margin-bottom: 3px;
+        text-align: center;
+        min-height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 1.16;
+    }
+
+    .member-title {
+        color: #fff;
+        font-style: italic;
+        font-size: 0.99em;
+        text-align: center;
+        font-weight: 500;
+    }
+
+    .call-to-action {
+        background: linear-gradient(135deg, #f3e9f2 0%, #ffffff 100%);
+        color: white;
+        padding: 20px 20px;
+        text-align: center;
+    }
+
+    .call-to-action h4 {
+        color: #666666;
+    }
+
+    .call-to-action p {
+        max-width: 600px;
+        margin: 0 auto 40px;
+        color: #666666;
+        line-height: 1.6;
+    }
+
+    .apply-button {
+        display: inline-block;
+        color: white;
+        background-color: #0066cc;
+        padding: 15px 40px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    @media (max-width: 768px) {
+        .team-row {
+            grid-template-columns: 1fr;
+        }
+
+        .leadership-section,
+        .team-intro {
+            padding: 40px 20px;
+        }
+
+        .hero-images {
+            padding: 40px 20px;
+        }
+
+        .section-title {
+            font-size: 1.8em;
+        }
+    }
+
+    @media (max-width: 992px) {
+        .team-row {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 32px 12px;
+        }
+
+        .team-member {
+            width: 94vw;
+            max-width: 350px;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .team-row {
+            grid-template-columns: 1fr;
+            gap: 28px 0;
+        }
+
+        .team-member {
+            width: 94vw;
+            max-width: 350px;
+        }
+    }
+</style>
+
+    <section class="leadership-section">
+        <h4>Leadership</h4>
+        <br>
+        <p>"Good leadership and teamwork are two pillars of any successful organization, community, or project. When
+            combined, they create a working environment where goals are met efficiently, people feel valued, and
+            challenges are faced with unity and resilience."</p>
+        <p>"What brings our team together toward a common goal is our shared vision, open communication, and mutual
+            trust. We are united by a clear purpose and a strong commitment to support each other and achieve success as
+            one team."</p>
+    </section>
+
+    <!-- Hero Images Section -->
+    <section class="hero-images">
+        <img src="http://wp-local.com/wp-content/uploads/2025/08/PICwithTheMayor_n.jpg" alt="Service Excellence"
+            class="hero-image">
+        <p class="image-caption">A mindset and attitude of providing service with genuine kindness, willingness, and
+            respect. It means doing your job not just because you have to, but because you truly want to help others.
+        </p>
+
+        <img src="http://wp-local.com/wp-content/uploads/2025/08/Team2.jpg" alt="Team Unity" class="hero-image">
+        <p class="image-caption">Together we achieve more — united, motivated, and unstoppable!</p>
+    </section>
+
+    <!-- Team Introduction -->
+    <section class="team-intro">
+        <h2>Meet the Team</h2>
+        <p>Our team culture is built on respect, collaboration, and shared purpose. We value open communication, support
+            one another, and work together with a positive attitude to achieve our common goals and serve with
+            excellence.</p>
+    </section>
+
+    <section class="team-grid">
+        <div class="team-container">
+            <div class="team-section">
+                <div class="team-row">
+                    <div class="team-member">
+                        <img src="http://wp-local.com/wp-content/uploads/2025/08/EricManlangitPresident.jpg"
+                            class="member-photo">
+                        <div class="member-name">Eric S. Manlangit</div>
+                        <div class="member-title">President</div>
+                    </div>
+                    <div class="team-member">
+                        <img src="http://wp-local.com/wp-content/uploads/2025/08/JorgeI.-TabiraraVicePresident.jpg"
+                            class="member-photo">
+                        <div class="member-name">Jorge I. Tabirara</div>
+                        <div class="member-title">Vice President</div>
+                    </div>
+                    <div class="team-member">
+                        <img src="http://wp-local.com/wp-content/uploads/2025/08/MaryKrystleABagadiongSecretary.jpg"
+                            class="member-photo">
+                        <div class="member-name">Mary Krystle A. Bagadiong</div>
+                        <div class="member-title">Secretary</div>
+                    </div>
+                    <div class="team-member">
+                        <div class="member-photo-placeholder"></div>
+                        <div class="member-name">Marites B. Tejerero</div>
+                        <div class="member-title">Treasurer</div>
+                    </div>
+                    <div class="team-member">
+                        <img src="http://wp-local.com/wp-content/uploads/2025/08/ImeldaMAguilarAuditor.jpg"
+                            class="member-photo">
+                        <div class="member-name">Imelda M. Aguilar</div>
+                        <div class="member-title">Auditor</div>
+                    </div>
+                    <div class="team-member">
+                        <img src="http://wp-local.com/wp-content/uploads/2025/08/RomelMValezaBusinessManager.jpg"
+                            class="member-photo">
+                        <div class="member-name">Romel M. Valeza</div>
+                        <div class="member-title">Business Manager</div>
+                    </div>
+                    <div class="team-member">
+                        <img src="http://wp-local.com/wp-content/uploads/2025/08/GoldaAVelchezBusinessManager.jpg"
+                            class="member-photo">
+                        <div class="member-name">Golda A. Velchez</div>
+                        <div class="member-title">Business Manager</div>
+                    </div>
+                    <div class="team-member">
+                        <img src="http://wp-local.com/wp-content/uploads/2025/08/ArmandoSolanoJrMMO.jpg"
+                            class="member-photo">
+                        <div class="member-name">Armando B. Solano Jr.</div>
+                        <div class="member-title">MMO</div>
+                    </div>
+                    <div class="team-member">
+                        <img src="http://wp-local.com/wp-content/uploads/2025/08/FernandoT.MartirezPeaceOfficer.jpg"
+                            class="member-photo">
+                        <div class="member-name">Fernando T. Martirez</div>
+                        <div class="member-title">Peace Officer</div>
+                    </div>
+                    <div class="team-member">
+                        <img src="http://wp-local.com/wp-content/uploads/2025/08/NestorS.SarmientoPeaceOfficer.jpg"
+                            class="member-photo">
+                        <div class="member-name">Nestor S. Sarmiento Jr.</div>
+                        <div class="member-title">Peace Officer</div>
+                    </div>
+                    <div class="team-member">
+                        <img src="http://wp-local.com/wp-content/uploads/2025/08/ErwinRBergonioBOD.jpg"
+                            class="member-photo">
+                        <div class="member-name">Erwin R. Bergonio</div>
+                        <div class="member-title">Board of Directors</div>
+                    </div>
+                    <div class="team-member">
+                        <img src="http://wp-local.com/wp-content/uploads/2025/08/RaffyCanariaBOD.jpg"
+                            class="member-photo">
+                        <div class="member-name">Raffy F. Carania</div>
+                        <div class="member-title">Board of Directors</div>
+                    </div>
+                    <div class="team-member">
+                        <img src="http://wp-local.com/wp-content/uploads/2025/08/VicenteGSocitoBOD.jpg"
+                            class="member-photo">
+                        <div class="member-name">Vicente G. Socito</div>
+                        <div class="member-title">Board of Directors</div>
+                    </div>
+                    <div class="team-member">
+                        <img src="http://wp-local.com/wp-content/uploads/2025/08/RichardAMasagcaBOD.jpeg"
+                            class="member-photo">
+                        <div class="member-name">Richard A. Masagca</div>
+                        <div class="member-title">Board of Directors</div>
+                    </div>
+                    <div class="team-member">
+                        <img src="http://wp-local.com/wp-content/uploads/2025/08/AnalynFBarcelonBOD.jpg"
+                            class="member-photo">
+                        <div class="member-name">Analyn F. Barcelon</div>
+                        <div class="member-title">Board of Directors</div>
+                    </div>
+                    <div class="team-member">
+                        <img src="http://wp-local.com/wp-content/uploads/2025/08/GinaSToledanaBOD.jpg"
+                            class="member-photo">
+                        <div class="member-name">Gina S. Toledana</div>
+                        <div class="member-title">Board of Directors</div>
+                    </div>
+                    <div class="team-member">
+                        <div class="member-photo-placeholder"></div>
+                        <div class="member-name">Agnes A. Escaro</div>
+                        <div class="member-title">Team Member</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>  
+
+    <section class="call-to-action">
+        <h4>Become a Member Now</h4>
+        <br>
+        <p>We are looking for a teammate who is reliable, communicative, and open-minded—someone who actively listens,
+            contributes ideas, and supports the team with a positive attitude and a strong commitment to our shared
+            goals.</p>
+        <a href="https://web.facebook.com/progocea.catanduanes" target="_blank" class="apply-button">Apply Now</a>
+    </section>

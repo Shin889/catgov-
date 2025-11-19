@@ -1,0 +1,225 @@
+<div class="grid-container municipalities">
+  <h1 class="municipalities__main-title page-title">Municipalities</h1>
+  <div class="municipalities__cards">
+
+    <div class="municipalities__card">
+      <div class="municipalities__cover-photo-div">
+        <img src="https://provinceofcatanduanes.gov.ph/wp-content/uploads/2018/05/Talisoy-Beach-Virac.jpg"
+          alt="Talisoy Beach - Virac, Catanduanes" />
+        <div class="municipalities__seal">
+          <img src="https://provinceofcatanduanes.gov.ph/wp-content/uploads/2018/05/Virac.png" alt="" />
+        </div>
+      </div>
+
+      <h2 class="municipalities__title">Virac <span> (Capital)</span>
+      </h2>
+      <div class="municipalities__description">
+        The actual founding of Virac as a distinct political unit is closely associated with the evangelization of its
+        original inhabitants by the Spanish conquistadores in the middle of the 16th century. Records of the past are so
+        fragile, inconsistent and incomplete that events presented are an admixture of facts and folklore… </div>
+
+      <a class="municipalities__a"
+        href="http://wp-local.com/virac-capital/">Visit Page</a>
+    </div>
+
+
+    <div class="municipalities__card">
+      <div class="municipalities__cover-photo-div">
+        <img src="https://provinceofcatanduanes.gov.ph/wp-content/uploads/2018/05/Soboc-Cove-Viga.jpg"
+          alt="Soboc Cove - Viga, Catanduanes" />
+        <div class="municipalities__seal">
+          <img src="https://provinceofcatanduanes.gov.ph/wp-content/uploads/2018/05/Viga.png" alt="" />
+        </div>
+      </div>
+
+      <h2 class="municipalities__title">Viga </h2>
+      <div class="municipalities__description">
+        The site of the original settlement of Viga was believed to be at sitio Caviga-o, now called Small Viga. It was
+        believed that the group of tribesmen led by “Abines” from the mainland were the first settlers thereof. Later
+        due to frequent “Moro” incursions, they fled inland and settled in a place where the primitive… </div>
+
+      <a class="municipalities__a"
+        href="http://wp-local.com/viga/">Visit Page</a>
+    </div>
+
+
+    <div class="municipalities__card">
+      <div class="municipalities__cover-photo-div">
+        <img src="https://provinceofcatanduanes.gov.ph/wp-content/uploads/2018/05/San-Miguel-Falls.jpg"
+          alt="Falls - San Miguel, Catanduanes" />
+        <div class="municipalities__seal">
+          <img src="https://provinceofcatanduanes.gov.ph/wp-content/uploads/2018/05/San-Miguel.png" alt="" />
+        </div>
+      </div>
+
+      <h2 class="municipalities__title">San Miguel </h2>
+      <div class="municipalities__description">
+        San Miguel, according to the pioneers was a sitio known as “Aguas”, named after a fish specie. Later, in 1930’s
+        during the celebration of the feast in honor of Santa Cruz the Patron Saint, Aguas was changed to San Miguel in
+        grateful recognition and commendation to the invaluable services of Don Miguel Triumfante… </div>
+
+      <a class="municipalities__a"
+        href="http://wp-local.com/san-miguel.com">Visit Page</a>
+    </div>
+
+
+    <div class="municipalities__card">
+      <div class="municipalities__cover-photo-div">
+        <img src="https://provinceofcatanduanes.gov.ph/wp-content/uploads/2018/05/Pasa-Tiempo-Resort-San-Andres.jpg"
+          alt="" />
+        <div class="municipalities__seal">
+          <img src="https://provinceofcatanduanes.gov.ph/wp-content/uploads/2018/05/San-Andres.png" alt="" />
+        </div>
+      </div>
+
+      <h2 class="municipalities__title">San Andres </h2>
+      <div class="municipalities__description">
+        The name Calolbon, said old-timers of yesteryears, used to be “Calolbong”. They refer vaguely to its origin from
+        the bicol expression “nacalobong” because the houses of the original community along the banks of the river up
+        to barrio Carangag looked almost submerged when viewed from the sea… </div>
+
+      <a class="municipalities__a"
+        href="http://wp-local.com/san-andres/">Visit Page</a>
+    </div>
+
+
+    <div class="municipalities__card">
+      <div class="municipalities__cover-photo-div">
+        <img src="https://provinceofcatanduanes.gov.ph/wp-content/uploads/2018/05/Cagnipa-Rolling-Hills-Pandan.jpg"
+          alt="Cagnipa Rolling Hills - Pandan, Catanduanes" />
+        <div class="municipalities__seal">
+          <img src="https://provinceofcatanduanes.gov.ph/wp-content/uploads/2018/05/Pandan.png" alt="" />
+        </div>
+      </div>
+
+      <h2 class="municipalities__title">Pandan </h2>
+      <div class="municipalities__description">
+        PANDAN, the name of the municipality was termed from pandan shrubs, which then surrounded the poblacion to
+        protect the inhabitants from Moro pirates who used to invade the place. The municipality lies on the northern
+        tip province of Catanduanes, 96 kilometers from the capital town of Virac. Bounded… </div>
+
+      <a class="municipalities__a"
+        href="http://wp-local.com/pandan/">Visit Page</a>
+    </div>
+
+
+    <div class="municipalities__card">
+      <div class="municipalities__cover-photo-div">
+        <img src="https://provinceofcatanduanes.gov.ph/wp-content/uploads/2018/05/Nahulugan-Falls-Gigmoto.jpg"
+          alt="Nahulugan Falls - Gigmoto, Catanduanes" />
+        <div class="municipalities__seal">
+          <img src="https://provinceofcatanduanes.gov.ph/wp-content/uploads/2018/05/Gigmoto.png" alt="" />
+        </div>
+      </div>
+
+      <h2 class="municipalities__title">Gigmoto </h2>
+      <div class="municipalities__description">
+        Gigmoto’s original name was “Himbutan” which was derived from the word himbut which literally means to hurry up.
+        Himbutan became the largest barrio when Baras became an independent municipality. As time went by, the name
+        “Himbutan” was changed to Gigmoto… </div>
+
+      <a class="municipalities__a"
+        href="http://wp-local.com/gigmoto/">Visit Page</a>
+    </div>
+
+
+    <div class="municipalities__card">
+      <div class="municipalities__cover-photo-div">
+        <img src="https://provinceofcatanduanes.gov.ph/wp-content/uploads/2018/05/Palumbanes-Island-Caramoran.jpg"
+          alt="Palumbanes Island - Caramoran, Catanduanes" />
+        <div class="municipalities__seal">
+          <img src="https://provinceofcatanduanes.gov.ph/wp-content/uploads/2018/05/Caramoran.png" alt="" />
+        </div>
+      </div>
+
+      <h2 class="municipalities__title">Caramoran </h2>
+      <div class="municipalities__description">
+        As to how the town got its name, the old people of Caramoan in Camarines Sur theorized that since their town is
+        only separated almost 2 kilometers by Maqueda Channel from Caramoran, the place also abound in “cara”, the
+        turtle’s precious shell made into combs, bowls, and décor materials. Another version is… </div>
+
+      <a class="municipalities__a"
+        href="https://provinceofcatanduanes.gov.ph/?municipalities=municipality-of-caramoran">Visit Page</a>
+    </div>
+
+
+    <div class="municipalities__card">
+      <div class="municipalities__cover-photo-div">
+        <img src="https://provinceofcatanduanes.gov.ph/wp-content/uploads/2018/05/Sacahon-Beach-Bato.jpg"
+          alt="Sacahon Beach - Bato, Catanduanes" />
+        <div class="municipalities__seal">
+          <img src="https://provinceofcatanduanes.gov.ph/wp-content/uploads/2018/05/Bato.png" alt="" />
+        </div>
+      </div>
+
+      <h2 class="municipalities__title">Bato </h2>
+      <div class="municipalities__description">
+        When the Spanish conquest adores led by Juan de Salcedo set foot in 1575, Bato was relatively unexplored. Local
+        Spanish officials assigned to the place once asked a woman who was washing clothes in the natural stone well the
+        name of the place. She thought that the Spaniards were asking the name of… </div>
+
+      <a class="municipalities__a"
+        href="http://wp-local.com/bato/">Visit Page</a>
+    </div>
+
+
+    <div class="municipalities__card">
+      <div class="municipalities__cover-photo-div">
+        <img src="https://provinceofcatanduanes.gov.ph/wp-content/uploads/2018/05/Binurong-Point-Baras.jpg"
+          alt="Binurong Point - Baras, Catanduanes" />
+        <div class="municipalities__seal">
+          <img src="https://provinceofcatanduanes.gov.ph/wp-content/uploads/2018/05/Baras.png" alt="" />
+        </div>
+      </div>
+
+      <h2 class="municipalities__title">Baras </h2>
+      <div class="municipalities__description">
+        The village town then was luxuriant and verdant with “badas” plants. As to what kind of vegetation “badas” was,
+        is a subject of conjuncture, for some believed that it was a kind of bamboo now called “bagacay”. But one common
+        belief is the fact that the Moro raiders and pirates agreed that “badas” was much in… </div>
+
+      <a class="municipalities__a"
+        href="http://wp-local.com/baras/">Visit Page</a>
+    </div>
+
+
+    <div class="municipalities__card">
+      <div class="municipalities__cover-photo-div">
+        <img src="https://provinceofcatanduanes.gov.ph/wp-content/uploads/2018/05/Boto-ni-Kurakog-Bagamanoc.jpg"
+          alt="Boto ni Kurakog - Bagamanoc, Catanduanes" />
+        <div class="municipalities__seal">
+          <img src="https://provinceofcatanduanes.gov.ph/wp-content/uploads/2018/05/bagamanoc.png" alt="" />
+        </div>
+      </div>
+
+      <h2 class="municipalities__title">Bagamanoc </h2>
+      <div class="municipalities__description">
+        A daring and adventurous young man from the tribe forced his way across the mouth of the river to look for
+        rattan needed for the repair of his future bride’s family home. Going westward by the shorelines, he finally
+        turned left for the business of venture but before he cut an uphill distance, he saw what… </div>
+
+      <a class="municipalities__a"
+        href="http://wp-local.com/bagamanoc/">Visit Page</a>
+    </div>
+
+
+    <div class="municipalities__card">
+      <div class="municipalities__cover-photo-div">
+        <img src="https://provinceofcatanduanes.gov.ph/wp-content/uploads/2018/05/Panay-Island-Panganiban.jpg"
+          alt="Panay Island - Panganiban, Catanduanes" />
+        <div class="municipalities__seal">
+          <img src="https://provinceofcatanduanes.gov.ph/wp-content/uploads/2018/05/Panganiban.png" alt="" />
+        </div>
+      </div>
+
+      <h2 class="municipalities__title">Panganiban </h2>
+      <div class="municipalities__description">
+        Historians theorize that the original settlers of Payo came from settlements in the Philippine mainland and
+        landed on the north eastern coast of Catanduanes most probably on what is now the small islet of Panay. The
+        early settlers set up their own governing body by electing from among themselves a tribal… </div>
+
+      <a class="municipalities__a"
+        href="http://wp-local.com/panganiban/">Visit Page</a>
+    </div>
+  </div>
+</div>

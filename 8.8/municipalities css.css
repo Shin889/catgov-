@@ -1,0 +1,124 @@
+.municipalities__cards {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+	gap: 30px;
+	max-width: 1400px;
+	margin: 0 auto;
+	padding: 0 20px;
+	box-sizing: border-box;
+}
+.municipalities__card {
+	background: #ffffff;
+	border-radius: 20px;
+	overflow: hidden;
+	#box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+	#transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+	position: relative;
+	height: fit-content;
+	border: 1px solid rgba(0, 0, 0, 0.05);
+	text-align: center;
+}
+.municipalities__cover-photo-div {
+	position: relative;
+	height: 250px;
+	overflow: hidden;
+	background: #f1f3f4;
+}
+.municipalities__cover-photo-div img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	#transition: transform 0.4s ease;
+}
+.municipalities__seal {
+	position: absolute;
+	top: 15px;
+	left: 15px;
+	width: 80px;
+	height: 80px;
+	background: transparent;
+	border-radius: 50%;
+	padding: 0;
+	box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+	z-index: 2;
+	border: none;
+}
+.municipalities__seal img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	border-radius: 50%;
+}
+.municipalities__title,
+.municipalities__description,
+.municipalities__a {
+	padding-left: 25px;
+	padding-right: 25px;
+}
+.municipalities__title {
+	font-size: 1.8rem;
+	font-weight: 600;
+	color: #2c3e50;
+	margin: 40px 0 15px 0;
+	line-height: 1.3;
+}
+.municipalities__title span {
+	color: #e74c3c;
+	font-size: 0.85em;
+	font-weight: 500;
+	background: rgba(231, 76, 60, 0.1);
+	padding: 2px 8px;
+	border-radius: 12px;
+	margin-left: 8px;
+}
+.municipalities__description {
+	color: #5a6c7d;
+	line-height: 1.7;
+	font-size: 0.95rem;
+	margin-bottom: 25px;
+	text-align: justify;
+}
+.municipalities__a {
+	display: inline-block;
+	background: linear-gradient(135deg, #3498db, #2980b9);
+	color: #ffffff;
+	text-decoration: none;
+	padding: 14px 28px;
+	border-radius: 30px;
+	font-weight: 600;
+	font-size: 0.9rem;
+	margin-bottom: 25px;
+	transition: all 0.3s ease;
+	position: relative;
+	overflow: hidden;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+}
+.municipalities__a::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: -100%;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(135deg, #2980b9, #1f4e79);
+	transition: left 0.3s ease;
+	z-index: -1;
+}
+.municipalities__a:hover::before {
+	left: 0;
+}
+.municipalities__a:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
+	color: #ffffff;
+}
+.municipalities__title,
+.municipalities__description {
+	text-align: left;
+}
+.grid-container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 20px;
+}

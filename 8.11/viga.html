@@ -1,0 +1,934 @@
+viga
+<style>
+        .barangay-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .barangay-item {
+            position: relative;
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 1px solid #e9ecef;
+            z-index: 1;
+        }
+
+        .barangay-item:hover {
+            background: #e3f2fd;
+            border-color: #004499;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            z-index: 1000;
+        }
+
+        .barangay-item.active {
+            z-index: 1001;
+        }
+
+        /* Modal Styles - Improved */
+        .barangay-modal {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            border: 2px solid #004499;
+            border-radius: 12px;
+            padding: 20px;
+            width: 90%;
+            max-width: 500px;
+            max-height: 80vh;
+            overflow-y: auto;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            z-index: 10000;
+            display: none;
+            font-size: 13px;
+        }
+
+        /* Modal backdrop */
+        .modal-backdrop {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 9999;
+            display: none;
+        }
+
+        .modal-backdrop.active {
+            display: block;
+        }
+
+        .barangay-modal.active {
+            display: block;
+        }
+
+        .modal-header {
+            text-align: center;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #004499;
+            position: relative;
+        }
+
+        .modal-header h3 {
+            margin: 0;
+            font-size: 18px;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: -5px;
+            right: 0;
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: #666;
+            cursor: pointer;
+            padding: 0;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+
+        .close-btn:hover {
+            background: #f0f0f0;
+            color: #004499;
+        }
+
+        .officials-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        .officials-table th {
+            background: #004499;
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-size: 14px;
+            font-weight: 600;
+            position: sticky;
+            top: 0;
+        }
+
+        .officials-table td {
+            padding: 10px 12px;
+            border-bottom: 1px solid #eee;
+            font-size: 13px;
+        }
+
+        .officials-table tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+
+        .officials-table tr:hover {
+            background-color: #e3f2fd;
+        }
+
+        .position-column {
+            font-weight: 500;
+            color: #004499;
+            width: 45%;
+        }
+
+        .name-column {
+            width: 55%;
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            .barangay-modal {
+                width: 95%;
+                max-height: 85vh;
+                padding: 15px;
+            }
+            
+            .officials-table th,
+            .officials-table td {
+                padding: 8px;
+                font-size: 12px;
+            }
+            
+            .modal-header h3 {
+                font-size: 16px;
+            }
+        }
+
+        /* Hover indicator */
+        .barangay-item::after {
+            content: '👁️ Click to view officials';
+            position: absolute;
+            bottom: 5px;
+            right: 10px;
+            font-size: 10px;
+            color: #666;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .barangay-item:hover::after {
+            opacity: 1;
+        }
+
+        /* Loading state */
+        .modal-loading {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+        }
+
+        /* Enhanced visual feedback */
+        .barangay-item:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="barangays">
+            <p style="margin-bottom: 25px; color: #666; font-style: italic;">Click on any barangay to view its current officials</p>
+            
+            <ul class="barangay-list">
+                <li class="barangay-item" data-barangay="almojuela">
+                    Almojuela
+                </li>
+
+                <li class="barangay-item" data-barangay="ananong">
+                    Ananong
+                </li>
+
+                <li class="barangay-item" data-barangay="asuncion-poblacion">
+                    Asuncion Poblacion
+                </li>
+
+                <li class="barangay-item" data-barangay="batohonan">
+                    Batohonan
+                </li>
+
+                <li class="barangay-item" data-barangay="begonia">
+                    Begonia
+                </li>
+
+                <li class="barangay-item" data-barangay="botinagan">
+                    Botinagan
+                </li>
+
+                <li class="barangay-item" data-barangay="buenavista">
+                    Buenavista
+                </li>
+                <li class="barangay-item" data-barangay="burgos">
+                    Burgos
+                </li>
+                <li class="barangay-item" data-barangay="del-pilar">
+                    Del Pilar
+                </li>
+                <li class="barangay-item" data-barangay="Mabini">
+                    Mabini
+                </li>
+                <li class="barangay-item" data-barangay="Magsaysay">
+                    Magsaysay
+                </li>
+                <li class="barangay-item" data-barangay="Ogbong">
+                    Ogbong
+                </li>
+                <li class="barangay-item" data-barangay="Osmeña">
+                    Osmeña
+                </li>
+                <li class="barangay-item" data-barangay="pedro-vera-summit">
+                    Pedro Vera (Summit)
+                </li>
+                <li class="barangay-item" data-barangay="peñafrancia-poblacion">
+                    Peñafrancia Poblacion
+                </li>
+                <li class="barangay-item" data-barangay="quezon">
+                    Quezon
+                </li>
+                <li class="barangay-item" data-barangay="quirino-abugan">
+                    Quirino (Abugan)
+                </li>
+                <li class="barangay-item" data-barangay="rizal">
+                    Rizal
+                </li>
+                <li class="barangay-item" data-barangay="roxas">
+                    Roxas
+                </li>
+                <li class="barangay-item" data-barangay="sagrada">
+                    Sagrada
+                </li>
+                <li class="barangay-item" data-barangay="san-isidro-poblacion">
+                    San Isidro Poblacion
+                </li>
+                <li class="barangay-item" data-barangay="san-jose-poblacion">
+                    San Jose Poblacion
+                </li>
+                <li class="barangay-item" data-barangay="san-jose-oco">
+                    San Jose (Oco)
+                </li>
+                <li class="barangay-item" data-barangay="san-pedro-poblacion">
+                    San Pedro Poblacion
+                </li>
+                <li class="barangay-item" data-barangay="san-roque-poblacion">
+                    San Roque Poblacion
+                </li>
+                <li class="barangay-item" data-barangay="san-vicente-poblacion">
+                    San Vicente Poblacion
+                </li>
+                <li class="barangay-item" data-barangay="santa-rosa">
+                    Santa Rosa
+                </li>
+                <li class="barangay-item" data-barangay="soboc">
+                    Soboc
+                </li>
+                <li class="barangay-item" data-barangay="tambongon">
+                    Tambongon
+                </li>
+                <li class="barangay-item" data-barangay="tinago">
+                    Tinago
+                </li>
+                <li class="barangay-item" data-barangay="villa-aurora">
+                    Villa Aurora
+                </li>
+            </ul>
+        </div>
+
+    <!-- Modal backdrop -->
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+
+    <!-- Single modal that gets populated with data -->
+    <div class="barangay-modal" id="officialsModal">
+        <div class="modal-header">
+            <button class="close-btn" id="closeModal">&times;</button>
+            <h3 id="modalTitle">Barangay Officials</h3>
+            <small id="modalSubtitle">Current Officials (2023-2025)</small>
+        </div>
+        <div id="modalContent">
+            <div class="modal-loading">Loading officials...</div>
+        </div>
+    </div>
+
+    <script>
+        // Barangay officials data
+        const barangayData = {
+            'almojuela': {
+                name: 'Almojuela',
+                officials: [
+                    {position: 'Punong Barangay', name: 'Domingo Nuelan'},
+                    {position: 'Sangguniang Barangay Member', name: 'Edgar Hercer'},
+                    {position: 'Sangguniang Barangay Member', name: 'Jerry Armamento'},
+                    {position: 'Sangguniang Barangay Member', name: 'Jim Pablo Tulod'},
+                    {position: 'Sangguniang Barangay Member', name: 'Jomar Bernal'},
+                    {position: 'Sangguniang Barangay Member', name: 'Joseph Tugano'},
+                    {position: 'Sangguniang Barangay Member', name: 'Melinda Bisco'},
+                    {position: 'Sangguniang Barangay Member', name: 'Bryan Adam Vega'},
+                    {position: 'SK Chairperson', name: 'Krizza Mae Calderon'},
+                    {position: 'Barangay Secretary', name: 'Fely Demafeliz'},
+                    {position: 'SK Member', name: 'Jessel Mae Tusi'},
+                    {position: 'SK Member', name: 'Jonald Tura'},
+                    {position: 'SK Member', name: 'John Joshua Abo'},
+                    {position: 'SK Member', name: 'Danica Tugono'},
+                    {position: 'SK Member', name: 'Joshell Tusi'},
+                    {position: 'SK Member', name: 'John Mikko Bilaos'},
+                    {position: 'SK Member', name: 'Teresa Tupal'},
+                    {position: 'SK Secretary', name: 'Kimberly Turirit'}
+                ]
+            },
+            'ananong': {
+                name: 'Ananong',
+                officials: [
+                    {position: 'Punong Barangay', name: 'Evangeline Cervantes'},
+                    {position: 'Sangguniang Barangay Member', name: 'Raffy Ogena'},
+                    {position: 'Sangguniang Barangay Member', name: 'Saturnino Obogne'},
+                    {position: 'Sangguniang Barangay Member', name: 'Roderick Antero'},
+                    {position: 'Sangguniang Barangay Member', name: 'Romeo Flores'},
+                    {position: 'Sangguniang Barangay Member', name: 'Rossel Panti'},
+                    {position: 'Sangguniang Barangay Member', name: 'Anthony Omigan'},
+                    {position: 'Sangguniang Barangay Member', name: 'Rosiller Omigan'},
+                    {position: 'SK Chairperson', name: 'Maricel Salome'},
+                    {position: 'Barangay Secretary', name: 'Mariaflor Flores'},
+                    {position: 'SK Member', name: 'Aron Antero'},
+                    {position: 'SK Member', name: 'Jericho Tarnate'},
+                    {position: 'SK Member', name: 'John Cathlyn Mae Torres'},
+                    {position: 'SK Member', name: 'Jomerie Garcia'},
+                    {position: 'SK Member', name: 'Luis Tapar'},
+                    {position: 'SK Member', name: 'Venus Antero'},
+                    {position: 'SK Member', name: 'Zaiross Bernanrd Olesco'},
+                    {position: 'SK Secretary', name: 'Resty John Toledo'}
+                ]
+            },
+            'asuncion': {
+                name: 'Asuncion',
+                officials: [
+                    {position: 'Punong Barangay', name: 'Erwin Tubeo'},
+                    {position: 'Sangguniang Barangay Member', name: 'Aldrin Tubale'},
+                    {position: 'Sangguniang Barangay Member', name: 'Expedito Tolod'},
+                    {position: 'Sangguniang Barangay Member', name: 'Jennie Odiaman'},
+                    {position: 'Sangguniang Barangay Member', name: 'Ma. Corazon Ermino'},
+                    {position: 'Sangguniang Barangay Member', name: 'Marvin Tulalian'},
+                    {position: 'Sangguniang Barangay Member', name: 'Roel Tumazar'},
+                    {position: 'Sangguniang Barangay Member', name: 'Teresita Olanka'},
+                    {position: 'SK Chairperson', name: 'Ener Tabor'},
+                    {position: 'Barangay Secretary', name: 'Jovielyn Osido'},
+                    {position: 'SK Member', name: 'Pauline Dominguez'},
+                    {position: 'SK Member', name: 'Julius Olalo'},
+                    {position: 'SK Secretary', name: 'Trixia Mae Teves'}
+                ]
+            },
+            'batohonan': {
+                name: 'Batohonan',
+                officials: [
+                    {position: 'Punong Barangay', name: 'Rico Tendenilla'},
+                    {position: 'Sangguniang Barangay Member', name: 'Dennis Tenoria'},
+                    {position: 'Sangguniang Barangay Member', name: 'Eddie Odiaman'},
+                    {position: 'Sangguniang Barangay Member', name: 'Ernesto Uchi'},
+                    {position: 'Sangguniang Barangay Member', name: 'Marlyn Uchi'},
+                    {position: 'Sangguniang Barangay Member', name: 'Richard Odiaman'},
+                    {position: 'Sangguniang Barangay Member', name: 'Roque Odiaman'},
+                    {position: 'Sangguniang Barangay Member', name: 'Teresita Odiaman'},
+                    {position: 'SK Chairperson', name: 'Kathlyn Bernardo'},
+                    {position: 'Barangay Secretary', name: 'Marina Odiaman'},
+                    {position: 'SK Member', name: 'Richeen Joy Uchi'},
+                    {position: 'SK Member', name: 'Marvin Odiaman'},
+                    {position: 'SK Member', name: 'Errol Uchi'},
+                    {position: 'SK Member', name: 'Mark Angelo Obre'},
+                    {position: 'SK Member', name: 'Jhon Rey Camacho'},
+                    {position: 'SK Secretary', name: 'Mark Carlo Odiaman'}
+                ]
+            },
+            'begonia': {
+                name: 'Begonia',
+                officials: [
+                    {position: 'Punong Barangay', name: 'Rey Obre'},
+                    {position: 'Sangguniang Barangay Member', name: 'Juan Oclarino'},
+                    {position: 'Sangguniang Barangay Member', name: 'Cyril Tapar'},
+                    {position: 'Sangguniang Barangay Member', name: 'Claro Tolin'},
+                    {position: 'Sangguniang Barangay Member', name: 'Daisy Torres'},
+                    {position: 'Sangguniang Barangay Member', name: 'Ma. Lourdes Torres'},
+                    {position: 'Sangguniang Barangay Member', name: 'Art Tugado'},
+                    {position: 'Sangguniang Barangay Member', name: 'Mary Ann Uchi'},
+                    {position: 'SK Chairperson', name: 'Mark Justine Dela Rosa'},
+                    {position: 'Barangay Secretary', name: 'Luz Tumale'},
+                    {position: 'SK Member', name: 'Anegl Liehra Abainza'},
+                    {position: 'SK Member', name: 'Kevin Borromeo'},
+                    {position: 'SK Member', name: 'Adalyn Narvasa'},
+                    {position: 'SK Member', name: 'Mel Obre'},
+                    {position: 'SK Member', name: 'Monica Torres'},
+                    {position: 'SK Member', name: 'Aldren Uchi'},
+                    {position: 'SK Secretary', name: 'Shekinah Angel Tumale'}
+                ]
+            },
+            'botinagan': {
+                name: 'Botinagan',
+                officials: [
+                    {position: 'Punong Barangay', name: 'Rodel Torres'},
+                    {position: 'Sangguniang Barangay Member', name: 'Richard Torio'},
+                    {position: 'Sangguniang Barangay Member', name: 'Romeo Bernacer'},
+                    {position: 'Sangguniang Barangay Member', name: 'Jose Caranza'},
+                    {position: 'Sangguniang Barangay Member', name: 'Rowie Frondoza'},
+                    {position: 'Sangguniang Barangay Member', name: 'Glenn Litong'},
+                    {position: 'Sangguniang Barangay Member', name: 'Joseph Atijano'},
+                    {position: 'Sangguniang Barangay Member', name: 'Jolly Alcantara'},
+                    {position: 'SK Chairperson', name: 'John Carl Tapar'},
+                    {position: 'Barangay Secretary', name: 'Victoria Palomer'},
+                    {position: 'SK Member', name: 'Bryan Gordon Bernacer'},
+                    {position: 'SK Member', name: 'Lyka Torres'},
+                    {position: 'SK Member', name: 'Anjo Rodriquez'},
+                ]
+            },
+            'buenavista': {
+                name: 'Buenavista',
+                officials: [
+                    {position: 'Punong Barangay', name: 'Carlomagmo Guerrero'},
+                    {position: 'Sangguniang Barangay Member', name: 'Marvin Lagmay'},
+                    {position: 'Sangguniang Barangay Member', name: 'Jimmy Mir'},
+                    {position: 'Sangguniang Barangay Member', name: 'Zaldy Conche'},
+                    {position: 'Sangguniang Barangay Member', name: 'Erlinda Solo'},
+                    {position: 'SK Chairperson', name: 'Charalie Teves'},
+                    {position: 'Barangay Secretary', name: 'Jocelyn Tupig'},
+                    {position: 'SK Member', name: 'Reymond Solo'},
+                    {position: 'SK Member', name: 'Angelo Tud'},
+                    {position: 'SK Member', name: 'Benjohn Sierra'},
+                    {position: 'SK Member', name: 'Leanard Tupig'},
+                ]
+            },
+            'burgos': {
+                name: 'Burgos',
+                officials: [
+                    {position: 'Punong Barangay', name: 'Ruby Tuplano'},
+                    {position: 'Sangguniang Barangay Member', name: 'Phoebe Tuplano'},
+                    {position: 'Sangguniang Barangay Member', name: 'Jesus Ogalesco'},
+                    {position: 'Sangguniang Barangay Member', name: 'Emelita Olapani'},
+                    {position: 'Sangguniang Barangay Member', name: 'Jeobert Mariquit'},
+                    {position: 'Sangguniang Barangay Member', name: 'Michael Delos Santos'},
+                    {position: 'Sangguniang Barangay Member', name: 'Willy Tusi'},
+                    {position: 'Sangguniang Barangay Member', name: 'Arvin Tuplano'},
+                    {position: 'SK Chairperson', name: 'Ni'},
+                    {position: 'Barangay Secretary', name: ''},
+                    {position: 'SK Member', name: ''},
+                    {position: 'SK Member', name: ''},
+                    {position: 'SK Member', name: ''},
+                    {position: 'SK Member', name: ''},
+                    {position: 'SK Member', name: ''},
+                    {position: 'SK Member', name: ''},
+                    {position: 'SK Member', name: ''},
+                    {position: 'SK Secretary', name: ''}
+                ]
+            },
+            '': {
+                name: '',
+                officials: [
+                    {position: 'Punong Barangay', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'SK Chairperson', name: ''},
+                    {position: 'Barangay Secretary', name: ''},
+                    {position: 'SK Member', name: ''},
+                    {position: 'SK Member', name: ''},
+                    {position: 'SK Member', name: ''},
+                ]
+            },
+            '': {
+                name: '',
+                officials: [
+                    {position: 'Punong Barangay', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'SK Chairperson', name: ''},
+                    {position: 'Barangay Secretary', name: ''},
+                    {position: 'SK Member', name: ''},
+                    {position: 'SK Member', name: ''},
+                    {position: 'SK Member', name: ''},
+                ]
+            },
+            '': {
+                name: '',
+                officials: [
+                    {position: 'Punong Barangay', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'SK Chairperson', name: ''},
+                    {position: 'Barangay Secretary', name: ''},
+                    {position: 'SK Member', name: ''},
+                    {position: 'SK Member', name: ''},
+                    {position: 'SK Member', name: ''},
+                ]
+            },
+            '': {
+                name: '',
+                officials: [
+                    {position: 'Punong Barangay', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'SK Chairperson', name: ''},
+                    {position: 'Barangay Secretary', name: ''},
+                    {position: 'SK Member', name: ''},
+                    {position: 'SK Member', name: ''},
+                    {position: 'SK Member', name: ''},
+                ]
+            },
+            '': {
+                name: '',
+                officials: [
+                    {position: 'Punong Barangay', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'SK Chairperson', name: ''},
+                    {position: 'Barangay Secretary', name: ''},
+                    {position: 'SK Member', name: ''},
+                    {position: 'SK Member', name: ''},
+                    {position: 'SK Member', name: ''},
+                ]
+            },
+            '': {
+                name: '',
+                officials: [
+                    {position: 'Punong Barangay', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'SK Chairperson', name: ''},
+                    {position: 'Barangay Secretary', name: ''},
+                    {position: 'SK Member', name: ''},
+                    {position: 'SK Member', name: ''},
+                    {position: 'SK Member', name: ''},
+                ]
+            },
+            '': {
+                name: '',
+                officials: [
+                    {position: 'Punong Barangay', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'SK Chairperson', name: ''},
+                    {position: 'Barangay Secretary', name: ''},
+                    {position: 'SK Member', name: ''},
+                    {position: 'SK Member', name: ''},
+                    {position: 'SK Member', name: ''},
+                ]
+            },
+            '': {
+                name: '',
+                officials: [
+                    {position: 'Punong Barangay', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'SK Chairperson', name: ''},
+                    {position: 'Barangay Secretary', name: ''},
+                    {position: 'SK Member', name: ''},
+                    {position: 'SK Member', name: ''},
+                    {position: 'SK Member', name: ''},
+                ]
+            },
+            '': {
+                name: '',
+                officials: [
+                    {position: 'Punong Barangay', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'SK Chairperson', name: ''},
+                    {position: 'Barangay Secretary', name: ''},
+                    {position: 'SK Member', name: ''},
+                    {position: 'SK Member', name: ''},
+                    {position: 'SK Member', name: ''},
+                ]
+            },
+            '': {
+                name: '',
+                officials: [
+                    {position: 'Punong Barangay', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'SK Chairperson', name: ''},
+                    {position: 'Barangay Secretary', name: ''},
+                    {position: 'SK Member', name: ''},
+                    {position: 'SK Member', name: ''},
+                    {position: 'SK Member', name: ''},
+                ]
+            },
+            '': {
+                name: '',
+                officials: [
+                    {position: 'Punong Barangay', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'SK Chairperson', name: ''},
+                    {position: 'Barangay Secretary', name: ''},
+                    {position: 'SK Member', name: ''},
+                    {position: 'SK Member', name: ''},
+                    {position: 'SK Member', name: ''},
+                ]
+            },
+            '': {
+                name: '',
+                officials: [
+                    {position: 'Punong Barangay', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'SK Chairperson', name: ''},
+                    {position: 'Barangay Secretary', name: ''},
+                    {position: 'SK Member', name: ''},
+                    {position: 'SK Member', name: ''},
+                    {position: 'SK Member', name: ''},
+                ]
+            },
+            '': {
+                name: '',
+                officials: [
+                    {position: 'Punong Barangay', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'SK Chairperson', name: ''},
+                    {position: 'Barangay Secretary', name: ''},
+                    {position: 'SK Member', name: ''},
+                    {position: 'SK Member', name: ''},
+                    {position: 'SK Member', name: ''},
+                ]
+            },
+            '': {
+                name: '',
+                officials: [
+                    {position: 'Punong Barangay', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'SK Chairperson', name: ''},
+                    {position: 'Barangay Secretary', name: ''},
+                    {position: 'SK Member', name: ''},
+                    {position: 'SK Member', name: ''},
+                    {position: 'SK Member', name: ''},
+                ]
+            },
+            '': {
+                name: '',
+                officials: [
+                    {position: 'Punong Barangay', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'SK Chairperson', name: ''},
+                    {position: 'Barangay Secretary', name: ''},
+                    {position: 'SK Member', name: ''},
+                    {position: 'SK Member', name: ''},
+                    {position: 'SK Member', name: ''},
+                ]
+            },
+            '': {
+                name: '',
+                officials: [
+                    {position: 'Punong Barangay', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'SK Chairperson', name: ''},
+                    {position: 'Barangay Secretary', name: ''},
+                    {position: 'SK Member', name: ''},
+                    {position: 'SK Member', name: ''},
+                    {position: 'SK Member', name: ''},
+                ]
+            },
+            '': {
+                name: '',
+                officials: [
+                    {position: 'Punong Barangay', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'SK Chairperson', name: ''},
+                    {position: 'Barangay Secretary', name: ''},
+                    {position: 'SK Member', name: ''},
+                    {position: 'SK Member', name: ''},
+                    {position: 'SK Member', name: ''},
+                ]
+            },
+            '': {
+                name: '',
+                officials: [
+                    {position: 'Punong Barangay', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'SK Chairperson', name: ''},
+                    {position: 'Barangay Secretary', name: ''},
+                    {position: 'SK Member', name: ''},
+                    {position: 'SK Member', name: ''},
+                    {position: 'SK Member', name: ''},
+                ]
+            },
+            '': {
+                name: '',
+                officials: [
+                    {position: 'Punong Barangay', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'SK Chairperson', name: ''},
+                    {position: 'Barangay Secretary', name: ''},
+                    {position: 'SK Member', name: ''},
+                    {position: 'SK Member', name: ''},
+                    {position: 'SK Member', name: ''},
+                ]
+            },
+            '': {
+                name: '',
+                officials: [
+                    {position: 'Punong Barangay', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'Sangguniang Barangay Member', name: ''},
+                    {position: 'SK Chairperson', name: ''},
+                    {position: 'Barangay Secretary', name: ''},
+                    {position: 'SK Member', name: ''},
+                    {position: 'SK Member', name: ''},
+                    {position: 'SK Member', name: ''},
+                ]
+            },
+
+        };
+
+        // Get DOM elements
+        const modalBackdrop = document.getElementById('modalBackdrop');
+        const officialsModal = document.getElementById('officialsModal');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalContent = document.getElementById('modalContent');
+        const closeModal = document.getElementById('closeModal');
+
+        // Function to show modal
+        function showModal(barangayKey) {
+            const data = barangayData[barangayKey];
+            
+            if (data) {
+                modalTitle.textContent = data.name;
+                
+                // Create officials table
+                const table = `
+                    <table class="officials-table">
+                        <thead>
+                            <tr>
+                                <th class="position-column">Position</th>
+                                <th class="name-column">Name</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            ${data.officials.map(official => `
+                                <tr>
+                                    <td class="position-column">${official.position}</td>
+                                    <td>${official.name}</td>
+                                </tr>
+                            `).join('')}
+                        </tbody>
+                    </table>
+                `;
+                modalContent.innerHTML = table;
+            } else {
+                modalContent.innerHTML = '<p style="text-align: center; padding: 20px;">Officials information not available yet.</p>';
+            }
+            
+            modalBackdrop.classList.add('active');
+            officialsModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        // Function to hide modal
+        function hideModal() {
+            modalBackdrop.classList.remove('active');
+            officialsModal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+            
+            // Remove active class from all barangay items
+            document.querySelectorAll('.barangay-item').forEach(item => {
+                item.classList.remove('active');
+            });
+        }
+
+        // Add click events to barangay items
+        document.querySelectorAll('.barangay-item').forEach(item => {
+            item.addEventListener('click', function() {
+                const barangayKey = this.getAttribute('data-barangay');
+                this.classList.add('active');
+                showModal(barangayKey);
+            });
+        });
+
+        // Close modal events
+        closeModal.addEventListener('click', hideModal);
+        modalBackdrop.addEventListener('click', hideModal);
+
+        // Close modal with ESC key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && officialsModal.classList.contains('active')) {
+                hideModal();
+            }
+        });
+
+        // Prevent modal from closing when clicking inside it
+        officialsModal.addEventListener('click', function(e) {
+            e.stopPropagation();
+        });
+    </script>

@@ -1,0 +1,274 @@
+<style>
+        .grid-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.governors {
+    margin-bottom: 40px;
+}
+
+.governors__cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.governors__card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.governors__card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.governors__cover-photo-div {
+    position: relative;
+    height: 200px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 48px;
+    font-weight: bold;
+    overflow: hidden; /* Ensure image doesn't overflow the rounded corners */
+}
+
+.governors__cover-photo-div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.governors__title {
+    margin: 20px;
+    margin-bottom: 10px;
+    font-size: 24px;
+    color: #333;
+    font-weight: bold;
+}
+
+.governors__title span {
+    font-size: 16px;
+    color: #666;
+    font-weight: normal;
+}
+
+/* Set margins to be the same as description */
+.governors__description {
+    margin: 0 20px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.governors__term {
+    margin: 0 20px;
+    padding: 0;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.governors__origin {
+    margin: 0 20px;
+    padding: 0;
+    font-size: 14px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 32px;
+}
+
+.republic-header {
+    background: #2c3e50;
+    color: white;
+    padding: 15px;
+    margin: 30px 0 20px 0;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+    </style>
+</head>
+<body>
+    <h1>Governors of Catanduanes</h1>
+    
+    <div class="grid-container governors">
+        <div class="republic-header">THIRD PHILIPPINE REPUBLIC (1945–1981)</div>
+        <div class="governors__cards">
+            <div class="governors__card">
+                <div class="governors__cover-photo-div">
+                    1
+                </div>
+                <h2 class="governors__title">Remigio Socito</h2>
+                <div class="governors__term">September 26, 1945 - December 30, 1947</div>
+                <div class="governors__origin">Origin: Virac</div>
+                <div class="governors__description">
+                    Last Lieutenant governor of subprovince of Catanduanes under Albay. Appointed first governor after Catanduanes became a separate province.
+                </div>
+            </div>
+
+            <div class="governors__card">
+                <div class="governors__cover-photo-div">
+                    2
+                </div>
+                <h2 class="governors__title">Alfonso Vera Usero</h2>
+                <div class="governors__term">December 30, 1947 - December 30, 1951</div>
+                <div class="governors__origin">Origin: Viga</div>
+                <div class="governors__description">
+                    First elected governor of Catanduanes. Served one term and established the foundation for democratic governance in the province.
+                </div>
+            </div>
+
+            <div class="governors__card">
+                <div class="governors__cover-photo-div">
+                    3
+                </div>
+                <h2 class="governors__title">Juan Molina Alberto</h2>
+                <div class="governors__term">December 30, 1951 - December 30, 1959</div>
+                <div class="governors__origin">Origin: Virac</div>
+                <div class="governors__description">
+                    Elected twice, serving two consecutive terms. Known for his dedication to public service and provincial development initiatives.
+                </div>
+            </div>
+
+            <div class="governors__card">
+                <div class="governors__cover-photo-div">
+                    4
+                </div>
+                <h2 class="governors__title">Jorge Vera Almojuela</h2>
+                <div class="governors__term">December 30, 1959 - December 30, 1967</div>
+                <div class="governors__origin">Origin: Pandan</div>
+                <div class="governors__description">
+                    Elected twice and served two consecutive terms. Focused on infrastructure development and connecting the northern municipalities to the capital.
+                </div>
+        </div>
+
+            <div class="governors__card">
+                <div class="governors__cover-photo-div">
+                    5
+                </div>
+                <h2 class="governors__title">Vicente Molina Alberto <span>(Longest Serving)</span></h2>
+                <div class="governors__term">December 30, 1967 - March 15, 1986</div>
+                <div class="governors__origin">Origin: Virac</div>
+                <div class="governors__description">
+                    Longest serving governor of Catanduanes. Elected in 3 consecutive terms and continued serving through the Fourth Republic until 1986.
+                </div>            
+            </div>
+        </div>
+
+        <div class="republic-header">FIFTH PHILIPPINE REPUBLIC (1986–present)</div>
+        <div class="governors__cards">
+            <div class="governors__card">
+                <div class="governors__cover-photo-div">
+                    6
+                </div>
+                <h2 class="governors__title">Leandro I. Verceles Sr.</h2>
+                <div class="governors__term">March 16, 1986 - June 30, 1992</div>
+                <div class="governors__origin">Origin: Virac</div>
+                <div class="governors__description">
+                    Former ambassador. Appointed by President Corazon C. Aquino in 1986, then elected to continue serving until 1992.
+                </div>
+            </div>
+
+            <div class="governors__card">
+                <div class="governors__cover-photo-div">
+                    7
+                </div>
+                <h2 class="governors__title">Rosalie Alberto-Estacio</h2>
+                <div class="governors__term">June 30, 1992 - June 30, 1995</div>
+                <div class="governors__origin">Origin: Virac</div>
+                <div class="governors__description">
+                    First female governor of Catanduanes. Broke barriers and paved the way for women's leadership in provincial governance.
+                </div>
+            </div>
+
+            <div class="governors__card">
+                <div class="governors__cover-photo-div">
+                    8
+                </div>
+                <h2 class="governors__title">Severo C. Alcantara</h2>
+                <div class="governors__term">June 30, 1995 - June 30, 1998</div>
+                <div class="governors__origin">Origin: Virac</div>
+                <div class="governors__description">
+                    Focused on infrastructure development and modernization initiatives during his single term as governor.
+                </div>
+            </div>
+
+            <div class="governors__card">
+                <div class="governors__cover-photo-div">
+                    9
+
+                </div>
+                <h2 class="governors__title">Hector S. Sanchez</h2>
+                <div class="governors__term">June 30, 1998 - June 30, 2001</div>
+                <div class="governors__origin">Origin: Virac</div>
+                <div class="governors__description">
+                    Served one term with focus on economic development and improving provincial services for the people of Catanduanes.
+                </div>
+            </div>
+
+            <div class="governors__card">
+                <div class="governors__cover-photo-div">
+                    10
+
+                </div>
+                <h2 class="governors__title">Leandro B. Verceles Jr.</h2>
+                <div class="governors__term">June 30, 2001 - June 30, 2007</div>
+                <div class="governors__origin">Origin: Virac</div>
+                <div class="governors__description">
+                    Son of former governor Leandro I. Verceles Sr. Elected twice and served two consecutive terms focusing on modernization.
+                </div>
+            </div>
+
+            <div class="governors__card">
+                <div class="governors__cover-photo-div">
+                    11
+                </div>
+                <h2 class="governors__title">Joseph Chua Cua <span>(Non-consecutive terms)</span></h2>
+                <div class="governors__term">2007-2013, 2016-2025</div>
+                <div class="governors__origin">Origin: San Andres</div>
+                <div class="governors__description">
+                    Served two separate periods as governor. First elected twice (2007-2013), then returned for three consecutive terms (2016-2025).
+                </div>
+            </div>
+
+            <div class="governors__card">
+                <div class="governors__cover-photo-div">
+                    12
+                </div>
+                <h2 class="governors__title">Araceli B. Wong</h2>
+                <div class="governors__term">June 30, 2013 - June 30, 2016</div>
+                <div class="governors__origin">Origin: Pandan</div>
+                <div class="governors__description">
+                    Second female governor of Catanduanes. Served one term between Joseph Cua's non-consecutive gubernatorial periods.
+                </div>
+            </div>
+
+            <div class="governors__card">
+                <div class="governors__cover-photo-div">
+                    <img src="http://wp-local.com/wp-content/uploads/2025/08/78272543488.png" alt="Cover Photo" />
+                </div>
+
+                <h2 class="governors__title">Patrick Alain T. Azanza <span>(Current)</span></h2>
+                <div class="governors__term">June 30, 2025 - Present</div>
+                <div class="governors__origin">Origin: Virac</div>
+                <div class="governors__description">
+                    Current governor of Catanduanes. Recently took office in 2025, bringing new leadership and vision for the province's future development.
+                </div>
+            </div>
+        </div>
+    </div>

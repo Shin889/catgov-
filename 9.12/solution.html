@@ -1,0 +1,172 @@
+<div id="mayorTableContainer" style="position: relative;">
+    <table id="mayorTable"
+        style="width: 100%; border-collapse: collapse; font-size: 14px; margin-bottom: 20px;">
+        <thead>
+            <tr style="background-color: #f1f1f1;">
+                <th class="sortable" style="text-align: left; padding: 8px; border-bottom: 1px solid #ccc;"
+                    data-column="name" data-type="string">
+                    Name <span class="sort-arrow"></span>
+                </th>
+                <th class="sortable" style="text-align: center; padding: 8px; border-bottom: 1px solid #ccc;"
+                    data-column="termStart" data-type="mixed">
+                    Term Start<span class="sort-arrow"></span>
+                </th>
+                <th class="sortable" style="text-align: center; padding: 8px; border-bottom: 1px solid #ccc;"
+                    data-column="termEnd" data-type="mixed">
+                    Term End <span class="sort-arrow"></span>
+                </th>
+            </tr>
+        </thead>
+        <tbody id="mayorTableBody">
+            <!-- Example row (manual) -->
+            <tr class="mayorRow">
+                <td style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                    <div class="hover-target" style="position: relative; display: inline-block;">
+                        Leo Z. Mendoza
+                        <div class="profile-modal top-right" style="display:none;">
+                            <div style="display: flex; align-items: center; gap: 10px;">
+                                <img src="http://wp-local.com/wp-content/uploads/2025/08/Mayor-Leo-Z.-Mendoza.png"
+                                    style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                    <h4 style="margin: 0;">Leo Zafe Mendoza (LP)</h4>
+                                    <p style="text-align: center;">Date of Birth: September 20, 1963 </p>
+                                    <p style="text-align: justify;">Looking back on the past year, I am proud of the
+                                        progress we’ve made together.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="pagination-wrapper"
+        style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
+        <p id="pageInfo" style="margin: 0; font-weight: bold; font-size: 14px;">This is page 1 out of X</p>
+        <div id="mayorPagination" class="pagination" style="display: flex; gap: 5px;"></div>
+    </div>
+
+    <hr style="margin: 15px 0; border-top: 1px solid #ccc;">
+
+    <script>
+        // Generate dummy rows
+        document.addEventListener("DOMContentLoaded", () => {
+            const tbody = document.getElementById("mayorTableBody");
+            const totalRows = 30;
+
+            for (let i = 1; i <= totalRows; i++) {
+                const tr = document.createElement("tr");
+                tr.className = "mayorRow";
+                tr.innerHTML = `
+                    <td style="padding:8px;border-bottom:1px solid #eee;">Mayor ${i}</td>
+                    <td style="text-align:center;padding:8px;border-bottom:1px solid #eee;">${1990 + i}</td>
+                    <td style="text-align:center;padding:8px;border-bottom:1px solid #eee;">${1993 + i}</td>
+                `;
+                tbody.appendChild(tr);
+            }
+
+            // Now sort and paginate after rows are added
+            sortMayorsByTermStartDesc();
+        });
+
+        function sortMayorsByTermStartDesc() {
+            const table = document.getElementById("mayorTable");
+            const tbody = table.querySelector("tbody");
+            if (!tbody) return;
+
+            function extractYear(text) {
+                if (!text) return 0;
+                const m = String(text).match(/\d{4}/);
+                return m ? parseInt(m[0], 10) : 0;
+            }
+
+            const rows = Array.from(tbody.querySelectorAll("tr.mayorRow"));
+            if (!rows.length) return;
+
+            rows.sort((a, b) => {
+                const yearA = extractYear(a.cells[1]?.textContent.trim() ?? "");
+                const yearB = extractYear(b.cells[1]?.textContent.trim() ?? "");
+                return yearB - yearA; // newest first
+            });
+
+            rows.forEach(row => tbody.appendChild(row));
+
+            const termStartHeader = table.querySelector("th[data-column='termStart']");
+            if (termStartHeader) termStartHeader.classList.add("desc");
+
+            updateMayorTable();
+        }
+
+        // Pagination
+        const rowsPerPage = 10;
+        let currentPage = 1;
+
+        function updateMayorTable() {
+            const rows = document.querySelectorAll(".mayorRow");
+            const totalPages = Math.ceil(rows.length / rowsPerPage);
+
+            rows.forEach((row, index) => {
+                row.style.display = (
+                    index >= (currentPage - 1) * rowsPerPage &&
+                    index < currentPage * rowsPerPage
+                ) ? '' : 'none';
+            });
+
+            renderPagination(totalPages);
+        }
+
+        function changeMayorPage(page) {
+            const rows = document.querySelectorAll(".mayorRow");
+            const totalPages = Math.ceil(rows.length / rowsPerPage);
+
+            if (page < 1) page = 1;
+            if (page > totalPages) page = totalPages;
+
+            currentPage = page;
+            updateMayorTable();
+        }
+
+        function renderPagination(totalPages) {
+            document.getElementById("pageInfo").textContent = `This is page ${currentPage} out of ${totalPages}`;
+            const container = document.getElementById("mayorPagination");
+            container.innerHTML = "";
+
+            const prevBtn = document.createElement("button");
+            prevBtn.textContent = "<< Prev";
+            prevBtn.disabled = currentPage === 1;
+            prevBtn.onclick = () => changeMayorPage(currentPage - 1);
+            container.appendChild(prevBtn);
+
+            for (let i = 1; i <= totalPages; i++) {
+                const btn = document.createElement("button");
+                btn.textContent = i;
+                if (i === currentPage) btn.className = "active";
+                btn.onclick = () => changeMayorPage(i);
+                container.appendChild(btn);
+            }
+
+            const nextBtn = document.createElement("button");
+            nextBtn.textContent = "Next >>";
+            nextBtn.disabled = currentPage === totalPages;
+            nextBtn.onclick = () => changeMayorPage(currentPage + 1);
+            container.appendChild(nextBtn);
+        }
+
+        // Hover effect for modal
+        document.addEventListener("DOMContentLoaded", () => {
+            document.querySelectorAll(".hover-target").forEach(target => {
+                target.addEventListener("mouseenter", () => {
+                    const modal = target.querySelector(".profile-modal");
+                    if (modal) modal.style.display = "block";
+                });
+                target.addEventListener("mouseleave", () => {
+                    const modal = target.querySelector(".profile-modal");
+                    if (modal) modal.style.display = "none";
+                });
+            });
+        });
+    </script>
+</div>

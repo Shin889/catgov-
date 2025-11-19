@@ -1,0 +1,77 @@
+<div class="how-to-register">
+    <ul>
+        <li>Go to https://pesojobs.ph/ and select REGISTER NOW</li>
+        <li>Select APPLICANT and fill out the registration form</li>
+        <li>Accept terms and create your account</li>
+        <li>After login, select CURRICULUM VITAE to build or update your CV</li>
+        <li>Complete BASIC PROFILE, EDUCATIONS, WORK EXPERIENCE, and SKILLS sections</li>
+    </ul>
+</div>
+
+<div class="how-to-build-cv">
+    <ul>
+        <li>Go to https://pesojobs.ph/ and login</li>
+        <li>Select CURRICULUM VITAE</li>
+        <li>Update BASIC PROFILE, EDUCATIONS, WORK EXPERIENCE, and SKILLS</li>
+        <li>Save changes after each section</li>
+    </ul>
+</div>
+
+
+<div class=how-to-search-and-apply>
+    <ul>
+        <li>Using your web browser, enter the URL https://pesojobs.ph/</li>
+        <li>Select JOB SEARCH to search for job vacancies. Select SEARCH to manually search the name of
+            the employer / job position</li>
+        <li>Select VIEW to view the details / job post of the employer. Select APPLY to apply for the selected
+            job vacancy</li>
+        <li>Select VIEW to view the details / job post of the employer. Select APPLY to apply for the selected
+            job vacancy</li>
+    </ul>
+</div>
+
+<div class="how-to-register-employer">
+    <ul>
+        <li>Using your web browser, enter the URL https://pesojobs.ph/</li>
+        <li>You will be redirected to the login / registration page of the system</li>
+        <li>Select REGISTER NOW to create an account</li>
+        <li>Select EMPLOYER. Enter all the information required in the registration form</li>
+        <li>Select ACCEPT OUR TERMS AND CONDITIONS. Select CREATE ACCOUNT to proceed</li>
+        <li>You will be redirected to the home page of the system, after successful login</li>
+    </ul>
+</div>
+
+<div class="how-to-update-company-details">
+    <ul>
+        <li>After successfully registering, provide or update your company details subject for approval of the PESO to be able to post job vacancies.</li>
+        <li>Select your PROFILE PICTURE / ICON and select COMPANY DETAILS</li>
+        <li>Enter all the required information to update your company details & information</li>
+        <li>Select if a Licensed Overseas Recruitment Agency (LRA) or Private Employment Agency (PEA), then enter your business address / location, contact information and upload your company logo. Select SUBMIT button to finalize.</li>
+    </ul>
+</div>
+
+<div class="how-to-upload-legal-documents">
+    <ul>
+        <li>Select LEGAL DOCUMENTS to attach your company’s legal documents subject for review and approval of PESO</li>
+        <li>Select CHOOSE FILE to upload a document and enter the DATE ISSUED and DATE EXPIRY then select UPLOAD once completed.</li>
+    </ul>
+</div>
+
+<div class="how-to-post-jobs">
+    <ul>
+        <li>Once PESO has approved your registration, you will be notified in the system dashboard and the JOB POSTS function will be enabled</li>
+        <li>Select JOB POSTS and select ADD VACANCY / JOB POST and enter all the required information</li>
+        <li>Select SAVE when done</li>
+        <li>You can VIEW, UPDATE, MONITOR your job vacancy, or REMOVE if necessary</li>
+    </ul>
+</div>
+
+<div class="how-to-manage-applications">
+    <ul>
+        <li>Select APPLICATION to view applicants who applied for the posted job vacancy</li>
+        <li>Select an action to VIEW APPLICANT, SCHEDULE AN INTERVIEW, HIRE or REJECT an application</li>
+        <li>Select VIEW APPLICANT icon to view the applicant’s system generated CV or download the uploaded CV</li>
+        <li>Select SCHEDULE AN INTERVIEW icon to send a message to the applicant including interview details and platform. Select SUBMIT when done</li>
+        <li>Select ACCEPT / HIRE APPLICANT icon to hire the applicant. Enter the hiring date. The hired applicant profile will be reflected in the HIRED module and job vacancy counts will update</li>
+    </ul>
+</div>

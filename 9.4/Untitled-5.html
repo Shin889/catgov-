@@ -1,0 +1,126 @@
+
+  <style>
+
+    .sitemap {
+      text-align: center;
+    }
+
+    .sitemap h1 {
+      background: linear-gradient(90deg, #ff6f61, #ffb347);
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 12px;
+      display: inline-block;
+    }
+
+    .tree {
+      display: flex;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+
+    .branch {
+      margin: 0 2rem;
+      text-align: center;
+    }
+
+    .branch > h2 {
+      background: #ffd54f;
+      padding: 0.6rem 1rem;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      margin: 0.5rem 0;
+      padding: 0.5rem 1rem;
+      font-size: 0.9rem;
+      transition: 0.3s;
+    }
+
+    li:hover {
+      background: #e3f2fd;
+    }
+
+    @media (max-width: 768px) {
+      .tree {
+        flex-direction: column;
+        align-items: center;
+      }
+      .branch {
+        margin: 1rem 0;
+      }
+    }
+  </style>
+
+  <div class="sitemap">
+    <h1>Homepage</h1>
+
+    <div class="tree">
+
+      <!-- Shop Section -->
+      <div class="branch">
+        <h2>Shop</h2>
+        <ul>
+          <li>New Items</li>
+          <li>Shoes</li>
+          <li>Clothing</li>
+          <li>Accessories</li>
+          <li>Sale</li>
+        </ul>
+      </div>
+
+      <!-- Blog Section -->
+      <div class="branch">
+        <h2>Blog</h2>
+        <ul>
+          <li>Articles</li>
+          <li>How-To Guides</li>
+          <li>Press Releases</li>
+        </ul>
+      </div>
+
+      <!-- About Section -->
+      <div class="branch">
+        <h2>About</h2>
+        <ul>
+          <li>Our Story</li>
+          <li>Team</li>
+          <li>Media</li>
+          <li>Events</li>
+        </ul>
+      </div>
+
+      <!-- Contact Section -->
+      <div class="branch">
+        <h2>Contact</h2>
+        <ul>
+          <li>Social Media</li>
+          <li>Info & Address</li>
+          <li>Email Form</li>
+        </ul>
+      </div>
+
+      <!-- FAQ Section -->
+      <div class="branch">
+        <h2>FAQ</h2>
+        <ul>
+          <li>Q&A</li>
+          <li>Shipping</li>
+          <li>Orders</li>
+          <li>Returns</li>
+          <li>Terms</li>
+          <li>Quick Links</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>

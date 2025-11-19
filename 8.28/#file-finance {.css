@@ -1,0 +1,23 @@
+#file-finance {
+  display: flex;
+  justify-content: center;   
+  align-items: flex-start;
+  gap: 5px;                  
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+#file-finance .wp-block-column,
+#file-finance figure {
+  margin: 0 !important;
+  padding: 0 !important;
+  flex: unset !important;    
+}
+
+#file-finance img {
+  display: block;
+  width: 200px;    
+  height: auto;
+  margin: 0;
+  padding: 0;
+}

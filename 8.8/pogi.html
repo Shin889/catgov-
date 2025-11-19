@@ -1,0 +1,611 @@
+<div class="cell large-6 municipality__tabs-container">
+  <ul class="tabs" data-tabs="" id="example-tabs">
+      <li class="tabs-title is-active">
+          <a href="#panel1" aria-selected="true" class="municipality__panel-tab">About</a>
+      </li>
+      <li class="tabs-title">
+          <a href="#panel2" class="municipality__panel-tab">Barangays</a>
+      </li>
+      <li class="tabs-title">
+          <a href="#panel3" class="municipality__panel-tab">Previous Officials</a>
+      </li>
+  </ul>
+  <div class="tabs-content" data-tabs-content="example-tabs" style="text-align: justify;">
+      <div class="tabs-panel is-active" id="panel1">
+              
+      
+        <p><strong>BACKGROUND</strong> </p>
+       <p>PANDAN, the name of the municipality was termed from pandan shrubs, which then surrounded the poblacion to protect the inhabitants from Moro pirates who used to invade the place. The municipality lies on the northern tip province of Catanduanes, 96 kilometers from the capital town of Virac. Bounded on the south by the municipality of Caramoran; on the west by the Maqueda Channel; on the east by the municipality of Bagamanoc; and on the north by the Pacific Ocean. This is the town where illustrious and eminent people of the province hails like the late senator Jose O. Vera and  immigration commissioner and governor Leandro I. Verceles Sr.. They claim that this is the most hospitable and sociable town in the island of Catanduanes.</p>
+               
+       <p><strong>HISTORY</strong> </p>
+       <p>Formerly the town site was located some two kilometers away south of the present site. Then the people were disturbed by constant depredation of bandits coming from other places.
+
+        The present site has been chosen because it was near the sea and the fishermen found it very convenient for their trade, however, being near the sea, it was vulnerable to Moros who always come to get their belongings or even capture some people.
+        
+        As a defense against such moro raids, the people planted pandan shrubs close to each other to form a formidable defense against invaders. When the Spaniards came they found the plants around the poblacion in great abundance. When asked what the name of the shrubs was, the people told them that they were pandan shrubs. Thus, the Spaniards called the place Pandan.
+        
+        The municipality lies on the northern tip of the province, 96 kilometers from the capital town of Virac. Bounded on the south by the municipality of Caramoran, on the west by the Maqueda Channel, on the east by the municipality of Bagamanoc and on the north by the Pacific Ocean. It has a total land area of 11,990 hectares. This is a town of 17,096 friendly and hospitable people, to which 99% are Roman Catholic.
+        
+        Of the 26 barangays that comprise the municipality, four of which actually form the town proper, which are Libod, the biggest barangay in terms of population, Napo, Pandan del Sur and Pandan del Norte. The rest are found usually near the seashore. The rest being an inland barangays.
+        
+        The municipality does not only boast of the natural beauties, it has which are the Parway, Mangbang, Parola beaches, the Hinik-Hinik falls (Hinik-hinik is a local term for rain shower) and Minaipit falls, but especially of its being a hometown of Senators, Congressman, Governor, Cardinal and Ambassador.
+        
+        The people of Pandan are generally peace loving, God fearing and are happy people. Everyone in the community is a brother, a sister and a friend where the products of which could be shared even food itself without thought of having it repaid or reciprocated. Visitors are offered the comforts that the family could afford even it means that the owner should lay on the floor just to make the visitor eased at home by using the “papag”. And that is not enough, before going home; products of their yard would be wrapped for you to bring in your family plus a bunch of cockling chickens.
+        
+        During celebrations, immediate neighbors are invited bringing among the whole members of the family and this seemed to be incomplete without tuba drinking and little dancing. Pantomina is a long cherished dance that never changes with time despite of the current dance and music. Pandananons has a series of collected pantomina songs which are now famous composed locally, of course it is not only the above songs, Pandananons used to compose, for evidence of which that gained popularity was a song composed by the late Mr. Alfredo dela Rosa, former Municipal Secretary of the Sangguniang Bayan of Pandan, entitled “Islang Catandungan”. This song won first place in the regional contest in Sorsogon sometime on the late 60’s.</p>
+
+
+        </div>
+        <div class="tabs-panel" id="panel2">
+              <ul class="barangay-list">
+                 
+                <li>Biong</li>
+                <li>Dororian</li>
+                <li>Poblacion District I</li>
+                <li>Poblacion District II/li>
+                <li>Poblacion District III</li>
+                <li>San Pedro</li>
+                <li>San Vicente</li>
+                <li>Sicmil</li>
+         </ul>
+          </div>       
+      
+   <style>
+    .official-profile {
+      position: relative;
+      margin-bottom: 10px;
+    }
+    
+   
+    .official-profile:hover .profile-modal {
+      display: block;
+    }
+    .official-profile a {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #000;
+    padding: 10px 15px;
+    border-radius: 10px;
+    transition: background 0.3s ease;
+  }
+  .hover-target {
+      display: inline-block;
+      position: relative;
+      cursor: pointer;
+    }
+  .official-profile a:hover {
+    background: #f1f1f1;
+  }
+  
+  .official-profile img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  .profile-modal {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    margin-left: 10px;
+    background: white;
+    padding: 15px;
+    width: 330px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    z-index: 1000;
+    display: none;
+  }
+  
+  .hover-target:hover .profile-modal {
+    display: block;
+  }
+  
+  .profile-modal img {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+    .profile-modal h4 {
+      margin: 0;
+      font-size: 15px;
+    }
+    
+    .profile-modal p {
+      font-size: 13px;
+      margin: 4px 0;
+      color: #555;
+    }
+  
+    .profile-modal h3 {
+    text-align: center;
+  }
+  
+  hr {
+    margin: 20px 0;
+    border: none;
+    border-top: 1px dashed #aaa;
+  }
+  .paging-btn {
+      padding: 6px 12px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 13px;
+      transition: background-color 0.3s;
+    }
+  
+    .paging-btn:hover {
+      background-color: #0056b3;
+    }
+  
+    </style>
+    
+    <div class="tabs-panel" id="panel3">
+  
+     
+  <h4 style="margin-top: 0;">Mayors</h4>
+    
+        <div id="mayorTableContainer" style="position: relative;">
+          <table id="mayorTable" style="width: 100%; border-collapse: collapse; font-size: 14px; margin-bottom: 20px;">
+            <thead>
+              <tr style="background-color: #f1f1f1;">
+                <th style="text-align: left; padding: 8px; border-bottom: 1px solid #ccc;">Name</th>
+                <th style="text-align: center; padding: 8px; border-bottom: 1px solid #ccc;">Term Start</th>
+                <th style="text-align: center; padding: 8px; border-bottom: 1px solid #ccc;">Term End</th>
+              </tr>
+            </thead>
+            <tbody id="mayorTableBody">
+              <tr class="mayorRow">
+                <td style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                    <div class="hover-target" style="position: relative; display: inline-block;">
+                      John Doe Parent
+                      <div class="profile-modal top-right">
+                        <div style="display: flex; align-items: center; gap: 10px;">
+                          <img src="https://cdn-icons-png.flaticon.com/512/4850/4850493.png" style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                          <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                            <h4 style="margin: 0;"> John Doe Children 1</h4>
+                            <p style="text-align: center;">Date of Birth: August 5, 2025</p>
+                            <p style="text-align: justify;">A strong advocate for education and women's rights, Jane modernized barangay health and learning centers.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2010</td>
+                <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2016</td>
+              </tr>
+              
+              <tr class="mayorRow">
+                <td style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                    <div class="hover-target" style="position: relative; display: inline-block;">
+                      John Doe Parent
+                      <div class="profile-modal top-right">
+                        <div style="display: flex; align-items: center; gap: 10px;">
+                          <img src="https://cdn-icons-png.flaticon.com/512/4850/4850493.png" style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                          <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                            <h4 style="margin: 0;">John Doe Children 1</h4>
+                            <p style="text-align: center;">Date of Birth: August 5, 2025</p>
+                            <p style="text-align: justify;">A strong advocate for education and women's rights, Jane modernized barangay health and learning centers.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2010</td>
+                <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2016</td>
+              </tr>
+              <tr class="mayorRow">
+                <td style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                    <div class="hover-target" style="position: relative; display: inline-block;">
+                      John Doe Parent
+                      <div class="profile-modal top-right">
+                        <div style="display: flex; align-items: center; gap: 10px;">
+                          <img src="https://cdn-icons-png.flaticon.com/512/4850/4850493.png" style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                          <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                            <h4 style="margin: 0;">John Doe Children 1</h4>
+                            <p style="text-align: center;">Date of Birth: August 5, 2025</p>
+                            <p style="text-align: justify;">A strong advocate for education and women's rights, Jane modernized barangay health and learning centers.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2010</td>
+                <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2016</td>
+              </tr>
+           
+              
+              <script>
+                const totalRows = 30; 
+                for (let i = 1; i <= totalRows; i++) {
+                  document.write(`
+              
+                  `);
+                }
+              </script>
+            </tbody>
+          </table>
+        
+        <script>
+          const rowsPerPage = 10;
+          let currentPage = 1;
+        
+          function updateMayorTable() {
+            const rows = document.querySelectorAll(".mayorRow");
+            const totalPages = Math.ceil(rows.length / rowsPerPage);
+        
+            rows.forEach((row, index) => {
+              row.style.display = (
+                index >= (currentPage - 1) * rowsPerPage &&
+                index < currentPage * rowsPerPage
+              ) ? '' : 'none';
+            });
+        
+            document.getElementById("mayorPageInfo").textContent = Page ${currentPage} of ${totalPages};
+          }
+        
+          function changeMayorPage(direction) {
+            const rows = document.querySelectorAll(".mayorRow");
+            const totalPages = Math.ceil(rows.length / rowsPerPage);
+        
+            currentPage += direction;
+            if (currentPage < 1) currentPage = 1;
+            if (currentPage > totalPages) currentPage = totalPages;
+        
+            updateMayorTable();
+          }
+        
+         
+          updateMayorTable();
+        </script>
+        
+     
+        <script>
+          document.addEventListener("DOMContentLoaded", () => {
+            document.querySelectorAll(".hover-target").forEach(target => {
+              target.addEventListener("mouseenter", () => {
+                const modal = target.querySelector(".profile-modal");
+                if (modal) modal.style.display = "block";
+              });
+              target.addEventListener("mouseleave", () => {
+                const modal = target.querySelector(".profile-modal");
+                if (modal) modal.style.display = "none";
+              });
+            });
+          });
+        </script>
+        
+      
+          <div style="text-align: right; margin-bottom: 20px;">
+            <button onclick="changeMayorPage(-1)">Previous</button>
+            
+            <button onclick="changeMayorPage(1)">Next</button>
+          </div>
+        </div>
+        
+        <script>
+  const rowsPerPage = 10;
+    let currentPage = 1;
+  
+    function updateMayorTable() {
+      const rows = document.querySelectorAll(".mayorRow");
+      const totalPages = Math.ceil(rows.length / rowsPerPage);
+      const totalEntries = rows.length;
+  
+     
+      rows.forEach((row, index) => {
+        row.style.display = (
+          index >= (currentPage - 1) * rowsPerPage &&
+          index < currentPage * rowsPerPage
+        ) ? '' : 'none';
+      });
+  
+      
+      const start = (currentPage - 1) * rowsPerPage + 1;
+      const end = Math.min(currentPage * rowsPerPage, totalEntries);
+      document.getElementById("mayorPageInfo").textContent = Page ${currentPage} of ${totalPages};
+      document.getElementById("visibleCount").textContent = ${start}–${end};
+      document.getElementById("totalEntries").textContent = totalEntries;
+    }
+  
+    function changeMayorPage(direction) {
+      const rows = document.querySelectorAll(".mayorRow");
+      const totalPages = Math.ceil(rows.length / rowsPerPage);
+  
+      currentPage += direction;
+      if (currentPage < 1) currentPage = 1;
+      if (currentPage > totalPages) currentPage = totalPages;
+  
+      updateMayorTable();
+    }
+  
+    document.addEventListener("DOMContentLoaded", updateMayorTable);
+        </script>
+
+<hr style="margin: 15px 0; border-top: 1px solid #ccc;">
+
+<h4 style="margin-top: 0;">Vice Mayors</h4>
+
+<div id="viceMayorTableContainer" style="position: relative;">
+  <table id="viceMayorTable" style="width: 100%; border-collapse: collapse; font-size: 14px; margin-bottom: 20px;">
+    <colgroup>
+      <col style="width: 50%;">
+      <col style="width: 30%;">
+      <col style="width: 30%;">
+    </colgroup>
+
+    <tbody id="viceMayorTableBody">
+      <tr class="viceMayorRow">
+        <td style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+          <div class="hover-target" style="position: relative; display: inline-block;">
+            John Doe Parent
+            <div class="profile-modal top-right">
+              <div style="display: flex; align-items: center; gap: 10px;">
+                <img src="https://cdn-icons-png.flaticon.com/512/4850/4850493.png" style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                  <h4 style="margin: 0;">John Doe Children 1</h4>
+                  <p style="text-align: center;">Date of Birth: August 5, 2025</p>
+                  <p style="text-align: justify;">A strong advocate for education and women's rights, Jane modernized barangay health and learning centers.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2010</td>
+        <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2016</td>
+      </tr>
+
+      <tr class="viceMayorRow">
+        <td style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+          <div class="hover-target" style="position: relative; display: inline-block;">
+            John Doe Parent
+            <div class="profile-modal top-right">
+              <div style="display: flex; align-items: center; gap: 10px;">
+                <img src="https://cdn-icons-png.flaticon.com/512/4850/4850493.png" style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                  <h4 style="margin: 0;">John Doe 1</h4>
+                  <p style="text-align: center;">Date of Birth: August 5, 2025</p>
+                  <p style="text-align: justify;">A strong advocate for education and women's rights, Jane modernized barangay health and learning centers.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2010</td>
+        <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2016</td>
+      </tr>
+      <tr class="viceMayorRow">
+        <td style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+          <div class="hover-target" style="position: relative; display: inline-block;">
+            John Doe
+            <div class="profile-modal top-right">
+              <div style="display: flex; align-items: center; gap: 10px;">
+                <img src="https://cdn-icons-png.flaticon.com/512/4850/4850493.png" style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                  <h4 style="margin: 0;">John Doe Children 2</h4>
+                  <p style="text-align: center;">Date of Birth: August 5, 2025</p>
+                  <p style="text-align: justify;">A strong advocate for education and women's rights, Jane modernized barangay health and learning centers.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2010</td>
+        <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2016</td>
+      </tr><tr class="viceMayorRow">
+        <td style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+          <div class="hover-target" style="position: relative; display: inline-block;">
+            John Doe Parent
+            <div class="profile-modal top-right">
+              <div style="display: flex; align-items: center; gap: 10px;">
+                <img src="https://cdn-icons-png.flaticon.com/512/4850/4850493.png style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                  <h4 style="margin: 0;">John Doe Children 3</h4>
+                  <p style="text-align: center;">Date of Birth: August 5, 2025</p>
+                  <p style="text-align: justify;">A strong advocate for education and women's rights, Jane modernized barangay health and learning centers.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2010</td>
+        <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2016</td>
+      </tr>
+      <script>
+        const totalRows = 30;
+        for (let i = 1; i <= totalRows; i++) {
+          document.write('');
+        }
+      </script>
+    </tbody>
+  </table>
+
+  <div style="text-align: right; margin-bottom: 20px;">
+    <button onclick="changeViceMayorPage(-1)">Previous</button>
+    
+    <button onclick="changeViceMayorPage(1)">Next</button>
+  </div>
+</div>
+
+<script>
+  const viceMayorRowsPerPage = 10;
+  let viceMayorCurrentPage = 1;
+
+  function updateViceMayorTable() {
+    const rows = document.querySelectorAll(".viceMayorRow");
+    const totalPages = Math.ceil(rows.length / viceMayorRowsPerPage);
+
+    rows.forEach((row, index) => {
+      row.style.display = (
+        index >= (viceMayorCurrentPage - 1) * viceMayorRowsPerPage &&
+        index < viceMayorCurrentPage * viceMayorRowsPerPage
+      ) ? '' : 'none';
+    });
+
+    document.getElementById("viceMayorPageInfo").textContent = Page ${viceMayorCurrentPage} of ${totalPages};
+  }
+
+  function changeViceMayorPage(direction) {
+    const rows = document.querySelectorAll(".viceMayorRow");
+    const totalPages = Math.ceil(rows.length / viceMayorRowsPerPage);
+
+    viceMayorCurrentPage += direction;
+    if (viceMayorCurrentPage < 1) viceMayorCurrentPage = 1;
+    if (viceMayorCurrentPage > totalPages) viceMayorCurrentPage = totalPages;
+
+    updateViceMayorTable();
+  }
+
+  updateViceMayorTable();
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".hover-target").forEach(target => {
+      target.addEventListener("mouseenter", () => {
+        const modal = target.querySelector(".profile-modal");
+        if (modal) modal.style.display = "block";
+      });
+      target.addEventListener("mouseleave", () => {
+        const modal = target.querySelector(".profile-modal");
+        if (modal) modal.style.display = "none";
+      });
+    });
+  });
+</script>
+
+     
+        </tbody>
+      </table>
+      
+       
+       
+      <hr style="margin: 15px 0; border-top: 1px solid #ccc;">
+      <h4 style="margin-top:0;">Councilors</h4>
+
+      <table style="width: 100%; border-collapse: collapse; font-size: 14px; margin-bottom: 10px;">
+       
+        <tbody>
+          <tr class="councilorRow">
+            <td style="padding: 8px; border-bottom: 1px solid #ccc;">Del Rosario, Juan</td>
+          </tr>
+          <tr class="councilorRow">
+            <td style="padding: 8px; border-bottom: 1px solid #ccc;">Cruz, Maria</td>
+          </tr>
+          <tr class="councilorRow">
+            <td style="padding: 8px; border-bottom: 1px solid #ccc;">Lopez, Antonio</td>
+          </tr>
+          <tr class="councilorRow">
+            <td style="padding: 8px; border-bottom: 1px solid #ccc;">Del Rosario, Juan</td>
+          </tr>
+          <tr class="councilorRow">
+            <td style="padding: 8px; border-bottom: 1px solid #ccc;">Cruz, Maria</td>
+          </tr>
+          <tr class="councilorRow">
+            <td style="padding: 8px; border-bottom: 1px solid #ccc;">Lopez, Antonio</td>
+          </tr><tr class="councilorRow">
+            <td style="padding: 8px; border-bottom: 1px solid #ccc;">Del Rosario, Juan</td>
+          </tr>
+          <tr class="councilorRow">
+            <td style="padding: 8px; border-bottom: 1px solid #ccc;">Cruz, Maria</td>
+          </tr>
+          <tr class="councilorRow">
+            <td style="padding: 8px; border-bottom: 1px solid #ccc;">Lopez, Antonio</td>
+          </tr><tr class="councilorRow">
+            <td style="padding: 8px; border-bottom: 1px solid #ccc;">Del Rosario, Juan</td>
+          </tr>
+          <tr class="councilorRow">
+            <td style="padding: 8px; border-bottom: 1px solid #ccc;">Cruz, Maria</td>
+          </tr>
+          <tr class="councilorRow">
+            <td style="padding: 8px; border-bottom: 1px solid #ccc;">Lopez, Antonio</td>
+          </tr>
+        </tbody>
+      </table>
+      <div style="text-align: right; margin-bottom: 20px;">
+        <button onclick="changeCouncilorPage(-1)">Previous</button>
+        
+        <button onclick="changeCouncilorPage(1)">Next</button>
+        <hr style="margin: 15px 0; border-top: 1px solid #ccc;">
+      </div>
+      
+      <script>
+        const councilorRowsPerPage = 10;
+        let councilorCurrentPage = 1;
+      
+        function updateCouncilorTable() {
+          const rows = document.querySelectorAll(".councilorRow");
+          const totalPages = Math.ceil(rows.length / councilorRowsPerPage);
+      
+          rows.forEach((row, index) => {
+            row.style.display = (
+              index >= (councilorCurrentPage - 1) * councilorRowsPerPage &&
+              index < councilorCurrentPage * councilorRowsPerPage
+            ) ? '' : 'none';
+          });
+      
+          document.getElementById("councilorPageInfo").textContent = Page ${councilorCurrentPage} of ${totalPages};
+        }
+      
+        function changeCouncilorPage(direction) {
+          const rows = document.querySelectorAll(".councilorRow");
+          const totalPages = Math.ceil(rows.length / councilorRowsPerPage);
+      
+          councilorCurrentPage += direction;
+          if (councilorCurrentPage < 1) councilorCurrentPage = 1;
+          if (councilorCurrentPage > totalPages) councilorCurrentPage = totalPages;
+      
+          updateCouncilorTable();
+        }
+      
+        updateCouncilorTable();
+      </script>
+      
+  
+  </div>
+  
+  
+  
+  </div>
+  </div>
+  </div>
+<div class="municipal-officials" style="flex: 0 0 300px; padding: 20px;">
+
+  <div style="text-align: center; margin-bottom: 18px;">
+    <img src="http://wp-local.com/wp-content/uploads/2025/08/Honesto-Tabligan-Pandan.png"Mayor" style="width: 160px; height: 160px; border-radius: 50%; object-fit: cover; margin-bottom: 10px;">
+    
+    <p style="margin: 0; padding: 0; line-height: 2;"><strong>Hon. Honesto II Castillo Tabligan</strong></p>
+    <p style="margin: 0; padding: 0; line-height: 1;">Mayor</p>
+ </div>
+
+  <div style="text-align: center; margin-bottom: 18px;">
+    <p style="margin: 0; padding: 0; line-height: 2;"><strong>Hon. Eric Trinidad Rodriguez</strong></p>
+    <p style="margin: 0; padding: 0; line-height: 1;">Vice Mayor</p>
+  </div>
+
+    <div style="text-align: center; margin-bottom: 18px;">
+    <p style="margin: 0; padding: 0; line-height: 2;"><strong>Councilors:</strong></p>
+    <ul style="list-style-type: none; margin: 0; line-height: 1.5;">
+      <li>Niola, Marvie Lingling</li>
+      <li>Arcilla, Shiela Cecilla Sanchez</li>
+      <li>Tabirara, John Willy Domingo</li>
+      <li>Delos Santos, Rynz Tabligan</li>
+      <li>Namata, Samuel Santelices</li>
+      <li>Crisipino, Alfonso III De Quiros</li>
+      <li>Lopez, Emmanuel Evangelista</li>
+      <li>Herrera, Florencio Rafael Lopez</li>
+    </ul>
+    </div>
+  </div>
+</div>
+
+  </div>

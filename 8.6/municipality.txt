@@ -1,0 +1,308 @@
+<div class="cell large-6 municipality__tabs-container">
+  <ul class="tabs" data-tabs="" id="example-tabs">
+      <li class="tabs-title is-active">
+          <a href="#panel1" aria-selected="true" class="municipality__panel-tab">About</a>
+      </li>
+      <li class="tabs-title">
+          <a href="#panel2" class="municipality__panel-tab">Barangays</a>
+      </li>
+      <li class="tabs-title">
+          <a href="#panel3" class="municipality__panel-tab">Previous Officials</a>
+      </li>
+  </ul>
+  <div class="tabs-content" data-tabs-content="example-tabs">
+      <div class="tabs-panel is-active" id="panel1">
+          <p><strong>Historical Background</strong> </p>
+          <p>The actual founding of Virac as a distinct political unit is closely associated with the evangelization of its original inhabitants by the Spanish conquistadores in the middle of the 16th century. Records of the past are so fragile, inconsistent and incomplete that events presented are an admixture of facts and folklore. Virac became officially recognized as a unit of governance only in 1755 as it was only during that year when records were started to be faithfully kept.</p>
+          
+          <p><strong>Pre-Hispanic Era</strong> </p>
+          <p>The first settlers to have set foot in the island province of Catanduanes were the scions of Bornean datus who came to the island of Panay and spread through the length and breadth of the Philippine archipelago in the 13th century. The first signs of human activity which began to be manifested in the middle of the 14th century were presumed to be that of the Malays who populated and developed some parts of Southern Luzon during the period.
+          
+              Other adventurers in search of better opportunities for trade and commerce eventually stayed and established settlements along the coastal confines of this tiny island during the 11th century. </p>
+          
+              <p><strong>The Naming of Virac</strong></p>
+              <p>From the exploits of Juan de Salcedo, Virac was first visited in 1573 by his own men in pursuit of pirates operating in the Bicol Peninsula. In Virac, the Spanish found a tribe under the leadership of one Datu Lumibao, scion of Datu Dumaguil who came to the Philippines with the 13 Malay datus and his wife Melbigan and son Macaco who settled near Vidak spring and founded the first civilized settlement with a score of servant followers and their wives. Some say Virac is a derivation of the word “Vidac” while others claim it is a contraction of the Spanish version of the word burac, meaning flower.
+              </p>
+          
+              <p><strong>Christianization</strong></p>
+              <p> A few weeks after the suppression of the pirates, the Spaniards returned with Dominican missionaries. Offering friendship and gifts, they were able to convert the tribe into the fold of Christendom. The first tribe conversion thus became Spain’s initial foothold to the island’s eventual Christianization.</p>
+          
+              <p><strong>Spanish Era</strong></p>
+              <p>In the 16th to 17th century, after establish and Christianizing settlements, a form of governance called “Encommiendas” was subsequently introduced as a guide to the socio-political development of each community.
+          
+                  The turbulent years of the late 18th century brought about by the sporadic incursions of the non-Christians on the prosperous settlements along the coast spawned myths about local heroes and essentially hastened the unification of Virac into a strong bastion against the forces opposed to Christianity. Stone chapels which proliferated along the coastal barangays had for years alternately served as places of refuge and worship of its people.</p>
+          
+                  <p><strong>Local Insurrection</strong></p>
+                  <p>The growing concern for better recognition and more participation of the natives in government affairs gave rise to rebellion. The nationwide uprising was upheld but lacked the necessary support due to the fairer treatment obtained locally.</p>
+          
+                  <p><strong> American Regime</strong></p>
+                  <p>Local resistance to the abrupt change of masters was more vigorous and gained wider acceptance. Not as eager to relinquish their hard-fought freedom, the “Katipuneros” refused to recognize the sovereignty of the new masters and fled to the mountains. The Americans’ might however, proved too formidable and quickly, all oppositions were subdued.
+          
+                      The American occupation ended in 1934 with the establishment of the Philippine Commonwealth.</p>
+          
+                  <p><strong>Japanese Occupation</strong></p>
+                  <p>With hardly a brief respite from foreign occupation, World War II brought new and untold woes, hardship and anxieties. Catanduanes was not spared from the Japanese onslaught. The Kamikura Regime established a puppet government centered on the capital town of Virac. All economic activities virtually stood at standstill. Even schools were temporarily closed.
+          
+                      The liberation of Catanduanes took place at what is now the present municipal building and the Virac Parish Cathedral. On February 8, 1945, the local guerrillas gained full control of the Japanese barracks.
+                      
+                      On April 22, 1945, Virac resumed its normal operations under the regime of the Philippine Civil Affairs Unit.</p>
+          
+                  <p><strong>Post American Liberation</strong></p>
+                  <p>The challenge of rebuilding the municipality from the ravages of the war was put on the shoulders of Florencio Tacorda, Geronimo Tabuzo and Primo Panti who, among themselves, held the stewardship of Virac from 1945 to 1957.</p>
+          
+                  <p><strong>Pre and Martial Law Era</strong></p>
+                  <p>From 1958-1970, Salvador Surtida took over followed by Jorge Arcilla from 1970-1986, two of the longest reigning local executives in the history of Virac. This period witnessed the ascendancy to national prominence of the Alberto brothers, Juan, Jose and Vicente, who doubtlessly brought progress and influenced the massive physical transformation of the municipality when Salvador Surtida and Jorge Arcilla were mayors. Foremost among the many infrastructure projects were the Catanduanes State Colleges and the Eastern Bicol Medical Center which placed Virac in the map as a major educational and health center in the Bicol Region.
+          
+                      The growth of Virac in terms of governance peaked in 1972. From the original 34 barangays in 1960, Virac was able to establish 29 new communities to upgrade to the present composition of 63 barangays. The declaration of martial law on September 21, 1972, despite the alleged rampant atrocities, had, by and large, no ill effects on the lives of the constituency, who by nature are peace-loving and law-abiding citizens.</p>
+          
+                      <p><strong>EDSA Revolution</strong></p>
+                      <p>The EDSA Revolution in1986 which toppled down the more than two decades of Marcos regime had a domino effect on the political structure of Virac. The replacement of the elected officials by appointed officials was in accordance with the Freedom Constitution which predominated during the revolutionary government from 1986 to1992. Rodulfo Sarmiento, a doctor by profession held the reins of the municipal government.</p>
+          
+                      <p><strong>Post EDSA</strong></p>
+                      <p>The early nineties and onward saw the alternate changing of guard at the helm of local governance between Rodulfo Sarmiento and Jose “Cito” Alberto II, the son of Congressman Jose Alberto. The operation of the ferry boat which facilitates the transfer of goods and services from the Bicol mainland to Virac ushered in the vibrance in trade and commerce as manifested by the modern unseen before but now dotting the commercial centers and the bee-line of private and public conveyances plying the streets. Growing political maturity has been apparent in barangay affairs operation and so with the swell in the number of non-government organizations which is an indication of growing people empowerment.
+          
+                          With the advent of the third millennium came the resurgence of the physical face lift of Virac as more public structures have been erected and upgraded during the second “tour of duty” of incumbent Mayor Jose “Cito” Alberto.
+                          
+                          The socio-political annals of Virac shall continue to increase its pages and one thing is certain: the municipality stands to gain – physically, economically and socially in its self-waged battle for progress.</p>
+  
+      </div>
+      <div class="tabs-panel" id="panel2">
+            <ul class="barangay-list">
+              
+              <li>Antipolo Del Sur	</li>
+              <li>Balite	</li>
+              <li>Batag	</li>
+              <li>Bigaa	</li>
+              <li>Buenavista	</li>
+              <li>Buyo	</li>
+              <li>Cabihian	</li>
+              <li>Calabnigan</li>
+              <li>Calampong	</li>
+              <li>Calatagan Proper	</li>
+              <li>Calatagan Tibang	</li>
+              <li>Capilihan	</li>
+              <li>Casoocan	</li>
+              <li>Cavinitan</li>
+              <li>Concepcion (Poblacion)	</li>
+              <li>Constantino (Poblacion)	</li>
+              <li>Danicop</li>
+              <li>Dugui San Isidro	</li>
+              <li>Dugui San Vicente	</li>
+              <li>Dugui Too	</li>
+              <li>F. Tacorda Village	</li>
+              <li>Francia (Poblacion)	</li>
+              <li>Gogon Centro	</li>
+              <li>Gogon Sirangan	</li>
+              <li>Hawan Grande	</li>
+              <li>Hawan Ilaya	</li>
+              <li>Hicming	</li>
+              <li>Igang	</li>
+              <li>Juan M. Alberto (Poniton)	</li>
+              <li>Lanao (Poblacion)	</li>
+              <li>Magnesia Del Norte	</li>
+              <li>Magnesia Del Sur	</li>
+              <li>Marcelo Alberto (Poblacion)	</li>
+              <li>Marilima	</li>
+              <li>Pajo Baguio	</li>
+              <li>Pajo San Isidro	</li>
+              <li>Palnab Del Norte	</li>
+              <li>Palnab Del Sur	</li>
+              <li>Palta Big	</li>
+              <li>Palta Salvacion	</li>
+              <li>Palta Small	</li>
+              <li>Rawis (Poblacion)	</li>
+              <li>Salvacion	</li>
+              <li>San Isidro Village	</li>
+              <li>San Jose (Poblacion)	</li>
+              <li>San Juan (Poblacion)	</li>
+              <li>San Pablo (Poblacion)	</li>
+              <li>San Pedro (Poblacion)	</li>
+              <li>San Roque (Poblacion)	</li>
+              <li>San Vicente	</li>
+              <li>Ibong Sapa (San Vicente Sur)	</li>
+              <li>Santa Cruz	</li>
+              <li>Santa Elena (Poblacion)	</li>
+              <li>Santo Cristo	</li>
+              <li>Santo Domingo	</li>
+              <li>Santo Niño	</li>
+              <li>Simamla	</li>
+              <li>Sogod-Simamla	</li>
+              <li>Sogod-Tibgao	</li>
+              <li>Talisoy	</li>
+              <li>Tubaon</li>
+              <li>Valencia	</li>
+
+          </ul>
+      </div>
+      <style>
+   
+  .official-profile {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+
+  .official-profile a {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #000;
+  padding: 10px 15px;
+  border-radius: 10px;
+  transition: background 0.3s ease;
+}
+
+
+.official-profile a:hover {
+  background: #f1f1f1;
+}
+.official-profile img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-modal {
+  display: none;
+  position: absolute;
+  top: -250px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  background: white;
+  padding: 20px;
+  width: 350px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  text-align: center;
+}
+
+.profile-modal h3 {
+  text-align: center;
+}
+
+.official-profile:hover .profile-modal {
+  display: block;
+}
+
+
+  .profile-modal img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 10px;
+  }
+
+  .profile-modal h4 {
+    text-align: center;
+    margin: 10px 0 5px;
+    font-size: 18px;
+  }
+
+  .profile-modal p {
+    font-size: 14px;
+    text-align: center;
+    color: #555;
+  }
+  hr {
+  margin: 20px 0;
+  border: none;
+  border-top: 1px dashed #aaa;
+}
+
+</style>
+
+      
+<div class="tabs-panel" id="panel3">
+
+  <!-- Previous Mayor 1 -->
+  <div class="official-profile">
+    <a href="#">
+      <img src="https://i.pinimg.com/564x/8d/ff/49/8dff49985d0d8afa53751d9ba8907aed.jpg" alt="Mayor John Doe">
+      <div>
+        <strong>Mayor John Doe</strong><br>
+        <small>2017–2024 | Mayor | Catanduanes</small>
+      </div>
+    </a>
+    <div class="profile-modal">
+      <div style="display: flex; align-items: center; gap: 15px;">
+        <img src="https://cdn.vectorstock.com/i/1000v/50/09/user-icon-female-person-symbol-profile-avatar-vector-20715009.jpg" style="width: 100px; height: 100px; border-radius: 10px; align-self: center;">
+        <div style="text-align: justify;">
+          <h4 style="margin: 0;">JOHN DOE</h4>
+          <p style="margin: 5px 0;">Served from 2008–2016–END</p>
+          <p style="margin: 5px 0;">Born: AUGUST 14, 2002</p>
+          <p style="margin: 5px 0;">A strong advocate for education and women's rights, Jane modernized barangay health and learning centers</p>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+  <hr style="margin: 20px 0; border: 0; border-top: 1px solid #ccc;">
+
+  <!-- Previous Mayor 2 -->
+  <div class="official-profile">
+    <a href="#">
+      <img src="https://cdn.vectorstock.com/i/1000v/50/09/user-icon-female-person-symbol-profile-avatar-vector-20715009.jpg" alt="Mayor Jane Doe">
+      <div>
+        <strong>Mayor Jane Doe</strong><br>
+        <small>2010–2016 | Mayor | Catanduanes</small>
+      </div>
+    </a>
+    <div class="profile-modal">
+      <div style="display: flex; align-items: flex-start; gap: 15px;">
+        <img src="https://cdn.vectorstock.com/i/1000v/50/09/user-icon-female-person-symbol-profile-avatar-vector-20715009.jpg" style="width: 100px; height: 100px; border-radius: 10px;">
+        <div style="text-align: left;">
+          <h4 style="margin: 0;">Mayor Jane Doe</h4>
+          <p style="margin: 5px 0;">Served from 2010–2016</p>
+          <p style="margin: 5px 0;">Born: July 22, 1972</p>
+          <p style="margin: 5px 0;">A strong advocate for education and women's rights, Jane modernized barangay health and learning centers.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr style="margin: 20px 0; border: 0; border-top: 1px solid #ccc;">
+
+</div>
+
+</div>
+</div>
+</div>
+<div class="municipal-officials" style="flex: 0 0 300px; padding: 20px; color: #000;">
+
+  <div style="text-align: center; margin-bottom: 20px;">
+    <img src="http://wp-local.com/wp-content/uploads/2025/08/14de48f4-36f4-4472-8054-7e9aed14d22c.jpg"Mayor style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin-bottom: 10px;">
+    
+    <h3 style="margin: 0;">Hon. Sinforoso Jr. M. Sarmiento</h3>
+    <p style="margin: 2px 0 0;">Mayor</p>
+ 
+
+  <div style="text-align: center; margin-bottom: 20px;">
+    <br>
+    <h3 style="margin: 0;">Hon. Lemuel Padua Surtida</h3>
+    <p style="margin: 2px 0 0;">Vice Mayor</p>
+  </div>
+
+    <h4 style="margin-bottom: 10px;">Councilors:</h4>
+    <ul style="list-style-type: disc; padding-left: 20px; margin: 0;">
+      Isidoro, Hazel Cipriano
+     Gianan, Fredeswindo Jr. Arcilla
+      Mendoza, Joseph De Leon
+      Arcilla, Anthony Agunday
+      Laynes, Angelo Piolo Molod
+      Molina, Ariel Guerrero
+      Zuniega, Rafael Creo
+      Abundo, Alexander Sarmiento
+    </ul>
+  </div>
+</div>
+
+  </div>

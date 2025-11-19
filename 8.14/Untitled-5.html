@@ -1,0 +1,73 @@
+<style>
+.download-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.download-list li {
+  flex: 1 1 calc(33.333% - 15px);
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  min-height: 60px; /* Makes boxes taller */
+}
+
+.download-list li a {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  font-size: 15px;
+  color: #0066cc;
+  text-decoration: none;
+  width: 100%;
+  transition: color 0.3s ease;
+}
+
+.download-list li a:hover {
+  color: #004499;
+}
+
+.download-list li a::before {
+  content: '';
+  background: url('http://wp-local.com/wp-content/uploads/2025/08/pdf-file-format.png') no-repeat center;
+  background-size: contain;
+  display: inline-block;
+  margin-right: 10px;
+  width: 20px; /* Smaller icon */
+  height: 20px;
+}
+
+@media (max-width: 992px) {
+  .download-list li {
+    flex: 1 1 calc(50% - 15px);
+  }
+}
+
+@media (max-width: 600px) {
+  .download-list li {
+    flex: 1 1 100%;
+  }
+}
+</style>
+
+<ol class="download-list">
+  <li><a href="/annual-procurement-plan/">Annual Procurement Plan</a></li>
+  <li><a href="/apcpi/">APCPI</a></li>
+  <li><a href="/citizens-charter/">Citizen's Charter</a></li>
+  <li><a href="/consignment-bulletin/">Consignment Bulletin</a></li>
+  <li><a href="/contracts-notices/">Contract, Notice of Award, Notice to Proceed, Purchase Order, Resolution</a></li>
+  <li><a href="/goods-services-bid/">Goods and Services/Civil Works Bid Out</a></li>
+  <li><a href="/invitation-to-bid/">Invitation to Bid</a></li>
+  <li><a href="/delinquent-properties/">List of Delinquent Real Properties</a></li>
+  <li><a href="/notice-postponement/">Notice of Postponement</a></li>
+  <li><a href="/bidding-documents/">Philippine Bidding Documents</a></li>
+  <li><a href="/procurement-monitoring/">Procurement Monitoring Report</a></li>
+  <li><a href="/request-quotation/">Request for Quotation</a></li>
+</ol>

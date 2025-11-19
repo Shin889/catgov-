@@ -1,0 +1,691 @@
+<div class="cell large-6 municipality__tabs-container">
+  <ul class="tabs" data-tabs="" id="example-tabs">
+      <li class="tabs-title is-active">
+          <a href="#panel1" aria-selected="true" class="municipality__panel-tab">About</a>
+      </li>
+      <li class="tabs-title">
+          <a href="#panel2" class="municipality__panel-tab">Barangays</a>
+      </li>
+      <li class="tabs-title">
+          <a href="#panel3" class="municipality__panel-tab">Previous Officials</a>
+      </li>
+  </ul>
+  <div class="tabs-content" data-tabs-content="example-tabs" style="text-align: justify;">
+      <div class="tabs-panel is-active" id="panel1">
+              
+        <p><strong>BACKGROUND</strong></p>
+        <p>Historians theorize that the original settlers of Payo came from settlements in the Philippine mainland and landed on the north eastern coast of Catanduanes most probably on what is now the small islet of Panay. The early settlers set up their own governing body by electing from among themselves a tribal chief whom they fondly called “Payo” which could have been their vernacular term for headman. The name “Payo” stuck through the Spanish era until January 1, 1921 in pursuant to Exec. Order No. 55 issued by Gov. General Francis B. Harrison, it was separated from Viga and its name was changed to “Panganiban” in honor of Jose Blanca Panganiban who stood as sponsor during its inauguration. Panganiban is the official name of the town.</p>
+
+        <p><strong>HISTORY</strong></p>
+        <p>On January 1, 1921, Gov. Gen. <a href="https://en.wikipedia.org/wiki/Francis_Burton_Harrison">Francis B. Harrison</a> signed into law Executive Order No. 55 officially segregating the municipality from <a href="https://en.wikipedia.org/wiki/Viga,_Catanduanes">Viga</a>; thenceforth she was called Panganiban, in honor of Jose Blanca Panganiban who stood as sponsor during the inauguration. She is also known as Payo, after a native herb, hamapayo and due to its brevity, the name Payo is more commonly used.</p>
+
+<p>About 9,500 inhabitants populate her 7,772 km<sup>2</sup> area of vast plains and valleys painted gold with rice, of hills verdant with abaca and coconuts, and of rugged coastlines thick with <a href="https://www.conservation.org/stories/mangroves-facts">mangroves</a>. Deep within her bowels lie the richest coal deposits in the island, untapped as of yet.</p>
+
+<p>The pioneers were navigators and traders on commercial expeditions, descendants of the first wave of settlers from Borneo, Malay and China. In the early 13th century, another wave of seafarers, coming from southern Luzon mainland, got lost in storm, ventured inward into the mouth of Payo river and there found an Eden—and so they stayed and called this home.</p>
+
+
+     
+
+        </div>
+        <div class="tabs-panel" id="panel2">
+              <ul class="barangay-list">
+                 
+                <li>Alinawan</li>
+                <li>Babaguan</li>
+                <li>Bagong Bayan</li>
+                <li>Burabod</li>
+                <li>Cabuyoan</li>
+                <li>Cagdarao</li>
+                <li>Mabini</li>
+                <li>Maculiw</li>
+                <li>Panay</li>
+                <li>Taopon (Pangcayanan)</li>
+                <li>Salvacion (Pob.)</li>
+                <li>San Antonio</li>
+                <li>San Joaquin (Pob.)</li>
+                <li>San Jose (Pob.)</li>
+                <li>San Juan (Pob.)</li>
+                <li>San Miguel</li>
+                <li>San Nicolas (Pob.)</li>
+                <li>San Pedro (Pob.)</li>
+                <li>San Vicente (Pob.)</li>
+                <li>Santa Ana (Pob.)</li>
+                <li>Santa Maria (Pob.)</li>
+                <li>Santo Santiago (Pob.)</li>
+                <li>Tibo</li>
+  
+    
+
+        
+            </ul>
+        </div>
+
+      <style>
+   
+    <style>
+      .official-profile {
+        position: relative;
+        margin-bottom: 10px;
+      }
+
+
+      .official-profile:hover .profile-modal {
+        display: block;
+      }
+
+      .official-profile a {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        font-size: 18px;
+        font-weight: 600;
+        text-decoration: none;
+        color: #000;
+        padding: 10px 15px;
+        border-radius: 10px;
+        transition: background 0.3s ease;
+      }
+
+      .hover-target {
+        display: inline-block;
+        position: relative;
+        cursor: pointer;
+      }
+
+      .official-profile a:hover {
+        background: #f1f1f1;
+      }
+
+      .official-profile img {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      .profile-modal {
+        position: absolute;
+        top: 0;
+        left: 100%;
+        margin-left: 10px;
+        background: white;
+        padding: 15px;
+        width: 330px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        z-index: 1000;
+        display: none;
+      }
+
+      .hover-target:hover .profile-modal {
+        display: block;
+      }
+
+      .profile-modal img {
+        width: 80px;
+        height: 80px;
+        border-radius: 10px;
+        object-fit: cover;
+      }
+
+      .profile-modal h4 {
+        margin: 0;
+        font-size: 15px;
+      }
+
+      .profile-modal p {
+        font-size: 13px;
+        margin: 4px 0;
+        color: #555;
+      }
+
+      .profile-modal h3 {
+        text-align: center;
+      }
+
+      hr {
+        margin: 20px 0;
+        border: none;
+        border-top: 1px dashed #aaa;
+      }
+
+      .paging-btn {
+        padding: 6px 12px;
+        background-color: #007BFF;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 13px;
+        transition: background-color 0.3s;
+      }
+
+      .paging-btn:hover {
+        background-color: #0056b3;
+      }
+    </style>
+
+    <div class="tabs-panel" id="panel3">
+
+
+      <h4 style="margin-top: 0;">Mayors</h4>
+
+      <div id="mayorTableContainer" style="position: relative;">
+        <table id="mayorTable" style="width: 100%; border-collapse: collapse; font-size: 14px; margin-bottom: 20px;">
+          <thead>
+            <tr style="background-color: #f1f1f1;">
+              <th style="text-align: left; padding: 8px; border-bottom: 1px solid #ccc;">Name</th>
+              <th style="text-align: center; padding: 8px; border-bottom: 1px solid #ccc;">Term Start</th>
+              <th style="text-align: center; padding: 8px; border-bottom: 1px solid #ccc;">Term End</th>
+            </tr>
+          </thead>
+          <tbody id="mayorTableBody">
+            <tr class="mayorRow">
+              <td style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                <div class="hover-target" style="position: relative; display: inline-block;">
+                  Cesar Jacob Robles 
+                  <div class="profile-modal top-right">
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                      <img src="https://cdn-icons-png.flaticon.com/512/4850/4850493.png"
+                        style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                      <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                        <h4 style="margin: 0;">Cesar Jacob Robles (NPC)</h4>
+                        <p style="text-align: center;">Date of Birth: January 9, 1971 </p>
+                        <p style="text-align: justify;">Looking back on the past year, I am proud of the progress we’ve made together.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2019</td>
+              <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+            </tr>
+
+            <tr class="mayorRow">
+              <td style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                <div class="hover-target" style="position: relative; display: inline-block;">
+                  Cesar Jacob Robles 
+                  <div class="profile-modal top-right">
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                      <img src="https://cdn-icons-png.flaticon.com/512/4850/4850493.png"
+                        style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                      <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                        <h4 style="margin: 0;">Cesar Jacob Robles (NPC)</h4>
+                        <p style="text-align: center;">Date of Birth: January 9, 1971 </p>
+                        <p style="text-align: justify;">Looking back on the past year, I am proud of the progress we’ve made together.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+              <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+            </tr>
+            <script>
+              const totalRows = 30;
+              for (let i = 1; i <= totalRows; i++) {
+                document.write(`
+              
+                  `);
+              }
+            </script>
+          </tbody>
+        </table>
+
+        <script>
+          const rowsPerPage = 10;
+          let currentPage = 1;
+
+          function updateMayorTable() {
+            const rows = document.querySelectorAll(".mayorRow");
+            const totalPages = Math.ceil(rows.length / rowsPerPage);
+
+            rows.forEach((row, index) => {
+              row.style.display = (
+                index >= (currentPage - 1) * rowsPerPage &&
+                index < currentPage * rowsPerPage
+              ) ? '' : 'none';
+            });
+
+            document.getElementById("mayorPageInfo").textContent = Page ${ currentPage } of ${ totalPages };
+          }
+
+          function changeMayorPage(direction) {
+            const rows = document.querySelectorAll(".mayorRow");
+            const totalPages = Math.ceil(rows.length / rowsPerPage);
+
+            currentPage += direction;
+            if (currentPage < 1) currentPage = 1;
+            if (currentPage > totalPages) currentPage = totalPages;
+
+            updateMayorTable();
+          }
+
+
+          updateMayorTable();
+        </script>
+
+
+        <script>
+          document.addEventListener("DOMContentLoaded", () => {
+            document.querySelectorAll(".hover-target").forEach(target => {
+              target.addEventListener("mouseenter", () => {
+                const modal = target.querySelector(".profile-modal");
+                if (modal) modal.style.display = "block";
+              });
+              target.addEventListener("mouseleave", () => {
+                const modal = target.querySelector(".profile-modal");
+                if (modal) modal.style.display = "none";
+              });
+            });
+          });
+        </script>
+
+
+        <div style="text-align: right; margin-bottom: 20px;">
+          <button onclick="changeMayorPage(-1)">Previous</button>
+
+          <button onclick="changeMayorPage(1)">Next</button>
+        </div>
+      </div>
+
+      <script>
+        const rowsPerPage = 10;
+        let currentPage = 1;
+
+        function updateMayorTable() {
+          const rows = document.querySelectorAll(".mayorRow");
+          const totalPages = Math.ceil(rows.length / rowsPerPage);
+          const totalEntries = rows.length;
+
+
+          rows.forEach((row, index) => {
+            row.style.display = (
+              index >= (currentPage - 1) * rowsPerPage &&
+              index < currentPage * rowsPerPage
+            ) ? '' : 'none';
+          });
+
+
+          const start = (currentPage - 1) * rowsPerPage + 1;
+          const end = Math.min(currentPage * rowsPerPage, totalEntries);
+          document.getElementById("mayorPageInfo").textContent = Page ${ currentPage } of ${ totalPages };
+          document.getElementById("visibleCount").textContent = ${ start }–${ end };
+          document.getElementById("totalEntries").textContent = totalEntries;
+        }
+
+        function changeMayorPage(direction) {
+          const rows = document.querySelectorAll(".mayorRow");
+          const totalPages = Math.ceil(rows.length / rowsPerPage);
+
+          currentPage += direction;
+          if (currentPage < 1) currentPage = 1;
+          if (currentPage > totalPages) currentPage = totalPages;
+
+          updateMayorTable();
+        }
+
+        document.addEventListener("DOMContentLoaded", updateMayorTable);
+      </script>
+
+      <hr style="margin: 15px 0; border-top: 1px solid #ccc;">
+            <h4 style="margin-top: 0;">Vice Mayors</h4>
+
+            <div id="viceMayorTableContainer" style="position: relative;">
+                <table id="viceMayorTable"
+                    style="width: 100%; border-collapse: collapse; font-size: 14px; margin-bottom: 20px;">
+                    <thead>
+                        <tr style="background-color: #f1f1f1;">
+                            <th style="text-align: left; padding: 8px; border-bottom: 1px solid #ccc;">Name</th>
+                            <th style="text-align: center; padding: 8px; border-bottom: 1px solid #ccc;">Term Start</th>
+                            <th style="text-align: center; padding: 8px; border-bottom: 1px solid #ccc;">Term End</th>
+                        </tr>
+                    </thead>
+                    <tbody id="viceMayorTableBody">
+                        <tr class="viceMayorRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Arvin Vega Atencia (Arvs) 
+                                    <div class="profile-modal top-right">
+                                        <div style="display: flex; align-items: center; gap: 10px;">
+                                            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+                                                style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                            <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                                <h4 style="margin: 0;">Arvin Vega Atencia (Arvs) (PDR)</h4>
+                                                <p style="text-align: center;">Date of Birth: July 11, 1975</p>
+                                                <p style="text-align: justify;">An advocate for youth programs, Jane Jr.
+                                                    launched barangay sports leagues and literacy campaigns.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                        </tr>
+                    </tbody>
+                </table>
+            <script>
+              const totalRows = 30;
+              for (let i = 1; i <= totalRows; i++) {
+                document.write('');
+              }
+            </script>
+          </tbody>
+        </table>
+
+        <div style="text-align: right; margin-bottom: 20px;">
+          <button onclick="changeViceMayorPage(-1)">Previous</button>
+
+          <button onclick="changeViceMayorPage(1)">Next</button>
+        </div>
+      </div>
+
+      <script>
+        const viceMayorRowsPerPage = 10;
+        let viceMayorCurrentPage = 1;
+
+        function updateViceMayorTable() {
+          const rows = document.querySelectorAll(".viceMayorRow");
+          const totalPages = Math.ceil(rows.length / viceMayorRowsPerPage);
+
+          rows.forEach((row, index) => {
+            row.style.display = (
+              index >= (viceMayorCurrentPage - 1) * viceMayorRowsPerPage &&
+              index < viceMayorCurrentPage * viceMayorRowsPerPage
+            ) ? '' : 'none';
+          });
+
+          document.getElementById("viceMayorPageInfo").textContent = Page ${ viceMayorCurrentPage } of ${ totalPages };
+        }
+
+        function changeViceMayorPage(direction) {
+          const rows = document.querySelectorAll(".viceMayorRow");
+          const totalPages = Math.ceil(rows.length / viceMayorRowsPerPage);
+
+          viceMayorCurrentPage += direction;
+          if (viceMayorCurrentPage < 1) viceMayorCurrentPage = 1;
+          if (viceMayorCurrentPage > totalPages) viceMayorCurrentPage = totalPages;
+
+          updateViceMayorTable();
+        }
+
+        updateViceMayorTable();
+      </script>
+
+      <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          document.querySelectorAll(".hover-target").forEach(target => {
+            target.addEventListener("mouseenter", () => {
+              const modal = target.querySelector(".profile-modal");
+              if (modal) modal.style.display = "block";
+            });
+            target.addEventListener("mouseleave", () => {
+              const modal = target.querySelector(".profile-modal");
+              if (modal) modal.style.display = "none";
+            });
+          });
+        });
+      </script>
+
+
+      </tbody>
+      </table>
+
+      <hr style="margin: 15px 0; border-top: 1px solid #ccc;">
+      <h4 style="margin-top:0;">Councilors</h4>
+
+      <div id="councilorTableContainer" style="position: relative;">
+                <table id="councilorTable"
+                    style="width: 100%; border-collapse: collapse; font-size: 14px; margin-bottom: 20px;">
+                    <thead>
+                        <tr style="background-color: #f1f1f1;">
+                            <th style="text-align: left; padding: 8px; border-bottom: 1px solid #ccc;">Name</th>
+                            <th style="text-align: center; padding: 8px; border-bottom: 1px solid #ccc;">Term Start</th>
+                            <th style="text-align: center; padding: 8px; border-bottom: 1px solid #ccc;">Term End</th>
+                        </tr>
+                    </thead>
+                    <tbody id="councilorTableBody">
+
+                        <tr class="councilorRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Jeffrey Delos Santos Velasco 
+                                    <div class="profile-modal top-right">
+                                        <div style="display: flex; align-items: center; gap: 10px;">
+                                            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+                                                style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                            <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                                <h4 style="margin: 0;">Jeffrey Delos Santos Velasco (Npc)</h4>
+                                                <p style="text-align: justify;">Looking back on the past year, I am proud of the progress we’ve made together.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                        </tr>
+                        <tr class="councilorRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Francis Karl Angeles Aquino 
+                                    <div class="profile-modal top-right">
+                                        <div style="display: flex; align-items: center; gap: 10px;">
+                                            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+                                                style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                            <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                                <h4 style="margin: 0;">Francis Karl Angeles Aquino (Pdplbn)</h4>
+                                                <p style="text-align: justify;">Looking back on the past year, I am proud of the progress we’ve made together.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                        </tr>
+                        <tr class="councilorRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Luz Villegas Velasco 
+                                    <div class="profile-modal top-right">
+                                        <div style="display: flex; align-items: center; gap: 10px;">
+                                            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+                                                style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                            <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                                <h4 style="margin: 0;">Luz Villegas Velasco (Lakas)</h4>
+                                                <p style="text-align: justify;">Looking back on the past year, I am proud of the progress we’ve made together.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                        </tr>
+                        <tr class="councilorRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Jocelyn Villamor Cabrera 
+                                    <div class="profile-modal top-right">
+                                        <div style="display: flex; align-items: center; gap: 10px;">
+                                            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+                                                style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                            <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                                <h4 style="margin: 0;">Jocelyn Villamor Cabrera (Lakas)</h4>
+                                                <p style="text-align: justify;">Looking back on the past year, I am proud of the progress we’ve made together.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                        </tr>
+                        <tr class="councilorRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Melchor Jacob Velasco (Palen) 
+                                    <div class="profile-modal top-right">
+                                        <div style="display: flex; align-items: center; gap: 10px;">
+                                            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+                                                style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                            <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                                <h4 style="margin: 0;">Melchor Jacob Velasco (Palen) (Npc)</h4>
+                                                <p style="text-align: justify;">Looking back on the past year, I am proud of the progress we’ve made together.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                        </tr>
+                        <tr class="councilorRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Belen Villafuerte Fernandez 
+                                    <div class="profile-modal top-right">
+                                        <div style="display: flex; align-items: center; gap: 10px;">
+                                            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+                                                style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                            <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                                <h4 style="margin: 0;">Belen Villafuerte Fernandez (Pdr)</h4>
+                                                <p style="text-align: justify;">Looking back on the past year, I am proud of the progress we’ve made together.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                        </tr>
+                        <tr class="councilorRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Ricardo Aquino Peña (Paroy)  
+                                    <div class="profile-modal top-right">
+                                        <div style="display: flex; align-items: center; gap: 10px;">
+                                            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+                                                style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                            <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                                <h4 style="margin: 0;">Ricardo Aquino Peña (Paroy) (Npc)</h4>
+                                                <p style="text-align: justify;">Looking back on the past year, I am proud of the progress we’ve made together.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                        </tr>
+                        <tr class="councilorRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Salvador Manlangit Suarez (Jun) 
+                                    <div class="profile-modal top-right">
+                                        <div style="display: flex; align-items: center; gap: 10px;">
+                                            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+                                                style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                            <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                                <h4 style="margin: 0;">Salvador Manlangit Suarez (Jun) (Pdr)</h4>
+                                                <p style="text-align: justify;">Looking back on the past year, I am proud of the progress we’ve made together..</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+      <div style="text-align: right; margin-bottom: 20px;">
+        <button onclick="changeCouncilorPage(-1)">Previous</button>
+
+        <button onclick="changeCouncilorPage(1)">Next</button>
+        <hr style="margin: 15px 0; border-top: 1px solid #ccc;">
+      </div>
+
+      <script>
+        const councilorRowsPerPage = 10;
+        let councilorCurrentPage = 1;
+
+        function updateCouncilorTable() {
+          const rows = document.querySelectorAll(".councilorRow");
+          const totalPages = Math.ceil(rows.length / councilorRowsPerPage);
+
+          rows.forEach((row, index) => {
+            row.style.display = (
+              index >= (councilorCurrentPage - 1) * councilorRowsPerPage &&
+              index < councilorCurrentPage * councilorRowsPerPage
+            ) ? '' : 'none';
+          });
+
+          document.getElementById("councilorPageInfo").textContent = Page ${ councilorCurrentPage } of ${ totalPages };
+        }
+
+        function changeCouncilorPage(direction) {
+          const rows = document.querySelectorAll(".councilorRow");
+          const totalPages = Math.ceil(rows.length / councilorRowsPerPage);
+
+          councilorCurrentPage += direction;
+          if (councilorCurrentPage < 1) councilorCurrentPage = 1;
+          if (councilorCurrentPage > totalPages) councilorCurrentPage = totalPages;
+
+          updateCouncilorTable();
+        }
+
+        updateCouncilorTable();
+      </script>
+  
+  </div>
+  
+  
+  
+  </div>
+  </div>
+  </div>
+<div class="municipal-officials" style="flex: 0 0 300px; padding: 20px;">
+
+  <div style="text-align: center; margin-bottom: 18px;">
+    <img src="http://wp-local.com/wp-content/uploads/2025/08/Cesar-Robles-Panganiban.png"Mayor" style="width: 160px; height: 160px; border-radius: 50%; object-fit: cover; margin-bottom: 10px;">
+    
+    <p style="margin: 0; padding: 0; line-height: 2;"><strong>Cesar Jacob Robles</strong></p>
+    <p style="margin: 0; padding: 0; line-height: 1;">Mayor</p>
+ </div>
+
+  <div style="text-align: center; margin-bottom: 18px;">
+    <p style="margin: 0; padding: 0; line-height: 2;"><strong>Arvin Vega Atencia</strong></p>
+    <p style="margin: 0; padding: 0; line-height: 1;">Vice Mayor</p>
+  </div>
+            <hr style="border: none; border-top: 1px solid #ddd; margin: 0 0 30px 0;">
+    <div style="text-align: center; margin-bottom: 18px;">
+    <p style="margin: 0; padding: 0; line-height: 2; font-size: 14px;"><strong>MUNICIPAL COUNCILORS</strong></p>
+    <ul style="list-style-type: none; margin: 0; line-height: 1.5;">
+      <li>Fernandez, Ian Tapar</li>
+      <li>Villamor, Silvestre Jr. Velasco</li>
+      <li>Angeles, Ma. Kristel Aquino</li>
+      <li>Velasco, Luz Villega</li>
+      <li>Vallespin, Sanny Tolentino</li>
+      <li>Morales, Edgardo Vallespin</li>
+      <li>Velasco, Primo Jr. Aquino</li>
+      <li>Vargas, Felix Jr. Urgel</li>
+    </ul>
+    </div>
+  </div>
+</div>
+
+  </div>

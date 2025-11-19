@@ -1,0 +1,130 @@
+<div class="block-inner">
+
+  <div class="morpogres-logo">
+    <img src="http://wp-local.com/wp-content/uploads/2025/08/525790149_1074655171014855_2488804827919991316_n-1.png" alt="Catanduanes Logo" />
+  </div>
+
+  <nav class="gov-buttons">
+    <a href="http://wp-local.com/governors-corner/" class="gov-btn">
+      <div class="icon-circle">
+        <img src="http://wp-local.com/wp-content/uploads/2025/08/High-Contrast-Gov-2.png" alt="Governor">
+      </div>
+      <span>MEET THE GOVERNOR</span>
+    </a>
+    <a href="http://wp-local.com/transparency/" class="gov-btn transparent">
+      <div class="icon-circle">
+        <img src="https://op-proper.gov.ph/wp-content/themes/gwt-wordpress-25.3.3/images/transparency-seal-160x160.png" alt="Transparency Seal">
+      </div>
+      <span>TRANSPARENCY SEAL</span>
+    </a>
+    <a href="#" class="gov-btn">
+      <div class="icon-circle">
+        <img src="https://via.placeholder.com/48" alt="Citizens Charter">
+      </div>
+      <span>CITIZENS CHARTER</span>
+    </a>
+    <a href="#" class="gov-btn">
+      <div class="icon-circle">
+        <img src="https://via.placeholder.com/48" alt="Executive Orders">
+      </div>
+      <span>EXECUTIVE ORDERS</span>
+    </a>
+  </nav>
+
+</div>
+<style>
+.block-inner {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.morpogres-logo {
+  width: 290px;          /* fixed width (or max-width: 290px if responsive) */
+  margin: 0 auto 1rem;   /* center logo */
+  text-align: center;
+}
+
+.morpogres-logo img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+.morpro {
+  color: #002266; /* Dark blue */
+}
+
+.gov-buttons {
+  width: 290px;         /* match morpogres-logo width */
+  margin: 0 auto;       /* center same as logo */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.gov-btn {
+  width: 100%;          /* fill gov-buttons width */
+  margin: 0;            /* no auto centering */
+  display: flex;
+  align-items: center;
+  border-radius: 25px;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+  color: #0066cc;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+/*.gov-btn {
+  width: 290px;
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  background-size: cover;
+  border-radius: 25px;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+  color: #0066cc;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0;  
+  position: relative;
+  text-decoration: none;
+  user-select: none;
+  overflow: hidden; 
+}*/
+
+.gov-btn .icon-circle {
+  width: auto;     /* or whatever fixed size you want */
+  height: auto;    /* keep it equal for circle */
+  flex: 0 0 auto;  /* don’t let flexbox stretch it */
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gov-btn .icon-circle img {
+  max-width: 50px;
+  max-height: 50px;
+  border-radius: 50%;
+  user-select: none;
+}
+
+.gov-btn span {
+  flex: 1; 
+  padding: 0 1rem; /* space between icon-circle and text */
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+</style>

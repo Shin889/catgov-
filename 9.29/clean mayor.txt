@@ -1,0 +1,431 @@
+<div class="tabs-panel" id="panel3">
+
+
+          <h4 style="margin-top: 0;">Mayors</h4>
+
+          <div id="mayorTableContainer" style="position: relative;">
+              <table id="mayorTable"
+                  style="width: 100%; border-collapse: collapse; font-size: 14px; margin-bottom: 20px;">
+                  <thead>
+                      <tr style="background-color: #f1f1f1;">
+                          <th class="sortable" style="text-align: left; padding: 8px; border-bottom: 1px solid #ccc;"
+                              data-column="name" data-type="string">
+                              Name <span class="sort-arrow"></span>
+                          </th>
+                          <th class="sortable desc"
+                              style="text-align: center; padding: 8px; border-bottom: 1px solid #ccc;"
+                              data-column="termStart" data-type="number">
+                              Term Start<span class="sort-arrow"></span>
+                          </th>
+
+                          <th class="sortable"
+                              style="text-align: center; padding: 8px; border-bottom: 1px solid #ccc;"
+                              data-column="termEnd" data-type="number">
+                              Term End <span class="sort-arrow"></span>
+                          </th>
+                      </tr>
+                  </thead>
+                  <tbody id="mayorTableBody">
+                      <tr class="mayorRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                  Glenda V. Aguilar
+                                  <div class="profile-modal top-right">
+                                      <div style="display: flex; align-items: center; gap: 10px;">
+                                       <img src="/wp-content/uploads/2025/08/Mayor-Border-female.png"
+                                              style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                          <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                              <h4 style="margin: 0;">Glenda V. Aguilar</h4>
+                                              <p style="text-align: justify;">Looking back on the past year, I am
+                                                  proud of the progress we’ve made together.</p>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                      </tr>
+                      <tr class="mayorRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                  Glenda V. Aguilar
+                                  <div class="profile-modal top-right">
+                                      <div style="display: flex; align-items: center; gap: 10px;">
+                                       <img src="/wp-content/uploads/2025/08/Mayor-Border-female.png"
+                                              style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                          <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                              <h4 style="margin: 0;">Glenda V. Aguilar</h4>
+                                              <p style="text-align: justify;">Looking back on the past year, I am
+                                                  proud of the progress we’ve made together.</p>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2019</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                      </tr>
+                      <tr class="mayorRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                  Agnes B. Popa
+                                  <div class="profile-modal top-right">
+                                      <div style="display: flex; align-items: center; gap: 10px;">
+                                       <img src="/wp-content/uploads/2025/08/Mayor-Border-female.png"
+                                              style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                          <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                              <h4 style="margin: 0;">Agnes B. Popa</h4>
+                                              <p style="text-align: justify;">Looking back on the past year, I am
+                                                  proud of the progress we’ve made together.</p>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2016</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2019</td>
+                      </tr>
+                      <tr class="mayorRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                  Salvacion P. Isuela
+                                  <div class="profile-modal top-right">
+                                      <div style="display: flex; align-items: center; gap: 10px;">
+                                       <img src="/wp-content/uploads/2025/08/Mayor-Border-female.png"
+                                              style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                          <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                              <h4 style="margin: 0;">Salvacion P. Isuela</h4>
+                                              <p style="text-align: justify;">Looking back on the past year, I am
+                                                  proud of the progress we’ve made together.</p>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2013</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2016</td>
+                      </tr>
+                      <tr class="mayorRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                  Agnes B. Popa
+                                  <div class="profile-modal top-right">
+                                      <div style="display: flex; align-items: center; gap: 10px;">
+                                       <img src="/wp-content/uploads/2025/08/Mayor-Border-female.png"
+                                              style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                          <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                              <h4 style="margin: 0;">Agnes B. Popa</h4>
+                                              <p style="text-align: justify;">Looking back on the past year, I am
+                                                  proud of the progress we’ve made together.</p>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2010</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2013</td>
+                      </tr>
+                      <tr class="mayorRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                  Agnes B. Popa
+                                  <div class="profile-modal top-right">
+                                      <div style="display: flex; align-items: center; gap: 10px;">
+                                       <img src="/wp-content/uploads/2025/08/Mayor-Border-female.png"
+                                              style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                          <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                              <h4 style="margin: 0;">Agnes B. Popa</h4>
+                                              <p style="text-align: justify;">Looking back on the past year, I am
+                                                  proud of the progress we’ve made together.</p>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2007</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2010</td>
+                      </tr>
+                      <tr class="mayorRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                  Maria Theresa S. Qua
+                                  <div class="profile-modal top-right">
+                                      <div style="display: flex; align-items: center; gap: 10px;">
+                                       <img src="/wp-content/uploads/2025/08/Mayor-Border-female.png"
+                                              style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                          <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                              <h4 style="margin: 0;">Maria Theresa S. Qua</h4>
+                                              <p style="text-align: justify;">Looking back on the past year, I am
+                                                  proud of the progress we’ve made together.</p>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2004</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2007</td>
+                      </tr>
+                      <tr class="mayorRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                  Lourdes F. Idanan
+                                  <div class="profile-modal top-right">
+                                      <div style="display: flex; align-items: center; gap: 10px;">
+                                       <img src="/wp-content/uploads/2025/08/Mayor-Border-female.png"
+                                              style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                          <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                              <h4 style="margin: 0;">Lourdes F. Idanan</h4>
+                                              <p style="text-align: justify;">Looking back on the past year, I am
+                                                  proud of the progress we’ve made together.</p>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2001</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2004</td>
+                      </tr>
+                      <tr class="mayorRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                  Francisco E. Idanan
+                                  <div class="profile-modal top-right">
+                                      <div style="display: flex; align-items: center; gap: 10px;">
+                                       <img src="/wp-content/uploads/2025/08/Mayor-Border-male.png"
+                                              style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                          <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                              <h4 style="margin: 0;">Francisco E. Idanan</h4>
+                                              <p style="text-align: justify;">Looking back on the past year, I am
+                                                  proud of the progress we’ve made together.</p>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2000</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2001</td>
+                      </tr>
+                  </tbody>
+
+              </table>
+              
+
+   <div class="pagination-wrapper"
+   style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
+   <p id="pageInfo" style="margin: 0; font-weight: bold; font-size: 14px;">This is page 1 out of X</p>
+   <div id="mayorPagination" class="pagination" style="display: flex; gap: 5px;"></div>
+</div>
+
+
+<script>
+              (function sortMayorsByTermStartDesc() {
+                  const table = document.getElementById("mayorTable");
+                  if (!table) return;
+                  const tbody = table.querySelector("tbody");
+                  if (!tbody) return;
+
+                  function extractYear(text) {
+                      if (!text) return 0;
+                      const m = String(text).match(/\d{4}/); // find first 4-digit year
+                      return m ? parseInt(m[0], 10) : 0;
+                  }
+
+                  const rows = Array.from(tbody.querySelectorAll("tr.mayorRow"));
+                  if (!rows.length) return;
+
+                  rows.sort((a, b) => {
+                      const yearA = extractYear(a.cells[1]?.textContent.trim() ?? "");
+                      const yearB = extractYear(b.cells[1]?.textContent.trim() ?? "");
+                      return yearB - yearA; // latest (biggest year) first
+                  });
+
+                  // Re-append in sorted order
+                  rows.forEach(row => tbody.appendChild(row));
+
+                  const termStartHeader = table.querySelector("th[data-column='termStart']");
+                  if (termStartHeader) termStartHeader.classList.add("desc");
+
+                  if (typeof updateMayorTable === "function") {
+                      try { updateMayorTable(); } catch (e) { console.warn("updateMayorTable call failed:", e); }
+                  }
+              })();
+          </script>
+
+<hr style="margin: 15px 0; border-top: 1px solid #ccc;">
+<script>
+  const rowsPerPage = 10;
+  let currentPage = 1;
+
+  function updateMayorTable() {
+    const rows = document.querySelectorAll(".mayorRow");
+    const totalPages = Math.ceil(rows.length / rowsPerPage);
+
+    rows.forEach((row, index) => {
+      row.style.display =
+        index >= (currentPage - 1) * rowsPerPage &&
+        index < currentPage * rowsPerPage
+          ? ""
+          : "none";
+    });
+
+    renderPagination(totalPages);
+  }
+
+  function changeMayorPage(page) {
+    const rows = document.querySelectorAll(".mayorRow");
+    const totalPages = Math.ceil(rows.length / rowsPerPage);
+
+    if (page < 1) page = 1;
+    if (page > totalPages) page = totalPages;
+
+    currentPage = page;
+    updateMayorTable();
+  }
+
+  function renderPagination(totalPages) {
+    const pageInfo = document.getElementById("pageInfo");
+    const container = document.getElementById("mayorPagination");
+
+    pageInfo.textContent = `This is page ${currentPage} out of ${totalPages}`;
+    container.innerHTML = "";
+
+    const prevBtn = document.createElement("button");
+    prevBtn.textContent = "<< Prev";
+    prevBtn.className = currentPage === 1 ? "disabled" : "";
+    prevBtn.disabled = currentPage === 1;
+    prevBtn.onclick = () => changeMayorPage(currentPage - 1);
+    container.appendChild(prevBtn);
+
+    const maxPagesToShow = 7;
+    let startPage = 1;
+    let endPage = totalPages;
+
+    if (totalPages > maxPagesToShow) {
+      if (currentPage <= 4) {
+        endPage = 5;
+      } else if (currentPage >= totalPages - 3) {
+        startPage = totalPages - 4;
+      } else {
+        startPage = currentPage - 2;
+        endPage = currentPage + 2;
+      }
+    }
+
+    if (startPage > 1) {
+      addPageButton(container, 1);
+      if (startPage > 2) addEllipsis(container);
+    }
+
+    for (let i = startPage; i <= endPage; i++) {
+      addPageButton(container, i);
+    }
+
+    if (endPage < totalPages) {
+      if (endPage < totalPages - 1) addEllipsis(container);
+      addPageButton(container, totalPages);
+    }
+
+    const nextBtn = document.createElement("button");
+    nextBtn.textContent = "Next >>";
+    nextBtn.className = currentPage === totalPages ? "disabled" : "";
+    nextBtn.disabled = currentPage === totalPages;
+    nextBtn.onclick = () => changeMayorPage(currentPage + 1);
+    container.appendChild(nextBtn);
+  }
+
+  function addPageButton(container, pageNumber) {
+    const btn = document.createElement("button");
+    btn.textContent = pageNumber;
+    if (currentPage === pageNumber) btn.className = "active";
+    btn.onclick = () => changeMayorPage(pageNumber);
+    container.appendChild(btn);
+  }
+
+  function addEllipsis(container) {
+    const ellipsis = document.createElement("span");
+    ellipsis.textContent = "...";
+    ellipsis.className = "ellipsis";
+    container.appendChild(ellipsis);
+  }
+
+  
+document.addEventListener("DOMContentLoaded", function () {
+  const table = document.getElementById("mayorTable");
+  const headers = table.querySelectorAll("th.sortable");
+
+  // store state per column
+  let sortState = {};
+
+  headers.forEach((header, index) => {
+    header.addEventListener("click", () => {
+      const type = header.dataset.type;
+      const tbody = table.querySelector("tbody");
+      const rows = Array.from(tbody.querySelectorAll("tr"));
+
+      // kunin last state ng column na ito
+      let newOrder = sortState[index] === "asc" ? "desc" : "asc";
+      sortState[index] = newOrder; // update state
+
+      // reset lang yung class sa lahat ng headers (visual lang)
+      headers.forEach((h) => h.classList.remove("asc", "desc"));
+      header.classList.add(newOrder);
+
+      // sorting logic
+      rows.sort((a, b) => {
+        let aText = a.cells[index].innerText.trim();
+        let bText = b.cells[index].innerText.trim();
+
+        if (type === "number") {
+          aText = parseInt(aText, 10) || 0;
+          bText = parseInt(bText, 10) || 0;
+        }
+
+        if (aText < bText) return newOrder === "asc" ? -1 : 1;
+        if (aText > bText) return newOrder === "asc" ? 1 : -1;
+        return 0;
+      });
+
+      rows.forEach((row) => tbody.appendChild(row));
+
+      // reset page + zebra
+      currentPage = 1;
+      updateMayorTable();
+    });
+  });
+
+  updateMayorTable();
+});
+</script>
+
+
+
+
+
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+
+              <script>
+                  document.addEventListener("DOMContentLoaded", () => {
+                      document.querySelectorAll(".hover-target").forEach(target => {
+                          target.addEventListener("mouseenter", () => {
+                              const modal = target.querySelector(".profile-modal");
+                              if (modal) modal.style.display = "block";
+                          });
+                          target.addEventListener("mouseleave", () => {
+                              const modal = target.querySelector(".profile-modal");
+                              if (modal) modal.style.display = "none";
+                          });
+                      });
+                  });
+              </script>

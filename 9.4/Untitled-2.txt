@@ -1,0 +1,2060 @@
+<div class="cell large-6 municipality__tabs-container">
+  <ul class="tabs" data-tabs="" id="example-tabs">
+      <li class="tabs-title is-active">
+          <a href="#panel1" aria-selected="true" class="municipality__panel-tab">About</a>
+      </li>
+      <li class="tabs-title">
+          <a href="#panel2" class="municipality__panel-tab">Barangays</a>
+      </li>
+      <li class="tabs-title">
+          <a href="#panel3" class="municipality__panel-tab">Previous Officials</a>
+      </li>
+  </ul>
+  <div class="tabs-content" data-tabs-content="example-tabs" style="text-align: justify;">
+      <div class="tabs-panel is-active" id="panel1">
+              
+      
+        <p><strong>BACKGROUND</strong> </p>
+       <p>PANDAN, the name of the municipality was termed from pandan shrubs, which then surrounded the poblacion to protect the inhabitants from Moro pirates who used to invade the place. The municipality lies on the northern tip province of Catanduanes, 96 kilometers from the capital town of Virac. Bounded on the south by the municipality of Caramoran; on the west by the Maqueda Channel; on the east by the municipality of Bagamanoc; and on the north by the Pacific Ocean. This is the town where illustrious and eminent people of the province hails like the late senator Jose O. Vera and  immigration commissioner and governor Leandro I. Verceles Sr.. They claim that this is the most hospitable and sociable town in the island of Catanduanes.</p>
+               
+       <p><strong>HISTORY</strong> </p>
+       <p>Formerly the town site was located some two kilometers away south of the present site. Then the people were disturbed by constant depredation of bandits coming from other places.
+
+        The present site has been chosen because it was near the sea and the fishermen found it very convenient for their trade, however, being near the sea, it was vulnerable to Moros who always come to get their belongings or even capture some people.
+        
+        As a defense against such moro raids, the people planted pandan shrubs close to each other to form a formidable defense against invaders. When the Spaniards came they found the plants around the poblacion in great abundance. When asked what the name of the shrubs was, the people told them that they were pandan shrubs. Thus, the Spaniards called the place Pandan.
+        
+        The municipality lies on the northern tip of the province, 96 kilometers from the capital town of Virac. Bounded on the south by the municipality of Caramoran, on the west by the Maqueda Channel, on the east by the municipality of Bagamanoc and on the north by the Pacific Ocean. It has a total land area of 11,990 hectares. This is a town of 17,096 friendly and hospitable people, to which 99% are Roman Catholic.
+        
+        Of the 26 barangays that comprise the municipality, four of which actually form the town proper, which are Libod, the biggest barangay in terms of population, Napo, Pandan del Sur and Pandan del Norte. The rest are found usually near the seashore. The rest being an inland barangays.
+        
+        The municipality does not only boast of the natural beauties, it has which are the Parway, Mangbang, Parola beaches, the Hinik-Hinik falls (Hinik-hinik is a local term for rain shower) and Minaipit falls, but especially of its being a hometown of Senators, Congressman, Governor, Cardinal and Ambassador.
+        
+        The people of Pandan are generally peace loving, God fearing and are happy people. Everyone in the community is a brother, a sister and a friend where the products of which could be shared even food itself without thought of having it repaid or reciprocated. Visitors are offered the comforts that the family could afford even it means that the owner should lay on the floor just to make the visitor eased at home by using the “papag”. And that is not enough, before going home; products of their yard would be wrapped for you to bring in your family plus a bunch of cockling chickens.
+        
+        During celebrations, immediate neighbors are invited bringing among the whole members of the family and this seemed to be incomplete without tuba drinking and little dancing. Pantomina is a long cherished dance that never changes with time despite of the current dance and music. Pandananons has a series of collected pantomina songs which are now famous composed locally, of course it is not only the above songs, Pandananons used to compose, for evidence of which that gained popularity was a song composed by the late Mr. Alfredo dela Rosa, former Municipal Secretary of the Sangguniang Bayan of Pandan, entitled “Islang Catandungan”. This song won first place in the regional contest in Sorsogon sometime on the late 60’s.</p>
+
+
+        </div>
+       <style>
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 4px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.pagination button {
+    padding: 0 2px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 0;
+    min-width: 20px;
+    min-height: 24px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 10px;
+}
+
+.pagination button:hover {
+    background-color: #dcdcdc;
+}
+
+.pagination button.active {
+    background-color: #004499cc;
+    color: white;
+    border-color: #004499cc;
+}
+
+.pagination-wrapper {
+    text-align: right;
+    margin-top: 10px;
+}
+
+.pagination {
+    display: inline-flex;
+    gap: 4px;
+}
+</style>
+<div class="tabs-panel" id="panel2">
+    <table class="styled-table">
+  <thead>
+     <tr>
+    <th style="text-align: left; padding: 8px; border-bottom: 1px solid #ccc;">
+      Barangay
+    </th>
+    <th style="text-align: center; padding: 8px; border-bottom: 1px solid #ccc;">
+      Fiesta Date
+    </th>
+  </tr>
+   
+  </thead>
+  <tbody>
+  <tr class="barangayRow">
+  <td>
+    <div class="hover-target" style="position: relative; display: inline-block;">
+      Bagawang
+      <div class="profile-modal top-right">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <img src="http://wp-local.com/wp-content/uploads/2025/08/sample.png"
+               style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+          <div style="font-size: 13px; line-height: 1.3;">
+           
+             <div style="text-align:center;">
+              <h4 style="margin: 0; color: #0073aa;">Saint Joseph</h4>
+        </div>
+            <p style="text-align: justify; font-size: 12px; color: #555;">
+              The barangay celebrates its fiesta in honor of  <b>Saint Joseph</b>
+              with religious and cultural activities.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </td>
+  <td style="text-align: center;">May 18 - 19</td>
+</tr>
+<tr class="barangayRow">
+  <td>
+    <div class="hover-target" style="position: relative; display: inline-block;">
+      Alongñonan
+      <div class="profile-modal top-right">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <img src="http://wp-local.com/wp-content/uploads/2025/08/sample.png"
+               style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+          <div style="font-size: 13px; line-height: 1.3;">
+           
+             <div style="text-align:center;">
+              <h4 style="margin: 0; color: #0073aa;">Patron Saint</h4>
+        </div>
+            <p style="text-align: justify; font-size: 12px; color: #555;">
+              The barangay celebrates its fiesta in honor of  <b>Patron Saint</b>
+              with religious and cultural activities.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </td>
+  <td style="text-align: center;">TBA</td>
+</tr>
+<tr class="barangayRow">
+  <td>
+    <div class="hover-target" style="position: relative; display: inline-block;">
+      Baldoc
+      <div class="profile-modal top-right">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <img src="http://wp-local.com/wp-content/uploads/2025/08/sample.png"
+               style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+          <div style="font-size: 13px; line-height: 1.3;">
+           
+             <div style="text-align:center;">
+              <h4 style="margin: 0; color: #0073aa;">Patron Saint</h4>
+        </div>
+            <p style="text-align: justify; font-size: 12px; color: #555;">
+              The barangay celebrates its fiesta in honor of  <b>Patron Saint</b>
+              with religious and cultural activities.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </td>
+  <td style="text-align: center;">August 7 - 8</td>
+</tr>
+<tr class="barangayRow">
+  <td>
+    <div class="hover-target" style="position: relative; display: inline-block;">
+      Canlubi
+      <div class="profile-modal top-right">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <img src="http://wp-local.com/wp-content/uploads/2025/08/sample.png"
+               style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+          <div style="font-size: 13px; line-height: 1.3;">
+           
+             <div style="text-align:center;">
+              <h4 style="margin: 0; color: #0073aa;">Patron Saint</h4>
+        </div>
+            <p style="text-align: justify; font-size: 12px; color: #555;">
+              The barangay celebrates its fiesta in honor of  <b>Patron Saint</b>
+              with religious and cultural activities.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </td>
+  <td style="text-align: center;">TBA</td>
+</tr>
+<tr class="barangayRow">
+  <td>
+    <div class="hover-target" style="position: relative; display: inline-block;">
+      Catamban
+      <div class="profile-modal top-right">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <img src="http://wp-local.com/wp-content/uploads/2025/08/sample.png"
+               style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+          <div style="font-size: 13px; line-height: 1.3;">
+           
+             <div style="text-align:center;">
+              <h4 style="margin: 0; color: #0073aa;">Sto. Cristo</h4>
+        </div>
+            <p style="text-align: justify; font-size: 12px; color: #555;">
+              The barangay celebrates its fiesta in honor of  <b>Sto. Cristo</b>
+              with religious and cultural activities.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </td>
+  <td style="text-align: center;">May 30 - 31</td>
+</tr>
+
+<tr class="barangayRow">
+  <td>
+    <div class="hover-target" style="position: relative; display: inline-block;">
+      Cobo
+      <div class="profile-modal top-right">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <img src="http://wp-local.com/wp-content/uploads/2025/08/sample.png"
+               style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+          <div style="font-size: 13px; line-height: 1.3;">
+           
+             <div style="text-align:center;">
+              <h4 style="margin: 0; color: #0073aa;">Our Lady of the Holy Rosary</h4>
+        </div>
+            <p style="text-align: justify; font-size: 12px; color: #555;">
+              The barangay celebrates its fiesta in honor of  <b>Our Lady of the Holy Rosary</b>
+              with religious and cultural activities.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </td>
+  <td style="text-align: center;">TBA</td>
+</tr>
+<tr class="barangayRow">
+  <td>
+    <div class="hover-target" style="position: relative; display: inline-block;">
+      Hiyop
+      <div class="profile-modal top-right">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <img src="http://wp-local.com/wp-content/uploads/2025/08/sample.png"
+               style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+          <div style="font-size: 13px; line-height: 1.3;">
+           
+             <div style="text-align:center;">
+              <h4 style="margin: 0; color: #0073aa;">Sto. Nino</h4>
+        </div>
+            <p style="text-align: justify; font-size: 12px; color: #555;">
+              The barangay celebrates its fiesta in honor of  <b>Sto. Nino</b>
+              with religious and cultural activities.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </td>
+  <td style="text-align: center;">June 19 - 20</td>
+</tr>
+<tr class="barangayRow">
+  <td>
+    <div class="hover-target" style="position: relative; display: inline-block;">
+      Libod (Poblacion)
+      <div class="profile-modal top-right">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <img src="http://wp-local.com/wp-content/uploads/2025/08/sample.png"
+               style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+          <div style="font-size: 13px; line-height: 1.3;">
+           
+             <div style="text-align:center;">
+              <h4 style="margin: 0; color: #0073aa;">Patron Saint</h4>
+        </div>
+            <p style="text-align: justify; font-size: 12px; color: #555;">
+              The barangay celebrates its fiesta in honor of  <b>Patron Saint</b>
+              with religious and cultural activities.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </td>
+  <td style="text-align: center;">TBA</td>
+</tr>
+<tr class="barangayRow">
+  <td>
+    <div class="hover-target" style="position: relative; display: inline-block;">
+      Lourdes
+      <div class="profile-modal top-right">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <img src="http://wp-local.com/wp-content/uploads/2025/08/sample.png"
+               style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+          <div style="font-size: 13px; line-height: 1.3;">
+           
+             <div style="text-align:center;">
+              <h4 style="margin: 0; color: #0073aa;">Patron Saint</h4>
+        </div>
+            <p style="text-align: justify; font-size: 12px; color: #555;">
+              The barangay celebrates its fiesta in honor of  <b>Patron Saint</b>
+              with religious and cultural activities.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </td>
+  <td style="text-align: center;">TBA</td>
+</tr>
+<tr class="barangayRow">
+  <td>
+    <div class="hover-target" style="position: relative; display: inline-block;">
+      Lumabao
+      <div class="profile-modal top-right">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <img src="http://wp-local.com/wp-content/uploads/2025/08/sample.png"
+               style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+          <div style="font-size: 13px; line-height: 1.3;">
+           
+             <div style="text-align:center;">
+              <h4 style="margin: 0; color: #0073aa;">Nuestra Señora de Salvación</h4>
+        </div>
+            <p style="text-align: justify; font-size: 12px; color: #555;">
+              The barangay celebrates its fiesta in honor of  <b>Nuestra Señora de Salvación</b>
+              with religious and cultural activities.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </td>
+  <td style="text-align: center;">May 11 - 12</td>
+</tr>
+<tr class="barangayRow">
+  <td>
+    <div class="hover-target" style="position: relative; display: inline-block;">
+      Marambong
+      <div class="profile-modal top-right">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <img src="http://wp-local.com/wp-content/uploads/2025/08/sample.png"
+               style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+          <div style="font-size: 13px; line-height: 1.3;">
+           
+             <div style="text-align:center;">
+              <h4 style="margin: 0; color: #0073aa;">Patron Saint</h4>
+        </div>
+            <p style="text-align: justify; font-size: 12px; color: #555;">
+              The barangay celebrates its fiesta in honor of  <b>Patron Saint</b>
+              with religious and cultural activities.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </td>
+  <td style="text-align: center;">TBA</td>
+</tr>
+<tr class="barangayRow">
+  <td>
+    <div class="hover-target" style="position: relative; display: inline-block;">
+      Napo (Poblacion)
+      <div class="profile-modal top-right">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <img src="http://wp-local.com/wp-content/uploads/2025/08/sample.png"
+               style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+          <div style="font-size: 13px; line-height: 1.3;">
+           
+             <div style="text-align:center;">
+              <h4 style="margin: 0; color: #0073aa;">Patron Saint</h4>
+        </div>
+            <p style="text-align: justify; font-size: 12px; color: #555;">
+              The barangay celebrates its fiesta in honor of  <b>Patron Saint</b>
+              with religious and cultural activities.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </td>
+  <td style="text-align: center;">May 4 - 5</td>
+</tr>
+<tr class="barangayRow">
+  <td>
+    <div class="hover-target" style="position: relative; display: inline-block;">
+      Oga
+      <div class="profile-modal top-right">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <img src="http://wp-local.com/wp-content/uploads/2025/08/sample.png"
+               style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+          <div style="font-size: 13px; line-height: 1.3;">
+           
+             <div style="text-align:center;">
+              <h4 style="margin: 0; color: #0073aa;">Patron Saint</h4>
+        </div>
+            <p style="text-align: justify; font-size: 12px; color: #555;">
+              The barangay celebrates its fiesta in honor of  <b>Patron Saint</b>
+              with religious and cultural activities.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </td>
+  <td style="text-align: center;">May 9 - 10</td>
+</tr>
+<tr class="barangayRow">
+  <td>
+    <div class="hover-target" style="position: relative; display: inline-block;">
+      Pandan Del Norte (Poblacion)
+      <div class="profile-modal top-right">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <img src="http://wp-local.com/wp-content/uploads/2025/08/sample.png"
+               style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+          <div style="font-size: 13px; line-height: 1.3;">
+           
+             <div style="text-align:center;">
+              <h4 style="margin: 0; color: #0073aa;">Patron Saint</h4>
+        </div>
+            <p style="text-align: justify; font-size: 12px; color: #555;">
+              The barangay celebrates its fiesta in honor of  <b>Patron Saint</b>
+              with religious and cultural activities.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </td>
+  <td style="text-align: center;">TBA</td>
+</tr>
+<tr class="barangayRow">
+  <td>
+    <div class="hover-target" style="position: relative; display: inline-block;">
+      Panda Del Sur (Poblacion)
+      <div class="profile-modal top-right">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <img src="http://wp-local.com/wp-content/uploads/2025/08/sample.png"
+               style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+          <div style="font-size: 13px; line-height: 1.3;">
+           
+             <div style="text-align:center;">
+              <h4 style="margin: 0; color: #0073aa;">Patron Saint</h4>
+        </div>
+            <p style="text-align: justify; font-size: 12px; color: #555;">
+              The barangay celebrates its fiesta in honor of  <b>Patron Saint</b>
+              with religious and cultural activities.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </td>
+  <td style="text-align: center;">TBA</td>
+</tr>
+<tr class="barangayRow">
+  <td>
+    <div class="hover-target" style="position: relative; display: inline-block;">
+      Panuto
+      <div class="profile-modal top-right">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <img src="http://wp-local.com/wp-content/uploads/2025/08/sample.png"
+               style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+          <div style="font-size: 13px; line-height: 1.3;">
+           
+             <div style="text-align:center;">
+              <h4 style="margin: 0; color: #0073aa;">Patron Saint</h4>
+        </div>
+            <p style="text-align: justify; font-size: 12px; color: #555;">
+              The barangay celebrates its fiesta in honor of  <b>Patron Saint</b>
+              with religious and cultural activities.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </td>
+  <td style="text-align: center;">TBA</td>
+</tr>
+<tr class="barangayRow">
+  <td>
+    <div class="hover-target" style="position: relative; display: inline-block;">
+      Porot (San Jose)
+      <div class="profile-modal top-right">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <img src="http://wp-local.com/wp-content/uploads/2025/08/sample.png"
+               style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+          <div style="font-size: 13px; line-height: 1.3;">
+           
+             <div style="text-align:center;">
+              <h4 style="margin: 0; color: #0073aa;">Saint Joseph</h4>
+        </div>
+            <p style="text-align: justify; font-size: 12px; color: #555;">
+              The barangay celebrates its fiesta in honor of  <b>Saint Joseph</b>
+              with religious and cultural activities.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </td>
+  <td style="text-align: center;">June 18 - 19</td>
+</tr>
+<tr class="barangayRow">
+  <td>
+    <div class="hover-target" style="position: relative; display: inline-block;">
+      Salvacion (Tariwara)
+      <div class="profile-modal top-right">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <img src="http://wp-local.com/wp-content/uploads/2025/08/sample.png"
+               style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+          <div style="font-size: 13px; line-height: 1.3;">
+           
+             <div style="text-align:center;">
+              <h4 style="margin: 0; color: #0073aa;">Patron Saint</h4>
+        </div>
+            <p style="text-align: justify; font-size: 12px; color: #555;">
+              The barangay celebrates its fiesta in honor of  <b>Patron Saint</b>
+              with religious and cultural activities.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </td>
+  <td style="text-align: center;">May 11 - 12</td>
+</tr>
+<tr class="barangayRow">
+  <td>
+    <div class="hover-target" style="position: relative; display: inline-block;">
+      San Andres (Dinungsuran)
+      <div class="profile-modal top-right">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <img src="http://wp-local.com/wp-content/uploads/2025/08/sample.png"
+               style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+          <div style="font-size: 13px; line-height: 1.3;">
+           
+             <div style="text-align:center;">
+              <h4 style="margin: 0; color: #0073aa;">St. Andrew</h4>
+        </div>
+            <p style="text-align: justify; font-size: 12px; color: #555;">
+              The barangay celebrates its fiesta in honor of  <b>St. Andrew</b>
+              with religious and cultural activities.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </td>
+  <td style="text-align: center;">May 20 - 21</td>
+</tr>
+<tr class="barangayRow">
+  <td>
+    <div class="hover-target" style="position: relative; display: inline-block;">
+      San Isidro (Langob)
+      <div class="profile-modal top-right">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <img src="http://wp-local.com/wp-content/uploads/2025/08/sample.png"
+               style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+          <div style="font-size: 13px; line-height: 1.3;">
+           
+             <div style="text-align:center;">
+              <h4 style="margin: 0; color: #0073aa;">Patron Saint</h4>
+        </div>
+            <p style="text-align: justify; font-size: 12px; color: #555;">
+              The barangay celebrates its fiesta in honor of  <b>Patron Saint</b>
+              with religious and cultural activities.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </td>
+  <td style="text-align: center;">TBA</td>
+</tr>
+<tr class="barangayRow">
+  <td>
+    <div class="hover-target" style="position: relative; display: inline-block;">
+      San Rafaeel (Bogtong)
+      <div class="profile-modal top-right">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <img src="http://wp-local.com/wp-content/uploads/2025/08/sample.png"
+               style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+          <div style="font-size: 13px; line-height: 1.3;">
+           
+             <div style="text-align:center;">
+              <h4 style="margin: 0; color: #0073aa;">Patron Saint</h4>
+        </div>
+            <p style="text-align: justify; font-size: 12px; color: #555;">
+              The barangay celebrates its fiesta in honor of  <b>Patron Saint</b>
+              with religious and cultural activities.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </td>
+  <td style="text-align: center;">TBA</td>
+</tr>
+<tr class="barangayRow">
+  <td>
+    <div class="hover-target" style="position: relative; display: inline-block;">
+      San Rafael (Bogtong)
+      <div class="profile-modal top-right">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <img src="http://wp-local.com/wp-content/uploads/2025/08/sample.png"
+               style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+          <div style="font-size: 13px; line-height: 1.3;">
+           
+             <div style="text-align:center;">
+              <h4 style="margin: 0; color: #0073aa;">Patron Saint</h4>
+        </div>
+            <p style="text-align: justify; font-size: 12px; color: #555;">
+              The barangay celebrates its fiesta in honor of  <b>Patron Saint</b>
+              with religious and cultural activities.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </td>
+  <td style="text-align: center;">TBA</td>
+</tr>
+<tr class="barangayRow">
+  <td>
+    <div class="hover-target" style="position: relative; display: inline-block;">
+      San Roque
+      <div class="profile-modal top-right">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <img src="http://wp-local.com/wp-content/uploads/2025/08/sample.png"
+               style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+          <div style="font-size: 13px; line-height: 1.3;">
+           
+             <div style="text-align:center;">
+              <h4 style="margin: 0; color: #0073aa;">Patron Saint</h4>
+        </div>
+            <p style="text-align: justify; font-size: 12px; color: #555;">
+              The barangay celebrates its fiesta in honor of  <b>Patron Saint</b>
+              with religious and cultural activities.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </td>
+  <td style="text-align: center;">TBA</td>
+</tr>
+<tr class="barangayRow">
+  <td>
+    <div class="hover-target" style="position: relative; display: inline-block;">
+      Santa Cruz (Catagbacon) 
+      <div class="profile-modal top-right">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <img src="http://wp-local.com/wp-content/uploads/2025/08/sample.png"
+               style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+          <div style="font-size: 13px; line-height: 1.3;">
+           
+             <div style="text-align:center;">
+              <h4 style="margin: 0; color: #0073aa;">Patron Saint</h4>
+        </div>
+            <p style="text-align: justify; font-size: 12px; color: #555;">
+              The barangay celebrates its fiesta in honor of  <b>Patron Saint</b>
+              with religious and cultural activities.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </td>
+  <td style="text-align: center;">May 9 - 10</td>
+</tr>
+<tr class="barangayRow">
+  <td>
+    <div class="hover-target" style="position: relative; display: inline-block;">
+      Tabugoc
+      <div class="profile-modal top-right">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <img src="http://wp-local.com/wp-content/uploads/2025/08/sample.png"
+               style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+          <div style="font-size: 13px; line-height: 1.3;">
+           
+             <div style="text-align:center;">
+              <h4 style="margin: 0; color: #0073aa;">San Francis Carraciolo</h4>
+        </div>
+            <p style="text-align: justify; font-size: 12px; color: #555;">
+              The barangay celebrates its fiesta in honor of  <b>San Francis Carraciolo</b>
+              with religious and cultural activities.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </td>
+  <td style="text-align: center;">June 3 - 4</td>
+</tr>
+<tr class="barangayRow">
+  <td>
+    <div class="hover-target" style="position: relative; display: inline-block;">
+      Tokio
+      <div class="profile-modal top-right">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <img src="http://wp-local.com/wp-content/uploads/2025/08/sample.png"
+               style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+          <div style="font-size: 13px; line-height: 1.3;">
+           
+             <div style="text-align:center;">
+              <h4 style="margin: 0; color: #0073aa;">Patron Saint</h4>
+        </div>
+            <p style="text-align: justify; font-size: 12px; color: #555;">
+              The barangay celebrates its fiesta in honor of  <b>Patron Saint</b>
+              with religious and cultural activities.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </td>
+  <td style="text-align: center;">TBA</td>
+</tr>
+<tr class="barangayRow">
+  <td>
+    <div class="hover-target" style="position: relative; display: inline-block;">
+      Wagdas
+      <div class="profile-modal top-right">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <img src="http://wp-local.com/wp-content/uploads/2025/08/sample.png"
+               style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+          <div style="font-size: 13px; line-height: 1.3;">
+           
+             <div style="text-align:center;">
+              <h4 style="margin: 0; color: #0073aa;">Patron Saint</h4>
+        </div>
+            <p style="text-align: justify; font-size: 12px; color: #555;">
+              The barangay celebrates its fiesta in honor of  <b>Patron Saint</b>
+              with religious and cultural activities.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </td>
+  <td style="text-align: center;">May 2 - 3</td>
+</tr>
+<script>
+                            const totalRows = 30;
+                            for (let i = 1; i <= totalRows; i++) {
+                                document.write(`
+              
+                  `);
+                            }
+                        </script>
+        </tbody>
+    </table>
+
+
+    <div class="pagination-wrapper" style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
+        <p id="barangayPageInfo" style="margin: 0; font-weight: bold; font-size: 14px;">This is page 1 out of X</p>
+        <div id="barangayPagination" class="pagination" style="display: flex; gap: 5px;"></div>
+    </div>
+</div>
+
+<script>
+(function(){
+    const rowsPerPage = 14;
+    let currentPage = 1;
+
+    function updateBarangayTable() {
+        const rows = document.querySelectorAll("#panel2 .barangayRow");
+        const totalPages = Math.ceil(rows.length / rowsPerPage);
+
+        rows.forEach((row, index) => {
+            row.style.display = (
+                index >= (currentPage - 1) * rowsPerPage &&
+                index < currentPage * rowsPerPage
+            ) ? '' : 'none';
+        });
+
+        renderPagination(totalPages);
+    }
+
+    function changeBarangayPage(page) {
+        const rows = document.querySelectorAll("#panel2 .barangayRow");
+        const totalPages = Math.ceil(rows.length / rowsPerPage);
+
+        if (page < 1) page = 1;
+        if (page > totalPages) page = totalPages;
+
+        currentPage = page;
+        updateBarangayTable();
+    }
+
+    function renderPagination(totalPages) {
+        document.getElementById("barangayPageInfo").textContent = `This is page ${currentPage} out of ${totalPages}`;
+
+        const container = document.getElementById("barangayPagination");
+        container.innerHTML = "";
+
+        const prevBtn = document.createElement("button");
+        prevBtn.textContent = "<< Prev";
+        prevBtn.disabled = currentPage === 1;
+        if (currentPage === 1) prevBtn.classList.add("disabled");
+        prevBtn.onclick = () => changeBarangayPage(currentPage - 1);
+        container.appendChild(prevBtn);
+
+        const maxPagesToShow = 7;
+        let startPage = 1;
+        let endPage = totalPages;
+
+        if (totalPages > maxPagesToShow) {
+            if (currentPage <= 4) {
+                endPage = 5;
+            } else if (currentPage >= totalPages - 3) {
+                startPage = totalPages - 4;
+            } else {
+                startPage = currentPage - 2;
+                endPage = currentPage + 2;
+            }
+        }
+
+        if (startPage > 1) {
+            addPageButton(container, 1);
+            if (startPage > 2) {
+                addEllipsis(container);
+            }
+        }
+
+        for (let i = startPage; i <= endPage; i++) {
+            addPageButton(container, i);
+        }
+
+        if (endPage < totalPages) {
+            if (endPage < totalPages - 1) {
+                addEllipsis(container);
+            }
+            addPageButton(container, totalPages);
+        }
+
+        const nextBtn = document.createElement("button");
+        nextBtn.textContent = "Next >>";
+        nextBtn.disabled = currentPage === totalPages;
+        if (currentPage === totalPages) nextBtn.classList.add("disabled");
+        nextBtn.onclick = () => changeBarangayPage(currentPage + 1);
+        container.appendChild(nextBtn);
+    }
+
+    function addPageButton(container, pageNumber) {
+        const btn = document.createElement("button");
+        btn.textContent = pageNumber;
+        if (currentPage === pageNumber) {
+            btn.classList.add("active");
+        }
+        btn.onclick = () => changeBarangayPage(pageNumber);
+        container.appendChild(btn);
+    }
+
+    function addEllipsis(container) {
+        const ellipsis = document.createElement("span");
+        ellipsis.textContent = "...";
+        ellipsis.className = "ellipsis";
+        container.appendChild(ellipsis);
+    }
+
+    updateBarangayTable();
+})();
+</script>
+<style>
+            .official-profile {
+                position: relative;
+                margin-bottom: 10px;
+            }
+
+
+            .official-profile:hover .profile-modal {
+                display: block;
+            }
+
+            .official-profile a {
+                display: flex;
+                align-items: center;
+                gap: 15px;
+                font-size: 18px;
+                font-weight: 600;
+                text-decoration: none;
+                color: #000;
+                padding: 10px 15px;
+                border-radius: 10px;
+                transition: background 0.3s ease;
+            }
+
+            .hover-target {
+                display: inline-block;
+                position: relative;
+                cursor: pointer;
+                overflow: visible !important;
+                position: relative;
+                display: inline-block;
+            }
+
+            .official-profile a:hover {
+                background: #f1f1f1;
+            }
+
+            .official-profile img {
+                width: 70px;
+                height: 70px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+
+            .profile-modal {
+                position: absolute;
+                top: 0;
+                left: 100%;
+                margin-left: 10px;
+                background: white;
+                padding: 15px;
+                width: 330px;
+                border: 1px solid #ccc;
+                border-radius: 10px;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+                z-index: 9999;
+                display: none;
+                white-space: normal;
+            }
+
+
+            .hover-target:hover .profile-modal {
+                display: block;
+            }
+
+            .profile-modal img {
+                width: 80px;
+                height: 80px;
+                border-radius: 10px;
+                object-fit: cover;
+            }
+
+            .profile-modal h4 {
+                margin: 0;
+                font-size: 15px;
+            }
+
+            .profile-modal p {
+                font-size: 13px;
+                margin: 4px 0;
+                color: #555;
+            }
+
+            .profile-modal h3 {
+                text-align: center;
+            }
+
+            .tabs-panel {
+                position: relative;
+                overflow: visible;
+                z-index: 0;
+            }
+
+            hr {
+                margin: 20px 0;
+                border: none;
+                border-top: 1px dashed #aaa;
+            }
+
+            .pagination {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                gap: 4px;
+                margin-top: 20px;
+                flex-wrap: wrap;
+            }
+
+             .pagination button {
+  padding: 0 2px; 
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 0;
+  min-width: 18px; 
+  min-height: 22px; 
+  text-align: center;
+  font-weight: bold;
+  font-size: 10px; 
+}
+            .pagination button:hover {
+                background-color: #dcdcdc;
+            }
+
+            .pagination button.active {
+                background-color: #004499cc;
+                color: white;
+                border-color: #004499cc;
+            }
+
+            .pagination-wrapper {
+                text-align: right;
+                margin-top: 10px;
+            }
+
+            .pagination {
+                display: inline-flex;
+                gap: 4px;
+            }
+
+            table {
+                table-layout: fixed;
+            }
+
+            th,
+            td {
+                padding: 8px;
+                border-bottom: 1px solid #ccc;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+
+            td {
+                position: relative;
+                overflow: visible !important;
+            }
+th.sortable {
+  cursor: pointer;
+  user-select: none;
+  text-align: center; /* center by default */
+  position: relative;
+  padding: 8px;
+  border-bottom: 1px solid #ccc;
+}
+
+/* Arrow span inside header */
+th.sortable .sort-arrow {
+  font-size: 12px;
+  color: #888;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 2px;
+  width: 12px;
+  height: 12px;
+  line-height: 12px;
+  text-align: center;
+}
+
+/* Default arrow always visible (small upward triangle as placeholder) */
+th.sortable .sort-arrow::after {
+  content: "▲";          /* laging may arrow */
+  color: #888;           /* grey para placeholder effect */
+}
+
+/* Arrow when ascending */
+th.sortable.asc .sort-arrow::after {
+  content: "▲";
+  color: #000;           /* black kapag active */
+}
+
+/* Arrow when descending */
+th.sortable.desc .sort-arrow::after {
+  content: "▼";
+  color: #000;           /* black kapag active */
+}
+
+/* Optional: center number columns */
+th.sortable[data-type="string"] {
+  text-align: left;       /* Name left-aligned */
+}
+
+th.sortable[data-type="number"] {
+  text-align: center;     /* Number columns center-aligned */
+}
+            #mayorTableContainer,
+            #viceMayorTableContainer,
+            #councilorTableContainer {
+                overflow: visible !important;
+                position: relative;
+                z-index: 1;
+            }
+
+            .profile-modal {
+
+                z-index: 1000;
+            }
+
+            @media (max-width: 768px) {
+                .officials-section {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: 100%;
+                }
+
+                .municipal-officials {
+                    flex: 0 0 auto;
+                    width: 100%;
+                    max-width: 300px;
+                }
+            }
+        </style>
+
+        <div class="tabs-panel" id="panel3">
+
+
+            <h4 style="margin-top: 0;">Mayors</h4>
+
+            <div id="mayorTableContainer" style="position: relative;">
+                <table id="mayorTable"
+                    style="width: 100%; border-collapse: collapse; font-size: 14px; margin-bottom: 20px;">
+                    <thead>
+  <tr style="background-color: #f1f1f1;">
+    <th class="sortable" style="text-align: left; padding: 8px; border-bottom: 1px solid #ccc;" data-column="name" data-type="string">
+      Name <span class="sort-arrow"></span>
+    </th>
+<th class="sortable desc" style="text-align: center; padding: 8px; border-bottom: 1px solid #ccc;" data-column="termStart" data-type="number">
+  Term Start<span class="sort-arrow"></span>
+</th>
+
+    <th class="sortable" style="text-align: center; padding: 8px; border-bottom: 1px solid #ccc;" data-column="termEnd" data-type="number">
+      Term End <span class="sort-arrow"></span>
+    </th>
+  </tr>
+</thead>
+
+                    <tbody id="mayorTableBody">
+                        <tr class="mayorRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Raul E. Tabirara 
+                                    <div class="profile-modal top-right">
+                                        <div style="display: flex; align-items: center; gap: 10px;">
+                                            <img src="http://wp-local.com/wp-content/uploads/2025/08/Mayor-Raul-E.-Tabirara.png"
+                                                style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                            <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                                <h4 style="margin: 0;">Raul Eubra Tabirara (Pdplbn)</h4>
+                                                <p style="text-align: center;">Date of Birth: May 12, 1976</p>
+                                                <p style="text-align: justify;">Looking back on the past year, I am proud of the progress we’ve made together.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                        </tr>
+                        <tr class="mayorRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Raul E. Tabirara 
+                                    <div class="profile-modal top-right">
+                                        <div style="display: flex; align-items: center; gap: 10px;">
+                                            <img src="http://wp-local.com/wp-content/uploads/2025/08/Mayor-Raul-E.-Tabirara.png"
+                                                style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                            <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                                <h4 style="margin: 0;">Raul Eubra Tabirara (Pdplbn)</h4>
+                                                <p style="text-align: center;">Date of Birth: May 12, 1976</p>
+                                                <p style="text-align: justify;">Looking back on the past year, I am proud of the progress we’ve made together.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2019</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                        </tr>
+                        <script>
+                            const totalRows = 30;
+                            for (let i = 1; i <= totalRows; i++) {
+                                document.write(`
+              
+                  `);
+                            }
+                        </script>
+                    </tbody>
+                </table>
+                <div class="pagination-wrapper"
+                    style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
+                    <p id="pageInfo" style="margin: 0; font-weight: bold; font-size: 14px;">This is page 1 out of X</p>
+                    <div id="mayorPagination" class="pagination" style="display: flex; gap: 5px;"></div>
+                </div>
+
+                <hr style="margin: 15px 0; border-top: 1px solid #ccc;">
+                <script>
+                    const rowsPerPage = 10;
+                    let currentPage = 1;
+
+                    function updateMayorTable() {
+                        const rows = document.querySelectorAll(".mayorRow");
+                        const totalPages = Math.ceil(rows.length / rowsPerPage);
+
+                        rows.forEach((row, index) => {
+                            row.style.display = (
+                                index >= (currentPage - 1) * rowsPerPage &&
+                                index < currentPage * rowsPerPage
+                            ) ? '' : 'none';
+                        });
+
+                        renderPagination(totalPages);
+                    }
+
+                    function changeMayorPage(page) {
+                        const rows = document.querySelectorAll(".mayorRow");
+                        const totalPages = Math.ceil(rows.length / rowsPerPage);
+
+                        if (page < 1) page = 1;
+                        if (page > totalPages) page = totalPages;
+
+                        currentPage = page;
+                        updateMayorTable();
+                    }
+
+                    function renderPagination(totalPages) {
+                        document.getElementById("pageInfo").textContent = `This is page ${currentPage} out of ${totalPages}`;
+
+
+                        const pageInfo = document.getElementById("pageInfo");
+                        const container = document.getElementById("mayorPagination");
+
+                        // Update the text
+                        pageInfo.textContent = `This is page ${currentPage} out of ${totalPages}`;
+                        container.innerHTML = "";
+
+                        // ← Prev button
+                        const prevBtn = document.createElement("button");
+                        prevBtn.textContent = "<< Prev";
+                        prevBtn.className = currentPage === 1 ? "disabled" : "";
+                        prevBtn.disabled = currentPage === 1;
+                        prevBtn.onclick = () => changeMayorPage(currentPage - 1);
+                        container.appendChild(prevBtn);
+
+                        const maxPagesToShow = 7;
+                        let startPage = 1;
+                        let endPage = totalPages;
+
+                        if (totalPages > maxPagesToShow) {
+                            if (currentPage <= 4) {
+                                endPage = 5;
+                            } else if (currentPage >= totalPages - 3) {
+                                startPage = totalPages - 4;
+                            } else {
+                                startPage = currentPage - 2;
+                                endPage = currentPage + 2;
+                            }
+                        }
+
+                        if (startPage > 1) {
+                            addPageButton(container, 1);
+                            if (startPage > 2) {
+                                addEllipsis(container);
+                            }
+                        }
+
+                        for (let i = startPage; i <= endPage; i++) {
+                            addPageButton(container, i);
+                        }
+
+                        if (endPage < totalPages) {
+                            if (endPage < totalPages - 1) {
+                                addEllipsis(container);
+                            }
+                            addPageButton(container, totalPages);
+                        }
+
+                        // → Next button
+                        const nextBtn = document.createElement("button");
+                        nextBtn.textContent = "Next >>";
+                        nextBtn.className = currentPage === totalPages ? "disabled" : "";
+                        nextBtn.disabled = currentPage === totalPages;
+                        nextBtn.onclick = () => changeMayorPage(currentPage + 1);
+                        container.appendChild(nextBtn);
+                    }
+
+
+
+                    function addPageButton(container, pageNumber) {
+                        const btn = document.createElement("button");
+                        btn.textContent = pageNumber;
+                        if (currentPage === pageNumber) {
+                            btn.className = "active";
+                        }
+                        btn.onclick = () => changeMayorPage(pageNumber);
+                        container.appendChild(btn);
+                    }
+
+                    function addEllipsis(container) {
+                        const ellipsis = document.createElement("span");
+                        ellipsis.textContent = "...";
+                        ellipsis.className = "ellipsis";
+                        container.appendChild(ellipsis);
+                    }
+
+
+                    updateMayorTable();
+
+
+                </script>
+
+
+                <script>
+                    document.addEventListener("DOMContentLoaded", () => {
+                        document.querySelectorAll(".hover-target").forEach(target => {
+                            target.addEventListener("mouseenter", () => {
+                                const modal = target.querySelector(".profile-modal");
+                                if (modal) modal.style.display = "block";
+                            });
+                            target.addEventListener("mouseleave", () => {
+                                const modal = target.querySelector(".profile-modal");
+                                if (modal) modal.style.display = "none";
+                            });
+                        });
+                    });
+                </script>
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<style>
+   .chart-header {
+ display: flex;
+justify-content: flex-end; 
+margin-bottom: 8px; 
+width: 550px; 
+padding-right: -1px; 
+}
+  .zoom-controls {
+    display: flex;
+    gap: 5px;
+  }
+  .zoom-btn {
+    width: 25px;
+    height: 25px;
+    background: #fff;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 3px;
+    text-align: center;
+    line-height: 22px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  }
+  .zoom-btn:hover {
+    background: #f0f0f0;
+  }
+.chart-wrapper {
+  overflow-x: hidden; 
+  overflow-y: hidden;
+  position: relative;
+  cursor: grab;
+}
+.chart-wrapper:active {
+    cursor: grabbing;
+}
+  .chart-scale {
+    transform-origin: top left;
+  }
+@media (max-width: 768px) {
+  .chart-wrapper {
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+
+  #chart-container {
+    min-width: unset;
+  }
+
+  .chart-header {
+    width: 100%; 
+    padding-right: 0;
+  }
+}
+
+</style>
+
+<div class="chart-header">
+  <div class="zoom-controls">
+    <div class="zoom-btn" onclick="zoomIn()">+</div>
+    <div class="zoom-btn" onclick="zoomOut()">−</div>
+  </div>
+</div>
+<div class="chart-wrapper" id="chartWrapper">
+    <div id="chart-container" class="chart-scale">
+      <div id="example2_1"></div>
+    </div>
+  </div>
+
+  <script>
+    
+    const chartWrapper = document.getElementById("chartWrapper");
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+  
+    chartWrapper.addEventListener("mousedown", (e) => {
+      isDown = true;
+      chartWrapper.classList.add("active");
+      startX = e.pageX - chartWrapper.offsetLeft;
+      scrollLeft = chartWrapper.scrollLeft;
+    });
+  
+    chartWrapper.addEventListener("mouseleave", () => {
+      isDown = false;
+    });
+  
+    chartWrapper.addEventListener("mouseup", () => {
+      isDown = false;
+    });
+  
+    chartWrapper.addEventListener("mousemove", (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - chartWrapper.offsetLeft;
+      const walk = (x - startX) * 1; // multiply for speed
+      chartWrapper.scrollLeft = scrollLeft - walk;
+    });
+  </script>
+<script type="text/javascript">
+  google.charts.load("current", { packages: ["timeline"] });
+  google.charts.setOnLoadCallback(init);
+
+  let chart, dataTable;
+  let minDate, maxDate;
+  let zoomFactor = 1; 
+function init() {
+  const container = document.getElementById("example2_1");
+  chart = new google.visualization.Timeline(container);
+  dataTable = new google.visualization.DataTable();
+
+  dataTable.addColumn({ type: "string", id: "Term" });
+  dataTable.addColumn({ type: "string", id: "Name" });
+  dataTable.addColumn({ type: "date", id: "Start" });
+  dataTable.addColumn({ type: "date", id: "End" });
+
+ dataTable.addRows([
+  ["1", "Raul Eubra Tabirara", new Date(2016, 0, 1), new Date(2019, 0, 2)],
+  ["2", "Raul Eubra Tabirara", new Date(2019, 0, 1), new Date(2022, 0, 2)],
+]);
+
+// Limit chart view from 2016 to 2025
+minDate = new Date(2016, 0, 1);
+maxDate = new Date(2025, 11, 31);
+
+  drawChart();
+}function drawChart() {
+  let ticks = [];
+  let startYear = minDate.getFullYear();
+  let endYear = maxDate.getFullYear();
+  for (let y = startYear; y <= endYear; y++) {
+    ticks.push(new Date(y, 0, 1));
+  }
+
+  const baseRowHeight = zoomFactor === 1 ? 35 : 45;
+  const rowHeight = baseRowHeight * zoomFactor;
+  const chartHeight = dataTable.getNumberOfRows() * rowHeight + 30;
+
+  let years = endYear - startYear + 1;
+  let baseWidth = zoomFactor === 1 ? 80 : 100; 
+  let chartWidth = years * baseWidth * zoomFactor;
+
+  
+  let finalWidth = Math.max(chartWidth, 550);
+
+  chart.draw(dataTable, {
+    height: chartHeight,
+    width: finalWidth,
+    timeline: {
+      rowLabelStyle: { fontSize: 12 * zoomFactor, color: '#444' },
+      barLabelStyle: { fontSize: 12 * zoomFactor, color: '#222' }
+    },
+    avoidOverlappingGridLines: true,
+   hAxis: {
+  format: 'yyyy',
+  ticks: ticks,
+  gridlines: { count: ticks.length },
+  minorGridlines: { count: 0 },
+  viewWindowMode: 'explicit',
+  viewWindow: { min: minDate, max: maxDate }
+}
+
+  });
+}
+
+
+
+function zoomIn() {
+  zoomFactor = Math.min(zoomFactor * 1.25, 5); 
+  drawChart();
+}
+
+function zoomOut() {
+  zoomFactor = Math.max(zoomFactor / 1.25, 0.5); 
+  drawChart();
+}
+
+</script>
+
+            </div>
+
+
+            <hr style="margin: 15px 0; border-top: 1px solid #ccc;">
+            <h4 style="margin-top: 0;">Vice Mayors</h4>
+
+            <div id="viceMayorTableContainer" style="position: relative;">
+                <table id="viceMayorTable"
+                    style="width: 100%; border-collapse: collapse; font-size: 14px; margin-bottom: 20px;">
+                  <thead>
+  <tr style="background-color: #f1f1f1;">
+    <th class="sortable" style="text-align: left; padding: 8px; border-bottom: 1px solid #ccc;" data-column="name" data-type="string">
+      Name <span class="sort-arrow"></span>
+    </th>
+<th class="sortable desc" style="text-align: center; padding: 8px; border-bottom: 1px solid #ccc;" data-column="termStart" data-type="number">
+  Term Start<span class="sort-arrow"></span>
+</th>
+
+    <th class="sortable" style="text-align: center; padding: 8px; border-bottom: 1px solid #ccc;" data-column="termEnd" data-type="number">
+      Term End <span class="sort-arrow"></span>
+    </th>
+                    <tbody id="viceMayorTableBody">
+                        <tr class="viceMayorRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Eric T. Rodriguez 
+                                    <div class="profile-modal top-right">
+                                        <div style="display: flex; align-items: center; gap: 10px;">
+                                            <img src="http://wp-local.com/wp-content/uploads/2025/08/Vice-Mayor-ERIC-TRINIDAD-RODRIGUEZ.png"
+                                                style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                            <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                                <h4 style="margin: 0;">Eric Trinidad Rodriguez (Pdplbn)</h4>
+                                                <p style="text-align: justify;">Looking back on the past year, I am proud of the progress we’ve made together.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                        </tr>
+                        <tr class="viceMayorRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Eric T. Rodriguez 
+                                    <div class="profile-modal top-right">
+                                        <div style="display: flex; align-items: center; gap: 10px;">
+                                            <img src="http://wp-local.com/wp-content/uploads/2025/08/Vice-Mayor-ERIC-TRINIDAD-RODRIGUEZ.png"
+                                                style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                            <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                                <h4 style="margin: 0;">Eric Trinidad Rodriguez (Pdplbn)</h4>
+                                                <p style="text-align: justify;">Looking back on the past year, I am proud of the progress we’ve made together.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2019</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="pagination-wrapper-vice" style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
+                    <p id="vicePageInfo" style="margin: 0; font-weight: bold; font-size: 14px;">This is page 1 out of X</p>
+                    <div id="vicePagination" class="pagination" style="display: flex; gap: 5px;"></div>
+                  </div>
+                  
+            </div>
+            <script>
+                const rowsPerPageVice = 10;
+                let currentPageVice = 1;
+              
+                function updateViceMayorTable() {
+                  const rows = document.querySelectorAll(".viceMayorRow");
+                  const totalPages = Math.ceil(rows.length / rowsPerPageVice);
+              
+                  rows.forEach((row, index) => {
+                    row.style.display = (
+                      index >= (currentPageVice - 1) * rowsPerPageVice &&
+                      index < currentPageVice * rowsPerPageVice
+                    ) ? '' : 'none';
+                  });
+              
+                  renderVicePagination(totalPages);
+                }
+              
+                function changeVicePage(page) {
+                  const rows = document.querySelectorAll(".viceMayorRow");
+                  const totalPages = Math.ceil(rows.length / rowsPerPageVice);
+              
+                  if (page < 1) page = 1;
+                  if (page > totalPages) page = totalPages;
+              
+                  currentPageVice = page;
+                  updateViceMayorTable();
+                }
+              
+                function renderVicePagination(totalPages) {
+                  document.getElementById("vicePageInfo").textContent = `This is page ${currentPageVice} out of ${totalPages}`;
+                  const container = document.getElementById("vicePagination");
+                  container.innerHTML = "";
+              
+                  const prevBtn = document.createElement("button");
+                  prevBtn.textContent = "<< Prev";
+                  prevBtn.className = currentPageVice === 1 ? "disabled" : "";
+                  prevBtn.disabled = currentPageVice === 1;
+                  prevBtn.onclick = () => changeVicePage(currentPageVice - 1);
+                  container.appendChild(prevBtn);
+              
+                  const maxPagesToShow = 7;
+                  let startPage = 1;
+                  let endPage = totalPages;
+              
+                  if (totalPages > maxPagesToShow) {
+                    if (currentPageVice <= 4) {
+                      endPage = 5;
+                    } else if (currentPageVice >= totalPages - 3) {
+                      startPage = totalPages - 4;
+                    } else {
+                      startPage = currentPageVice - 2;
+                      endPage = currentPageVice + 2;
+                    }
+                  }
+              
+                  if (startPage > 1) {
+                    addVicePageButton(container, 1);
+                    if (startPage > 2) {
+                      addViceEllipsis(container);
+                    }
+                  }
+              
+                  for (let i = startPage; i <= endPage; i++) {
+                    addVicePageButton(container, i);
+                  }
+              
+                  if (endPage < totalPages) {
+                    if (endPage < totalPages - 1) {
+                      addViceEllipsis(container);
+                    }
+                    addVicePageButton(container, totalPages);
+                  }
+              
+                  const nextBtn = document.createElement("button");
+                  nextBtn.textContent = "Next >>";
+                  nextBtn.className = currentPageVice === totalPages ? "disabled" : "";
+                  nextBtn.disabled = currentPageVice === totalPages;
+                  nextBtn.onclick = () => changeVicePage(currentPageVice + 1);
+                  container.appendChild(nextBtn);
+                }
+              
+                function addVicePageButton(container, pageNumber) {
+                  const btn = document.createElement("button");
+                  btn.textContent = pageNumber;
+                  if (currentPageVice === pageNumber) {
+                    btn.className = "active";
+                  }
+                  btn.onclick = () => changeVicePage(pageNumber);
+                  container.appendChild(btn);
+                }
+              
+                function addViceEllipsis(container) {
+                  const ellipsis = document.createElement("span");
+                  ellipsis.textContent = "...";
+                  ellipsis.className = "ellipsis";
+                  container.appendChild(ellipsis);
+                }
+              
+                updateViceMayorTable();
+              </script>
+              
+            <hr style="margin: 15px 0; border-top: 1px solid #ccc;">
+            <h4 style="margin-top: 0;">Councilors</h4>
+
+            <div id="councilorTableContainer" style="position: relative;">
+                <table id="councilorTable"
+                    style="width: 100%; border-collapse: collapse; font-size: 14px; margin-bottom: 20px;">
+                    <thead>
+  <tr style="background-color: #f1f1f1;">
+    <th class="sortable" style="text-align: left; padding: 8px; border-bottom: 1px solid #ccc;" data-column="name" data-type="string">
+      Name <span class="sort-arrow"></span>
+    </th>
+<th class="sortable desc" style="text-align: center; padding: 8px; border-bottom: 1px solid #ccc;" data-column="termStart" data-type="number">
+  Term Start<span class="sort-arrow"></span>
+</th>
+
+    <th class="sortable" style="text-align: center; padding: 8px; border-bottom: 1px solid #ccc;" data-column="termEnd" data-type="number">
+      Term End <span class="sort-arrow"></span>
+    </th>
+  </tr>
+                  </thead>
+                    <tbody id="councilorTableBody">
+
+                        <tr class="councilorRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Jezreel E. Delos Santos 
+                                    <div class="profile-modal top-right">
+                                        <div style="display: flex; align-items: center; gap: 10px;">
+                                            <img src="http://wp-local.com/wp-content/uploads/2025/08/Mayor-Border-female.png"
+                                                style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                            <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                                <h4 style="margin: 0;">Jezreel Evangelista Delos Santos (Ind)</h4>
+                                                <p style="text-align: justify;">Looking back on the past year, I am proud of the progress we’ve made together.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                        </tr>
+                        <tr class="councilorRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Michael F. Tidon 
+                                    <div class="profile-modal top-right">
+                                        <div style="display: flex; align-items: center; gap: 10px;">
+                                            <img src="http://wp-local.com/wp-content/uploads/2025/08/Mayor-Border-male.png"
+                                                style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                            <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                                <h4 style="margin: 0;">Michael Fernandez Tidon (Pdplbn)</h4>
+                                               <p style="text-align: justify;">Looking back on the past year, I am proud of the progress we’ve made together.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                        </tr>
+                        <tr class="councilorRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Erickson F. Niola 
+                                    <div class="profile-modal top-right">
+                                        <div style="display: flex; align-items: center; gap: 10px;">
+                                            <img src="http://wp-local.com/wp-content/uploads/2025/08/Mayor-Border-male.png"
+                                                style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                            <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                                <h4 style="margin: 0;">Erickson Fernandez Niola (Pdplbn)</h4>
+                                                <p style="text-align: justify;">Looking back on the past year, I am proud of the progress we’ve made together.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                        </tr>
+                        <tr class="councilorRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    John Willy D. Tabirara
+                                    <div class="profile-modal top-right">
+                                        <div style="display: flex; align-items: center; gap: 10px;">
+                                            <img src="http://wp-local.com/wp-content/uploads/2025/08/Mayor-Border-male.png"
+                                                style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                            <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                                <h4 style="margin: 0;">John Willy Domingo Tabirara (Janjan) (Pdplbn)</h4>
+                                                <p style="text-align: justify;">Looking back on the past year, I am proud of the progress we’ve made together.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                        </tr>
+                        <tr class="councilorRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Samuel S. Namata 
+                                    <div class="profile-modal top-right">
+                                        <div style="display: flex; align-items: center; gap: 10px;">
+                                            <img src="http://wp-local.com/wp-content/uploads/2025/08/Mayor-Border-male.png"
+                                                style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                            <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                                <h4 style="margin: 0;">Samuel Santelices Namata (Ind)</h4>
+                                                <p style="text-align: justify;">Looking back on the past year, I am proud of the progress we’ve made together.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                        </tr>
+                        <tr class="councilorRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Wilfredo P. Santelices
+                                    <div class="profile-modal top-right">
+                                        <div style="display: flex; align-items: center; gap: 10px;">
+                                            <img src="http://wp-local.com/wp-content/uploads/2025/08/Mayor-Border-male.png"
+                                                style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                            <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                                <h4 style="margin: 0;">Wilfredo Posada Santelices (Doc Freding) (Ind)</h4>
+                                                <p style="text-align: justify;">Looking back on the past year, I am proud of the progress we’ve made together.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                        </tr>
+                        <tr class="councilorRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Concordio I. Delos 
+                                    <div class="profile-modal top-right">
+                                        <div style="display: flex; align-items: center; gap: 10px;">
+                                            <img src="http://wp-local.com/wp-content/uploads/2025/08/Mayor-Border-male.png"
+                                                style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                            <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                                <h4 style="margin: 0;">Concordio Isorena Delos Santos (Ind)</h4>
+                                                <p style="text-align: justify;">Looking back on the past year, I am proud of the progress we’ve made together.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                        </tr>
+                        <tr class="councilorRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Alfonso D. Crispino III	
+                                    <div class="profile-modal top-right">
+                                        <div style="display: flex; align-items: center; gap: 10px;">
+                                            <img src="http://wp-local.com/wp-content/uploads/2025/08/Mayor-Border-male.png"
+                                                style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                            <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                                <h4 style="margin: 0;">Alfonso De Quiros Crispino III (Ind)	</h4>
+                                                <p style="text-align: justify;">Looking back on the past year, I am proud of the progress we’ve made together.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="pagination-wrapper" style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
+                    <p id="councilorPageInfo" style="margin: 0; font-weight: bold; font-size: 14px;">This is page 1 out of X</p>
+                    <div id="councilorPagination" class="pagination" style="display: flex; gap: 5px;"></div>
+                  </div>
+                  
+            </div>
+
+            <script>
+                const rowsPerPageCouncilor = 10;
+                let currentPageCouncilor = 1;
+              
+                function updateCouncilorTable() {
+                  const rows = document.querySelectorAll(".councilorRow");
+                  const totalPages = Math.ceil(rows.length / rowsPerPageCouncilor);
+              
+                  rows.forEach((row, index) => {
+                    row.style.display = (
+                      index >= (currentPageCouncilor - 1) * rowsPerPageCouncilor &&
+                      index < currentPageCouncilor * rowsPerPageCouncilor
+                    ) ? '' : 'none';
+                  });
+              
+                  renderCouncilorPagination(totalPages);
+                }
+              
+                function changeCouncilorPage(page) {
+                  const rows = document.querySelectorAll(".councilorRow");
+                  const totalPages = Math.ceil(rows.length / rowsPerPageCouncilor);
+              
+                  if (page < 1) page = 1;
+                  if (page > totalPages) page = totalPages;
+              
+                  currentPageCouncilor = page;
+                  updateCouncilorTable();
+                }
+              
+                function renderCouncilorPagination(totalPages) {
+                  document.getElementById("councilorPageInfo").textContent = `This is page ${currentPageCouncilor} out of ${totalPages}`;
+                  const container = document.getElementById("councilorPagination");
+                  container.innerHTML = "";
+              
+                  const prevBtn = document.createElement("button");
+                  prevBtn.textContent = "<< Prev";
+                  prevBtn.className = currentPageCouncilor === 1 ? "disabled" : "";
+                  prevBtn.disabled = currentPageCouncilor === 1;
+                  prevBtn.onclick = () => changeCouncilorPage(currentPageCouncilor - 1);
+                  container.appendChild(prevBtn);
+              
+                  const maxPagesToShow = 7;
+                  let startPage = 1;
+                  let endPage = totalPages;
+              
+                  if (totalPages > maxPagesToShow) {
+                    if (currentPageCouncilor <= 4) {
+                      endPage = 5;
+                    } else if (currentPageCouncilor >= totalPages - 3) {
+                      startPage = totalPages - 4;
+                    } else {
+                      startPage = currentPageCouncilor - 2;
+                      endPage = currentPageCouncilor + 2;
+                    }
+                  }
+              
+                  if (startPage > 1) {
+                    addCouncilorPageButton(container, 1);
+                    if (startPage > 2) {
+                      addCouncilorEllipsis(container);
+                    }
+                  }
+              
+                  for (let i = startPage; i <= endPage; i++) {
+                    addCouncilorPageButton(container, i);
+                  }
+              
+                  if (endPage < totalPages) {
+                    if (endPage < totalPages - 1) {
+                      addCouncilorEllipsis(container);
+                    }
+                    addCouncilorPageButton(container, totalPages);
+                  }
+              
+                  const nextBtn = document.createElement("button");
+                  nextBtn.textContent = "Next >>";
+                  nextBtn.className = currentPageCouncilor === totalPages ? "disabled" : "";
+                  nextBtn.disabled = currentPageCouncilor === totalPages;
+                  nextBtn.onclick = () => changeCouncilorPage(currentPageCouncilor + 1);
+                  container.appendChild(nextBtn);
+                }
+              
+                function addCouncilorPageButton(container, pageNumber) {
+                  const btn = document.createElement("button");
+                  btn.textContent = pageNumber;
+                  if (currentPageCouncilor === pageNumber) {
+                    btn.className = "active";
+                  }
+                  btn.onclick = () => changeCouncilorPage(pageNumber);
+                  container.appendChild(btn);
+                }
+              
+                function addCouncilorEllipsis(container) {
+                  const ellipsis = document.createElement("span");
+                  ellipsis.textContent = "...";
+                  ellipsis.className = "ellipsis";
+                  container.appendChild(ellipsis);
+                }
+              
+                updateCouncilorTable();
+              </script>
+<script>
+/**
+ * Generic table sorter
+ * @param {string} tbodyId - ID ng tbody (e.g.,"viceMayorTableBody", "councilorTableBody")
+ * @param {string} rowClass - class ng row (e.g., "viceMayorRow", "councilorRow")
+ * @param {number} columnIndex - index ng column to sort
+ * @param {string} type - "string" o "number"
+ * @param {boolean} asc - ascending or descending
+ */
+function sortGenericTable(tbodyId, rowClass, columnIndex, type, asc) {
+  const tbody = document.getElementById(tbodyId);
+  const rowsArray = Array.from(tbody.querySelectorAll("." + rowClass));
+
+  rowsArray.sort((a, b) => {
+    let valA, valB;
+    if(type === "string") {
+      // For Name column or text
+      valA = a.children[columnIndex].innerText.trim().toLowerCase();
+      valB = b.children[columnIndex].innerText.trim().toLowerCase();
+      if(valA < valB) return asc ? -1 : 1;
+      if(valA > valB) return asc ? 1 : -1;
+      return 0;
+    } else if(type === "number") {
+      // For Term Start / Term End
+      valA = parseInt(a.children[columnIndex].innerText.trim(), 10);
+      valB = parseInt(b.children[columnIndex].innerText.trim(), 10);
+      return asc ? valA - valB : valB - valA;
+    }
+    return 0;
+  });
+
+  tbody.innerHTML = "";
+  rowsArray.forEach(row => tbody.appendChild(row));
+}
+
+// Apply sorting to all tables
+document.querySelectorAll("table").forEach(table => {
+  const tbodyId = table.querySelector("tbody").id;
+  const rowClass = table.querySelector("tbody tr").className;
+
+  table.querySelectorAll("th.sortable").forEach((th, idx) => {
+    th.addEventListener("click", () => {
+      // Remove asc/desc from other headers
+      table.querySelectorAll("th.sortable").forEach(header => {
+        if(header !== th) header.classList.remove("asc", "desc");
+      });
+
+      // Toggle direction
+      const asc = !th.classList.contains("asc");
+      th.classList.toggle("asc", asc);
+      th.classList.toggle("desc", !asc);
+
+      // Sort table
+      const type = th.dataset.type;
+      sortGenericTable(tbodyId, rowClass, idx, type, asc);
+    });
+  });
+});
+</script>              
+        </div>
+
+    </div>
+</div>
+</div>
+
+<div class="officials-section">
+    <div class="officials-wrapper">
+
+
+    <div class="municipal-officials" style="padding: 20px;">
+        <div style="text-align: center; margin-bottom: 25px;">
+            <img src="http://wp-local.com/wp-content/uploads/2025/08/Honesto-Tabligan-Pandan.png"
+                alt="Mayor"
+                style="width: 160px; height: 160px; border-radius: 50%; object-fit: cover; margin-bottom: 10px;">
+            <p style="margin: 0; padding: 0; line-height: 1.2;"><strong>Honesto II Castillo Tabligan</strong></p>
+            <p style="margin: 0 0 30px 0; padding: 0; line-height: 1;">Mayor</p>
+        </div>
+        <div style="text-align: center; margin-bottom: 30px;">
+            <p style="margin: 0; padding: 0; line-height: 1.2;"><strong>Eric Trinidad Rodriguez</strong></p>
+            <p style="margin: 0 0 10px 0; padding: 0; line-height: 1;">Vice Mayor</p>
+        </div>
+        <hr style="border: none; border-top: 1px solid #ddd; margin: 0 0 30px 0;">
+        <div style="text-align: center;">
+            <p style="margin: 0 0 15px 0; padding: 0; font-weight: bold; font-size: 14px;">MUNICIPAL COUNCILORS</p>
+            <p style="margin: 0; padding: 0; line-height: 1.2;">Marvie Lingling Niola</p>
+                        <p style="margin: 0; padding: 0; line-height: 1.2;">Rynz Tabligan Delos Santos</p>
+                                    <p style="margin: 0; padding: 0; line-height: 1.2;">Samuel Santelices Namata</p>
+                                                <p style="margin: 0; padding: 0; line-height: 1.2;">Emmanuel Evangelista Lopez</p>
+                                                            <p style="margin: 0; padding: 0; line-height: 1.2;">John Willy Domingo Tabirara</p>
+                                                                        <p style="margin: 0; padding: 0; line-height: 1.2;">Florencio Rafael Lopez Herrera</p>
+                                                <p style="margin: 0; padding: 0; line-height: 1.2;">Shiela Cecilla Sanchez Arcilla</p>
+            <p style="margin: 0; padding: 0; line-height: 1.2;">Alfonso III De Quiros Crisipino</p>        </div>
+      </div>
+    </div>
+</div>

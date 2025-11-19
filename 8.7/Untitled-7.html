@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Get in Touch</title>
+  <style>
+    body {
+      margin: 40px;
+      background-color: #fff;
+    }
+
+    /* Provincial color scheme */
+    :root {
+      --provincial-navy: hsl(220, 26%, 14%);
+    }
+
+    .contact-section {
+      max-width: 400px;
+    }
+
+    .contact-section h2 {
+      font-weight: 700;
+      font-size: 24px;
+      margin-bottom: 8px;
+      letter-spacing: 0.5px;
+      color: var(--provincial-navy);
+    }
+
+    .contact-section p {
+      margin-bottom: 24px;
+      max-width: 350px;
+      line-height: 1.4;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 18px;
+    }
+
+    .icon {
+      width: 28px;
+      height: 28px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #dde0e3;
+      border-radius: 5px;
+      margin-right: 14px;
+      flex-shrink: 0;
+    }
+
+    .icon.prov {
+      /* Building icon color */
+      color: #4d5257;
+    }
+
+    .icon.address {
+      color: #487951;
+      /* green pin color */
+    }
+
+    .icon.phone {
+      color: #4a6be8;
+      /* blue phone */
+    }
+
+    .icon.email {
+      color: #bd8a38;
+      /* orange mail */
+    }
+
+    .contact-content {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .contact-title {
+      font-weight: 700;
+      font-size: 14px;
+      margin-bottom: 4px;
+      color: var(--provincial-navy);
+    }
+
+    .contact-subtitle {
+      font-size: 13px;
+    }
+
+    .contact-text {
+      font-size: 13px;
+    }
+
+    .email-text {
+      font-size: 13px;
+    }
+
+    /* Style for embedded map */
+    .map-container {
+      margin-top: 20px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      max-width: 400px;
+    }
+
+    iframe {
+      width: 100%;
+      height: 200px;
+      border: none;
+      border-radius: 12px;
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <section class="contact-section">
+    <h2>GET IN TOUCH</h2>
+    <p>We're here to assist you with any inquiries or services you need.
+      Contact us through any of the channels below.</p>
+
+    <div class="contact-item">
+      <div class="icon prov" aria-label="Provincial Information Office icon">
+        &#128196; <!-- page icon representing office -->
+      </div>
+      <div class="contact-content">
+        <div class="contact-title">PROVINCIAL INFORMATION OFFICE</div>
+        <div class="contact-subtitle">Catanduanes Provincial Information Office</div>
+      </div>
+    </div>
+
+    <div class="contact-item">
+      <div class="icon address" aria-label="Address icon">
+        &#x1F4CD; <!-- location pin -->
+      </div>
+      <div class="contact-content">
+        <div class="contact-title">ADDRESS</div>
+        <div class="contact-subtitle">Catanduanes Provincial Capitol, Virac, Catanduanes</div>
+      </div>
+    </div>
+
+    <div class="contact-item">
+      <div class="icon phone" aria-label="Phone icon">
+        &#128222; <!-- telephone receiver -->
+      </div>
+      <div class="contact-content">
+        <div class="contact-title">PHONE</div>
+        <div class="contact-text">0912 345 6789</div>
+      </div>
+    </div>
+
+    <div class="contact-item">
+      <div class="icon email" aria-label="Email icon">
+        &#9993; <!-- envelope -->
+      </div>
+      <div class="contact-content">
+        <div class="contact-title">EMAIL</div>
+        <div class="email-text">provincialcapitol@gmail.com</div>
+      </div>
+    </div>
+
+    <div class="map-container">
+      <iframe 
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3878.173627567928!2d124.23442097572979!3d13.586201901104738!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a016d421fd8175%3A0x3539f215f1a4bc6c!2sCatanduanes%20Provincial%20Capitol!5e0!3m2!1sen!2sph!4v1754533900244!5m2!1sen!2sph" 
+  width="600" 
+  height="450" 
+  style="border:0;" 
+  allowfullscreen="" 
+  loading="lazy" 
+  referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+
+    </div>
+  </section>
+</body>
+
+</html>

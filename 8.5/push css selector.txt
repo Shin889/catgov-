@@ -1,0 +1,25 @@
+<aside id="govph_widget_transparency-2" 
+class="widget callout secondary transparency_widget text-center">
+<a href="https://op-proper.gov.ph/transparency-seal-2/">
+<img id="tp-seal" src="https://op-proper.gov.ph/wp-content/themes/gwt-wordpress-25.3.3/images/transparency-seal-160x160.png" 
+alt="transparency seal logo" title="Transparency Seal"></a></aside>
+
+
+
+div > p {
+  background-color: gold;
+  border: 1px solid gray;
+}
+
+
+wp-block-column is-layout-flow wp-block-column-is-layout-flow > wp-block-latest-posts__list wp-block-latest-posts > wp-block-latest-posts__post-title > wp-block-latest-posts__post-excerpt > li {
+  background-color: 
+  border: 1px solid gray;
+  padding: 
+}
+
+wp-block-column is-layout-flow wp-block-column-is-layout-flow > wp-block-latest-posts__list wp-block-latest-posts > wp-block-latest-posts__post-title :: hover {
+  font-weight: 
+  font-color: #0066cc;
+}
+

@@ -1,0 +1,380 @@
+<style>
+        .osmap-items {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: #f9f9f9;
+            border-radius: 12px;
+border: 1px solid #ddd;
+            padding: 2rem;
+        }
+
+        #osmap-menu-uid-mainmenu {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 2rem;
+            text-align: center;
+            background: linear-gradient(135deg, #555864 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+.level_0 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+        .level_0 > li {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            border-left: 4px solid #3498db;
+            flex: 1 1 300px;
+        }
+
+        .level_0 > li:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .level_0 > li:nth-child(odd) {
+            border-left-color: #e74c3c;
+        }
+
+        .level_0 > li:nth-child(even) {
+            border-left-color: #2ecc71;
+        }
+
+        .level_0 > li:nth-child(3n) {
+            border-left-color: #f39c12;
+        }
+
+.level_1, .level_2, .level_3 {
+  display: none;
+  margin-top: 0.5rem;
+  padding-left: 1.2rem;
+  border-left: 2px solid #ecf0f1;
+}
+
+        .level_1 > li {
+            margin-bottom: 0.8rem;
+        }
+
+        .level_2 > li, .level_3 > li {
+            margin-bottom: 0.5rem;
+        }
+
+        .osmap-link {
+            color: #2c3e50;
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-block;
+            padding: 0.5rem 0;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .osmap-link::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            transition: width 0.3s ease;
+        }
+
+        .osmap-link:hover {
+            color: #667eea;
+            transform: translateX(5px);
+        }
+
+        .osmap-link:hover::before {
+            width: 100%;
+        }
+
+        .level_0 > li > .osmap-link {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #2c3e50;
+            border-bottom: 2px solid transparent;
+        }
+
+        .level_1 .osmap-link {
+            color: #34495e;
+            font-weight: 500;
+        }
+
+        .level_2 .osmap-link, .level_3 .osmap-link {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+
+        span {
+            font-weight: 600;
+            color: #2c3e50;
+            display: inline-block;
+            padding: 0.5rem 0;
+        }
+
+        .osmap-has-children > span, .osmap-has-children > .osmap-link {
+            position: relative;
+        }
+
+        /* When active, show child menu */
+.osmap-has-children.open > .level_1,
+.osmap-has-children.open > .level_2,
+.osmap-has-children.open > .level_3 {
+  display: block;
+}
+
+/* Arrow rotation for active */
+.osmap-has-children > span::after,
+.osmap-has-children > .osmap-link::after {
+  content: '▼';
+  font-size: 0.8rem;
+  margin-left: 0.5rem;
+  color: #95a5a6;
+  transition: transform 0.3s ease;
+}
+
+.osmap-has-children.open > span::after,
+.osmap-has-children.open > .osmap-link::after {
+  transform: rotate(180deg);
+}
+        .osmap-has-children > span::after, .osmap-has-children > .osmap-link::after {
+            content: '▼';
+            font-size: 0.8rem;
+            margin-left: 0.5rem;
+            color: #95a5a6;
+            transition: transform 0.3s ease;
+        }
+
+        .osmap-has-children:hover > span::after, .osmap-has-children:hover > .osmap-link::after {
+            transform: rotate(180deg);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+
+            .osmap-items {
+                padding: 1.5rem;
+            }
+
+            #osmap-menu-uid-mainmenu {
+                font-size: 2rem;
+            }
+
+            .level_1, .level_2, .level_3 {
+                padding-left: 1rem;
+            }
+        }
+
+        .osmap-items {
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .level_0 > li {
+            animation: slideInLeft 0.6s ease-out forwards;
+            opacity: 0;
+        }
+
+        .level_0 > li:nth-child(1) { animation-delay: 0.1s; }
+        .level_0 > li:nth-child(2) { animation-delay: 0.2s; }
+        .level_0 > li:nth-child(3) { animation-delay: 0.3s; }
+        .level_0 > li:nth-child(4) { animation-delay: 0.4s; }
+        .level_0 > li:nth-child(5) { animation-delay: 0.5s; }
+        .level_0 > li:nth-child(6) { animation-delay: 0.6s; }
+        .level_0 > li:nth-child(7) { animation-delay: 0.7s; }
+        .level_0 > li:nth-child(8) { animation-delay: 0.8s; }
+        .level_0 > li:nth-child(9) { animation-delay: 0.9s; }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+    </style>
+
+    <div class="osmap-items">
+        <ul class="level_0" id="osmap-ul-uid-mainmenu">
+            <li id="osmap-li-uid-menuitem-101">
+                <a href="http://wp-local.com" class="osmap-link">Home</a>
+            </li>
+            <li id="osmap-li-uid-menuitem-102">
+                <a href="http://wp-local.com/new-and-information/" class="osmap-link">News and Information</a>
+            </li>
+            <li class="osmap-has-children" id="osmap-li-uid-separator-government">
+                <a href="http://wp-local.com/government-2/" class="osmap-link">Government</a>
+                <ul class="level_1">
+                    <li class="osmap-has-children" id="osmap-li-uid-joomla-article-87">
+                        <span>Executive</span>
+                        <ul class="level_2">
+                            <li><a href="http://wp-local.com/governors-corner/" class="osmap-link">Governor's Corner</a></li>
+                            <li><a href="http://wp-local.com/featured-speeches/" class="osmap-link">Featured Speeches</a></li>
+                        </ul>
+                    </li>
+                    <li class="osmap-has-children" id="osmap-li-uid-joomla-article-50">
+                        <a href="http://wp-local.com/municipalities/" class="osmap-link">Municipalities</a>
+                        <ul class="level_2">
+                            <li><a href="http://wp-local.com/virac-capital/" class="osmap-link">Municipality of Virac</a></li>
+                            <li><a href="http://wp-local.com/baras/" class="osmap-link">Municipality of Baras</a></li>
+                            <li><a href="http://wp-local.com/bagamanoc/" class="osmap-link">Municipality of Bagamanoc</a></li>
+                            <li><a href="http://wp-local.com/bato/" class="osmap-link">Municipality of Bato</a></li>
+                            <li><a href="http://wp-local.com/caramoran/" class="osmap-link">Municipality of Caramoran</a></li>
+                            <li><a href="http://wp-local.com/gigmoto/" class="osmap-link">Municipality of Gigmoto</a></li>
+                            <li><a href="http://wp-local.com/pandan/" class="osmap-link">Municipality of Pandan</a></li>
+                            <li><a href="http://wp-local.com/panganiban/" class="osmap-link">Municipality of Panganiban</a></li>
+                            <li><a href="http://wp-local.com/san-andres/" class="osmap-link">Municipality of San Andres</a></li>
+                            <li><a href="http://wp-local.com/san-miguel/" class="osmap-link">Municipality of San Miguel</a></li>
+                            <li><a href="http://wp-local.com/viga/" class="osmap-link">Municipality of Viga</a></li>
+                        </ul>
+                    </li>
+                    <li class="osmap-has-children" id="osmap-li-uid-joomla-article-52">
+                        <a href="http://wp-local.com/progocea/" class="osmap-link">PROGOCEA</a>
+                        <ul class="level_2">
+                            <li class="osmap-has-children">
+                                <span>Program</span>
+                                <ul class="level_3">
+                                    <li><a href="http://wp-local.com/activities/" class="osmap-link">Activities</a></li>
+                                    <li><a href="http://wp-local.com/meetings-greetings/" class="osmap-link">Meetings & Greetings</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="http://wp-local.com/insurances-record/" class="osmap-link">Documents</a></li>
+                            <li class="osmap-has-children">
+                                <a href="http://wp-local.com/about-us/" class="osmap-link">About Us</a>
+                                <ul class="level_3">
+                                    <li><a href="http://wp-local.com/team/" class="osmap-link">Team</a></li>
+                                    <li><a href="http://wp-local.com/members/" class="osmap-link">Members</a></li>
+                                    <li><a href="http://wp-local.com/contact-us-3/" class="osmap-link">Contact Us</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="osmap-has-children">
+                        <a href="http://wp-local.com/sangguniang-kabataan/" class="osmap-link">CASS</a>
+                        <ul class="level_2">
+                            <li><a href="http://wp-local.com/officers/" class="osmap-link">Officers</a></li>
+                            <li><a href="http://wp-local.com/directors/" class="osmap-link">Directors</a></li>
+                        </ul>
+                    </li>
+                    <li class="osmap-has-children">
+                        <a href="http://wp-local.com/phrmdo/" class="osmap-link">PHRMDO</a>
+                        <ul class="level_2">
+                            <li><a href="http://wp-local.com/phrmdo-officers/" class="osmap-link">Organizations</a></li>
+                            <li><a href="http://wp-local.com/contact-us-4/" class="osmap-link">Contact Us</a></li>
+                        </ul>
+                    </li>
+                    <li class="osmap-has-children">
+                        <a href="http://wp-local.com/peso/" class="osmap-link">PESO</a>
+                        <ul class="level_2">
+                            <li><a href="http://wp-local.com/programs/" class="osmap-link">Programs & Activities</a></li>
+                            <li><a href="http://wp-local.com/finance-and-administration/" class="osmap-link">Finance and Administration</a></li>
+                            <li class="osmap-has-children">
+                                <a href="http://wp-local.com/about-us-2/" class="osmap-link">About</a>
+                                <ul class="level_3">
+                                    <li><a href="http://wp-local.com/futures/" class="osmap-link">Future Plan</a></li>
+                                    <li><a href="http://wp-local.com/contact-us-5/" class="osmap-link">Contact Us</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="osmap-has-children" id="osmap-li-uid-about">
+                <span>About</span>
+                <ul class="level_1">
+                    <li><a href="http://wp-local.com/history/" class="osmap-link">History</a></li>
+                    <li><a href="http://wp-local.com/events/" class="osmap-link">Events</a></li>
+                </ul>
+            </li>
+            <li class="osmap-has-children">
+                <a href="http://wp-local.com/transparency/" class="osmap-link">Transparency</a>
+                <ul class="level_1">
+                    <li class="osmap-has-children">
+                        <span>Procurement & Documents</span>
+                        <ul class="level_2">
+                            <li><a href="http://wp-local.com/annual-procurement-plan/" class="osmap-link">Annual Procurement Plan</a></li>
+                            <li><a href="http://wp-local.com/apcpi/" class="osmap-link">APCPI</a></li>
+                            <li><a href="http://wp-local.com/citizens-charter/" class="osmap-link">Citizen's Charter</a></li>
+                            <li><a href="http://wp-local.com/consignment-bulletin/" class="osmap-link">Consignment Bulletin</a></li>
+                            <li><a href="http://wp-local.com/contracts-notices/" class="osmap-link">Contracts & Notices</a></li>
+                            <li><a href="http://wp-local.com/goods-services-bid/" class="osmap-link">Goods & Services/Civil Works</a></li>
+                            <li><a href="http://wp-local.com/invitation-to-bid/" class="osmap-link">Invitation to Bid</a></li>
+                            <li><a href="http://wp-local.com/delinquent-properties/" class="osmap-link">Delinquent Properties</a></li>
+                            <li><a href="http://wp-local.com/notice-postponement/" class="osmap-link">Notice of Postponement</a></li>
+                            <li><a href="http://wp-local.com/bidding-documents/" class="osmap-link">Philippine Bidding Documents</a></li>
+                            <li><a href="http://wp-local.com/procurement-monitoring/" class="osmap-link">Procurement Monitoring Report</a></li>
+                            <li><a href="http://wp-local.com/request-quotation/" class="osmap-link">Request for Quotation</a></li>
+                        </ul>
+                    </li>
+                    <li class="osmap-has-children">
+                        <a href="http://wp-local.com/gad/" class="osmap-link">GAD</a>
+                        <ul class="level_2">
+                            <li><a href="http://wp-local.com/gad-database-2024-institutional-sector/" class="osmap-link">Institutional Sector</a></li>
+                            <li><a href="http://wp-local.com/gad-database-2024-infra-sector/" class="osmap-link">Infra Sector</a></li>
+                            <li><a href="http://wp-local.com/gad-database-2024-environment-sector/" class="osmap-link">Environment Sector</a></li>
+                            <li><a href="http://wp-local.com/gad-database-2024-economic-sector/" class="osmap-link">Economic Sector</a></li>
+                            <li><a href="http://wp-local.com/gad-database-2024-social-sector/" class="osmap-link">Social Sector</a></li>
+                            <li><a href="http://wp-local.com/social-development-sector/" class="osmap-link">Social Development</a></li>
+                            <li><a href="http://wp-local.com/economic-sector/" class="osmap-link">Economic</a></li>
+                            <li><a href="http://wp-local.com/environment-sector/" class="osmap-link">Environment</a></li>
+                            <li><a href="http://wp-local.com/infrastructure-sector/" class="osmap-link">Infrastructure</a></li>
+                            <li><a href="http://wp-local.com/institutional-sector/" class="osmap-link">Institutional</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#" class="osmap-link">Full Disclosure Policy</a></li>
+            <li><a href="#" class="osmap-link">Citizen's Charter</a></li>
+            <li><a href="#" class="osmap-link">Executive Orders</a></li>
+            <li><a href="http://wp-local.com/sitemap/" class="osmap-link">Sitemap</a></li>
+            <li><a href="http://wp-local.com/contact-us-2/" class="osmap-link">Contact Us</a></li>
+        </ul>
+    </div>
+
+    <script>
+document.addEventListener("DOMContentLoaded", function () {
+  const parents = document.querySelectorAll(".osmap-has-children > span, .osmap-has-children > .osmap-link");
+
+  parents.forEach(parent => {
+    parent.addEventListener("click", function (e) {
+      e.preventDefault(); // prevent link navigation if it’s just a parent
+      const li = parent.parentElement;
+
+      // toggle "open" class
+      li.classList.toggle("open");
+    });
+  });
+});
+</script>

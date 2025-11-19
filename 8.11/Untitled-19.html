@@ -1,0 +1,997 @@
+<div class="cell large-6 municipality__tabs-container">
+  <ul class="tabs" data-tabs="" id="example-tabs">
+      <li class="tabs-title is-active">
+          <a href="#panel1" aria-selected="true" class="municipality__panel-tab">About</a>
+      </li>
+      <li class="tabs-title">
+          <a href="#panel2" class="municipality__panel-tab">Barangays</a>
+      </li>
+      <li class="tabs-title">
+          <a href="#panel3" class="municipality__panel-tab">Previous Officials</a>
+      </li>
+  </ul>
+  <div class="tabs-content" data-tabs-content="example-tabs" style="text-align: justify;">
+      <div class="tabs-panel is-active" id="panel1">
+              
+    <p><strong>Background</strong> </p>
+    <p>When the Spanish conquest adores led by Juan de Salcedo set foot in 1575, Bato was relatively unexplored. Local Spanish officials assigned to the place once asked a woman who was washing clothes in the natural stone well the name of the place. She thought that the Spaniards were asking the name of the well. So she answered “Bato”, which the Spaniards recorded and reported as the name of one of the sitios of Virac. From then on, the place was called Bato until it became a full-fledged municipality in 1896.</p>
+    
+    <p><strong>GENERAL INRFOMATION</strong></p>
+    <p>Bato is one of the satellite municipalities of the Province of Catanduanes. It is a fifth class municipality composed of 27 barangays with a total land of 4,880 hectares, which is the smallest among the 11 towns of the province. It is a 20-minute ride from Virac, the provincial capital passing through paved national road.
+
+      Agriculture and fishing are the major industries. The best variety of abaca fiber (Manila hemp) is produced in Bato. It is also the only municipality in the province that produces millet, a kind of cereal which is one of the town’s delicacies.
+      
+      The geographical location of Bato, facing the Pacific Ocean was found to be a “Tuna Highway” Large and marketable sizes of tuna are caught the whole year round as well as other first class fish species like blue marlin and tanguigue.</p>
+
+      <p><strong>PHYSICAL CHARACTERISTICS:</strong></p>
+
+      <p><strong>LOCATION</strong></p>
+      <p>Bato is situated along the eastern coast of the Bicol Region and lies on the southeastern part of storm-tossed island Province of Catanduanes. It is located (11) kilometers southeast of Virac, the provincial capital towm. It is bounded on the north by the Municipality of San Miguel; on the east by the greatest body of water, the Pacific Ocean; on the South by Cabugao Bay and on the West by the Municipality of Virac. Meridional coordinates of the municipality’s location are: 124015’16” to 124i21’7” East longitude and 13 32’50” to 130 38’47” North latitude.</p>
+
+      <p><strong>TOPOGRAPHY</strong></p>
+      <p>The land elevation of the municipality of Bato varies from sea level to about 700 meters above  sea level, it has space and areas for approximately all its necessities. The areas of flat to nearly flat lands along the coast of Cabugao Bay and the Pacific and those along the banks of Bato river do not only cater to the agricultural needs of its inhabitants but also to their to their shelter and recreational needs.
+
+          The eastern portion of the bank of the river has a vast expanse of flat nearly flat lands. Covering an area of 25-30 percent of the locality, this flat land is 80 percent productive or agriculturally used. Also included within this area the swamps and marshes of Bato, which are spawning grounds of games and fishes of both fresh and salt-water fishes.
+          
+           </p>
+
+      <p><strong>CLIMATE</strong></p>
+      <p>Bato fall under the second type of climate, characterized by absence of dry season with a very pronounced maximum rainfall from November to January, while April and May are the only months with the least rainfall averaging 162 mm. with its location along the Pacific coast, Bato is neither sheltered from northeast monsoon nor the trade winds as well as cyclonic storms.
+
+          From September to early March the Northeasterly wind prevails at an average velocity of 3 knots. The southwesterly wind or “Habagat” prevails from May to early September at an average velocity of 4 knots December to February is the coldest months.</p>
+
+
+        </div>
+        <div class="tabs-panel" id="panel2">
+              <ul class="barangay-list">
+                 
+                <li>Aroyao Pequeño</li>
+                <li>Bagumbayan</li>
+                <li>Banawang (Poblacion)</li>
+                <li>Batalay</li>
+                <li>Binanwahan</li>
+                <li>Bote</li>
+                <li>Buenavista</li>
+                <li>Cabugao</li>
+                <li>Cagraray</li>
+                <li>Carorian</li>
+                <li>Guinobatan</li>
+                <li>Libjo</li>
+                <li>Marinawa</li>
+                <li>Mintay</li>
+                <li>Oguis</li>
+                <li>Pananaogan</li>
+                <li>Libod (Poblacion)</li>
+                <li>San Andres</li>
+                <li>San Pedro</li>
+                <li>San Roque</li>
+                <li>Santa Isabel</li>
+                <li>Sibacungan</li>
+                <li>Sipi</li>
+                <li>Talisay</li>
+                <li>Tamburan (Poblacion)</li>
+                <li>Tilis</li>
+                <li>Ilawod (Poblacion)</li>
+      
+  
+
+        
+            </ul>
+        </div>
+
+
+        <style>
+            .official-profile {
+                position: relative;
+                margin-bottom: 10px;
+            }
+
+
+            .official-profile:hover .profile-modal {
+                display: block;
+            }
+
+            .official-profile a {
+                display: flex;
+                align-items: center;
+                gap: 15px;
+                font-size: 18px;
+                font-weight: 600;
+                text-decoration: none;
+                color: #000;
+                padding: 10px 15px;
+                border-radius: 10px;
+                transition: background 0.3s ease;
+            }
+
+            .hover-target {
+                display: inline-block;
+                position: relative;
+                cursor: pointer;
+                overflow: visible !important;
+                position: relative;
+                display: inline-block;
+            }
+
+            .official-profile a:hover {
+                background: #f1f1f1;
+            }
+
+            .official-profile img {
+                width: 70px;
+                height: 70px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+
+            .profile-modal {
+                position: absolute;
+                top: 0;
+                left: 100%;
+                margin-left: 10px;
+                background: white;
+                padding: 15px;
+                width: 330px;
+                border: 1px solid #ccc;
+                border-radius: 10px;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+                z-index: 9999;
+                display: none;
+                white-space: normal;
+            }
+
+
+            .hover-target:hover .profile-modal {
+                display: block;
+            }
+
+            .profile-modal img {
+                width: 80px;
+                height: 80px;
+                border-radius: 10px;
+                object-fit: cover;
+            }
+
+            .profile-modal h4 {
+                margin: 0;
+                font-size: 15px;
+            }
+
+            .profile-modal p {
+                font-size: 13px;
+                margin: 4px 0;
+                color: #555;
+            }
+
+            .profile-modal h3 {
+                text-align: center;
+            }
+
+            .tabs-panel {
+                position: relative;
+                overflow: visible;
+                z-index: 0;
+            }
+
+            hr {
+                margin: 20px 0;
+                border: none;
+                border-top: 1px dashed #aaa;
+            }
+
+            .pagination {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                gap: 4px;
+                margin-top: 20px;
+                flex-wrap: wrap;
+            }
+
+            .pagination button {
+                padding: 2px 4px;
+                background-color: #f0f0f0;
+                border: 1px solid #ccc;
+                color: #333;
+                cursor: pointer;
+                transition: background-color 0.3s;
+                border-radius: 0;
+                min-width: 30px;
+                min-height: 30px;
+                text-align: center;
+                font-weight: bold;
+                font-size: 13px;
+            }
+
+            .pagination button:hover {
+                background-color: #dcdcdc;
+            }
+
+            .pagination button.active {
+                background-color: #004499cc;
+                color: white;
+                border-color: #004499cc;
+            }
+
+            .pagination-wrapper {
+                text-align: right;
+                margin-top: 10px;
+            }
+
+            .pagination {
+                display: inline-flex;
+                gap: 4px;
+            }
+
+            table {
+                table-layout: fixed;
+            }
+
+            th,
+            td {
+                padding: 8px;
+                border-bottom: 1px solid #ccc;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+
+            td {
+                position: relative;
+                overflow: visible !important;
+            }
+
+            #mayorTableContainer,
+            #viceMayorTableContainer,
+            #councilorTableContainer {
+                overflow: visible !important;
+                position: relative;
+                z-index: 1;
+            }
+
+            .profile-modal {
+
+                z-index: 1000;
+            }
+
+            @media (max-width: 768px) {
+                .officials-section {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: 100%;
+                }
+
+                .municipal-officials {
+                    flex: 0 0 auto;
+                    width: 100%;
+                    max-width: 300px;
+                }
+            }
+        </style>
+
+        <div class="tabs-panel" id="panel3">
+
+
+            <h4 style="margin-top: 0;">Mayors</h4>
+
+            <div id="mayorTableContainer" style="position: relative;">
+                <table id="mayorTable"
+                    style="width: 100%; border-collapse: collapse; font-size: 14px; margin-bottom: 20px;">
+                    <thead>
+                        <tr style="background-color: #f1f1f1;">
+                            <th style="text-align: left; padding: 8px; border-bottom: 1px solid #ccc;">Name</th>
+                            <th style="text-align: center; padding: 8px; border-bottom: 1px solid #ccc;">Term Start</th>
+                            <th style="text-align: center; padding: 8px; border-bottom: 1px solid #ccc;">Term End</th>
+                        </tr>
+                    </thead>
+                    <tbody id="mayorTableBody">
+                        <tr class="mayorRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Johnny Todoc Rodulfo 
+                                    <div class="profile-modal top-right">
+                                        <div style="display: flex; align-items: center; gap: 10px;">
+                                            <img src="https://cdn-icons-png.flaticon.com/512/4850/4850493.png"
+                                                style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                            <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                                <h4 style="margin: 0;">Johnny Todoc Rodulfo (Juan) (Ind)</h4>
+                                                <p style="text-align: center;">Date of Birth: March 16, 1969</p>
+                                                <p style="text-align: justify;">Looking back on the past year, I am proud of the progress we’ve made together.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2019</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                        </tr>
+                        <tr class="mayorRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Johnny Todoc Rodulfo 
+                                    <div class="profile-modal top-right">
+                                        <div style="display: flex; align-items: center; gap: 10px;">
+                                            <img src="https://cdn-icons-png.flaticon.com/512/4850/4850493.png"
+                                                style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                            <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                                <h4 style="margin: 0;">Johnny Todoc Rodulfo (Juan) (Ind)</h4>
+                                                <p style="text-align: center;">Date of Birth: March 16, 1969</p>
+                                                <p style="text-align: justify;">Looking back on the past year, I am proud of the progress we’ve made together.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                        </tr>
+                        
+                        <script>
+                            const totalRows = 30;
+                            for (let i = 1; i <= totalRows; i++) {
+                                document.write(`
+              
+                  `);
+                            }
+                        </script>
+                    </tbody>
+                </table>
+                <div class="pagination-wrapper"
+                    style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
+                    <p id="pageInfo" style="margin: 0; font-weight: bold; font-size: 14px;">This is page 1 out of X</p>
+                    <div id="mayorPagination" class="pagination" style="display: flex; gap: 5px;"></div>
+                </div>
+
+
+                <script>
+                    const rowsPerPage = 10;
+                    let currentPage = 1;
+
+                    function updateMayorTable() {
+                        const rows = document.querySelectorAll(".mayorRow");
+                        const totalPages = Math.ceil(rows.length / rowsPerPage);
+
+                        rows.forEach((row, index) => {
+                            row.style.display = (
+                                index >= (currentPage - 1) * rowsPerPage &&
+                                index < currentPage * rowsPerPage
+                            ) ? '' : 'none';
+                        });
+
+                        renderPagination(totalPages);
+                    }
+
+                    function changeMayorPage(page) {
+                        const rows = document.querySelectorAll(".mayorRow");
+                        const totalPages = Math.ceil(rows.length / rowsPerPage);
+
+                        if (page < 1) page = 1;
+                        if (page > totalPages) page = totalPages;
+
+                        currentPage = page;
+                        updateMayorTable();
+                    }
+
+                    function renderPagination(totalPages) {
+                        document.getElementById("pageInfo").textContent = `This is page ${currentPage} out of ${totalPages}`;
+
+
+                        const pageInfo = document.getElementById("pageInfo");
+                        const container = document.getElementById("mayorPagination");
+
+                        // Update the text
+                        pageInfo.textContent = `This is page ${currentPage} out of ${totalPages}`;
+                        container.innerHTML = "";
+
+                        // ← Prev button
+                        const prevBtn = document.createElement("button");
+                        prevBtn.textContent = "← Prev";
+                        prevBtn.className = currentPage === 1 ? "disabled" : "";
+                        prevBtn.disabled = currentPage === 1;
+                        prevBtn.onclick = () => changeMayorPage(currentPage - 1);
+                        container.appendChild(prevBtn);
+
+                        const maxPagesToShow = 7;
+                        let startPage = 1;
+                        let endPage = totalPages;
+
+                        if (totalPages > maxPagesToShow) {
+                            if (currentPage <= 4) {
+                                endPage = 5;
+                            } else if (currentPage >= totalPages - 3) {
+                                startPage = totalPages - 4;
+                            } else {
+                                startPage = currentPage - 2;
+                                endPage = currentPage + 2;
+                            }
+                        }
+
+                        if (startPage > 1) {
+                            addPageButton(container, 1);
+                            if (startPage > 2) {
+                                addEllipsis(container);
+                            }
+                        }
+
+                        for (let i = startPage; i <= endPage; i++) {
+                            addPageButton(container, i);
+                        }
+
+                        if (endPage < totalPages) {
+                            if (endPage < totalPages - 1) {
+                                addEllipsis(container);
+                            }
+                            addPageButton(container, totalPages);
+                        }
+
+                        // → Next button
+                        const nextBtn = document.createElement("button");
+                        nextBtn.textContent = "Next →";
+                        nextBtn.className = currentPage === totalPages ? "disabled" : "";
+                        nextBtn.disabled = currentPage === totalPages;
+                        nextBtn.onclick = () => changeMayorPage(currentPage + 1);
+                        container.appendChild(nextBtn);
+                    }
+
+
+
+                    function addPageButton(container, pageNumber) {
+                        const btn = document.createElement("button");
+                        btn.textContent = pageNumber;
+                        if (currentPage === pageNumber) {
+                            btn.className = "active";
+                        }
+                        btn.onclick = () => changeMayorPage(pageNumber);
+                        container.appendChild(btn);
+                    }
+
+                    function addEllipsis(container) {
+                        const ellipsis = document.createElement("span");
+                        ellipsis.textContent = "...";
+                        ellipsis.className = "ellipsis";
+                        container.appendChild(ellipsis);
+                    }
+
+
+                    updateMayorTable();
+
+
+                </script>
+
+
+                <script>
+                    document.addEventListener("DOMContentLoaded", () => {
+                        document.querySelectorAll(".hover-target").forEach(target => {
+                            target.addEventListener("mouseenter", () => {
+                                const modal = target.querySelector(".profile-modal");
+                                if (modal) modal.style.display = "block";
+                            });
+                            target.addEventListener("mouseleave", () => {
+                                const modal = target.querySelector(".profile-modal");
+                                if (modal) modal.style.display = "none";
+                            });
+                        });
+                    });
+                </script>
+
+
+
+            </div>
+
+
+            <hr style="margin: 15px 0; border-top: 1px solid #ccc;">
+            <h4 style="margin-top: 0;">Vice Mayors</h4>
+
+            <div id="viceMayorTableContainer" style="position: relative;">
+                <table id="viceMayorTable"
+                    style="width: 100%; border-collapse: collapse; font-size: 14px; margin-bottom: 20px;">
+                    <thead>
+                        <tr style="background-color: #f1f1f1;">
+                            <th style="text-align: left; padding: 8px; border-bottom: 1px solid #ccc;">Name</th>
+                            <th style="text-align: center; padding: 8px; border-bottom: 1px solid #ccc;">Term Start</th>
+                            <th style="text-align: center; padding: 8px; border-bottom: 1px solid #ccc;">Term End</th>
+                        </tr>
+                    </thead>
+                    <tbody id="viceMayorTableBody">
+                        <tr class="viceMayorRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Roy Palean Regalado 
+                                    <div class="profile-modal top-right">
+                                        <div style="display: flex; align-items: center; gap: 10px;">
+                                            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+                                                style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                            <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                                <h4 style="margin: 0;">Roy Palean Regalado (Ind)</h4>
+                                                <p style="text-align: center;">Date of Birth: January 30, 1979</p>
+                                                <p style="text-align: justify;">Looking back on the past year, I am proud of the progress we’ve made together.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2016</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2019</td>
+                        </tr>
+                        <tr class="viceMayorRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Roy Palean Regalado 
+                                    <div class="profile-modal top-right">
+                                        <div style="display: flex; align-items: center; gap: 10px;">
+                                            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+                                                style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                            <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                                <h4 style="margin: 0;">Roy Palean Regalado (Ind)</h4>
+                                                <p style="text-align: center;">Date of Birth: January 30, 1979</p>
+                                                <p style="text-align: justify;">Looking back on the past year, I am proud of the progress we’ve made together.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2019</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                        </tr>
+                        <tr class="viceMayorRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Roy Palean Regalado 
+                                    <div class="profile-modal top-right">
+                                        <div style="display: flex; align-items: center; gap: 10px;">
+                                            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+                                                style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                            <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                                <h4 style="margin: 0;">Roy Palean Regalado (Ind)</h4>
+                                                <p style="text-align: center;">Date of Birth: January 30, 1979</p>
+                                                <p style="text-align: justify;">Looking back on the past year, I am proud of the progress we’ve made together.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                        </tr> 
+                    </tbody>
+                </table>
+
+                <div class="pagination-wrapper-vice" style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
+                    <p id="vicePageInfo" style="margin: 0; font-weight: bold; font-size: 14px;">This is page 1 out of X</p>
+                    <div id="vicePagination" class="pagination" style="display: flex; gap: 5px;"></div>
+                  </div>
+                  
+            </div>
+            <script>
+                const rowsPerPageVice = 10;
+                let currentPageVice = 1;
+              
+                function updateViceMayorTable() {
+                  const rows = document.querySelectorAll(".viceMayorRow");
+                  const totalPages = Math.ceil(rows.length / rowsPerPageVice);
+              
+                  rows.forEach((row, index) => {
+                    row.style.display = (
+                      index >= (currentPageVice - 1) * rowsPerPageVice &&
+                      index < currentPageVice * rowsPerPageVice
+                    ) ? '' : 'none';
+                  });
+              
+                  renderVicePagination(totalPages);
+                }
+              
+                function changeVicePage(page) {
+                  const rows = document.querySelectorAll(".viceMayorRow");
+                  const totalPages = Math.ceil(rows.length / rowsPerPageVice);
+              
+                  if (page < 1) page = 1;
+                  if (page > totalPages) page = totalPages;
+              
+                  currentPageVice = page;
+                  updateViceMayorTable();
+                }
+              
+                function renderVicePagination(totalPages) {
+                  document.getElementById("vicePageInfo").textContent = `This is page ${currentPageVice} out of ${totalPages}`;
+                  const container = document.getElementById("vicePagination");
+                  container.innerHTML = "";
+              
+                  const prevBtn = document.createElement("button");
+                  prevBtn.textContent = "← Prev";
+                  prevBtn.className = currentPageVice === 1 ? "disabled" : "";
+                  prevBtn.disabled = currentPageVice === 1;
+                  prevBtn.onclick = () => changeVicePage(currentPageVice - 1);
+                  container.appendChild(prevBtn);
+              
+                  const maxPagesToShow = 7;
+                  let startPage = 1;
+                  let endPage = totalPages;
+              
+                  if (totalPages > maxPagesToShow) {
+                    if (currentPageVice <= 4) {
+                      endPage = 5;
+                    } else if (currentPageVice >= totalPages - 3) {
+                      startPage = totalPages - 4;
+                    } else {
+                      startPage = currentPageVice - 2;
+                      endPage = currentPageVice + 2;
+                    }
+                  }
+              
+                  if (startPage > 1) {
+                    addVicePageButton(container, 1);
+                    if (startPage > 2) {
+                      addViceEllipsis(container);
+                    }
+                  }
+              
+                  for (let i = startPage; i <= endPage; i++) {
+                    addVicePageButton(container, i);
+                  }
+              
+                  if (endPage < totalPages) {
+                    if (endPage < totalPages - 1) {
+                      addViceEllipsis(container);
+                    }
+                    addVicePageButton(container, totalPages);
+                  }
+              
+                  const nextBtn = document.createElement("button");
+                  nextBtn.textContent = "Next →";
+                  nextBtn.className = currentPageVice === totalPages ? "disabled" : "";
+                  nextBtn.disabled = currentPageVice === totalPages;
+                  nextBtn.onclick = () => changeVicePage(currentPageVice + 1);
+                  container.appendChild(nextBtn);
+                }
+              
+                function addVicePageButton(container, pageNumber) {
+                  const btn = document.createElement("button");
+                  btn.textContent = pageNumber;
+                  if (currentPageVice === pageNumber) {
+                    btn.className = "active";
+                  }
+                  btn.onclick = () => changeVicePage(pageNumber);
+                  container.appendChild(btn);
+                }
+              
+                function addViceEllipsis(container) {
+                  const ellipsis = document.createElement("span");
+                  ellipsis.textContent = "...";
+                  ellipsis.className = "ellipsis";
+                  container.appendChild(ellipsis);
+                }
+              
+                updateViceMayorTable();
+              </script>
+              
+            <hr style="margin: 15px 0; border-top: 1px solid #ccc;">
+            <h4 style="margin-top: 0;">Councilors</h4>
+
+            <div id="councilorTableContainer" style="position: relative;">
+                <table id="councilorTable"
+                    style="width: 100%; border-collapse: collapse; font-size: 14px; margin-bottom: 20px;">
+                    <thead>
+                        <tr style="background-color: #f1f1f1;">
+                            <th style="text-align: left; padding: 8px; border-bottom: 1px solid #ccc;">Name</th>
+                            <th style="text-align: center; padding: 8px; border-bottom: 1px solid #ccc;">Term Start</th>
+                            <th style="text-align: center; padding: 8px; border-bottom: 1px solid #ccc;">Term End</th>
+                        </tr>
+                    </thead>
+                    <tbody id="councilorTableBody">
+
+                        <tr class="councilorRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Renz Mickenly Todoc 
+                                    <div class="profile-modal top-right">
+                                        <div style="display: flex; align-items: center; gap: 10px;">
+                                            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+                                                style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                            <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                                <h4 style="margin: 0;">Renz Mickenly Todoc Rodulfo (Ind)</h4>
+                                                <p style="text-align: justify;">Looking back on the past year, I am proud of the progress we’ve made together.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                        </tr>
+                        <tr class="councilorRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Dennis Tarroquin Timbal 
+                                    <div class="profile-modal top-right">
+                                        <div style="display: flex; align-items: center; gap: 10px;">
+                                            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+                                                style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                            <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                                <h4 style="margin: 0;">Dennis Tarroquin Timbal (Npc)</h4>
+                                                <p style="text-align: justify;">Looking back on the past year, I am proud of the progress we’ve made together.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                        </tr>
+                        <tr class="councilorRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Reynanto Camacho Teston 
+                                    <div class="profile-modal top-right">
+                                        <div style="display: flex; align-items: center; gap: 10px;">
+                                            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+                                                style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                            <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                                <h4 style="margin: 0;">Reynanto Camacho Teston (Atoy) (Npc)</h4>
+                                                <p style="text-align: justify;">Looking back on the past year, I am proud of the progress we’ve made together.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                        </tr>
+                        <tr class="councilorRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Amador Tubiera Toledana 
+                                    <div class="profile-modal top-right">
+                                        <div style="display: flex; align-items: center; gap: 10px;">
+                                            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+                                                style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                            <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                                <h4 style="margin: 0;">Amador Tubiera Toledana (Adoy) (Ind)</h4>
+                                                <p style="text-align: justify;">Looking back on the past year, I am proud of the progress we’ve made together.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                        </tr>
+                        <tr class="councilorRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Pedro Torrenueva Vergara 
+                                    <div class="profile-modal top-right">
+                                        <div style="display: flex; align-items: center; gap: 10px;">
+                                            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+                                                style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                            <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                                <h4 style="margin: 0;">Pedro Torrenueva Vergara (Bong) (Ind)</h4>
+                                                <p style="text-align: justify;">Looking back on the past year, I am proud of the progress we’ve made together.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                        </tr>
+                        <tr class="councilorRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Francis Reagan Soneja Rodulfo 
+                                    <div class="profile-modal top-right">
+                                        <div style="display: flex; align-items: center; gap: 10px;">
+                                            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+                                                style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                            <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                                <h4 style="margin: 0;">Francis Reagan Soneja Rodulfo (Khominie) (Ind)</h4>
+                                                <p style="text-align: justify;">Looking back on the past year, I am proud of the progress we’ve made together.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                        </tr>
+                        <tr class="councilorRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Joselito Taño Alberto 
+                                    <div class="profile-modal top-right">
+                                        <div style="display: flex; align-items: center; gap: 10px;">
+                                            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+                                                style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                            <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                                <h4 style="margin: 0;">Joselito Taño Alberto (Lito) (Npc)</h4>
+                                                <p style="text-align: justify;">Looking back on the past year, I am proud of the progress we’ve made together.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                        </tr>
+                        <tr class="councilorRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Ely Tardecilla Tasarra 
+                                    <div class="profile-modal top-right">
+                                        <div style="display: flex; align-items: center; gap: 10px;">
+                                            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+                                                style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover;">
+                                            <div style="text-align: center; font-size: 13px; line-height: 1.3;">
+                                                <h4 style="margin: 0;">Ely Tardecilla Tasarra (Ind)</h4>
+                                                <p style="text-align: justify;">Looking back on the past year, I am proud of the progress we’ve made together.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="pagination-wrapper" style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
+                    <p id="councilorPageInfo" style="margin: 0; font-weight: bold; font-size: 14px;">This is page 1 out of X</p>
+                    <div id="councilorPagination" class="pagination" style="display: flex; gap: 5px;"></div>
+                  </div>
+                  
+            </div>
+
+            <script>
+                const rowsPerPageCouncilor = 10;
+                let currentPageCouncilor = 1;
+              
+                function updateCouncilorTable() {
+                  const rows = document.querySelectorAll(".councilorRow");
+                  const totalPages = Math.ceil(rows.length / rowsPerPageCouncilor);
+              
+                  rows.forEach((row, index) => {
+                    row.style.display = (
+                      index >= (currentPageCouncilor - 1) * rowsPerPageCouncilor &&
+                      index < currentPageCouncilor * rowsPerPageCouncilor
+                    ) ? '' : 'none';
+                  });
+              
+                  renderCouncilorPagination(totalPages);
+                }
+              
+                function changeCouncilorPage(page) {
+                  const rows = document.querySelectorAll(".councilorRow");
+                  const totalPages = Math.ceil(rows.length / rowsPerPageCouncilor);
+              
+                  if (page < 1) page = 1;
+                  if (page > totalPages) page = totalPages;
+              
+                  currentPageCouncilor = page;
+                  updateCouncilorTable();
+                }
+              
+                function renderCouncilorPagination(totalPages) {
+                  document.getElementById("councilorPageInfo").textContent = `This is page ${currentPageCouncilor} out of ${totalPages}`;
+                  const container = document.getElementById("councilorPagination");
+                  container.innerHTML = "";
+              
+                  const prevBtn = document.createElement("button");
+                  prevBtn.textContent = "← Prev";
+                  prevBtn.className = currentPageCouncilor === 1 ? "disabled" : "";
+                  prevBtn.disabled = currentPageCouncilor === 1;
+                  prevBtn.onclick = () => changeCouncilorPage(currentPageCouncilor - 1);
+                  container.appendChild(prevBtn);
+              
+                  const maxPagesToShow = 7;
+                  let startPage = 1;
+                  let endPage = totalPages;
+              
+                  if (totalPages > maxPagesToShow) {
+                    if (currentPageCouncilor <= 4) {
+                      endPage = 5;
+                    } else if (currentPageCouncilor >= totalPages - 3) {
+                      startPage = totalPages - 4;
+                    } else {
+                      startPage = currentPageCouncilor - 2;
+                      endPage = currentPageCouncilor + 2;
+                    }
+                  }
+              
+                  if (startPage > 1) {
+                    addCouncilorPageButton(container, 1);
+                    if (startPage > 2) {
+                      addCouncilorEllipsis(container);
+                    }
+                  }
+              
+                  for (let i = startPage; i <= endPage; i++) {
+                    addCouncilorPageButton(container, i);
+                  }
+              
+                  if (endPage < totalPages) {
+                    if (endPage < totalPages - 1) {
+                      addCouncilorEllipsis(container);
+                    }
+                    addCouncilorPageButton(container, totalPages);
+                  }
+              
+                  const nextBtn = document.createElement("button");
+                  nextBtn.textContent = "Next →";
+                  nextBtn.className = currentPageCouncilor === totalPages ? "disabled" : "";
+                  nextBtn.disabled = currentPageCouncilor === totalPages;
+                  nextBtn.onclick = () => changeCouncilorPage(currentPageCouncilor + 1);
+                  container.appendChild(nextBtn);
+                }
+              
+                function addCouncilorPageButton(container, pageNumber) {
+                  const btn = document.createElement("button");
+                  btn.textContent = pageNumber;
+                  if (currentPageCouncilor === pageNumber) {
+                    btn.className = "active";
+                  }
+                  btn.onclick = () => changeCouncilorPage(pageNumber);
+                  container.appendChild(btn);
+                }
+              
+                function addCouncilorEllipsis(container) {
+                  const ellipsis = document.createElement("span");
+                  ellipsis.textContent = "...";
+                  ellipsis.className = "ellipsis";
+                  container.appendChild(ellipsis);
+                }
+              
+                updateCouncilorTable();
+              </script>
+              
+        </div>
+
+    </div>
+</div>
+</div>
+  
+<div class="officials-section">
+    <div class="officials-wrapper">
+
+
+    <div class="municipal-officials" style="padding: 10px;">
+        <div style="text-align: center; margin-bottom: 25px;">
+            <img src="http://wp-local.com/wp-content/uploads/2025/08/Hon.-Juan-Todoc-Rodulfo-Bato.png"
+                alt="Mayor"
+                style="width: 160px; height: 160px; border-radius: 50%; object-fit: cover; margin-bottom: 10px;">
+            <p style="margin: 0; padding: 0; line-height: 2;"><strong>Juan Todoc Rodulfo</strong></p>
+            <p style="margin: 0 0 30px 0; padding: 0; line-height: 1;">Mayor</p>
+        </div>
+        <div style="text-align: center; margin-bottom: 30px;">
+            <p style="margin: 0; padding: 0; line-height: 2;"><strong>Reynato Camacho Teston</strong></p>
+            <p style="margin: 0 0 10px 0; padding: 0; line-height: 1;">Vice Mayor</p>
+        </div>
+            <hr style="border: none; border-top: 1px solid #ddd; margin: 0 0 30px 0;">
+        <div style="text-align: center;">
+            <p style="margin: 0 0 0 0; padding: 0; font-weight: bold; font-size: 14px;">MUNICIPAL COUNCILORS</p>
+            <p style="margin: 0; padding: 0; line-height: 1.5;">Bernal, Joevic Tevar</p>
+             <p style="margin: 0; padding: 0; line-height: 1.5;">Timbal, Dennis Tarroquin</p>
+              <p style="margin: 0; padding: 0; line-height: 1.5;">Toledana, Amador Tubiena</p>
+               <p style="margin: 0; padding: 0; line-height: 1.5;">Viado, Janice Teope</p>
+                <p style="margin: 0; padding: 0; line-height: 1.5;">Tanael Renz, Mickenly Todoc</p>
+                 <p style="margin: 0; padding: 0; line-height: 1.5;">Rodulfo, Francis Reagan Soneja</p>
+<p style="margin: 0; padding: 0; line-height: 1.5;">Tasarra, Ely Tardecilla</p>
+<p style="margin: 0; padding: 0; line-height: 1.5;">Pereyra, Dennis Grajo</p>
+          
+        </div>
+      </div>
+    </div>
+</div>

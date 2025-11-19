@@ -1,0 +1,1418 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+.catanduanes-footer {
+   margin: 0;
+padding: 0;
+
+
+    position: relative;
+
+    overflow: hidden;
+
+    color: white;
+
+}
+
+.catanduanes-footer::before {
+
+    content: '';
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    right: 0;
+
+    bottom: 0;
+
+    background: 
+
+        radial-gradient(circle at 20% 50%, rgba(2, 106, 179, 0.15) 0%, transparent 50%),
+
+        radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.05) 0%, transparent 50%),
+
+        radial-gradient(circle at 40% 80%, rgba(3, 155, 229, 0.12) 0%, transparent 50%);
+
+    pointer-events: none;
+
+}
+
+.footer-hero {
+
+    text-align: center;
+
+    padding: 0;
+
+    position: relative;
+background: linear-gradient(rgba(2, 106, 179, 0.4), rgba(4, 169, 245, 0.4));
+
+    height: 500px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+}
+
+.footer-hero::before {
+
+    content: '';
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    right: 0;
+
+    bottom: 0;
+
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.05)"/><circle cx="75" cy="75" r="1" fill="rgba(255,255,255,0.03)"/><circle cx="50" cy="10" r="1" fill="rgba(255,255,255,0.04)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+
+    pointer-events: none;
+
+}
+
+.footer-hero img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+
+    filter: brightness(1.1) contrast(1.05);
+
+}
+
+.footer-hero:hover img {
+
+    transform: scale(1.05);
+
+}
+
+.footer-hero h2 {
+
+    position: relative;
+
+    z-index: 2;
+
+    margin: 0;
+
+    font-size: 2.5em;
+
+    font-weight: 300;
+
+    letter-spacing: 2px;
+
+    text-shadow: 
+
+        0 2px 4px rgba(0, 0, 0, 0.8),
+
+        0 0 20px rgba(2, 106, 179, 0.6);
+
+    background: linear-gradient(45deg, #ffffff, #04a9f5, #ffffff);
+
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+    background-clip: text;
+
+    animation: shimmer 3s ease-in-out infinite;
+
+    text-align: center;
+
+    padding: 0 20px;
+
+}
+
+@keyframes shimmer {
+
+    0%, 100% { background-position: 0% 50%; }
+
+    50% { background-position: 100% 50%; }
+
+}
+
+.footer-hero p {
+
+    position: relative;
+
+    z-index: 2;
+
+    font-size: 1.1em;
+
+    opacity: 0.95;
+
+    margin: 10px 0 0;
+
+    font-weight: 300;
+
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+
+    text-align: center;
+
+    padding: 0 20px;
+
+}
+
+/* Main Footer Content */
+
+.footer-content {
+
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+    padding: 50px 20px 40px;
+
+    display: grid;
+
+    grid-template-columns: 1.8fr 1fr 1fr 1fr 1.3fr;
+
+    gap: 40px;
+
+    position: relative;
+
+    z-index: 1;
+
+}
+
+/* Contact Section */
+
+.footer-contact {
+
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.05));
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    backdrop-filter: blur(20px);
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    box-shadow: 
+
+        0 10px 25px rgba(0, 0, 0, 0.2),
+
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+.footer-contact::before {
+
+    content: '';
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    right: 0;
+
+    height: 3px;
+
+    background: linear-gradient(90deg, #04a9f5, #0288d1, #04a9f5);
+
+    border-radius: 15px 15px 0 0;
+
+}
+
+.footer-contact:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow: 
+
+        0 15px 30px rgba(0, 0, 0, 0.3),
+
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+
+}
+
+.contact-item {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 15px;
+
+    font-size: 14px;
+
+    font-weight: 400;
+
+    transition: transform 0.3s ease;
+
+    padding: 6px 0;
+
+}
+
+.contact-item:hover {
+
+    transform: translateX(8px);
+
+}
+
+.contact-item i {
+
+    font-size: 16px;
+
+    color: #04a9f5;
+
+    min-width: 40px;
+
+    height: 40px;
+
+    background: linear-gradient(135deg, rgba(4, 169, 245, 0.2), rgba(2, 136, 209, 0.15));
+
+    padding: 0;
+
+    border-radius: 10px;
+
+    text-align: center;
+
+    line-height: 40px;
+
+    border: 1px solid rgba(4, 169, 245, 0.3);
+
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+
+}
+
+.contact-item:hover i {
+
+    background: linear-gradient(135deg, rgba(4, 169, 245, 0.3), rgba(2, 136, 209, 0.2));
+
+    transform: rotate(5deg) scale(1.1);
+
+    box-shadow: 0 6px 20px rgba(4, 169, 245, 0.4);
+
+}
+
+.contact-item a {
+
+    color: white;
+
+    text-decoration: none;
+
+    transition: color 0.3s ease;
+
+    font-weight: 400;
+
+}
+
+.contact-item a:hover {
+
+    color: #04a9f5;
+
+    text-shadow: 0 0 10px rgba(4, 169, 245, 0.5);
+
+}
+
+/* Menu Sections */
+
+.footer-menu {
+
+    position: relative;
+
+    transition: transform 0.3s ease;
+
+}
+
+.footer-menu:hover {
+
+    transform: translateY(-2px);
+
+}
+
+.footer-menu::before {
+
+    content: '';
+
+    position: absolute;
+
+    left: -10px;
+
+    top: 0;
+
+    width: 3px;
+
+    height: 40px;
+
+    background: linear-gradient(to bottom, #04a9f5, #0288d1);
+
+    border-radius: 2px;
+
+    transition: height 0.3s ease;
+
+}
+
+.footer-menu:hover::before {
+
+    height: 60px;
+
+}
+
+.footer-menu h3 {
+
+    color: white;
+
+    font-weight: 600;
+
+    margin-bottom: 20px;
+
+    font-size: 18px;
+
+    padding-bottom: 10px;
+
+    position: relative;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+}
+
+.footer-menu h3::after {
+
+    content: '';
+
+    position: absolute;
+
+    bottom: 0;
+
+    left: 0;
+
+    width: 40px;
+
+    height: 2px;
+
+    background: linear-gradient(90deg, #04a9f5, #0288d1);
+
+    border-radius: 2px;
+
+    transition: width 0.3s ease;
+
+}
+
+.footer-menu:hover h3::after {
+
+    width: 60px;
+
+}
+
+.footer-menu ul {
+
+    list-style: none;
+
+    padding: 0;
+
+    margin: 0;
+
+}
+
+.footer-menu ul li {
+
+    margin-bottom: 10px;
+
+    transition: transform 0.3s ease;
+
+}
+
+.footer-menu ul li:hover {
+
+    transform: translateX(6px);
+
+}
+
+.footer-menu ul li a {
+
+    color: rgba(255, 255, 255, 0.9);
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 400;
+
+    transition: all 0.3s ease;
+
+    display: inline-block;
+
+    padding: 4px 0;
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+.footer-menu ul li a::before {
+
+    content: '';
+
+    position: absolute;
+
+    bottom: 0;
+
+    left: -100%;
+
+    width: 100%;
+
+    height: 2px;
+
+    background: linear-gradient(90deg, #04a9f5, #0288d1);
+
+    transition: left 0.4s ease;
+
+}
+
+.footer-menu ul li a:hover {
+
+    color: #04a9f5;
+
+    text-shadow: 0 0 10px rgba(4, 169, 245, 0.5);
+
+}
+
+.footer-menu ul li a:hover::before {
+
+    left: 0;
+
+}
+
+/* Gallery Section */
+
+.footer-gallery {
+
+    position: relative;
+
+}
+
+.footer-gallery h3 {
+
+    color: white;
+
+    font-weight: 600;
+
+    margin-bottom: 20px;
+
+    font-size: 18px;
+
+    text-align: center;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+    position: relative;
+
+    padding-bottom: 12px;
+
+}
+
+.footer-gallery h3::after {
+
+    content: '';
+
+    position: absolute;
+
+    bottom: 0;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 50px;
+
+    height: 2px;
+
+    background: linear-gradient(90deg, #04a9f5, #0288d1);
+
+    border-radius: 2px;
+
+}
+
+.slideshow-container {
+
+    position: relative;
+
+    max-width: 100%;
+
+    margin: 0 auto;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    box-shadow: 
+
+        0 10px 25px rgba(0, 0, 0, 0.4),
+
+        0 0 0 1px rgba(255, 255, 255, 0.1);
+
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+
+    backdrop-filter: blur(15px);
+
+}
+
+.slideshow-wrapper {
+
+    display: flex;
+
+    transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+
+}
+
+.slideshow-wrapper img {
+
+    width: 100%;
+
+    height: 180px;
+
+    object-fit: cover;
+
+    flex-shrink: 0;
+
+    transition: transform 0.6s ease;
+
+    filter: brightness(1.1) contrast(1.1) saturate(1.2);
+
+}
+
+.slideshow-container:hover .slideshow-wrapper img {
+
+    transform: scale(1.05);
+
+}
+
+.slide-btn {
+
+    position: absolute;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    background: linear-gradient(135deg, rgba(4, 169, 245, 0.95), rgba(2, 136, 209, 0.9));
+
+    color: white;
+
+    border: none;
+
+    padding: 12px 15px;
+
+    cursor: pointer;
+
+    border-radius: 50%;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+
+    z-index: 15;
+
+    box-shadow: 0 6px 20px rgba(4, 169, 245, 0.3);
+
+    border: 2px solid rgba(255, 255, 255, 0.2);
+
+}
+
+.slide-btn.prev {
+
+    left: 12px;
+
+}
+
+.slide-btn.next {
+
+    right: 12px;
+
+}
+
+.slide-btn:hover {
+
+    background: linear-gradient(135deg, #04a9f5, #0288d1);
+
+    transform: translateY(-50%) scale(1.1) rotate(5deg);
+
+    box-shadow: 
+
+        0 10px 25px rgba(4, 169, 245, 0.5),
+
+        0 0 15px rgba(4, 169, 245, 0.3);
+
+}
+
+.slide-btn:active {
+
+    transform: translateY(-50%) scale(0.95);
+
+}
+
+.slide-dots {
+
+    text-align: center;
+
+    padding: 15px 0 5px;
+
+    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.1));
+
+}
+
+.dot {
+
+    height: 8px;
+
+    width: 8px;
+
+    margin: 0 4px;
+
+    background-color: rgba(255, 255, 255, 0.4);
+
+    border-radius: 50%;
+
+    display: inline-block;
+
+    cursor: pointer;
+
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+
+    border: 2px solid rgba(255, 255, 255, 0.2);
+
+    position: relative;
+
+}
+
+.dot::before {
+
+    content: '';
+
+    position: absolute;
+
+    top: 50%;
+
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 0;
+
+    height: 0;
+
+    background: radial-gradient(circle, #04a9f5, #0288d1);
+
+    border-radius: 50%;
+
+    transition: all 0.3s ease;
+
+}
+
+.dot.active,
+
+.dot:hover {
+
+    background-color: #04a9f5;
+
+    transform: scale(1.2);
+
+    box-shadow: 
+
+        0 0 12px rgba(4, 169, 245, 0.6),
+
+        0 0 25px rgba(4, 169, 245, 0.3);
+
+}
+
+.dot.active::before,
+
+.dot:hover::before {
+
+    width: 4px;
+
+    height: 4px;
+
+}
+
+/* Footer Bottom */
+
+.footer-bottom {
+
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.4), rgba(2, 106, 179, 0.3));
+
+    text-align: center;
+
+    padding: 25px 20px;
+
+    font-size: 13px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+    backdrop-filter: blur(15px);
+
+    position: relative;
+
+}
+
+.footer-bottom::before {
+
+    content: '';
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    right: 0;
+
+    height: 1px;
+
+    background: linear-gradient(90deg, transparent, rgba(4, 169, 245, 0.5), transparent);
+
+}
+
+.footer-bottom .highlight {
+
+    color: #04a9f5;
+
+    font-weight: 600;
+
+    text-shadow: 0 0 10px rgba(4, 169, 245, 0.5);
+
+    background: linear-gradient(45deg, #04a9f5, #0288d1);
+
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+    background-clip: text;
+
+}
+
+/* Floating Animation */
+
+@keyframes float {
+
+    0%, 100% { transform: translateY(0px); }
+
+    50% { transform: translateY(-6px); }
+
+}
+
+.footer-contact {
+
+    animation: float 6s ease-in-out infinite;
+
+    animation-delay: 0s;
+
+}
+
+.footer-menu:nth-of-type(2) {
+
+    animation: float 6s ease-in-out infinite;
+
+    animation-delay: 1s;
+
+}
+
+.footer-menu:nth-of-type(3) {
+
+    animation: float 6s ease-in-out infinite;
+
+    animation-delay: 2s;
+
+}
+
+.footer-menu:nth-of-type(4) {
+
+    animation: float 6s ease-in-out infinite;
+
+    animation-delay: 3s;
+
+}
+
+.footer-gallery {
+
+    animation: float 6s ease-in-out infinite;
+
+    animation-delay: 4s;
+
+}
+
+/* Responsive Design */
+
+@media (max-width: 1024px) {
+
+    .footer-content {
+
+        grid-template-columns: 1fr 1fr 1fr;
+
+        gap: 30px;
+
+    }
+
+    
+
+    .footer-contact {
+
+        grid-column: 1 / -1;
+
+    }
+
+    
+
+    .footer-hero {
+
+        height: 150px;
+
+    }
+
+    
+
+    .footer-hero h2 {
+
+        font-size: 2.2em;
+
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .footer-content {
+
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+
+        padding: 30px 20px;
+
+    }
+
+    
+
+    .footer-hero {
+
+        height: 120px;
+
+    }
+
+    
+
+    .footer-hero h2 {
+
+        font-size: 1.8em;
+
+    }
+
+    
+
+    .slideshow-wrapper img {
+
+        height: 140px;
+
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .footer-content {
+
+        padding: 25px 15px;
+
+    }
+
+    
+
+    .footer-hero {
+
+        height: 100px;
+
+    }
+
+    
+
+    .footer-hero h2 {
+
+        font-size: 1.5em;
+
+    }
+
+    
+
+    .slideshow-wrapper img {
+
+        height: 120px;
+
+    }
+
+    
+
+    .footer-bottom {
+
+        padding: 20px 15px;
+
+        font-size: 12px;
+
+    }
+
+}
+
+/* Entrance Animation */
+
+@keyframes fadeInUp {
+
+    from {
+
+        opacity: 0;
+
+        transform: translate3d(0, 30px, 0);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translate3d(0, 0, 0);
+
+    }
+
+}
+
+.footer-content > * {
+
+    animation: fadeInUp 0.6s ease forwards;
+
+    opacity: 0;
+
+}
+
+.footer-content > *:nth-child(1) { animation-delay: 0.1s; }
+
+.footer-content > *:nth-child(2) { animation-delay: 0.2s; }
+
+.footer-content > *:nth-child(3) { animation-delay: 0.3s; }
+
+.footer-content > *:nth-child(4) { animation-delay: 0.4s; }
+
+.footer-content > *:nth-child(5) { animation-delay: 0.5s; }
+
+</style>
+
+<footer class="catanduanes-footer">
+
+    <!-- Hero Section with Love Catanduanes Image -->
+
+    <div class="footer-hero">
+
+        <img src="http://wp-local.com/wp-content/uploads/2025/09/540227620_780731264351929_5040393982012803925_n.jpg" alt="Love Catanduanes, Philippines">
+    </div>
+
+    <!-- Main Footer Content -->
+
+    <div class="footer-content">
+
+        <!-- Contact Information -->
+
+        <div class="footer-contact">
+
+            <div class="contact-item">
+
+                <i class="fas fa-map-marker-alt"></i>
+
+                <span>Provincial Capitol, Virac, Catanduanes</span>
+
+            </div>
+
+            
+
+            <div class="contact-item">
+
+                <i class="fas fa-envelope"></i>
+
+                <a href="mailto:info@catanduanes.gov.ph">info@catanduanes.gov.ph</a>
+
+            </div>
+
+            
+
+            <div class="contact-item">
+
+                <i class="fas fa-phone"></i>
+
+                <a href="tel:+01234567890123">+01 2345 67890 123</a>
+
+            </div>
+
+            
+
+            <div class="contact-item">
+
+                <i class="fas fa-globe"></i>
+
+                <a href="#">www.catanduanes.gov.ph</a>
+
+            </div>
+
+        </div>
+
+        <!-- Transparency Menu -->
+
+        <div class="footer-menu">
+
+            <h3>Transparency</h3>
+
+            <ul>
+
+                <li><a href="#">Archive</a></li>
+
+                <li><a href="#">Downloads</a></li>
+
+                <li><a href="#">Executive Order</a></li>
+
+                <li><a href="#">Citizen's Charter</a></li>
+
+            </ul>
+
+        </div>
+
+        <!-- Agencies Menu -->
+
+        <div class="footer-menu">
+
+            <h3>Agencies</h3>
+
+            <ul>
+
+                <li><a href="#">PESO</a></li>
+
+                <li><a href="#">CASS</a></li>
+
+                <li><a href="#">PHRMDO</a></li>
+
+                <li><a href="#">PROGOCEA</a></li>
+
+            </ul>
+
+        </div>
+
+        <!-- About Us Menu -->
+
+        <div class="footer-menu">
+
+            <h3>About Us</h3>
+
+            <ul>
+
+                <li><a href="#">Site Map</a></li>
+
+                <li><a href="#">Government</a></li>
+
+                <li><a href="#">Office Hotlines</a></li>
+
+                <li><a href="#">Governor's Corner</a></li>
+
+            </ul>
+
+        </div>
+
+        <!-- Municipalities Gallery -->
+
+        <div class="footer-gallery">
+
+            <h3>Municipalities</h3>
+
+            <div class="slideshow-container">
+
+                <div class="slideshow-wrapper" id="municipalitySlides">
+
+                    <img src="http://wp-local.com/wp-content/uploads/2025/08/Panganiban.png" alt="Panganiban">
+
+                    <img src="http://wp-local.com/wp-content/uploads/2025/08/Pasa-Tiempo-Resort-San-Andres.jpg" alt="San Andres">
+
+                    <img src="http://wp-local.com/wp-content/uploads/2025/08/Soboc-Cove-Viga.jpg" alt="Viga">
+
+                    <img src="http://wp-local.com/wp-content/uploads/2025/08/Bato-1.png" alt="Bato">
+
+                    <img src="http://wp-local.com/wp-content/uploads/2025/08/Virac-1.png" alt="Virac">
+
+                    <img src="http://wp-local.com/wp-content/uploads/2025/08/Pandan-1.png" alt="Pandan">
+
+                    <img src="http://wp-local.com/wp-content/uploads/2025/08/Gigmoto-1.png" alt="Gigmoto">
+
+                    <img src="http://wp-local.com/wp-content/uploads/2025/08/Caramoran-1.png" alt="Caramoran">
+
+                    <img src="http://wp-local.com/wp-content/uploads/2025/08/Bagamanoc-1.png" alt="Bagamanoc">
+
+                    <img src="http://wp-local.com/wp-content/uploads/2025/08/Baras-1.png" alt="Baras">
+
+                    <img src="http://wp-local.com/wp-content/uploads/2025/08/San-Miguel-Falls.jpg" alt="San Miguel">
+
+                </div>
+
+                
+
+                <button class="slide-btn prev" onclick="changeSlide(-1)">&#10094;</button>
+
+                <button class="slide-btn next" onclick="changeSlide(1)">&#10095;</button>
+
+                
+
+                <div class="slide-dots">
+
+                    <span class="dot active" onclick="currentSlide(1)"></span>
+
+                    <span class="dot" onclick="currentSlide(2)"></span>
+
+                    <span class="dot" onclick="currentSlide(3)"></span>
+
+                    <span class="dot" onclick="currentSlide(4)"></span>
+
+                    <span class="dot" onclick="currentSlide(5)"></span>
+
+                    <span class="dot" onclick="currentSlide(6)"></span>
+
+                    <span class="dot" onclick="currentSlide(7)"></span>
+
+                    <span class="dot" onclick="currentSlide(8)"></span>
+
+                    <span class="dot" onclick="currentSlide(9)"></span>
+
+                    <span class="dot" onclick="currentSlide(10)"></span>
+
+                    <span class="dot" onclick="currentSlide(11)"></span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Footer Bottom -->
+
+    <div class="footer-bottom">
+
+        © 2025 <span class="highlight">Catanduanes Provincial Government</span>. All rights reserved.<br>
+
+        Proudly serving the Happy Island Province
+
+    </div>
+
+</footer>
+
+<script>
+
+let slideIndex = 1;
+
+let slideInterval;
+
+function showSlides(n) {
+
+    const slides = document.getElementById('municipalitySlides');
+
+    const dots = document.getElementsByClassName('dot');
+
+    const totalSlides = slides.children.length;
+
+        
+
+    if (n > totalSlides) { slideIndex = 1; }
+
+    if (n < 1) { slideIndex = totalSlides; }
+
+    
+
+    slides.style.transform = `translateX(-${(slideIndex - 1) * 100}%)`;
+
+    
+
+    for (let i = 0; i < dots.length; i++) {
+
+        dots[i].classList.remove('active');
+
+    }
+
+    
+
+    if (dots[slideIndex - 1]) {
+
+        dots[slideIndex - 1].classList.add('active');
+
+    }
+
+}
+
+function changeSlide(n) {
+
+    clearInterval(slideInterval);
+
+    slideIndex += n;
+
+    showSlides(slideIndex);
+
+    startAutoSlide();
+
+}
+
+function currentSlide(n) {
+
+    clearInterval(slideInterval);
+
+    slideIndex = n;
+
+    showSlides(slideIndex);
+
+    startAutoSlide();
+
+}
+
+function startAutoSlide() {
+
+    slideInterval = setInterval(() => {
+
+        slideIndex++;
+
+        showSlides(slideIndex);
+
+    }, 4500);
+
+}
+
+// Initialize slideshow
+
+document.addEventListener('DOMContentLoaded', function() {
+
+    showSlides(slideIndex);
+
+    startAutoSlide();
+
+    
+
+    // Pause on hover
+
+    const container = document.querySelector('.slideshow-container');
+
+    if (container) {
+
+        container.addEventListener('mouseenter', () => clearInterval(slideInterval));
+
+        container.addEventListener('mouseleave', startAutoSlide);
+
+    }
+
+    
+
+    // Smooth scroll reveal
+
+    const observerOptions = {
+
+        threshold: 0.1,
+
+        rootMargin: '0px 0px -50px 0px'
+
+    };
+
+    
+
+    const observer = new IntersectionObserver((entries) => {
+
+        entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+                entry.target.style.opacity = '1';
+
+                entry.target.style.transform = 'translateY(0)';
+
+            }
+
+        });
+
+    }, observerOptions);
+
+    
+
+    // Observe footer elements
+
+    document.querySelectorAll('.footer-content > *').forEach(el => {
+
+        observer.observe(el);
+
+    });
+
+});
+
+// Add performance optimization
+
+if ('IntersectionObserver' in window) {
+
+    const lazyImageObserver = new IntersectionObserver((entries) => {
+
+        entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+                const img = entry.target;
+
+                img.src = img.dataset.src || img.src;
+
+                lazyImageObserver.unobserve(img);
+
+            }
+
+        });
+
+    });
+
+    
+
+    document.querySelectorAll('.slideshow-wrapper img').forEach(img => {
+
+        lazyImageObserver.observe(img);
+
+    });
+
+}
+
+</script>

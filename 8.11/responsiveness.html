@@ -1,0 +1,519 @@
+responsiveness
+
+<style>
+        .barangay-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .barangay-item {
+            position: relative;
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 1px solid #e9ecef;
+            z-index: 1;
+        }
+
+        .barangay-item:hover {
+            background: #e3f2fd;
+            border-color: #004499;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            z-index: 1000;
+        }
+
+        .barangay-item.active {
+            z-index: 1001;
+        }
+
+        /* Modal Styles - Improved */
+        .barangay-modal {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            border: 2px solid #004499;
+            border-radius: 12px;
+            padding: 20px;
+            width: 90%;
+            max-width: 500px;
+            max-height: 80vh;
+            overflow-y: auto;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            z-index: 10000;
+            display: none;
+            font-size: 13px;
+        }
+
+        /* Modal backdrop */
+        .modal-backdrop {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 9999;
+            display: none;
+        }
+
+        .modal-backdrop.active {
+            display: block;
+        }
+
+        .barangay-modal.active {
+            display: block;
+        }
+
+        .modal-header {
+            text-align: center;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #004499;
+            position: relative;
+        }
+
+        .modal-header h3 {
+            margin: 0;
+            font-size: 18px;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: -5px;
+            right: 0;
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: #666;
+            cursor: pointer;
+            padding: 0;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+
+        .close-btn:hover {
+            background: #f0f0f0;
+            color: #004499;
+        }
+
+        .officials-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        .officials-table th {
+            background: #004499;
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-size: 14px;
+            font-weight: 600;
+            position: sticky;
+            top: 0;
+        }
+
+        .officials-table td {
+            padding: 10px 12px;
+            border-bottom: 1px solid #eee;
+            font-size: 13px;
+        }
+
+        .officials-table tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+
+        .officials-table tr:hover {
+            background-color: #e3f2fd;
+        }
+
+        .position-column {
+            font-weight: 500;
+            color: #004499;
+            width: 45%;
+        }
+
+        .name-column {
+            width: 55%;
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            .barangay-modal {
+                width: 95%;
+                max-height: 85vh;
+                padding: 15px;
+            }
+            
+            .officials-table th,
+            .officials-table td {
+                padding: 8px;
+                font-size: 12px;
+            }
+            
+            .modal-header h3 {
+                font-size: 16px;
+            }
+        }
+
+        /* Hover indicator */
+        .barangay-item::after {
+            content: '👁️ Click to view officials';
+            position: absolute;
+            bottom: 5px;
+            right: 10px;
+            font-size: 10px;
+            color: #666;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .barangay-item:hover::after {
+            opacity: 1;
+        }
+
+        /* Loading state */
+        .modal-loading {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+        }
+
+        /* Enhanced visual feedback */
+        .barangay-item:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="barangays">
+            <h2 style="margin-bottom: 20px; color: #333;">Barangay Officials</h2>
+            <p style="margin-bottom: 25px; color: #666; font-style: italic;">Click on any barangay to view its current officials</p>
+            
+            <ul class="barangay-list">
+                <li class="barangay-item" data-barangay="antipolo-del-sur">
+                    Antipolo Del Sur
+                </li>
+
+                <li class="barangay-item" data-barangay="balite">
+                    Balite
+                </li>
+
+                <li class="barangay-item" data-barangay="batag">
+                    Batag
+                </li>
+
+                <li class="barangay-item" data-barangay="bigaa">
+                    Bigaa
+                </li>
+
+                <li class="barangay-item" data-barangay="buenavista">
+                    Buenavista
+                </li>
+
+                <li class="barangay-item" data-barangay="buyo">
+                    Buyo
+                </li>
+
+                <li class="barangay-item" data-barangay="cabihian">
+                    Cabihian
+                </li>
+                <li class="barangay-item" data-barangay="calabnigan">
+                    Calabnigan
+                </li>
+                <li class="barangay-item" data-barangay="calampong">
+                    Calampong
+                </li>
+                <li class="barangay-item" data-barangay="calatagan-proper">
+                    Calatagan Proper
+                </li>
+                <li class="barangay-item" data-barangay="calatagan-tibang">
+                    Calatagan Tibang
+                </li>
+                <li class="barangay-item" data-barangay="capilihan">
+                    Capilihan
+                </li>
+                <li class="barangay-item" data-barangay="casoocan">
+                    Casoocan
+                </li>
+                <li class="barangay-item" data-barangay="cavinitan">
+                    Cavinitan
+                </li>
+                <li class="barangay-item" data-barangay="concepcion">
+                    Concepcion (Poblacion)
+                </li>
+                <li class="barangay-item" data-barangay="constantino">
+                    Constantino (Poblacion)
+                </li>
+            </ul>
+        </div>
+
+    <!-- Modal backdrop -->
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+
+    <!-- Single modal that gets populated with data -->
+    <div class="barangay-modal" id="officialsModal">
+        <div class="modal-header">
+            <button class="close-btn" id="closeModal">&times;</button>
+            <h3 id="modalTitle">Barangay Officials</h3>
+            <small id="modalSubtitle">Current Officials (2023-2026)</small>
+        </div>
+        <div id="modalContent">
+            <div class="modal-loading">Loading officials...</div>
+        </div>
+    </div>
+
+    <script>
+        // Barangay officials data
+        const barangayData = {
+            'antipolo-del-sur': {
+                name: 'Barangay Antipolo Del Sur',
+                officials: [
+                    {position: 'Punong Barangay', name: 'Maria Santos Cruz'},
+                    {position: 'Sangguniang Barangay Member', name: 'Juan dela Cruz'},
+                    {position: 'Sangguniang Barangay Member', name: 'Ana Marie Reyes'},
+                    {position: 'Sangguniang Barangay Member', name: 'Pedro Gonzales'},
+                    {position: 'Sangguniang Barangay Member', name: 'Rosa Mendoza'},
+                    {position: 'Sangguniang Barangay Member', name: 'Carlos Villanueva'},
+                    {position: 'Sangguniang Barangay Member', name: 'Lisa Fernandez'},
+                    {position: 'Sangguniang Barangay Member', name: 'Miguel Torres'},
+                    {position: 'SK Chairperson', name: 'John Mark Rivera'},
+                    {position: 'Barangay Secretary', name: 'Elena Rodriguez'},
+                    {position: 'SK Member', name: 'Sarah Mae Aquino'},
+                    {position: 'SK Member', name: 'James Patrick Ramos'},
+                    {position: 'SK Member', name: 'Michelle Garcia'},
+                    {position: 'SK Member', name: 'Kevin John Morales'},
+                    {position: 'SK Member', name: 'Angel Rose Castro'},
+                    {position: 'SK Member', name: 'Ryan Joshua Santos'},
+                    {position: 'SK Member', name: 'Nicole Anne Perez'},
+                    {position: 'SK Secretary', name: 'Mark Anthony Lopez'}
+                ]
+            },
+            'balite': {
+                name: 'Barangay Balite',
+                officials: [
+                    {position: 'Punong Barangay', name: 'Roberto Magno Silva'},
+                    {position: 'Sangguniang Barangay Member', name: 'Carmen dela Rosa'},
+                    {position: 'Sangguniang Barangay Member', name: 'Francisco Herrera'},
+                    {position: 'Sangguniang Barangay Member', name: 'Luz Marina Diaz'},
+                    {position: 'Sangguniang Barangay Member', name: 'Antonio Valdez'},
+                    {position: 'Sangguniang Barangay Member', name: 'Gloria Estrada'},
+                    {position: 'Sangguniang Barangay Member', name: 'Raul Montero'},
+                    {position: 'Sangguniang Barangay Member', name: 'Beatriz Aguilar'},
+                    {position: 'SK Chairperson', name: 'Alexandra Mae Jimenez'},
+                    {position: 'Barangay Secretary', name: 'Remedios Castillo'},
+                    {position: 'SK Member', name: 'Christian Paul Navarro'},
+                    {position: 'SK Member', name: 'Jasmine Joy Ortega'},
+                    {position: 'SK Member', name: 'Daniel Carl Robles'},
+                    {position: 'SK Member', name: 'Princess Mae Vargas'},
+                    {position: 'SK Member', name: 'Joshua Miguel Flores'},
+                    {position: 'SK Member', name: 'Ysabel Marie Campos'},
+                    {position: 'SK Member', name: 'Patrick John Salazar'},
+                    {position: 'SK Secretary', name: 'Clarissa Anne Medina'}
+                ]
+            },
+            'batag': {
+                name: 'Barangay Batag',
+                officials: [
+                    {position: 'Punong Barangay', name: 'Esperanza Luz Moreno'},
+                    {position: 'Sangguniang Barangay Member', name: 'Manuel Cruz Bautista'},
+                    {position: 'Sangguniang Barangay Member', name: 'Victoria Santos'},
+                    {position: 'Sangguniang Barangay Member', name: 'Alfredo Pascual'},
+                    {position: 'Sangguniang Barangay Member', name: 'Rosario Garcia'},
+                    {position: 'Sangguniang Barangay Member', name: 'Eduardo Rivera'},
+                    {position: 'Sangguniang Barangay Member', name: 'Milagros Aquino'},
+                    {position: 'Sangguniang Barangay Member', name: 'Arturo Mendoza'},
+                    {position: 'SK Chairperson', name: 'Angela Rose Martinez'},
+                    {position: 'Barangay Secretary', name: 'Teresita Villanueva'},
+                    {position: 'SK Member', name: 'Carlo James Dela Cruz'},
+                    {position: 'SK Member', name: 'Maria Kristine Lopez'},
+                    {position: 'SK Member', name: 'Julius Mark Fernandez'},
+                    {position: 'SK Member', name: 'Stephanie Mae Torres'},
+                    {position: 'SK Member', name: 'Ronnie Jay Gonzales'},
+                    {position: 'SK Member', name: 'Catherine Joy Reyes'},
+                    {position: 'SK Member', name: 'Michael John Castro'},
+                    {position: 'SK Secretary', name: 'Bernadette Rose Santos'}
+                ]
+            },
+            'bigaa': {
+                name: 'Barangay Bigaa',
+                officials: [
+                    {position: 'Punong Barangay', name: 'Leonardo Jose Aguilar'},
+                    {position: 'Sangguniang Barangay Member', name: 'Amelia Cruz Ramos'},
+                    {position: 'Sangguniang Barangay Member', name: 'Domingo Herrera'},
+                    {position: 'Sangguniang Barangay Member', name: 'Soledad Morales'},
+                    {position: 'Sangguniang Barangay Member', name: 'Ricardo Valdez'},
+                    {position: 'Sangguniang Barangay Member', name: 'Corazon Perez'},
+                    {position: 'Sangguniang Barangay Member', name: 'Ernesto Jimenez'},
+                    {position: 'Sangguniang Barangay Member', name: 'Consolacion Silva'},
+                    {position: 'SK Chairperson', name: 'Kenneth Paul Navarro'},
+                    {position: 'Barangay Secretary', name: 'Leticia Montero'},
+                    {position: 'SK Member', name: 'Angelica Mae Ortega'},
+                    {position: 'SK Member', name: 'Ferdinand Jay Robles'},
+                    {position: 'SK Member', name: 'Maricel Anne Vargas'},
+                    {position: 'SK Member', name: 'Romeo John Flores'},
+                    {position: 'SK Member', name: 'Christine Joy Campos'},
+                    {position: 'SK Member', name: 'Gabriel Mark Salazar'},
+                    {position: 'SK Member', name: 'Vanessa Rose Medina'},
+                    {position: 'SK Secretary', name: 'Francis Xavier Castro'}
+                ]
+            },
+            'buenavista': {
+                name: 'Barangay Buenavista',
+                officials: [
+                    {position: 'Punong Barangay', name: 'Felicidad Santos Rivera'},
+                    {position: 'Sangguniang Barangay Member', name: 'Gregorio Dela Cruz'},
+                    {position: 'Sangguniang Barangay Member', name: 'Purificacion Garcia'},
+                    {position: 'Sangguniang Barangay Member', name: 'Alejandro Mendoza'},
+                    {position: 'Sangguniang Barangay Member', name: 'Estrella Torres'},
+                    {position: 'Sangguniang Barangay Member', name: 'Florencio Aquino'},
+                    {position: 'Sangguniang Barangay Member', name: 'Pilar Gonzales'},
+                    {position: 'Sangguniang Barangay Member', name: 'Dionisio Villanueva'},
+                    {position: 'SK Chairperson', name: 'Maria Lourdes Martinez'},
+                    {position: 'Barangay Secretary', name: 'Salvacion Fernandez'},
+                    {position: 'SK Member', name: 'Joseph Miguel Lopez'},
+                    {position: 'SK Member', name: 'Rochelle Mae Santos'},
+                    {position: 'SK Member', name: 'Arnold James Cruz'},
+                    {position: 'SK Member', name: 'Jocelyn Rose Reyes'},
+                    {position: 'SK Member', name: 'Vincent Paul Morales'},
+                    {position: 'SK Member', name: 'Lovely Ann Garcia'},
+                    {position: 'SK Member', name: 'Edwin Carl Perez'},
+                    {position: 'SK Secretary', name: 'Sheila Marie Rodriguez'}
+                ]
+            },
+            'buyo': {
+                name: 'Barangay Buyo',
+                officials: [
+                    {position: 'Punong Barangay', name: 'Remedios Cruz Martinez'},
+                    {position: 'Sangguniang Barangay Member', name: 'Rogelio Santos'},
+                    {position: 'Sangguniang Barangay Member', name: 'Cristina Reyes'},
+                    {position: 'Sangguniang Barangay Member', name: 'Mariano Gonzales'},
+                    {position: 'Sangguniang Barangay Member', name: 'Juanita Morales'},
+                    {position: 'Sangguniang Barangay Member', name: 'Benito Valdez'},
+                    {position: 'Sangguniang Barangay Member', name: 'Esperanza Perez'},
+                    {position: 'Sangguniang Barangay Member', name: 'Teodoro Silva'},
+                    {position: 'SK Chairperson', name: 'Lance Gabriel Torres'},
+                    {position: 'Barangay Secretary', name: 'Natividad Aguilar'},
+                    {position: 'SK Member', name: 'Cheryl Anne Rivera'},
+                    {position: 'SK Member', name: 'Paolo Vicente Cruz'},
+                    {position: 'SK Member', name: 'Hannah Rose Lopez'},
+                    {position: 'SK Member', name: 'Timothy John Santos'},
+                    {position: 'SK Member', name: 'Melody Joy Garcia'},
+                    {position: 'SK Member', name: 'Jerome Paul Fernandez'},
+                    {position: 'SK Member', name: 'Grace Marie Mendoza'},
+                    {position: 'SK Secretary', name: 'Adrian Jose Villanueva'}
+                ]
+            }
+        };
+
+        // Get DOM elements
+        const modalBackdrop = document.getElementById('modalBackdrop');
+        const officialsModal = document.getElementById('officialsModal');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalContent = document.getElementById('modalContent');
+        const closeModal = document.getElementById('closeModal');
+
+        // Tab functionality
+        document.querySelectorAll('.tab-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                document.querySelectorAll('.tab-link').forEach(tab => tab.classList.remove('active'));
+                document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+                
+                this.classList.add('active');
+                
+                const tabId = this.getAttribute('data-tab');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+
+        // Function to show modal
+        function showModal(barangayKey) {
+            const data = barangayData[barangayKey];
+            
+            if (data) {
+                modalTitle.textContent = data.name;
+                
+                // Create officials table
+                const table = `
+                    <table class="officials-table">
+                        <thead>
+                            <tr>
+                                <th class="position-column">Position</th>
+                                <th class="name-column">Name</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            ${data.officials.map(official => `
+                                <tr>
+                                    <td class="position-column">${official.position}</td>
+                                    <td>${official.name}</td>
+                                </tr>
+                            `).join('')}
+                        </tbody>
+                    </table>
+                `;
+                modalContent.innerHTML = table;
+            } else {
+                modalContent.innerHTML = '<p style="text-align: center; padding: 20px;">Officials information not available yet.</p>';
+            }
+            
+            modalBackdrop.classList.add('active');
+            officialsModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        // Function to hide modal
+        function hideModal() {
+            modalBackdrop.classList.remove('active');
+            officialsModal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+            
+            // Remove active class from all barangay items
+            document.querySelectorAll('.barangay-item').forEach(item => {
+                item.classList.remove('active');
+            });
+        }
+
+        // Add click events to barangay items
+        document.querySelectorAll('.barangay-item').forEach(item => {
+            item.addEventListener('click', function() {
+                const barangayKey = this.getAttribute('data-barangay');
+                this.classList.add('active');
+                showModal(barangayKey);
+            });
+        });
+
+        // Close modal events
+        closeModal.addEventListener('click', hideModal);
+        modalBackdrop.addEventListener('click', hideModal);
+
+        // Close modal with ESC key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && officialsModal.classList.contains('active')) {
+                hideModal();
+            }
+        });
+
+        // Prevent modal from closing when clicking inside it
+        officialsModal.addEventListener('click', function(e) {
+            e.stopPropagation();
+        });
+    </script>

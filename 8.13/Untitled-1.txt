@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virac Officials - Enhanced</title>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <style>
+        .cell {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .tabs {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0 0 20px 0;
+            border-bottom: 2px solid #ddd;
+        }
+
+        .tabs-title {
+            margin-right: 20px;
+        }
+
+        .tabs-title.is-active a {
+            background-color: #004499cc;
+            color: white;
+        }
+
+        .tabs-title a {
+            display: block;
+            padding: 12px 20px;
+            text-decoration: none;
+            color: #333;
+            background-color: #f5f5f5;
+            border-radius: 5px 5px 0 0;
+            transition: all 0.3s ease;
+        }
+
+        .tabs-title a:hover {
+            background-color: #e0e0e0;
+        }
+
+        .tabs-content {
+            background: white;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 0 5px 5px 5px;
+        }
+
+        .tabs-panel {
+            display: none;
+        }
+
+        .tabs-panel.is-active {
+            display: block;
+        }
+
+        .barangay-list {
+            columns: 3;
+            column-gap: 30px;
+            list-style: none;
+            padding: 0;
+        }
+
+        .barangay-list li {
+            padding: 5px 0;
+            break-inside: avoid;
+        }
+
+        /* Controls styling */
+        .controls-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .sort-controls, .view-controls {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .control-group {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .control-btn {
+            padding: 6px 12px;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .control-btn:hover {
+            background-color: #e0e0e0;
+        }
+
+        .control-btn.active {
+            background-color: #004499cc;
+            color: white;
+            border-color: #004499cc;
+        }
+
+        select {
+            padding: 6px 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+
+        /* Table and profile modal styles */
+        .official-profile {
+            position: relative;
+            margin-bottom: 10px;
+        }
+
+        .official-profile:hover .profile-modal {
+            display: block;
+        }
+
+        .hover-target {
+            display: inline-block;
+            position: relative;
+            cursor: pointer;
+            overflow: visible !important;
+        }
+
+        .profile-modal {
+            position: absolute;
+            top: 0;
+            left: 100%;
+            margin-left: 10px;
+            background: white;
+            padding: 15px;
+            width: 330px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            z-index: 9999;
+            display: none;
+            white-space: normal;
+        }
+
+        .hover-target:hover .profile-modal {
+            display: block;
+        }
+
+        .profile-modal img {
+            width: 80px;
+            height: 80px;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+
+        .profile-modal h4 {
+            margin: 0;
+            font-size: 15px;
+        }
+
+        .profile-modal p {
+            font-size: 13px;
+            margin: 4px 0;
+            color: #555;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            padding: 8px;
+            border-bottom: 1px solid #eee;
+            word-wrap: break-word;
+            white-space: normal;
+        }
+
+        th {
+            background-color: #f1f1f1;
+            border-bottom: 1px solid #ccc;
+        }
+
+        td {
+            position: relative;
+            overflow: visible !important;
+        }
+
+        /* Pagination styles */
+        .pagination-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        #pageInfo {
+            margin: 0;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .pagination {
+            display: flex;
+            gap: 4px;
+        }
+
+        .pagination button {
+            padding: 0 2px;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            color: #333;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            border-radius: 0;
+            min-width: 18px;
+            min-height: 22px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 10px;
+        }
+
+        .pagination button:hover {
+            background-color: #dcdcdc;
+        }
+
+        .pagination button.active {
+            background-color: #004499cc;
+            color: white;
+            border-color: #004499cc;
+        }
+
+        .pagination button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        /* Chart styles */
+        .chart-header {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 8px;
+            width: 550px;
+            padding-right: -1px;
+        }
+
+        .zoom-controls {
+            display: flex;
+            gap: 5px;
+        }
+
+        .zoom-btn {
+            width: 25px;
+            height: 25px;
+            background: #fff;
+            border: 1px solid #ccc;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 3px;
+            text-align: center;
+            line-height: 22px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+        }
+
+        .zoom-btn:hover {
+            background: #f0f0f0;
+        }
+
+        .chart-wrapper {
+            overflow-x: hidden;
+            overflow-y: hidden;
+            position: relative;
+            cursor: grab;
+        }
+
+        .chart-wrapper:active {
+            cursor: grabbing;
+        }
+
+        .chart-scale {
+            transform-origin: top left;
+        }
+
+        /* Current officials styling */
+        .officials-section {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .municipal-officials {
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            max-width: 300px;
+        }
+
+        hr {
+            margin: 20px 0;
+            border: none;
+            border-top: 1px dashed #aaa;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .controls-container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .chart-wrapper {
+                overflow-x: auto;
+                overflow-y: hidden;
+            }
+
+            .chart-header {
+                width: 100%;
+                padding-right: 0;
+            }
+
+            .barangay-list {
+                columns: 2;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .pagination-wrapper {
+                flex-wrap: wrap;
+            }
+
+            .barangay-list {
+                columns: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cell municipality__tabs-container">
+        <ul class="tabs" data-tabs="" id="example-tabs">
+            <li class="tabs-title is-active">
+                <a href="#panel1" aria-selected="true" class="municipality__panel-tab" onclick="showTab('panel1')">About</a>
+            </li>
+            <li class="tabs-title">
+                <a href="#panel2" class="municipality__panel-tab" onclick="showTab('panel2')">Barangays</a>
+            </li>
+            <li class="tabs-title">
+                <a href="#panel3" class="municipality__panel-tab" onclick="showTab('panel3')">Previous Officials</a>
+            </li>
+        </ul>
+
+        <div class="tabs-content">
+            <div class="tabs-panel is-active" id="panel1">
+                <p><strong>Historical Background</strong></p>
+                <p style="text-align: justify;">The actual founding of Virac as a distinct political unit is closely associated with the evangelization of its original inhabitants by the Spanish conquistadores in the middle of the 16th century. Records of the past are so fragile, inconsistent and incomplete that events presented are an admixture of facts and folklore. Virac became officially recognized as a unit of governance only in 1755 as it was only during that year when records were started to be faithfully kept.</p>
+
+                <p><strong>Pre-Hispanic Era</strong></p>
+                <p>The first settlers to have set foot in the island province of Catanduanes were the scions of Bornean datus who came to the island of Panay and spread through the length and breadth of the Philippine archipelago in the 13th century. The first signs of human activity which began to be manifested in the middle of the 14th century were presumed to be that of the Malays who populated and developed some parts of Southern Luzon during the period.</p>
+
+                <p>Other adventurers in search of better opportunities for trade and commerce eventually stayed and established settlements along the coastal confines of this tiny island during the 11th century.</p>
+
+                <p><strong>The Naming of Virac</strong></p>
+                <p>From the exploits of Juan de Salcedo, Virac was first visited in 1573 by his own men in pursuit of pirates operating in the Bicol Peninsula. In Virac, the Spanish found a tribe under the leadership of one Datu Lumibao, scion of Datu Dumaguil who came to the Philippines with the 13 Malay datus and his wife Melbigan and son Macaco who settled near Vidak spring and founded the first civilized settlement with a score of servant followers and their wives. Some say Virac is a derivation of the word "Vidac" while others claim it is a contraction of the Spanish version of the word burac, meaning flower.</p>
+
+                <p><strong>Christianization</strong></p>
+                <p>A few weeks after the suppression of the pirates, the Spaniards returned with Dominican missionaries. Offering friendship and gifts, they were able to convert the tribe into the fold of Christendom. The first tribe conversion thus became Spain's initial foothold to the island's eventual Christianization.</p>
+
+                <p><strong>Spanish Era</strong></p>
+                <p>In the 16th to 17th century, after establishing and Christianizing settlements, a form of governance called "Encommiendas" was subsequently introduced as a guide to the socio-political development of each community.</p>
+
+                <p>The turbulent years of the late 18th century brought about by the sporadic incursions of the non-Christians on the prosperous settlements along the coast spawned myths about local heroes and essentially hastened the unification of Virac into a strong bastion against the forces opposed to Christianity. Stone chapels which proliferated along the coastal barangays had for years alternately served as places of refuge and worship of its people.</p>
+
+                <p><strong>Local Insurrection</strong></p>
+                <p>The growing concern for better recognition and more participation of the natives in government affairs gave rise to rebellion. The nationwide uprising was upheld but lacked the necessary support due to the fairer treatment obtained locally.</p>
+
+                <p><strong>American Regime</strong></p>
+                <p>Local resistance to the abrupt change of masters was more vigorous and gained wider acceptance. Not as eager to relinquish their hard-fought freedom, the "Katipuneros" refused to recognize the sovereignty of the new masters and fled to the mountains. The Americans' might however, proved too formidable and quickly, all oppositions were subdued.</p>
+
+                <p>The American occupation ended in 1934 with the establishment of the Philippine Commonwealth.</p>
+
+                <p><strong>Japanese Occupation</strong></p>
+                <p>With hardly a brief respite from foreign occupation, World War II brought new and untold woes, hardship and anxieties. Catanduanes was not spared from the Japanese onslaught. The Kamikura Regime established a puppet government centered on the capital town of Virac. All economic activities virtually stood at standstill. Even schools were temporarily closed.</p>
+
+                <p>The liberation of Catanduanes took place at what is now the present municipal building and the Virac Parish Cathedral. On February 8, 1945, the local guerrillas gained full control of the Japanese barracks.</p>
+
+                <p>On April 22, 1945, Virac resumed its normal operations under the regime of the Philippine Civil Affairs Unit.</p>
+
+                <p><strong>Post American Liberation</strong></p>
+                <p>The challenge of rebuilding the municipality from the ravages of the war was put on the shoulders of Florencio Tacorda, Geronimo Tabuzo and Primo Panti who, among themselves, held the stewardship of Virac from 1945 to 1957.</p>
+
+                <p><strong>Pre and Martial Law Era</strong></p>
+                <p>From 1958-1970, Salvador Surtida took over followed by Jorge Arcilla from 1970-1986, two of the longest reigning local executives in the history of Virac. This period witnessed the ascendancy to national prominence of the Alberto brothers, Juan, Jose and Vicente, who doubtlessly brought progress and influenced the massive physical transformation of the municipality when Salvador Surtida and Jorge Arcilla were mayors. Foremost among the many infrastructure projects were the Catanduanes State Colleges and the Eastern Bicol Medical Center which placed Virac in the map as a major educational and health center in the Bicol Region.</p>
+
+                <p>The growth of Virac in terms of governance peaked in 1972. From the original 34 barangays in 1960, Virac was able to establish 29 new communities to upgrade to the present composition of 63 barangays. The declaration of martial law on September 21, 1972, despite the alleged rampant atrocities, had, by and large, no ill effects on the lives of the constituency, who by nature are peace-loving and law-abiding citizens.</p>
+
+                <p><strong>EDSA Revolution</strong></p>
+                <p>The EDSA Revolution in 1986 which toppled down the more than two decades of Marcos regime had a domino effect on the political structure of Virac. The replacement of the elected officials by appointed officials was in accordance with the Freedom Constitution which predominated during the revolutionary government from 1986 to 1992. Rodulfo Sarmiento, a doctor by profession held the reins of the municipal government.</p>
+
+                <p><strong>Post EDSA</strong></p>
+                <p>The early nineties and onward saw the alternate changing of guard at the helm of local governance between Rodulfo Sarmiento and Jose "Cito" Alberto II, the son of Congressman Jose Alberto. The operation of the ferry boat which facilitates the transfer of goods and services from the Bicol mainland to Virac ushered in the vibrance in trade and commerce as manifested by the modern establishments unseen before but now dotting the commercial centers and the bee-line of private and public conveyances plying the streets. Growing political maturity has been apparent in barangay affairs operation and so with the swell in the number of non-government organizations which is an indication of growing people empowerment.</p>
+
+                <p>With the advent of the third millennium came the resurgence of the physical face lift of Virac as more public structures have been erected and upgraded during the second "tour of duty" of incumbent Mayor Jose "Cito" Alberto.</p>
+
+                <p>The socio-political annals of Virac shall continue to increase its pages and one thing is certain: the municipality stands to gain – physically, economically and socially in its self-waged battle for progress.</p>
+            </div>
+
+            <div class="tabs-panel" id="panel2">
+                <ul class="barangay-list">
+                    <li>Antipolo Del Sur</li>
+                    <li>Balite</li>
+                    <li>Batag</li>
+                    <li>Bigaa</li>
+                    <li>Buenavista</li>
+                    <li>Buyo</li>
+                    <li>Cabihian</li>
+                    <li>Calabnigan</li>
+                    <li>Calampong</li>
+                    <li>Calatagan Proper</li>
+                    <li>Calatagan Tibang</li>
+                    <li>Capilihan</li>
+                    <li>Casoocan</li>
+                    <li>Cavinitan</li>
+                    <li>Concepcion (Poblacion)</li>
+                    <li>Constantino (Poblacion)</li>
+                    <li>Danicop</li>
+                    <li>Dugui San Isidro</li>
+                    <li>Dugui San Vicente</li>
+                    <li>Dugui Too</li>
+                    <li>F. Tacorda Village</li>
+                    <li>Francia (Poblacion)</li>
+                    <li>Gogon Centro</li>
+                    <li>Gogon Sirangan</li>
+                    <li>Hawan Grande</li>
+                    <li>Hawan Ilaya</li>
+                    <li>Hicming</li>
+                    <li>Igang</li>
+                    <li>Juan M. Alberto (Poniton)</li>
+                    <li>Lanao (Poblacion)</li>
+                    <li>Magnesia Del Norte</li>
+                    <li>Magnesia Del Sur</li>
+                    <li>Marcelo Alberto (Poblacion)</li>
+                    <li>Marilima</li>
+                    <li>Pajo Baguio</li>
+                    <li>Pajo San Isidro</li>
+                    <li>Palnab Del Norte</li>
+                    <li>Palnab Del Sur</li>
+                    <li>Palta Big</li>
+                    <li>Palta Salvacion</li>
+                    <li>Palta Small</li>
+                    <li>Rawis (Poblacion)</li>
+                    <li>Salvacion</li>
+                    <li>San Isidro Village</li>
+                    <li>San Jose (Poblacion)</li>
+                    <li>San Juan (Poblacion)</li>
+                    <li>San Pablo (Poblacion)</li>
+                    <li>San Pedro (Poblacion)</li>
+                    <li>San Roque (Poblacion)</li>
+                    <li>San Vicente</li>
+                    <li>Ibong Sapa (San Vicente Sur)</li>
+                    <li>Santa Cruz</li>
+                    <li>Santa Elena (Poblacion)</li>
+                    <li>Santo Cristo</li>
+                    <li>Santo Domingo</li>
+                    <li>Santo Niño</li>
+                    <li>Simamla</li>
+                    <li>Sogod-Simamla</li>
+                    <li>Sogod-Tibgao</li>
+                    <li>Talisoy</li>
+                    <li>Tubaon</li>
+                    <li>Valencia</li>
+                </ul>
+            </div>
+
+            <div class="tabs-panel" id="panel3">
+                <!-- Controls Section -->
+                <div class="controls-container">
+                    <div class="sort-controls">
+                        <div class="control-group">
+                            <label for="sortSelect">Sort by:</label>
+                            <select id="sortSelect" onchange="handleSort()">
+                                <option value="earliest">Earliest to Latest</option>
+                                <option value="latest">Latest to Earliest</option>
+                                <option value="name">Name (A-Z)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="view-controls">
+                        <div class="control-group">
+                            <label>View:</label>
+                            <button class="control-btn active" id="viewAll" onclick="setView('all')">All</button>
+                            <button class="control-btn" id="viewBefore2016" onclick="setView('before2016')">Before 2016</button>
+                            <button class="control-btn" id="viewAfter2016" onclick="setView('after2016')">2016 & After</button>
+                        </div>
+                    </div>
+                </div>
+
+                <h4 style="margin-top: 0;">Mayors</h4>
+                <div id="mayorTableContainer" style="position: relative;">
+                    <table id="mayorTable">
+                        <thead>
+                            <tr style="background-color: #f1f1f1;">
+                                <th style="text-align: left; padding: 8px; border-bottom: 1px solid #ccc;">Name</th>
+                                <th style="text-align: center; padding: 8px; border-bottom: 1px solid #ccc;">Term Start</th>
+                                <th style="text-align: center; padding: 8px; border-bottom: 1px solid #ccc;">Term End</th>
+                            </tr>
+                        </thead>
+                        <tbody id="mayorTableBody">
+                            <!-- Mayor data will be populated by JavaScript -->
+                        </tbody>
+                    </table>
+                    <div class="pagination-wrapper">
+                        <p id="mayorPageInfo">This is page 1 out of X</p>
+                        <div id="mayorPagination" class="pagination"></div>
+                    </div>
+                </div>
+
+                <hr>
+
+                <!-- Chart Section -->
+                <div class="chart-header">
+                    <div class="zoom-controls">
+                        <div class="zoom-btn" onclick="zoomIn()">+</div>
+                        <div class="zoom-btn" onclick="zoomOut()">−</div>
+                    </div>
+                </div>
+                <div class="chart-wrapper" id="chartWrapper">
+                    <div id="chart-container" class="chart-scale">
+                        <div id="example2_1"></div>
+                    </div>
+                </div>
+
+                <hr>
+
+                <h4 style="margin-top: 0;">Vice Mayors</h4>
+                <div id="viceMayorTableContainer" style="position: relative;">
+                    <table id="viceMayorTable">
+                        <thead>
+                            <tr style="background-color: #f1f1f1;">
+                                <th style="text-align: left; padding: 8px; border-bottom: 1px solid #ccc;">Name</th>
+                                <th style="text-align: center; padding: 8px; border-bottom: 1px solid #ccc;">Term Start</th>
+                                <th style="text-align: center; padding: 8px; border-bottom: 1px solid #ccc;">Term End</th>
+                            </tr>
+                        </thead>
+                        <tbody id="viceMayorTableBody">
+                            <!-- Vice Mayor data will be populated by JavaScript -->
+                        </tbody>
+                    </table>
+                    <div class="pagination-wrapper">
+                        <p id="vicePageInfo">This is page 1 out of X</p>
+                        <div id="vicePagination" class="pagination"></div>
+                    </div>
+                </div>
+
+                <hr>
+
+                <h4 style="margin-top: 0;">Councilors</h4>
+                <div id="councilorTableContainer" style="position: relative;">
+                    <table id="councilorTable">
+                        <thead>
+                            <tr style="background-color: #f1f1f1;">
+                                <th style="text-align: left; padding: 8px; border-bottom: 1px solid #ccc;">Name</th>
+                                <th style="text-align: center; padding: 8px; border-bottom: 1px solid #ccc;">Term Start</th>
+                                <th style="text-align: center; padding: 8px; border-bottom: 1px solid #ccc;">Term End</th>
+                            </tr>
+                        </thead>
+                        <tbody id="councilorTableBody">
+                            <!-- Councilor data will be populated by JavaScript -->
+                        </tbody>
+                    </table>
+                    <div class="pagination-wrapper">
+                        <p id="councilorPageInfo">This is page 1 out of X</p>
+                        <div id="councilorPagination" class="pagination"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Current Officials Section -->
+    <div class="officials-section">
+        <div class="municipal-officials">
+            <div style="text-align: center; margin-bottom: 25px;">
+                <img src="http://wp-local.com/wp-content/uploads/2025/08/Sinforoso-Sarmiento-2-Virac.png"
+                     alt="Mayor"
+                     style="width: 160px; height: 160px; border-radius: 50%; object-fit: cover; margin-bottom: 10px;">
+                <p style="margin: 0; padding: 0; line-height: 1.2;"><strong>Sinforoso Magallanes Sarmiento Jr.</strong></p>
+                <p style="margin: 0 0 30px 0; padding: 0; line-height: 1;">Mayor</p>
+            </div>
+            <div style="text-align: center; margin-bottom: 30px;">
+                <p style="margin: 0; padding: 0; line-height: 1.2;"><strong>Lemuel Padua Surtida</strong></p>
+                <p style="margin: 0 0 10px 0; padding: 0; line-height: 1;">Vice Mayor</p>
+            </div>
+            <hr style="border: none; border-top: 1px solid #ddd; margin: 0 0 30px 0;">
+            <div style="text-align: center;">
+                <p style="margin: 0 0 15px 0; padding: 0; font-weight: bold; font-size: 14px;">MUNICIPAL COUNCILORS</p>
+                <p style="margin: 0; padding: 0; line-height: 1.2;">Ramon C. Surtida</p>
+                <p style="margin: 0; padding: 0; line-height: 1.2;">Rafael P. Zuniega</p>
+                <p style="margin: 0; padding: 0; line-height: 1.2;">Evelyn C. Surtida</p>
+                <p style="margin: 0; padding: 0; line-height: 1.2;">Alan T. Tamaray</p>
+                <p style="margin: 0; padding: 0; line-height: 1.2;">Ruel S. Tumbado</p>
+                <p style="margin: 0; padding: 0; line-height: 1.2;">Jose S. Surtida</p>
+                <p style="margin: 0; padding: 0; line-height: 1.2;">Celia B. Cua</p>
+                <p style="margin: 0; padding: 0; line-height: 1.2;">Ricardo T. Tria</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Data Arrays
+        let mayorData = [
+            {
+                name: "Samuel Vilanueva Laynes",
+                termStart: 2016,
+                termEnd: 2019,
+                dateOfBirth: "September 14, 1962",
+                location: "Virac, Catanduanes, Bicol, Philippines",
+                family: "Husband of Private, son of Private, Father of Private",
+                occupation: "Mechanical Engineer, Politician",
+                image: "http://wp-local.com/wp-content/uploads/2025/08/Mayor-Border-male.png"
+            },
+            {
+                name: "Sinforoso Magallanes Sarmiento Jr.",
+                termStart: 2019,
+                termEnd: 2022,
+                dateOfBirth: "",
+                location: "Virac, Catanduanes",
+                family: "",
+                occupation: "Politician",
+                image: "http://wp-local.com/wp-content/uploads/2025/08/Mayor-Border-male.png"
+            },
+            {
+                name: "Samuel Vilanueva Laynes",
+                termStart: 2022,
+                termEnd: 2025,
+                dateOfBirth: "September 14, 1962",
+                location: "Virac, Catanduanes, Bicol, Philippines",
+                family: "Husband of Private, son of Private, Father of Private",
+                occupation: "Mechanical Engineer, Politician",
+                image: "http://wp-local.com/wp-content/uploads/2025/08/Mayor-Border-male.png"
+            },
+            // Add more historical mayors here
+            {
+                name: "Jorge Arcilla",
+                termStart: 1970,
+                termEnd: 1986,
+                dateOfBirth: "",
+                location: "Virac, Catanduanes",
+                family: "",
+                occupation: "Politician",
+                image: "http://wp-local.com/wp-content/uploads/2025/08/Mayor-Border-male.png"
+            },
+            {
+                name: "Salvador Surtida",
+                termStart: 1958,
+                termEnd: 1970,
+                dateOfBirth: "",
+                location: "Virac, Catanduanes",
+                family: "",
+                occupation: "Politician",
+                image: "http://wp-local.com/wp-content/uploads/2025/08/Mayor-Border-male.png"
+            },

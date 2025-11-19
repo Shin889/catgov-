@@ -1,0 +1,46 @@
+<ol class="download-list-progocea">
+  <li><a href="/annual-procurement-plan/">JOINT RESOLUTION NO. 001-2021</a></li>
+  <li><a href="/apcpi/">NO. 001-2021</a></li>
+  <li><a href="/citizens-charter/">NO. 002-2021</a></li>
+  <li><a href="/consignment-bulletin/">NO. 003-2021</a></li>
+  <li><a href="/contracts-notices/">NO. 004-2021</a></li>
+  <li><a href="/goods-services-bid/">NO. 005-2021</a></li>
+</ol>
+
+<ol class="download-list-progocea">
+  <li><a href="/annual-procurement-plan/">JOINT RESOLUTION NO. 001-2022</a></li>
+  <li><a href="/apcpi/">No. 001-2022</a></li>
+  <li><a href="/citizens-charter/">NO. 002-2022</a></li>
+  <li><a href="/consignment-bulletin/">NO. 003-2022</a></li>
+  <li><a href="/contracts-notices/">NO. 004-2022</a></li>
+  <li><a href="/goods-services-bid/">NO. 005-2022</a></li>
+  <li><a href="/goods-services-bid/">NO. 006-2022</a></li>
+</ol>
+
+<ol class="download-list-progocea">
+  <li><a href="/annual-procurement-plan/">JOINT RESOLUTION NO. 001-2023</a></li>
+  <li><a href="/apcpi/">NO. 001-2023</a></li>
+  <li><a href="/citizens-charter/">NO. 002-2023</a></li>
+  <li><a href="/consignment-bulletin/">NO. 003-2023</a></li>
+  <li><a href="/contracts-notices/">NO. 004-2023</a></li>
+  <li><a href="/goods-services-bid/">NO. 005-2023</a></li>
+  <li><a href="/goods-services-bid/">NO. 006-2023</a></li>
+  <li><a href="/goods-services-bid/">NO. 007-2023</a></li>
+  <li><a href="/goods-services-bid/">NO. 008-2023</a></li>
+  <li><a href="/goods-services-bid/">NO. 009-2023</a></li>
+</ol>
+
+<ol class="download-list-progocea">
+  <li><a href="/annual-procurement-plan/">JOINT RESOLUTION NO. 001-2024</a></li>
+  <li><a href="/apcpi/">NO. 001-2024</a></li>
+  <li><a href="/citizens-charter/">NO. 002-2024</a></li>
+  <li><a href="/consignment-bulletin/">NO. 003-2024</a></li>
+  <li><a href="/contracts-notices/">NO. 004-2024</a></li>
+  <li><a href="/goods-services-bid/">NO. 005-2024</a></li>
+  <li><a href="/goods-services-bid/">NO. 006-2024</a></li>
+</ol>
+
+<ol class="download-list-progocea">
+  <li><a href="/apcpi/">RESOLUTION NO. 001-2024</a></li>
+  <li><a href="/citizens-charter/">RESOLUTION NO. 002-2024</a></li>
+</ol>

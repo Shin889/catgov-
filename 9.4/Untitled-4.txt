@@ -1,0 +1,132 @@
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    .team-container {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 30px;
+        max-width: 1500px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .team-member {
+        position: relative;
+        background: #fff;
+        border-radius: 20px;
+        border: 1px solid rgba(0, 0, 0, 0.05);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+        overflow: hidden;
+        text-align: center;
+        padding-bottom: 25px;
+    }
+
+
+    .team-member img {
+        width: 100%;
+        height: 200px;
+        object-fit: contain;
+        display: block;
+        background-color: #f8f9fa;
+    }
+
+    .team-member .caption {
+        margin-top: 15px;
+        padding: 0 25px;
+        font-size: 0.95rem;
+        color: #5a6c7d;
+        line-height: 1.7;
+    }
+
+    .team-member .name {
+        font-weight: 600;
+        font-size: 1rem;
+        color: #2c3e50;
+        display: block;
+        margin-bottom: 5px;
+        line-height: 1.3;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 1200px) {
+        .team-container {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .team-container {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            padding: 10px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .team-container {
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+    }
+</style>
+
+<div class="team-container">
+    <div class="team-member">
+        <img src="http://wp-local.com/wp-content/uploads/2025/08/Suarez.jpg" alt="Atty. Gilbert T. Suarez">
+        <div class="caption">
+            <div class="name">Atty. Gilbert T. Suarez</div>
+            <div class="position">President</div>
+        </div>
+    </div>
+
+    <div class="team-member">
+        <img src="http://wp-local.com/wp-content/uploads/2025/08/Sanchez.jpg" alt="Guariño B. Sanchez">
+        <div class="caption">
+            <div class="name">Guariño B. Sanchez</div>
+            <div class="position">Vice President</div>
+        </div>
+    </div>
+
+    <div class="team-member">
+        <img src="http://wp-local.com/wp-content/uploads/2025/08/Camano.jpg" alt="Cheerlyane B. Camano">
+        <div class="caption">
+            <div class="name">Cheerylane B. Camano</div>
+            <div class="position">Secretary</div>
+        </div>
+    </div>
+
+    <div class="team-member">
+        <img src="http://wp-local.com/wp-content/uploads/2025/08/Tutanes.jpg" alt="Maribel T. Tutanes">
+        <div class="caption">
+            <div class="name">Maribel T. Tutanes</div>
+            <div class="position">Treasurer</div>
+        </div>
+    </div>
+
+    <div class="team-member">
+        <img src="http://wp-local.com/wp-content/uploads/2025/08/Idanan.jpg" alt="Jeric C. Idanan">
+        <div class="caption">
+            <div class="name">Jeric C. Idanan</div>
+            <div class="position">Auditor</div>
+        </div>
+    </div>
+
+    <div class="team-member">
+        <img src="http://wp-local.com/wp-content/uploads/2025/08/Rima.jpg" alt="Nenebeth S. Rima">
+        <div class="caption">
+            <div class="name">Nenebeth S. Rima</div>
+            <div class="position">PRO</div>
+        </div>
+    </div>
+
+    <div class="team-member">
+        <img src="http://wp-local.com/wp-content/uploads/2025/08/Acabado.jpg" alt="Felizardo T. Acabado">
+        <div class="caption">
+            <div class="name">Felizardo T. Acabado</div>
+            <div class="position">Business Manager</div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Catanduanes Provincial Capitol - Hero and Services</title>
+  <style>
+    /* Reset and base styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      line-height: 1.6;
+      color: #1f2937;
+    }
+
+    /* Provincial color scheme */
+    :root {
+      --provincial-green: hsl(142, 76%, 36%);
+      --provincial-gold: hsl(34, 100%, 50%);
+      --provincial-blue: hsl(217, 91%, 59%);
+      --provincial-navy: hsl(220, 26%, 14%);
+      --provincial-cream: hsl(48, 89%, 96%);
+    }
+
+    /* Hero section */
+    .hero-section {
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(90deg, var(--provincial-green) 0%, var(--provincial-blue) 50%, var(--provincial-navy) 100%);
+      padding: 3rem 0 4rem;
+      border-radius: 1rem 1rem 0 0;
+      margin-bottom: 0;
+      color: white;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.2);
+    }
+
+    .hero-content {
+      position: relative;
+      text-align: center;
+      opacity: 0;
+      transform: translateY(2rem);
+      animation: fadeInUp 1s ease-out forwards;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(8px);
+      border-radius: 9999px;
+      padding: 0.5rem 1.5rem;
+      margin-bottom: 1.5rem;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      transition: all 0.3s ease;
+      color: white;
+      font-weight: 600;
+      font-size: 1rem;
+      justify-content: center;
+    }
+
+    .hero-badge:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .hero-title {
+      font-size: 3.5rem;
+      font-weight: bold;
+      margin-bottom: 0.75rem;
+      background: linear-gradient(90deg, #ffffff 0%, var(--provincial-cream) 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-subtitle {
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+      color: rgba(255, 255, 255, 0.9);
+      max-width: 768px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero-contact-info {
+      display: flex;
+      flex-direction: row;
+      gap: 2rem;
+      justify-content: center;
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    .hero-contact-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: color 0.2s ease;
+      font-size: 1rem;
+    }
+
+    .hero-contact-item:hover {
+      color: white;
+    }
+
+    .hero-gradient {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 4rem;
+      background: linear-gradient(to top, var(--provincial-cream), transparent);
+    }
+
+    /* Services section */
+    .services-section {
+      background: white;
+      border-radius: 0 0 1rem 1rem;
+      padding: 3rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+      border: 1px solid #f3f4f6;
+      margin-top: 0;
+    }
+
+    .services-header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .services-title {
+      font-size: 1.25rem;
+      font-weight: bold;
+      color: var(--provincial-navy);
+      margin-bottom: 1rem;
+    }
+
+    .services-subtitle {
+      font-size: 1rem;
+      color: #6b7280;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+    }
+
+    .service-card {
+      max-width: 300px; 
+      margin: 0 auto; 
+      padding: 1rem;
+      background: linear-gradient(135deg, #f9fafb 0%, #ffffff 100%);
+      border-radius: 0.75rem;
+      border: 2px solid #f3f4f6;
+      padding: 1.5rem;
+      transition: all 0.3s ease;
+      text-align: center;
+    }
+
+    .service-icon {
+      width: 1rem;
+      height: 1rem;
+      background: linear-gradient(135deg, var(--provincial-green), var(--provincial-blue));
+      border-radius: 0.75rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1rem;
+      transition: transform 0.3s ease;
+    }
+
+    .service-title {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--provincial-navy);
+      margin-bottom: 0.5rem;
+    }
+
+    .service-description {
+      color: #6b7280;
+      font-size: 0.7rem;
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(2rem);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 class="hero-title">CATANDUANES</h1>
+      <p class="hero-subtitle">Provincial Capitol Contact Center</p>
+    </div>
+    <div class="hero-gradient"></div>
+  </section>
+  
+  <!-- Services Section -->
+  <section class="services-section">
+    <div class="services-header">
+      <h2 class="services-title">How We Serve You</h2>
+      <p class="services-subtitle">Committed to providing exceptional public service to the citizens of Catanduanes</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon" aria-hidden="true">
+          <svg class="icon-lg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+            <circle cx="9" cy="7" r="4"/>
+            <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+          </svg>
+        </div>
+        <h3 class="service-title">Public Services</h3>
+        <p class="service-description">Serving the people of Catanduanes with excellence and integrity</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon" aria-hidden="true">
+          <svg class="icon-lg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+        </div>
+        <h3 class="service-title">Government Affairs</h3>
+        <p class="service-description">Transparent and accountable governance for all citizens</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon" aria-hidden="true">
+          <svg class="icon-lg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/>
+            <polyline points="12,6 12,12 16,14"/>
+          </svg>
+        </div>
+        <h3 class="service-title">24/7 Support</h3>
+        <p class="service-description">Emergency services and critical support available round the clock</p>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

@@ -1,0 +1,172 @@
+<section class="hero-section">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1 class="hero-title">PHRMDO</h1>
+        <p class="hero-subtitle">PHRMDO Contact Center</p>
+    </div>
+    <div class="hero-gradient"></div>
+</section>
+
+
+
+<section class="services-section">
+    <div class="services-header">
+      <h2 class="services-title">How PHRMDO Serves You</h2>
+      <p class="services-subtitle">To provide personnel services to all provincial offices in accordance with the program to Institutionalize Meritocracy and Excellence in Human Resource Management (PRIME HRM) of the Civil Service Commission</p>
+    </div>
+  
+    <div class="slider-container">
+      <button class="slider-btn prev" onclick="moveSlide(-1)">&#10094;</button>
+      
+      <div class="services-slider">
+        <div class="services-track">
+          
+          
+          <div class="service-card">
+            <div class="service-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                <circle cx="12" cy="4" r="2"/>
+                <path d="M12 6v4m-4 4h8m-6 0v6m4-6v6"/>
+                <circle cx="6" cy="20" r="2"/>
+                <circle cx="18" cy="20" r="2"/>
+              </svg>
+            </div>
+            <h3 class="service-title">Manpower Planning and Forecasting</h3>
+            <p class="service-description">Ensuring the right number of people with the right skills are available to meet future workforce needs.</p>
+          </div>
+  
+          <div class="service-card">
+            <div class="service-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                <circle cx="12" cy="7" r="4"/>
+                <path d="M6 21v-2a4 4 0 0 1 4-4h0"/>
+                <path d="M16 19l2 2 4-4"/>
+              </svg>
+            </div>
+            <h3 class="service-title">Selection and Staffing</h3>
+            <p class="service-description">Recruiting and appointing the most qualified individuals to serve the province effectively.</p>
+          </div>
+  
+          <div class="service-card">
+            <div class="service-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                <path d="M4 4.5A2.5 2.5 0 0 1 6.5 7H20"/>
+                <path d="M20 22V2"/>
+              </svg>
+            </div>
+            <h3 class="service-title">Training and Development</h3>
+            <p class="service-description">Empowering employees through learning opportunities and skill enhancement programs.</p>
+          </div>
+  
+          <div class="service-card">
+            <div class="service-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                <path d="M3 3v18h18"/>
+                <rect x="7" y="12" width="3" height="6"/>
+                <rect x="12" y="8" width="3" height="10"/>
+                <rect x="17" y="5" width="3" height="13"/>
+              </svg>
+            </div>
+            <h3 class="service-title">Performance Management</h3>
+            <p class="service-description">Monitoring and evaluating employee performance to sustain organizational excellence.</p>
+          </div>
+  
+          <div class="service-card">
+            <div class="service-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                <path d="M12 8v4l3 3"/>
+              </svg>
+            </div>
+            <h3 class="service-title">Employee Discipline</h3>
+            <p class="service-description">Upholding fairness, accountability, and compliance with civil service rules and standards.</p>
+          </div>
+  
+          <div class="service-card">
+            <div class="service-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                <path d="M12 21C12 21 4 13.5 4 8.5A4.5 4.5 0 0 1 8.5 4 5.5 5.5 0 0 1 12 6.5 5.5 5.5 0 0 1 15.5 4 4.5 4.5 0 0 1 20 8.5C20 13.5 12 21 12 21z"/>
+              </svg>
+            </div>
+            <h3 class="service-title">Promotion of Employee Welfare and Productivity</h3>
+            <p class="service-description">Supporting well-being and motivation to enhance employee satisfaction and workplace efficiency.</p>
+          </div>
+  
+        </div>
+      </div>
+      
+      <button class="slider-btn next" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+  </section>
+  
+  <style>
+ 
+  .slider-container {
+    position: relative;
+    max-width: 1100px;
+    margin: auto;
+    overflow: hidden;
+  }
+  
+  .services-slider {
+    overflow: hidden;
+  }
+  
+  .services-track {
+    display: flex;
+    transition: transform 0.5s ease;
+  
+  gap: 1rem; /* adds space between each service card */
+  
+  padding: 0; /* no padding here so no space before first card */
+box-sizing: content-box;
+  }
+  
+  .service-card {
+    flex: 0 0 33.333%; 
+    box-sizing: border-box;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.2); 
+  border: none;
+  color: white;
+  font-size: 2rem;
+  padding: 0.3rem 0.6rem; 
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 50%;
+  transition: background 0.3s ease, transform 0.2s;
+}
+
+.slider-btn.prev { left: 10px; }
+.slider-btn.next { right: 10px; }
+
+.slider-btn:hover {
+  background: rgba(0,0,0,0.5);
+  transform: translateY(-50%) scale(1.1);
+}
+
+  </style>
+  
+  <script>
+  let currentIndex = 0;
+  function moveSlide(direction) {
+    const track = document.querySelector(".services-track");
+    const totalCards = document.querySelectorAll(".service-card").length;
+    const visibleCards = 3;
+    const maxIndex = totalCards - visibleCards;
+  
+    currentIndex += direction;
+    if (currentIndex < 0) currentIndex = 0;
+    if (currentIndex > maxIndex) currentIndex = maxIndex;
+  
+    track.style.transform = `translateX(-${currentIndex * (100/visibleCards)}%)`;
+  }
+  </script>

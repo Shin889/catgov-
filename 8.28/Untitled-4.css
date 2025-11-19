@@ -1,0 +1,49 @@
+@media (max-width: 992px) {
+  #slider-icon > .wp-block-column:first-child,
+  #slider-icon > .wp-block-column:last-child {
+    flex-basis: 100% !important;
+    max-width: 100% !important;
+  }
+
+  #slider-icon {
+    flex-direction: column !important;
+  }
+
+  .gov-btn {
+    font-size: 0.9rem;       
+    padding: 0.3rem 0.5rem;  
+    border-radius: 20px;     
+  }
+
+  .gov-btn .icon-circle {
+    width: 45px;  
+    height: 45px;
+    border-radius: 50% 0 0 50%; 
+  }
+
+  .gov-btn .icon-circle img {
+    max-width: 32px;  
+    max-height: 32px;
+  }
+
+  .gov-btn span {
+    font-size: 0.85rem; 
+    padding: 0 0.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .gov-btn {
+    font-size: 0.8rem;
+  }
+
+  .gov-btn .icon-circle {
+    width: 40px;
+    height: 40px;
+  }
+
+  .gov-btn .icon-circle img {
+    max-width: 28px;
+    max-height: 28px;
+  }
+}

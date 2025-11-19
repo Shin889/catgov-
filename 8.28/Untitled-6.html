@@ -1,0 +1,2702 @@
+<p class="has-text-align-center has-large-font-size"><strong> CATANDUANES GOVERNMENT OFFICIALS</strong></p>
+<h2 class="wp-block-heading has-text-align-center">NATIONAL LEGISLATURE & PROVINCIAL EXECUTIVE</h2>
+
+<div class="gov-officials-container">
+    <div class="gov-official">
+        <img src="http://wp-local.com/wp-content/uploads/2025/08/Cong-DropShadow.png" alt="Leo Rodriguez">
+        <div class="caption">
+            <div class="name">Leo Rodriguez</div>
+            <div class="position">Congressman</div>
+        </div>
+    </div>
+    <div class="gov-official">
+        <img src="http://wp-local.com/wp-content/uploads/2025/08/Gov-Pat_DropShadow.png" alt="Patrick Alain Azanza">
+        <div class="caption">
+            <div class="name">Patrick Alain Azanza</div>
+            <div class="position">Governor</div>
+        </div>
+    </div>
+
+    <div class="gov-official">
+        <img src="http://wp-local.com/wp-content/uploads/2025/08/ViceGov-DropShadow.png" alt="Obet Fernandez">
+        <div class="caption">
+            <div class="name">Robert Fernandez</div>
+            <div class="position">Vice Governor</div>
+        </div>
+    </div>
+</div>
+
+<hr style="border: none; border-top: 2px solid black; margin-bottom: 30px;">
+
+<style>
+    
+    .gov-officials-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .gov-official {
+        position: relative;
+        background: #fff;
+        border-radius: 20px;
+        border: 1px solid rgba(0, 0, 0, 0.05);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+        overflow: hidden;
+        text-align: center;
+        padding-bottom: 25px; 
+    }
+
+    .gov-official img {
+        width: 100%;
+        height: 200px;
+        object-fit: contain;
+        display: block;
+        background-color: #f8f9fa;
+    }
+
+    .gov-official .caption {
+        margin-top: 15px;
+        padding: 0 20px;
+        font-size: 0.95rem;
+        color: #5a6c7d;
+        line-height: 1.7;
+    }
+
+    .gov-official .name {
+        font-weight: 600;
+        font-size: 1.1rem;
+        color: #2c3e50;
+        margin-bottom: 5px;
+    }
+
+    .gov-official .position {
+        font-size: 0.95rem;
+        font-weight: 500;
+        color: #0077b6;
+    }
+
+   
+    @media (max-width: 992px) {
+        .gov-officials-container {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .gov-officials-container {
+            grid-template-columns: 1fr;
+            gap: 15px;
+            padding: 10px;
+        }
+    }
+
+
+
+    hr {
+        margin: 20px 0;
+        border: none;
+        border-top: 1px dashed #aaa;
+    }
+
+    .pagination {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 4px;
+        margin-top: 20px;
+        flex-wrap: wrap;
+    }
+
+    .pagination button {
+        padding: 0 2px; 
+        background-color: #f0f0f0;
+        border: 1px solid #ccc;
+        color: #333;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        border-radius: 0;
+        min-width: 20px; 
+        min-height: 24px; 
+        text-align: center;
+        font-weight: bold;
+        font-size: 10px; 
+        }
+    .pagination button:hover {
+        background-color: #dcdcdc;
+    }
+
+    .pagination button.active {
+        background-color: #004499cc;
+        color: white;
+        border-color: #004499cc;
+    }
+
+    .pagination-wrapper {
+        text-align: right;
+        margin-top: 10px;
+    }
+
+    .pagination {
+        display: inline-flex;
+        gap: 4px;
+    }
+
+    table {
+        table-layout: fixed;
+    }
+
+    th,
+    td {
+        padding: 8px;
+        border-bottom: 1px solid #ccc;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    td {
+        position: relative;
+        overflow: visible !important;
+    }
+        th.sortable {
+        cursor: pointer;
+        user-select: none;
+        text-align: center; 
+        position: relative;
+        padding: 8px;
+        border-bottom: 1px solid #ccc;
+        }
+
+        th.sortable .sort-arrow {
+        font-size: 12px;
+        color: #888;
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 2px;
+        width: 12px;
+        height: 12px;
+        line-height: 12px;
+        text-align: center;
+        }
+
+        th.sortable .sort-arrow::after {
+        content: "▲";         
+        color: #888;         
+        }
+
+        th.sortable.asc .sort-arrow::after {
+        content: "▲";
+        color: #000;         
+        }
+
+
+        th.sortable.desc .sort-arrow::after {
+        content: "▼";
+        color: #000;           
+        }
+
+        th.sortable[data-type="string"] {
+        text-align: left;      
+        }
+
+        th.sortable[data-type="number"] {
+        text-align: center;     
+        }
+</style>
+<div>
+
+
+    <h4 style="margin-top: 0; color: #1F2937;">Previous Congressman</h4>
+
+    <div id="previousCongressmanTableContainer" style="position: relative;">
+        <table id="previousCongressmanTable"
+            style="width: 100%; border-collapse: collapse; font-size: 14px; margin-bottom: 20px;">
+            <thead>
+              <tr style="background-color: #f1f1f1;">
+                  <th class="sortable" style="text-align: left; padding: 8px; border-bottom: 1px solid #ccc;" data-column="name" data-type="string">
+                  Name <span class="sort-arrow"></span>
+                  </th>
+              <th class="sortable desc" style="text-align: center; padding: 8px; border-bottom: 1px solid #ccc;" data-column="termStart" data-type="number">
+              Term Start<span class="sort-arrow"></span>
+              </th>
+
+                  <th class="sortable" style="text-align: center; padding: 8px; border-bottom: 1px solid #ccc;" data-column="termEnd" data-type="number">
+                  Term End <span class="sort-arrow"></span>
+                  </th>
+              </tr>
+            </thead>
+            <tbody id="previousCongressmanTableBody">
+
+              
+                <tr class="previousCongressmanRow">
+                    <td
+                        style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                        <div class="hover-target" style="position: relative; display: inline-block;">
+                             Jose Alejandrino
+                        </div>
+                    </td>
+                    <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1898</td>
+                    <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1901</td>
+                </tr>
+                <tr class="previousCongressmanRow">
+                    <td
+                        style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                        <div class="hover-target" style="position: relative; display: inline-block;">
+                            Marcelino Santos
+                        </div>
+                    </td>
+                    <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1898</td>
+                    <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1901</td>
+                </tr>
+                <tr class="previousCongressmanRow">
+                    <td
+                        style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                        <div class="hover-target" style="position: relative; display: inline-block;">
+                            Francisco Perfecto
+                        </div>
+                    </td>
+                    <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1946</td>
+                    <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1949</td>
+                </tr>
+                <tr class="previousCongressmanRow">
+                    <td
+                        style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                        <div class="hover-target" style="position: relative; display: inline-block;">
+                            Severiano de León
+                        </div>
+                    </td>
+                    <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1949</td>
+                    <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1953</td>
+                </tr>
+                <tr class="previousCongressmanRow">
+                    <td
+                        style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                        <div class="hover-target" style="position: relative; display: inline-block;">
+                            Francisco Perfecto
+                        </div>
+                    </td>
+                    <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1953</td>
+                    <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1957</td>
+                </tr>
+                <tr class="previousCongressmanRow">
+                    <td
+                        style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                        <div class="hover-target" style="position: relative; display: inline-block;">
+                            José M. Alberto
+                        </div>
+                    </td>
+                    <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1957</td>
+                    <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1972</td>
+                </tr>
+                <tr class="previousCongressmanRow">
+                    <td
+                        style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                        <div class="hover-target" style="position: relative; display: inline-block;">
+                           José M. Alberto
+                        </div>
+                    </td>
+                    <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1984</td>
+                    <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1986</td>
+                </tr>
+                <tr class="previousCongressmanRow">
+                    <td
+                        style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                        <div class="hover-target" style="position: relative; display: inline-block;">
+                           Moises M. Tapia
+                        </div>
+                    </td>
+                    <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1987</td>
+                    <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1987</td>
+                </tr>
+                <tr class="previousCongressmanRow">
+                    <td
+                        style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                        <div class="hover-target" style="position: relative; display: inline-block;">
+                           Leandro B. Verceles Jr.
+                        </div>
+                    </td>
+                    <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1992</td>
+                    <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2001</td>
+                </tr>
+                <tr class="previousCongressmanRow">
+                    <td
+                        style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                        <div class="hover-target" style="position: relative; display: inline-block;">
+                           Joseph Santiago
+                        </div>
+                    </td>
+                    <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2001</td>
+                    <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2010</td>
+                </tr>
+                <tr class="previousCongressmanRow">
+                    <td
+                        style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                        <div class="hover-target" style="position: relative; display: inline-block;">
+                           	Cesar V. Sarmiento
+                        </div>
+                    </td>
+                    <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2010</td>
+                    <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2019</td>
+                </tr>
+                <tr class="previousCongressmanRow">
+                    <td
+                        style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                        <div class="hover-target" style="position: relative; display: inline-block;">
+                           Hector S. Sanchez
+                        </div>
+                    </td>
+                    <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2019</td>
+                    <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                </tr>
+                <tr class="previousCongressmanRow">
+                    <td
+                        style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                        <div class="hover-target" style="position: relative; display: inline-block;">
+                           Eulogio R. Rodriguez
+                        </div>
+                    </td>
+                    <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                    <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="pagination-wrapper" style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
+            <p id="previousCongressmanPageInfo" style="margin: 0; font-weight: bold; font-size: 14px;">This is page 1 out of X</p>
+            <div id="previousCongressmanPagination" class="pagination" style="display: flex; gap: 5px;"></div>
+          </div>
+      </div>
+  </div>
+  <script>
+    const rowsPerPagepreviousCongressman = 5;
+    let currentPagepreviousCongressman = 1;
+    let sortDirection = 1; 
+    
+    // New function to sort by termStart descending by default
+function defaultSortByLatestTermStart() {
+  const tbody = document.querySelector("#previousCongressmanTableBody");
+  const rows = Array.from(tbody.querySelectorAll(".previousCongressmanRow"));
+  
+  // columnIndex = 1 for termStart
+  let columnIndex = 1;
+
+  rows.sort((a, b) => {
+    let valA = parseInt(a.cells[columnIndex].innerText.trim(), 10);
+    let valB = parseInt(b.cells[columnIndex].innerText.trim(), 10);
+
+    // sort descending
+    return valB - valA; 
+  });
+
+  // Append sorted rows back to tbody
+  rows.forEach(row => tbody.appendChild(row));
+}
+
+// Call this function before the first update rendering
+defaultSortByLatestTermStart();
+updatepreviousCongressmanTable();
+
+    function updatepreviousCongressmanTable() {
+      const rows = document.querySelectorAll(".previousCongressmanRow");
+      const totalPages = Math.ceil(rows.length / rowsPerPagepreviousCongressman);
+    
+      let visibleIndex = 0;
+      rows.forEach((row, index) => {
+        if (
+          index >= (currentPagepreviousCongressman - 1) * rowsPerPagepreviousCongressman &&
+          index < currentPagepreviousCongressman * rowsPerPagepreviousCongressman
+        ) {
+          row.style.display = "";
+          row.style.backgroundColor = visibleIndex % 2 === 0 ? "#fff" : "#f9f9f9";
+          visibleIndex++;
+        } else {
+          row.style.display = "none";
+        }
+      });
+    
+      renderpreviousCongressmanPagination(totalPages);
+    }
+    
+  
+    function changepreviousCongressmanPage(page) {
+      const rows = document.querySelectorAll(".previousCongressmanRow");
+      const totalPages = Math.ceil(rows.length / rowsPerPagepreviousCongressman);
+    
+      if (page < 1) page = 1;
+      if (page > totalPages) page = totalPages;
+    
+      currentPagepreviousCongressman = page;
+      updatepreviousCongressmanTable();
+    }
+    
+   
+    function renderpreviousCongressmanPagination(totalPages) {
+      document.getElementById("previousCongressmanPageInfo").textContent = 
+        `This is page ${currentPagepreviousCongressman} out of ${totalPages}`;
+      const container = document.getElementById("previousCongressmanPagination");
+      container.innerHTML = "";
+    
+      const prevBtn = document.createElement("button");
+      prevBtn.textContent = "<< Prev";
+      prevBtn.className = currentPagepreviousCongressman === 1 ? "disabled" : "";
+      prevBtn.disabled = currentPagepreviousCongressman === 1;
+      prevBtn.onclick = () => changepreviousCongressmanPage(currentPagepreviousCongressman - 1);
+      container.appendChild(prevBtn);
+    
+      const maxPagesToShow = 7;
+      let startPage = 1;
+      let endPage = totalPages;
+    
+      if (totalPages > maxPagesToShow) {
+        if (currentPagepreviousCongressman <= 4) {
+          endPage = 5;
+        } else if (currentPagepreviousCongressman >= totalPages - 3) {
+          startPage = totalPages - 4;
+        } else {
+          startPage = currentPagepreviousCongressman - 2;
+          endPage = currentPagepreviousCongressman + 2;
+        }
+      }
+    
+      if (startPage > 1) {
+        addpreviousCongressmanPageButton(container, 1);
+        if (startPage > 2) addpreviousCongressmanEllipsis(container);
+      }
+    
+      for (let i = startPage; i <= endPage; i++) {
+        addpreviousCongressmanPageButton(container, i);
+      }
+    
+      if (endPage < totalPages) {
+        if (endPage < totalPages - 1) addpreviousCongressmanEllipsis(container);
+        addpreviousCongressmanPageButton(container, totalPages);
+      }
+    
+      const nextBtn = document.createElement("button");
+      nextBtn.textContent = "Next >>";
+      nextBtn.className = currentPagepreviousCongressman === totalPages ? "disabled" : "";
+      nextBtn.disabled = currentPagepreviousCongressman === totalPages;
+      nextBtn.onclick = () => changepreviousCongressmanPage(currentPagepreviousCongressman + 1);
+      container.appendChild(nextBtn);
+    }
+    
+    function addpreviousCongressmanPageButton(container, pageNumber) {
+      const btn = document.createElement("button");
+      btn.textContent = pageNumber;
+      if (currentPagepreviousCongressman === pageNumber) btn.className = "active";
+      btn.onclick = () => changepreviousCongressmanPage(pageNumber);
+      container.appendChild(btn);
+    }
+    
+    function addpreviousCongressmanEllipsis(container) {
+      const ellipsis = document.createElement("span");
+      ellipsis.textContent = "...";
+      ellipsis.className = "ellipsis";
+      container.appendChild(ellipsis);
+    }
+    
+   
+    function sortpreviousCongressmanTable(column, type) {
+      const tbody = document.querySelector("#previousCongressmanTableBody");
+      const rows = Array.from(tbody.querySelectorAll(".previousCongressmanRow"));
+    
+      let columnIndex;
+      if (column === "name") columnIndex = 0;
+      else if (column === "termStart") columnIndex = 1;
+      else if (column === "termEnd") columnIndex = 2;
+    
+      rows.sort((a, b) => {
+        let valA = a.cells[columnIndex].innerText.trim();
+        let valB = b.cells[columnIndex].innerText.trim();
+    
+        if (type === "number") {
+          valA = parseInt(valA, 10);
+          valB = parseInt(valB, 10);
+        }
+    
+        if (valA > valB) return 1 * sortDirection;
+        if (valA < valB) return -1 * sortDirection;
+        return 0;
+      });
+    
+      sortDirection *= -1; 
+      rows.forEach(row => tbody.appendChild(row));
+    
+      updatepreviousCongressmanTable();
+    }
+    
+   
+    document.querySelectorAll("#previousCongressmanTable th.sortable").forEach(th => {
+      th.addEventListener("click", function () {
+        const column = this.getAttribute("data-column");
+        const type = this.getAttribute("data-type");
+        sortpreviousCongressmanTable(column, type);
+      });
+    });
+    
+   
+    updatepreviousCongressmanTable();
+    </script>
+       <hr style="border: none; border-top: 2px solid black; margin-bottom: 30px;">
+
+
+
+
+    
+    <h4 style="margin-top: 0; color: #1F2937;">Previous Governor</h4>
+
+    <div id="previousGovernorTableContainer" style="position: relative;">
+        <table id="previousGovernorTable"
+            style="width: 100%; border-collapse: collapse; font-size: 14px; margin-bottom: 20px;">
+            <thead>
+              <tr style="background-color: #f1f1f1;">
+                  <th class="sortable" style="text-align: left; padding: 8px; border-bottom: 1px solid #ccc;" data-column="name" data-type="string">
+                  Name <span class="sort-arrow"></span>
+                  </th>
+              <th class="sortable desc" style="text-align: center; padding: 8px; border-bottom: 1px solid #ccc;" data-column="termStart" data-type="number">
+              Term Start<span class="sort-arrow"></span>
+              </th>
+
+                  <th class="sortable" style="text-align: center; padding: 8px; border-bottom: 1px solid #ccc;" data-column="termEnd" data-type="number">
+                  Term End <span class="sort-arrow"></span>
+                  </th>
+              </tr>
+            </thead>
+            <tbody id="previousGovernorTableBody">
+
+              
+                <tr class="previousGovernorRow">
+                    <td
+                        style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                        <div class="hover-target" style="position: relative; display: inline-block;">
+                             Remigio Socito
+                        </div>
+                    </td>
+                    <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1945</td>
+                    <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1947</td>
+                </tr>
+                <tr class="previousGovernorRow">
+                    <td
+                        style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                        <div class="hover-target" style="position: relative; display: inline-block;">
+                            Alfonso Vera Usero
+                        </div>
+                    </td>
+                    <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1947</td>
+                    <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1951</td>
+                </tr>
+                <tr class="previousGovernorRow">
+                    <td
+                        style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                        <div class="hover-target" style="position: relative; display: inline-block;">
+                            Juan Molina Alberto
+                        </div>
+                    </td>
+                    <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1951</td>
+                    <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1959</td>
+                </tr>
+                <tr class="previousGovernorRow">
+                    <td
+                        style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                        <div class="hover-target" style="position: relative; display: inline-block;">
+                           Jorge Vera Almojuela
+                        </div>
+                    </td>
+                    <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1959</td>
+                    <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1967</td>
+                </tr>
+                <tr class="previousGovernorRow">
+                    <td
+                        style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                        <div class="hover-target" style="position: relative; display: inline-block;">
+                           Vicente Molina Alberto
+                        </div>
+                    </td>
+                    <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1967</td>
+                    <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1981</td>
+                </tr>
+                <tr class="previousGovernorRow">
+                    <td
+                        style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                        <div class="hover-target" style="position: relative; display: inline-block;">
+                           Vicente Molina Alberto
+                        </div>
+                    </td>
+                    <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1981</td>
+                    <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1986</td>
+                </tr>
+                <tr class="previousGovernorRow">
+                    <td
+                        style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                        <div class="hover-target" style="position: relative; display: inline-block;">
+                           Leandro I. Verceles Sr.
+                        </div>
+                    </td>
+                    <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1986</td>
+                    <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1988</td>
+                </tr>
+                <tr class="previousGovernorRow">
+                    <td
+                        style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                        <div class="hover-target" style="position: relative; display: inline-block;">
+                           Rosalie Alberto-Estacio
+                        </div>
+                    </td>
+                    <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1992</td>
+                    <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1995</td>
+                </tr>
+                <tr class="previousGovernorRow">
+                    <td
+                        style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                        <div class="hover-target" style="position: relative; display: inline-block;">
+                           Severo C. Alcantara
+                        </div>
+                    </td>
+                    <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1995</td>
+                    <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1998</td>
+                </tr>
+                <tr class="previousGovernorRow">
+                    <td
+                        style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                        <div class="hover-target" style="position: relative; display: inline-block;">
+                           Hector S. Sanchez
+                        </div>
+                    </td>
+                    <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1998</td>
+                    <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2001</td>
+                </tr>
+                <tr class="previousGovernorRow">
+                    <td
+                        style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                        <div class="hover-target" style="position: relative; display: inline-block;">
+                           Leandro Buenconsejo Verceles Jr.
+                        </div>
+                    </td>
+                    <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2001</td>
+                    <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2007</td>
+                </tr>
+                <tr class="previousGovernorRow">
+                    <td
+                        style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                        <div class="hover-target" style="position: relative; display: inline-block;">
+                           Joseph Chua Cua
+                        </div>
+                    </td>
+                    <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2007</td>
+                    <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2013</td>
+                </tr>
+                <tr class="previousGovernorRow">
+                    <td
+                        style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                        <div class="hover-target" style="position: relative; display: inline-block;">
+                           Araceli B. Wong
+                        </div>
+                    </td>
+                    <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2013</td>
+                    <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2016</td>
+                </tr>
+                <tr class="previousGovernorRow">
+                    <td
+                        style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                        <div class="hover-target" style="position: relative; display: inline-block;">
+                           Joseph Chua Cua
+                        </div>
+                    </td>
+                    <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2016</td>
+                    <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                </tr>
+                <tr class="previousGovernorRow">
+                    <td
+                        style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                        <div class="hover-target" style="position: relative; display: inline-block;">
+                           Patrick Alain T. Azanza
+                        </div>
+                    </td>
+                    <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                    <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="pagination-wrapper" style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
+            <p id="previousGovernorPageInfo" style="margin: 0; font-weight: bold; font-size: 14px;">This is page 1 out of X</p>
+            <div id="previousGovernorPagination" class="pagination" style="display: flex; gap: 5px;"></div>
+          </div>
+      </div>
+  </div>
+
+      <script>
+        const rowsPerPagepreviousGovernor = 5;
+        let currentPagepreviousGovernor = 1;
+      
+        // New function to sort by termStart descending by default
+function defaultSortByLatestTermStart() {
+  const tbody = document.querySelector("#previousGovernorTableBody");
+  const rows = Array.from(tbody.querySelectorAll(".previousGovernorRow"));
+  
+  // columnIndex = 1 for termStart
+  let columnIndex = 1;
+
+  rows.sort((a, b) => {
+    let valA = parseInt(a.cells[columnIndex].innerText.trim(), 10);
+    let valB = parseInt(b.cells[columnIndex].innerText.trim(), 10);
+
+    // sort descending
+    return valB - valA; 
+  });
+
+  // Append sorted rows back to tbody
+  rows.forEach(row => tbody.appendChild(row));
+}
+
+// Call this function before the first update rendering
+defaultSortByLatestTermStart();
+updatepreviousGovernorTable();
+
+        function updatepreviousGovernorTable() {
+          const rows = document.querySelectorAll(".previousGovernorRow");
+          const totalPages = Math.ceil(rows.length / rowsPerPagepreviousGovernor);
+      
+          rows.forEach((row, index) => {
+            row.style.display = (
+              index >= (currentPagepreviousGovernor - 1) * rowsPerPagepreviousGovernor &&
+              index < currentPagepreviousGovernor * rowsPerPagepreviousGovernor
+            ) ? '' : 'none';
+          });
+      
+          renderpreviousGovernorPagination(totalPages);
+        }
+      
+        function changepreviousGovernorPage(page) {
+          const rows = document.querySelectorAll(".previousGovernorRow");
+          const totalPages = Math.ceil(rows.length / rowsPerPagepreviousGovernor);
+      
+          if (page < 1) page = 1;
+          if (page > totalPages) page = totalPages;
+      
+          currentPagepreviousGovernor = page;
+          updatepreviousGovernorTable();
+        }
+      
+        function renderpreviousGovernorPagination(totalPages) {
+          document.getElementById("previousGovernorPageInfo").textContent = `This is page ${currentPagepreviousGovernor} out of ${totalPages}`;
+          const container = document.getElementById("previousGovernorPagination");
+          container.innerHTML = "";
+      
+          const prevBtn = document.createElement("button");
+          prevBtn.textContent = "<< Prev";
+          prevBtn.className = currentPagepreviousGovernor === 1 ? "disabled" : "";
+          prevBtn.disabled = currentPagepreviousGovernor === 1;
+          prevBtn.onclick = () => changepreviousGovernorPage(currentPagepreviousGovernor - 1);
+          container.appendChild(prevBtn);
+      
+          const maxPagesToShow = 7;
+          let startPage = 1;
+          let endPage = totalPages;
+      
+          if (totalPages > maxPagesToShow) {
+            if (currentPagepreviousGovernor <= 4) {
+              endPage = 5;
+            } else if (currentPagepreviousGovernor >= totalPages - 3) {
+              startPage = totalPages - 4;
+            } else {
+              startPage = currentPagepreviousGovernor - 2;
+              endPage = currentPagepreviousGovernor + 2;
+            }
+          }
+      
+          if (startPage > 1) {
+            addpreviousGovernorPageButton(container, 1);
+            if (startPage > 2) {
+              addpreviousGovernorEllipsis(container);
+            }
+          }
+      
+          for (let i = startPage; i <= endPage; i++) {
+            addpreviousGovernorPageButton(container, i);
+          }
+      
+          if (endPage < totalPages) {
+            if (endPage < totalPages - 1) {
+              addpreviousGovernorEllipsis(container);
+            }
+            addpreviousGovernorPageButton(container, totalPages);
+          }
+      
+          const nextBtn = document.createElement("button");
+          nextBtn.textContent = "Next >>";
+          nextBtn.className = currentPagepreviousGovernor === totalPages ? "disabled" : "";
+          nextBtn.disabled = currentPagepreviousGovernor === totalPages;
+          nextBtn.onclick = () => changepreviousGovernorPage(currentPagepreviousGovernor + 1);
+          container.appendChild(nextBtn);
+        }
+      
+        function addpreviousGovernorPageButton(container, pageNumber) {
+          const btn = document.createElement("button");
+          btn.textContent = pageNumber;
+          if (currentPagepreviousGovernor === pageNumber) {
+            btn.className = "active";
+          }
+          btn.onclick = () => changepreviousGovernorPage(pageNumber);
+          container.appendChild(btn);
+        }
+      
+        function addpreviousGovernorEllipsis(container) {
+          const ellipsis = document.createElement("span");
+          ellipsis.textContent = "...";
+          ellipsis.className = "ellipsis";
+          container.appendChild(ellipsis);
+        }
+      
+        updatepreviousGovernorTable();
+      </script>
+       <hr style="border: none; border-top: 2px solid black; margin-bottom: 30px;">
+
+
+
+
+
+
+    <h4 style="margin-top: 0;">Previous Vice Governor</h4>
+
+      <div id="previousViceGovernorTableContainer" style="position: relative;">
+          <table id="previousGovernorTable"
+              style="width: 100%; border-collapse: collapse; font-size: 14px; margin-bottom: 20px;">
+              <thead>
+                <tr style="background-color: #f1f1f1;">
+                    <th class="sortable" style="text-align: left; padding: 8px; border-bottom: 1px solid #ccc;" data-column="name" data-type="string">
+                    Name <span class="sort-arrow"></span>
+                    </th>
+                <th class="sortable desc" style="text-align: center; padding: 8px; border-bottom: 1px solid #ccc;" data-column="termStart" data-type="number">
+                Term Start<span class="sort-arrow"></span>
+                </th>
+
+                    <th class="sortable" style="text-align: center; padding: 8px; border-bottom: 1px solid #ccc;" data-column="termEnd" data-type="number">
+                    Term End <span class="sort-arrow"></span>
+                    </th>
+                </tr>
+              </thead>
+              <tbody id="previousViceGovernorTableBody">
+
+                
+                  <tr class="previousViceGovernorRow">
+                      <td
+                          style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                          <div class="hover-target" style="position: relative; display: inline-block;">
+                              Severo Alcantara 
+                          </div>
+                      </td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1992</td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1995</td>
+                  </tr>
+                  <tr class="previousViceGovernorRow">
+                      <td
+                          style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                          <div class="hover-target" style="position: relative; display: inline-block;">
+                              Teofisto Verceles
+                          </div>
+                      </td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1995</td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1998</td>
+                  </tr>
+                  <tr class="previousViceGovernorRow">
+                      <td
+                          style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                          <div class="hover-target" style="position: relative; display: inline-block;">
+                              Alfred Aquino
+                          </div>
+                      </td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1998</td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2001</td>
+                  </tr>
+                  <tr class="previousViceGovernorRow">
+                      <td
+                          style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                          <div class="hover-target" style="position: relative; display: inline-block;">
+                              Cesar Sarmiento	
+                          </div>
+                      </td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2001</td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2004</td>
+                  </tr>
+                  <tr class="previousViceGovernorRow">
+                      <td
+                          style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                          <div class="hover-target" style="position: relative; display: inline-block;">
+                             Vincent Villaluna
+                          </div>
+                      </td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2004</td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2007</td>
+                  </tr>
+                  <tr class="previousViceGovernorRow">
+                      <td
+                          style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                          <div class="hover-target" style="position: relative; display: inline-block;">
+                             Alfred Aquino
+                          </div>
+                      </td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2007</td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2010</td>
+                  </tr>
+                  <tr class="previousViceGovernorRow">
+                      <td
+                          style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                          <div class="hover-target" style="position: relative; display: inline-block;">
+                             Jose Teves Jr.
+                          </div>
+                      </td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2010</td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2016</td>
+                  </tr>
+                  <tr class="previousViceGovernorRow">
+                      <td
+                          style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                          <div class="hover-target" style="position: relative; display: inline-block;">
+                             Shirley Abundo
+                          </div>
+                      </td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2016</td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                  </tr>
+                  <tr class="previousViceGovernorRow">
+                      <td
+                          style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                          <div class="hover-target" style="position: relative; display: inline-block;">
+                             Peter Cua
+                          </div>
+                      </td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                  </tr>
+                  <tr class="previousViceGovernorRow">
+                      <td
+                          style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                          <div class="hover-target" style="position: relative; display: inline-block;">
+                             Robert Fernandez
+                          </div>
+                      </td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                      <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                  </tr>
+              </tbody>
+          </table>
+
+          <div class="pagination-wrapper" style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
+              <p id="previousViceGovernorPageInfo" style="margin: 0; font-weight: bold; font-size: 14px;">This is page 1 out of X</p>
+              <div id="previousViceGovernorPagination" class="pagination" style="display: flex; gap: 5px;"></div>
+            </div>
+        </div>
+    </div>
+
+        <script>
+         const rowsPerPagepreviousViceGovernor = 5;
+    let currentPagepreviousViceGovernor = 1;
+    let sortDirectionViceGovernor = 1;
+    
+    // New function to sort by termStart descending by default
+function defaultSortByLatestTermStart() {
+  const tbody = document.querySelector("#previousViceGovernorTableBody");
+  const rows = Array.from(tbody.querySelectorAll(".previousViceGovernorRow"));
+  
+  // columnIndex = 1 for termStart
+  let columnIndex = 1;
+
+  rows.sort((a, b) => {
+    let valA = parseInt(a.cells[columnIndex].innerText.trim(), 10);
+    let valB = parseInt(b.cells[columnIndex].innerText.trim(), 10);
+
+    // sort descending
+    return valB - valA; 
+  });
+
+  // Append sorted rows back to tbody
+  rows.forEach(row => tbody.appendChild(row));
+}
+
+// Call this function before the first update rendering
+defaultSortByLatestTermStart();
+updatepreviousViceGovernorTable();
+
+    function updatepreviousViceGovernorTable() {
+      const rows = document.querySelectorAll(".previousViceGovernorRow");
+      const totalPages = Math.ceil(rows.length / rowsPerPagepreviousViceGovernor);
+    
+      let visibleIndex = 0;
+      rows.forEach((row, index) => {
+        if (
+          index >= (currentPagepreviousViceGovernor - 1) * rowsPerPagepreviousViceGovernor &&
+          index < currentPagepreviousViceGovernor * rowsPerPagepreviousViceGovernor
+        ) {
+          row.style.display = "";
+          row.style.backgroundColor = visibleIndex % 2 === 0 ? "#fff" : "#f9f9f9";
+          visibleIndex++;
+        } else {
+          row.style.display = "none";
+        }
+      });
+    
+      renderpreviousViceGovernorPagination(totalPages);
+    }
+    
+    function changepreviousViceGovernorPage(page) {
+      const rows = document.querySelectorAll(".previousViceGovernorRow");
+      const totalPages = Math.ceil(rows.length / rowsPerPagepreviousViceGovernor);
+    
+      if (page < 1) page = 1;
+      if (page > totalPages) page = totalPages;
+    
+      currentPagepreviousViceGovernor = page;
+      updatepreviousViceGovernorTable();
+    }
+    
+    function renderpreviousViceGovernorPagination(totalPages) {
+      document.getElementById("previousViceGovernorPageInfo").textContent = 
+        `This is page ${currentPagepreviousViceGovernor} out of ${totalPages}`;
+      const container = document.getElementById("previousViceGovernorPagination");
+      container.innerHTML = "";
+    
+      const prevBtn = document.createElement("button");
+      prevBtn.textContent = "<< Prev";
+      prevBtn.className = currentPagepreviousViceGovernor === 1 ? "disabled" : "";
+      prevBtn.disabled = currentPagepreviousViceGovernor === 1;
+      prevBtn.onclick = () => changepreviousViceGovernorPage(currentPagepreviousViceGovernor - 1);
+      container.appendChild(prevBtn);
+    
+      const maxPagesToShow = 7;
+      let startPage = 1;
+      let endPage = totalPages;
+    
+      if (totalPages > maxPagesToShow) {
+        if (currentPagepreviousViceGovernor <= 4) {
+          endPage = 5;
+        } else if (currentPagepreviousViceGovernor >= totalPages - 3) {
+          startPage = totalPages - 4;
+        } else {
+          startPage = currentPagepreviousViceGovernor - 2;
+          endPage = currentPagepreviousViceGovernor + 2;
+        }
+      }
+    
+      if (startPage > 1) {
+        addpreviousViceGovernorPageButton(container, 1);
+        if (startPage > 2) addpreviousViceGovernorEllipsis(container);
+      }
+    
+      for (let i = startPage; i <= endPage; i++) {
+        addpreviousViceGovernorPageButton(container, i);
+      }
+    
+      if (endPage < totalPages) {
+        if (endPage < totalPages - 1) addpreviousViceGovernorEllipsis(container);
+        addpreviousViceGovernorPageButton(container, totalPages);
+      }
+    
+      const nextBtn = document.createElement("button");
+      nextBtn.textContent = "Next >>";
+      nextBtn.className = currentPagepreviousViceGovernor === totalPages ? "disabled" : "";
+      nextBtn.disabled = currentPagepreviousViceGovernor === totalPages;
+      nextBtn.onclick = () => changepreviousViceGovernorPage(currentPagepreviousViceGovernor + 1);
+      container.appendChild(nextBtn);
+    }
+    
+    function addpreviousViceGovernorPageButton(container, pageNumber) {
+      const btn = document.createElement("button");
+      btn.textContent = pageNumber;
+      if (currentPagepreviousViceGovernor === pageNumber) btn.className = "active";
+      btn.onclick = () => changepreviousViceGovernorPage(pageNumber);
+      container.appendChild(btn);
+    }
+    
+    function addpreviousViceGovernorEllipsis(container) {
+      const ellipsis = document.createElement("span");
+      ellipsis.textContent = "...";
+      ellipsis.className = "ellipsis";
+      container.appendChild(ellipsis);
+    }
+    
+    function sortpreviousViceGovernorTable(column, type) {
+      const tbody = document.querySelector("#previousViceGovernorTableBody");
+      const rows = Array.from(tbody.querySelectorAll(".previousViceGovernorRow"));
+    
+      let columnIndex;
+      if (column === "name") columnIndex = 0;
+      else if (column === "termStart") columnIndex = 1;
+      else if (column === "termEnd") columnIndex = 2;
+    
+      rows.sort((a, b) => {
+        let valA = a.cells[columnIndex].innerText.trim();
+        let valB = b.cells[columnIndex].innerText.trim();
+    
+        if (type === "number") {
+          valA = parseInt(valA, 10);
+          valB = parseInt(valB, 10);
+        }
+    
+        if (valA > valB) return 1 * sortDirectionViceGovernor;
+        if (valA < valB) return -1 * sortDirectionViceGovernor;
+        return 0;
+      });
+    
+      sortDirectionViceGovernor *= -1; 
+      rows.forEach(row => tbody.appendChild(row));
+    
+      updatepreviousViceGovernorTable();
+    }
+    
+    document.querySelectorAll("#previousViceGovernorTable th.sortable").forEach(th => {
+      th.addEventListener("click", function () {
+        const column = this.getAttribute("data-column");
+        const type = this.getAttribute("data-type");
+        sortpreviousViceGovernorTable(column, type);
+      });
+    });
+    
+    updatepreviousViceGovernorTable();
+        </script>
+         <hr style="border: none; border-top: 2px solid black; margin-bottom: 30px;">
+
+     
+   
+
+
+
+
+
+
+<p class="has-text-align-center has-large-font-size"><strong>PROVINCIAL BOARD MEMBERS</strong></p>
+<h2 class="wp-block-heading has-text-align-center">West District</h2>
+
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    .team-container {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 30px;
+        max-width: 1500px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .team-member {
+        position: relative;
+        background: #fff;
+        border-radius: 20px;
+        border: 1px solid rgba(0, 0, 0, 0.05);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+        overflow: hidden;
+        text-align: center;
+        padding-bottom: 25px;
+    }
+
+
+    .team-member img {
+        width: 100%;
+        height: 200px;
+        object-fit: contain;
+        display: block;
+        background-color: #f8f9fa;
+        padding: 10px;
+    }
+
+    .team-member .caption {
+        margin-top: 15px;
+        padding: 0 25px;
+        font-size: 0.95rem;
+        color: #5a6c7d;
+        line-height: 1.7;
+    }
+
+    .team-member .name {
+        font-weight: 600;
+        font-size: 1rem;
+        color: #2c3e50;
+        display: block;
+        margin-bottom: 5px;
+        line-height: 1.3;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 1200px) {
+        .team-container {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .team-container {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            padding: 10px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .team-container {
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+    }
+</style>
+
+<div class="team-container">
+    <div class="team-member">
+        <img src="http://wp-local.com/wp-content/uploads/2025/08/PBM-Zafe-DropShadow.png" alt="Santos V. Zafe">
+        <div class="caption">
+            <div class="name">Santos V. Zafe</div>
+        </div>
+    </div>
+
+    <div class="team-member">
+        <img src="http://wp-local.com/wp-content/uploads/2025/08/PBM-Gianan-DropShadow.png" alt="Fred Gianan">
+        <div class="caption">
+            <div class="name">Fred Gianan</div>
+        </div>
+    </div>
+
+    <div class="team-member">
+        <img src="http://wp-local.com/wp-content/uploads/2025/08/PBM-Francisco-DropShadow.png" alt="Sonny Francisco">
+        <div class="caption">
+            <div class="name">Sonny Francisco</div>
+        </div>
+    </div>
+
+    <div class="team-member">
+        <img src="http://wp-local.com/wp-content/uploads/2025/08/PBM-Albaniel-DropShadow.png" alt="Boboy Albaniel">
+        <div class="caption">
+            <div class="name">Boboy Albaniel</div>
+        </div>
+    </div>
+
+    <div class="team-member">
+        <img src="http://wp-local.com/wp-content/uploads/2025/08/PBM-Balmadrid-DropShadow.png" alt="Bani Balmadrid">
+        <div class="caption">
+            <div class="name">Bani Balmadrid</div>
+        </div>
+    </div>
+</div>
+
+        <style>
+            hr {
+                margin: 20px 0;
+                border: none;
+                border-top: 1px dashed #aaa;
+            }
+
+            .pagination {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                gap: 4px;
+                margin-top: 20px;
+                flex-wrap: wrap;
+            }
+
+            .pagination button {
+                padding: 0 2px; 
+                background-color: #f0f0f0;
+                border: 1px solid #ccc;
+                color: #333;
+                cursor: pointer;
+                transition: background-color 0.3s;
+                border-radius: 0;
+                min-width: 20px; 
+                min-height: 24px; 
+                text-align: center;
+                font-weight: bold;
+                font-size: 10px; 
+                }
+            .pagination button:hover {
+                background-color: #dcdcdc;
+            }
+
+            .pagination button.active {
+                background-color: #004499cc;
+                color: white;
+                border-color: #004499cc;
+            }
+
+            .pagination-wrapper {
+                text-align: right;
+                margin-top: 10px;
+            }
+
+            .pagination {
+                display: inline-flex;
+                gap: 4px;
+            }
+
+            table {
+                table-layout: fixed;
+            }
+
+            th,
+            td {
+                padding: 8px;
+                border-bottom: 1px solid #ccc;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+
+            td {
+                position: relative;
+                overflow: visible !important;
+            }
+                th.sortable {
+                cursor: pointer;
+                user-select: none;
+                text-align: center; 
+                position: relative;
+                padding: 8px;
+                border-bottom: 1px solid #ccc;
+                }
+
+                th.sortable .sort-arrow {
+                font-size: 12px;
+                color: #888;
+                display: inline-block;
+                vertical-align: middle;
+                margin-left: 2px;
+                width: 12px;
+                height: 12px;
+                line-height: 12px;
+                text-align: center;
+                }
+
+                th.sortable .sort-arrow::after {
+                content: "▲";         
+                color: #888;         
+                }
+
+                th.sortable.asc .sort-arrow::after {
+                content: "▲";
+                color: #000;         
+                }
+
+
+                th.sortable.desc .sort-arrow::after {
+                content: "▼";
+                color: #000;           
+                }
+
+                th.sortable[data-type="string"] {
+                text-align: left;      
+                }
+
+                th.sortable[data-type="number"] {
+                text-align: center;     
+                }
+                #westTableBody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  #westTableBody tr:nth-child(odd) {
+    background-color: #ffffff;
+  }
+            </style>
+    <div>
+        <hr style="border: none; border-top: 2px solid black; margin-bottom: 30px;">
+        <h4 style="margin-top: 0;">Previous West District PBM</h4>
+
+          <div id="westTableContainer" style="position: relative;">
+              <table id="westTable"
+                  style="width: 100%; border-collapse: collapse; font-size: 14px; margin-bottom: 20px;">
+                  <thead>
+                    <tr style="background-color: #f1f1f1;">
+                        <th class="sortable" style="text-align: left; padding: 8px; border-bottom: 1px solid #ccc;" data-column="name" data-type="string">
+                        Name <span class="sort-arrow"></span>
+                        </th>
+                    <th class="sortable desc" style="text-align: center; padding: 8px; border-bottom: 1px solid #ccc;" data-column="termStart" data-type="number">
+                    Term Start<span class="sort-arrow"></span>
+                    </th>
+
+                        <th class="sortable" style="text-align: center; padding: 8px; border-bottom: 1px solid #ccc;" data-column="termEnd" data-type="number">
+                        Term End <span class="sort-arrow"></span>
+                        </th>
+                    </tr>
+                  </thead>
+                  <tbody id="westTableBody">
+
+                    
+                      <tr class="westRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                  Alfred Aquino 
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1992</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1998</td>
+                      </tr>
+                      <tr class="westRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                  Fredeswindo Gianan
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1992</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1995</td>
+                      </tr>
+                      <tr class="westRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                  Catalino Gabao Jr.
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1995</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1998</td>
+                      </tr>
+                      <tr class="westRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                  Jesus Tacorda
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1992</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1995</td>
+                      </tr>
+                      <tr class="westRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                  Evelyn Lucero-Guttieres 
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1995</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1998</td>
+                      </tr>
+                      <tr class="westRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                  Rafael Zuniega 
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1998</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2001</td>
+                      </tr>
+                      <tr class="westRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                  Catalino Gabao Jr.
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1998</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2001</td>
+                      </tr><tr class="westRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                  Evelyn Lucero-Guttieres 
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1998</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2001</td>
+                      </tr>
+                      <tr class="westRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                  Fredeswindo Gianan
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1998</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2001</td>
+                      </tr>
+                      <tr class="westRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                  Rafael Zuniega
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2001</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2004</td>
+                      </tr>
+                      <tr class="westRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                  Natalio Popa, Jr.
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2001</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2004</td>
+                      </tr>
+                      <tr class="westRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                  Angeles Tablizo, Jr. 
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2001</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2004</td>
+                      </tr>
+                      <tr class="westRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                  Fredeswindo Gianan 
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2001</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2004</td>
+                      </tr>
+                      <tr class="westRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                  Rafael Zuniega 
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2004</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2007</td>
+                      </tr>
+                      <tr class="westRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                  Shirley Abundo 
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2004</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2013</td>
+                      </tr>
+                      <tr class="westRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                  Rosemarie Zafe
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2004</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2007</td>
+                      </tr>
+                      <tr class="westRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                  Fredeswindo Gianan
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2004</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2007</td>
+                      </tr>
+                      <tr class="westRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                  Nel Asanza 
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2007</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2010</td>
+                      </tr>
+                      <tr class="westRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                  Ariel Molina 
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2007</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2010</td>
+                      </tr>
+                      <tr class="westRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                  Natalio Popa, Jr. 
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2007</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2010</td>
+                      </tr>
+                      <tr class="westRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                  Nel Asanza 
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2010</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2016</td>
+                      </tr>
+                      <tr class="westRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                  Rafael Zuniega
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2010</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2013</td>
+                      </tr>
+                      <tr class="westRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                  Jose Romeo Francisco
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2010</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2013</td>
+                      </tr>
+                      <tr class="westRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                  Jorge Reyes
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2013</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2016</td>
+                      </tr>
+                      <tr class="westRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                  Giovanni Balmadrid
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2013</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2016</td>
+                      </tr>
+                      <tr class="westRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                  Jose Romeo Francisco
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2013</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2016</td>
+                      </tr>
+                      <tr class="westRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                  Rafael Zuniega 
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2016</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                      </tr>
+                      <tr class="westRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                  Natalio Popa, Jr.
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2016</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2019</td>
+                      </tr>
+                      <tr class="westRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                  Giovanni Balmadrid
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2016</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                      </tr>
+                      <tr class="westRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                  Jose Romeo Francisco
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2016</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2019</td>
+                      </tr>
+                      <tr class="westRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                  Natalio Popa, Jr.
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2019</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                      </tr>
+                      <tr class="westRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                  Santos Zafe
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2019</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                      </tr>
+                      <tr class="westRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                   Rafael Zuniega
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                      </tr>
+                      <tr class="westRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                  Jan Ferdinand Alberto
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                      </tr>
+                      <tr class="westRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                   Jose Romeo Francisco
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                      </tr>
+                      <tr class="westRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                  Santos Zafe
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                      </tr>
+                      <tr class="westRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                  Giovanni Balmadrid
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                      </tr>
+                      <tr class="westRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                  Xyrell Albaniel
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                      </tr>
+                      <tr class="westRow">
+                          <td
+                              style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                              <div class="hover-target" style="position: relative; display: inline-block;">
+                                 Fred Benedict Gianan
+                              </div>
+                          </td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                          <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                      </tr>
+                  </tbody>
+              </table>
+
+              <div class="pagination-wrapper" style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
+                  <p id="westPageInfo" style="margin: 0; font-weight: bold; font-size: 14px;">This is page 1 out of X</p>
+                  <div id="westPagination" class="pagination" style="display: flex; gap: 5px;"></div>
+                </div>
+            </div>
+        </div>
+        <script>
+            const rowsPerPageWest = 5;
+            let currentPageWest = 1;
+            let sortDirectionWest = 1;
+          
+            // New function to sort by termStart descending by default
+function defaultSortByLatestTermStart() {
+  const tbody = document.querySelector("#westTableBody");
+  const rows = Array.from(tbody.querySelectorAll(".westRow"));
+  
+  // columnIndex = 1 for termStart
+  let columnIndex = 1;
+
+  rows.sort((a, b) => {
+    let valA = parseInt(a.cells[columnIndex].innerText.trim(), 10);
+    let valB = parseInt(b.cells[columnIndex].innerText.trim(), 10);
+
+    // sort descending
+    return valB - valA; 
+  });
+
+  // Append sorted rows back to tbody
+  rows.forEach(row => tbody.appendChild(row));
+}
+
+// Call this function before the first update rendering
+defaultSortByLatestTermStart();
+updateWestTable();
+
+            function updateWestTable() {
+              const rows = document.querySelectorAll(".westRow");
+              const totalPages = Math.ceil(rows.length / rowsPerPageWest) || 1;
+          
+              let visibleIndex = 0;
+              rows.forEach((row, index) => {
+                if (
+                  index >= (currentPageWest - 1) * rowsPerPageWest &&
+                  index < currentPageWest * rowsPerPageWest
+                ) {
+                  row.style.display = "";
+                  row.style.backgroundColor = visibleIndex % 2 === 0 ? "#fff" : "#f9f9f9";
+                  visibleIndex++;
+                } else {
+                  row.style.display = "none";
+                }
+              });
+          
+              renderWestPagination(totalPages);
+            }
+          
+            function changeWestPage(page) {
+              const rows = document.querySelectorAll(".westRow");
+              const totalPages = Math.ceil(rows.length / rowsPerPageWest) || 1;
+          
+              if (page < 1) page = 1;
+              if (page > totalPages) page = totalPages;
+          
+              currentPageWest = page;
+              updateWestTable();
+            }
+          
+            function renderWestPagination(totalPages) {
+              document.getElementById("westPageInfo").textContent =
+                `This is page ${currentPageWest} out of ${totalPages}`;
+              const container = document.getElementById("westPagination");
+              container.innerHTML = "";
+          
+              const prevBtn = document.createElement("button");
+              prevBtn.textContent = "<< Prev";
+              prevBtn.className = currentPageWest === 1 ? "disabled" : "";
+              prevBtn.disabled = currentPageWest === 1;
+              prevBtn.onclick = () => changeWestPage(currentPageWest - 1);
+              container.appendChild(prevBtn);
+          
+              const maxPagesToShow = 7;
+              let startPage = 1;
+              let endPage = totalPages;
+          
+              if (totalPages > maxPagesToShow) {
+                if (currentPageWest <= 4) {
+                  endPage = 5;
+                } else if (currentPageWest >= totalPages - 3) {
+                  startPage = totalPages - 4;
+                } else {
+                  startPage = currentPageWest - 2;
+                  endPage = currentPageWest + 2;
+                }
+              }
+          
+              if (startPage > 1) {
+                addWestPageButton(container, 1);
+                if (startPage > 2) addWestEllipsis(container);
+              }
+          
+              for (let i = startPage; i <= endPage; i++) {
+                addWestPageButton(container, i);
+              }
+          
+              if (endPage < totalPages) {
+                if (endPage < totalPages - 1) addWestEllipsis(container);
+                addWestPageButton(container, totalPages);
+              }
+          
+              const nextBtn = document.createElement("button");
+              nextBtn.textContent = "Next >>";
+              nextBtn.className = currentPageWest === totalPages ? "disabled" : "";
+              nextBtn.disabled = currentPageWest === totalPages;
+              nextBtn.onclick = () => changeWestPage(currentPageWest + 1);
+              container.appendChild(nextBtn);
+            }
+          
+            function addWestPageButton(container, pageNumber) {
+              const btn = document.createElement("button");
+              btn.textContent = pageNumber;
+              if (currentPageWest === pageNumber) btn.className = "active";
+              btn.onclick = () => changeWestPage(pageNumber);
+              container.appendChild(btn);
+            }
+          
+            function addWestEllipsis(container) {
+              const ellipsis = document.createElement("span");
+              ellipsis.textContent = "...";
+              ellipsis.className = "ellipsis";
+              container.appendChild(ellipsis);
+            }
+          
+            function sortWestTable(column, type) {
+              const tbody = document.querySelector("#westTableBody");
+              const rows = Array.from(tbody.querySelectorAll(".westRow"));
+          
+              let columnIndex;
+              if (column === "name") columnIndex = 0;
+              else if (column === "termStart") columnIndex = 1;
+              else if (column === "termEnd") columnIndex = 2;
+          
+              rows.sort((a, b) => {
+                let valA = a.cells[columnIndex].innerText.trim();
+                let valB = b.cells[columnIndex].innerText.trim();
+          
+                if (type === "number") {
+                  valA = parseInt(valA, 10);
+                  valB = parseInt(valB, 10);
+                }
+          
+                if (valA > valB) return 1 * sortDirectionWest;
+                if (valA < valB) return -1 * sortDirectionWest;
+                return 0;
+              });
+          
+              sortDirectionWest *= -1;
+              rows.forEach(row => tbody.appendChild(row));
+          
+              updateWestTable();
+            }
+          
+            document.querySelectorAll("#westTable th.sortable").forEach(th => {
+              th.addEventListener("click", function () {
+                const column = this.getAttribute("data-column");
+                const type = this.getAttribute("data-type");
+                sortWestTable(column, type);
+              });
+            });
+          
+            updateWestTable();
+          </script>
+          
+             <hr style="border: none; border-top: 2px solid black; margin-bottom: 30px;">
+<div>
+    <h2 class="wp-block-heading has-text-align-center">East District</h2>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .team-container {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 30px;
+            max-width: 1500px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .team-member {
+            position: relative;
+            background: #fff;
+            border-radius: 20px;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+            text-align: center;
+            padding-bottom: 25px;
+        }
+
+
+        .team-member img {
+            width: 100%;
+            height: 200px;
+            object-fit: contain;
+            display: block;
+            background-color: #f8f9fa;
+            padding: 10px;
+        }
+
+        .team-member .caption {
+            margin-top: 15px;
+            padding: 0 25px;
+            font-size: 0.95rem;
+            color: #5a6c7d;
+            line-height: 1.7;
+        }
+
+        .team-member .name {
+            font-weight: 600;
+            font-size: 1rem;
+            color: #2c3e50;
+            display: block;
+            margin-bottom: 5px;
+            line-height: 1.3;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 1200px) {
+            .team-container {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 20px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .team-container {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+                padding: 10px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .team-container {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+        }
+    </style>
+
+    <div class="team-container">
+        <div class="team-member">
+            <img src="http://wp-local.com/wp-content/uploads/2025/08/PBM-Tanael-DropShadow.png" alt="Edwin Tanael">
+            <div class="caption">
+                <div class="name">Edwin Tanael</div>
+            </div>
+        </div>
+
+        <div class="team-member">
+            <img src="http://wp-local.com/wp-content/uploads/2025/08/PBM-Templonuevo-DropShadow.png" alt="Bolotoy Templonuevo">
+            <div class="caption">
+                <div class="name">Bolotoy Templonuevo</div>
+            </div>
+        </div>
+
+        <div class="team-member">
+            <img src="http://wp-local.com/wp-content/uploads/2025/08/Capitol.png" alt="Boy Balidoy">
+            <div class="caption">
+                <div class="name">Boy Balidoy</div>
+            </div>
+        </div>
+
+        <div class="team-member">
+            <img src="http://wp-local.com/wp-content/uploads/2025/08/Capitol.png" alt="Dean Vergara">
+            <div class="caption">
+                <div class="name">Dean Vergara</div>
+            </div>
+        </div>
+
+        <div class="team-member">
+            <img src="http://wp-local.com/wp-content/uploads/2025/08/PBM-Turado-DropShadow.png" alt="Arnel Turado">
+            <div class="caption">
+                <div class="name">Arnel Turado</div>
+            </div>
+        </div>
+    </div>
+
+            <hr style="border: none; border-top: 2px solid black; margin-bottom: 30px;">
+            <h4 style="margin-top: 0;">Previous East District PBM</h4>
+
+            <div id="PBMTableContainer" style="position: relative;">
+                <table id="PBMTable"
+                    style="width: 100%; border-collapse: collapse; font-size: 14px; margin-bottom: 20px;">
+                    <thead>
+                        <tr style="background-color: #f1f1f1;">
+                            <th class="sortable" style="text-align: left; padding: 8px; border-bottom: 1px solid #ccc;" data-column="name" data-type="string">
+                            Name <span class="sort-arrow"></span>
+                            </th>
+                        <th class="sortable desc" style="text-align: center; padding: 8px; border-bottom: 1px solid #ccc;" data-column="termStart" data-type="number">
+                        Term Start<span class="sort-arrow"></span>
+                        </th>
+
+                            <th class="sortable" style="text-align: center; padding: 8px; border-bottom: 1px solid #ccc;" data-column="termEnd" data-type="number">
+                            Term End <span class="sort-arrow"></span>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody id="PBMTableBody">
+
+                        <tr class="previousPBMRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Carlos Aguilar 
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1992</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2001</td>
+                        </tr>
+                        <tr class="previousPBMRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Lilia Evangelista 
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1992</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2001</td>
+                        </tr>
+                        <tr class="previousPBMRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Francisco De Los Santos
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1992</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1995</td>
+                        </tr>
+                        <tr class="previousPBMRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Edwin Tanael
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1995</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1998</td>
+                        </tr>
+                        <tr class="previousPBMRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                        Edwin Tanael
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1998</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2004</td>
+                        </tr>
+                        <tr class="previousPBMRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Edgar Tapel
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">1998</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2001</td>
+                        </tr>
+                        <tr class="previousPBMRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Julieto Barceta
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2001</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2004</td>
+                        </tr>
+                        <tr class="previousPBMRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Romeo Tuplano
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2001</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2010</td>
+                        </tr>
+                        <tr class="previousPBMRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Pio Tubalinal
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2001</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2004</td>
+                        </tr>
+                        <tr class="previousPBMRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Rene Vega 
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2004</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2007</td>
+                        </tr>
+                        <tr class="previousPBMRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Roger Pereyra
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2004</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2010</td>
+                        </tr>
+                        <tr class="previousPBMRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Edgar Tapel
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2004</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2007</td>
+                        </tr>
+                        <tr class="previousPBMRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Edwin Tanael 
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2007</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2010</td>
+                        </tr>
+                        <tr class="previousPBMRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Francisco Camano, Jr.
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2007</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2010</td>
+                        </tr>
+                        <tr class="previousPBMRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Edwin Tanael
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2010</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2013</td>
+                        </tr>
+                        <tr class="previousPBMRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Wilfredo Santelices 
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2010</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2013</td>
+                        </tr>
+                        <tr class="previousPBMRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Roger Pereyra 
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2010</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2013</td>
+                        </tr>
+                        <tr class="previousPBMRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Marilyn Tatel
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2010</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2013</td>
+                        </tr>
+                        <tr class="previousPBMRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Edwin Tanael 
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2013</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2016</td>
+                        </tr>
+                        <tr class="previousPBMRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Lorenzo Templonuevo, Jr.
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2013</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                        </tr>
+                        <tr class="previousPBMRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Arnel Turado 
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2013</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2016</td>
+                        </tr>
+                        <tr class="previousPBMRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Marilyn Tatel 
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2013</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2016</td>
+                        </tr>
+                        <tr class="previousPBMRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Vincent Villaluna 
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2016</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2019</td>
+                        </tr>
+                        <tr class="previousPBMRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Arnel Turado 
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2016</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                        </tr>
+                        <tr class="previousPBMRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Joseph Al Randie Wong 
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2016</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2019</td>
+                        </tr>
+                        <tr class="previousPBMRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Edwin Tanael  
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2019</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                        </tr>
+                        <tr class="previousPBMRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Robert Fernandez 
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2019</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                        </tr>
+                        <tr class="previousPBMRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Edwin Tanael 
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                        </tr>
+                        <tr class="previousPBMRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Josevan Balidoy  
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                        </tr>
+                        <tr class="previousPBMRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Dean Roberto Vergara 
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                        </tr>
+                        <tr class="previousPBMRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Robert Fernandez  
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2022</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                        </tr>
+                        <tr class="previousPBMRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Josevan Balidoy  
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                        </tr>
+                        <tr class="previousPBMRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                    Lorenzo Templonuevo, Jr.
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                        </tr>
+                        <tr class="previousPBMRow">
+                            <td
+                                style="padding: 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;">
+                                <div class="hover-target" style="position: relative; display: inline-block;">
+                                        Arnel Turado
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                            <td style="text-align: center; padding: 8px; border-bottom: 1px solid #eee;">2025</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="pagination-wrapper" style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
+                    <p id="PBMPageInfo" style="margin: 0; font-weight: bold; font-size: 14px;">This is page 1 out of X</p>
+                    <div id="PBMPagination" class="pagination" style="display: flex; gap: 5px;"></div>
+                    </div>
+                </div>
+            </div>
+          
+    <script>
+      const rowsPerPagePBM = 5;
+      let currentPagePBM = 1;
+      let sortDirectionPBM = 1;
+    
+      function defaultSortByLatestTermStart() {
+  const tbody = document.querySelector("#PBMTableBody");
+  const rows = Array.from(tbody.querySelectorAll(".previousPBMRow"));  
+  
+  let columnIndex = 1; // termStart column
+
+  rows.sort((a, b) => {
+    let valA = parseInt(a.cells[columnIndex].innerText.trim(), 10);
+    let valB = parseInt(b.cells[columnIndex].innerText.trim(), 10);
+
+    return valB - valA; // descending order
+  });
+
+  rows.forEach(row => tbody.appendChild(row));
+}
+
+defaultSortByLatestTermStart();
+updatePBMTable();
+
+      function updatePBMTable() {
+        const rows = document.querySelectorAll(".previousPBMRow");
+        const totalPages = Math.ceil(rows.length / rowsPerPagePBM) || 1;
+    
+        let visibleIndex = 0;
+        rows.forEach((row, index) => {
+          if (
+            index >= (currentPagePBM - 1) * rowsPerPagePBM &&
+            index < currentPagePBM * rowsPerPagePBM
+          ) {
+            row.style.display = "";
+            row.style.backgroundColor = visibleIndex % 2 === 0 ? "#fff" : "#f9f9f9";
+            visibleIndex++;
+          } else {
+            row.style.display = "none";
+          }
+        });
+    
+        renderPBMPagination(totalPages);
+      }
+    
+      function changePBMPage(page) {
+        const rows = document.querySelectorAll(".previousPBMRow");
+        const totalPages = Math.ceil(rows.length / rowsPerPagePBM) || 1;
+    
+        if (page < 1) page = 1;
+        if (page > totalPages) page = totalPages;
+    
+        currentPagePBM = page;
+        updatePBMTable();
+      }
+    
+      function renderPBMPagination(totalPages) {
+        document.getElementById("PBMPageInfo").textContent =
+          `This is page ${currentPagePBM} out of ${totalPages}`;
+        const container = document.getElementById("PBMPagination");
+        container.innerHTML = "";
+    
+        const prevBtn = document.createElement("button");
+        prevBtn.textContent = "<< Prev";
+        prevBtn.className = currentPagePBM === 1 ? "disabled" : "";
+        prevBtn.disabled = currentPagePBM === 1;
+        prevBtn.onclick = () => changePBMPage(currentPagePBM - 1);
+        container.appendChild(prevBtn);
+    
+        const maxPagesToShow = 7;
+        let startPage = 1;
+        let endPage = totalPages;
+    
+        if (totalPages > maxPagesToShow) {
+          if (currentPagePBM <= 4) {
+            endPage = 5;
+          } else if (currentPagePBM >= totalPages - 3) {
+            startPage = totalPages - 4;
+          } else {
+            startPage = currentPagePBM - 2;
+            endPage = currentPagePBM + 2;
+          }
+        }
+    
+        if (startPage > 1) {
+          addPBMPageButton(container, 1);
+          if (startPage > 2) addPBMEllipsis(container);
+        }
+    
+        for (let i = startPage; i <= endPage; i++) {
+          addPBMPageButton(container, i);
+        }
+    
+        if (endPage < totalPages) {
+          if (endPage < totalPages - 1) addPBMEllipsis(container);
+          addPBMPageButton(container, totalPages);
+        }
+    
+        const nextBtn = document.createElement("button");
+        nextBtn.textContent = "Next >>";
+        nextBtn.className = currentPagePBM === totalPages ? "disabled" : "";
+        nextBtn.disabled = currentPagePBM === totalPages;
+        nextBtn.onclick = () => changePBMPage(currentPagePBM + 1);
+        container.appendChild(nextBtn);
+      }
+    
+      function addPBMPageButton(container, pageNumber) {
+        const btn = document.createElement("button");
+        btn.textContent = pageNumber;
+        if (currentPagePBM === pageNumber) btn.className = "active";
+        btn.onclick = () => changePBMPage(pageNumber);
+        container.appendChild(btn);
+      }
+    
+      function addPBMEllipsis(container) {
+        const ellipsis = document.createElement("span");
+        ellipsis.textContent = "...";
+        ellipsis.className = "ellipsis";
+        container.appendChild(ellipsis);
+      }
+    
+      function sortPBMTable(column, type) {
+        const tbody = document.querySelector("#PBMTableBody");
+        const rows = Array.from(tbody.querySelectorAll(".previousPBMRow"));
+    
+        let columnIndex;
+        if (column === "name") columnIndex = 0;
+        else if (column === "termStart") columnIndex = 1;
+        else if (column === "termEnd") columnIndex = 2;
+    
+        rows.sort((a, b) => {
+          let valA = a.cells[columnIndex].innerText.trim();
+          let valB = b.cells[columnIndex].innerText.trim();
+    
+          if (type === "number") {
+            valA = parseInt(valA, 10);
+            valB = parseInt(valB, 10);
+          }
+    
+          if (valA > valB) return 1 * sortDirectionPBM;
+          if (valA < valB) return -1 * sortDirectionPBM;
+          return 0;
+        });
+    
+        sortDirectionPBM *= -1;
+        rows.forEach(row => tbody.appendChild(row));
+    
+        updatePBMTable();
+      }
+    
+      document.querySelectorAll("#PBMTable th.sortable").forEach(th => {
+        th.addEventListener("click", function () {
+          const column = this.getAttribute("data-column");
+          const type = this.getAttribute("data-type");
+          sortPBMTable(column, type);
+        });
+      });
+    
+      updatePBMTable();
+    </script>
+            
+                      
+<script>
+/**
+ * Generic table sorter
+ * @param {string} tbodyId - ID ng tbody (e.g., "westTableBody", "PBMTableBody")
+ * @param {string} rowClass - class ng row (e.g.,  "westRow", "previousPBMRow")
+ * @param {number} columnIndex - index ng column to sort
+ * @param {string} type - "string" o "number"
+ * @param {boolean} asc - ascending or descending
+ */
+function sortGenericTable(tbodyId, rowClass, columnIndex, type, asc) {
+  const tbody = document.getElementById(tbodyId);
+  const rowsArray = Array.from(tbody.querySelectorAll("." + rowClass));
+
+  rowsArray.sort((a, b) => {
+    let valA, valB;
+    if(type === "string") {
+      // For Name column or text
+      valA = a.children[columnIndex].innerText.trim().toLowerCase();
+      valB = b.children[columnIndex].innerText.trim().toLowerCase();
+      if(valA < valB) return asc ? -1 : 1;
+      if(valA > valB) return asc ? 1 : -1;
+      return 0;
+    } else if(type === "number") {
+      // For Term Start / Term End
+      valA = parseInt(a.children[columnIndex].innerText.trim(), 10);
+      valB = parseInt(b.children[columnIndex].innerText.trim(), 10);
+      return asc ? valA - valB : valB - valA;
+    }
+    return 0;
+  });
+
+  tbody.innerHTML = "";
+  rowsArray.forEach(row => tbody.appendChild(row));
+}
+
+// Apply sorting to all tables
+document.querySelectorAll("table").forEach(table => {
+  const tbodyId = table.querySelector("tbody").id;
+  const rowClass = table.querySelector("tbody tr").className;
+
+  table.querySelectorAll("th.sortable").forEach((th, idx) => {
+    th.addEventListener("click", () => {
+      // Remove asc/desc from other headers
+      table.querySelectorAll("th.sortable").forEach(header => {
+        if(header !== th) header.classList.remove("asc", "desc");
+      });
+
+      // Toggle direction
+      const asc = !th.classList.contains("asc");
+      th.classList.toggle("asc", asc);
+      th.classList.toggle("desc", !asc);
+
+      // Sort table
+      const type = th.dataset.type;
+      sortGenericTable(tbodyId, rowClass, idx, type, asc);
+    });
+  });
+});
+</script>

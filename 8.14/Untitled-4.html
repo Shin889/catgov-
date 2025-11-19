@@ -1,0 +1,322 @@
+<style>       
+ .leadership-section {
+            background: linear-gradient(135deg, #f3e9f2 0%, #ffffff 100%);
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .leadership-section p {
+            max-width: 800px;
+            margin: 0 auto 30px;
+            color: #555;
+        }
+
+        .hero-images {
+            background: linear-gradient(135deg, #0066cc, #004499);
+            padding: 60px 20px;
+            color: white;
+            text-align: center;
+        }
+
+        .hero-image {
+            max-width: 800px;
+            width: 100%;
+            height: auto;
+            margin: 20px auto;
+        }
+
+        .image-caption {
+            margin: 20px auto;
+            max-width: 600px;
+            line-height: 1.6;
+        }
+
+        .team-intro {
+            background: linear-gradient(135deg, #f3e9f2 0%, #ffffff 100%);
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .team-intro h2 {
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        .team-intro p {
+            max-width: 800px;
+            margin: 0 auto;
+            color: #555;
+        }
+
+        .team-grid {
+            padding: 60px 20px;
+            background: #0066cc;
+        }
+
+        .team-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .team-section {
+            margin-bottom: 60px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2em;
+            color: #333;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background: #6aa84f;
+            margin: 10px auto;
+        }
+
+        .team-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .team-member {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .team-member:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .member-photo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            object-fit: cover;
+            border: 4px solid #0066cc;
+        }
+
+        .member-name {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 8px;
+            font-family: 'Merriweather', serif;
+        }
+
+        .member-title {
+            color: #6aa84f;
+            font-style: italic;
+        }
+
+        .call-to-action {
+            background: #0066cc;
+            color: white;
+            padding: 20px 20px;
+            text-align: center;
+        }
+
+        .call-to-action h2 {
+            color: white;
+            margin-bottom: 30px;
+        }
+
+        .call-to-action p {
+            max-width: 600px;
+            margin: 0 auto 40px;
+            color: white;
+            line-height: 1.6;
+        }
+
+        .apply-button {
+            display: inline-block;
+            color: #0066cc;
+            background-color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .team-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .leadership-section, .team-intro {
+                padding: 40px 20px;
+            }
+            
+            .hero-images {
+                padding: 40px 20px;
+            }
+            
+            .section-title {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+<section class="leadership-section">
+        <h4>Leadership</h4>
+<br>
+        <p>"Good leadership and teamwork are two pillars of any successful organization, community, or project. When combined, they create a working environment where goals are met efficiently, people feel valued, and challenges are faced with unity and resilience."</p>
+        <p>"What brings our team together toward a common goal is our shared vision, open communication, and mutual trust. We are united by a clear purpose and a strong commitment to support each other and achieve success as one team."</p>
+    </section>
+
+    <!-- Hero Images Section -->
+    <section class="hero-images">
+        <img src="https://lh6.googleusercontent.com/p6cUrMRDJJ9zZeWKE-xWKrc_xJaxbMHnGbydwC5yluxmGq7iuzQIMvjcfiDOgJEMmp3ZZc5HYspKeypKkD5ifX4e0ufqpodbTaO3zGRPlMDhB0aWvMDbR6gJPmif1GCxiWLcFbPTPS45uoCk8lgnNPakjLjvffBhGnv2bKpDzjkT6pM2RMSixA=w1280" alt="Service Excellence" class="hero-image">
+        <p class="image-caption">A mindset and attitude of providing service with genuine kindness, willingness, and respect. It means doing your job not just because you have to, but because you truly want to help others.</p>
+
+        <img src="https://lh5.googleusercontent.com/yda27pLN2avwlFcC_eDrW9WBSaSC53Oeuf33M7aef8pAl6H-Q4CmnE7gNBRDOvw3N8i5yKuE8cCgs6BvsLuz4eFdOiE-2SGoJz61Djzr46GYejf-Zp8xtSGoTUqXe-8A3M40nI1eugZwhy4_Tiema6BcNLcqGl4nuO5oVz_a_ZzIuP2btY8emQ=w1280" alt="Team Unity" class="hero-image">
+        <p class="image-caption">Together we achieve more — united, motivated, and unstoppable!</p>
+    </section>
+
+    <!-- Team Introduction -->
+    <section class="team-intro">
+        <h2>Meet the Team</h2>
+        <p>Our team culture is built on respect, collaboration, and shared purpose. We value open communication, support one another, and work together with a positive attitude to achieve our common goals and serve with excellence.</p>
+    </section>
+
+    <section class="team-grid">
+        <div class="team-container">
+            <div class="team-section">
+                <div class="team-row">
+                    <div class="team-member">
+                        <img src="https://lh4.googleusercontent.com/sK52yV36zD_fJ0jkCGG5TaE8afq2CMFSDH0TE-XxrGeK7_TsAw1R0pW84oaetTcxsCuYQ3XThlyZ_SPE4NTWNUCd-_wnf0UGvw0fn_yv9K1rsqZufh_hSwRJd5xVTI1E3qj8UgjDBKkAD1Rg92Ll3CqTFmggbYSakt8WLSkVIr99A_EEAV-HXQ=w1280" alt="Eric S. Manlangit" class="member-photo">
+                        <div class="member-name">Eric S. Manlangit</div>
+                        <div class="member-title">President</div>
+                    </div>
+                    <div class="team-member">
+                        <img src="https://lh5.googleusercontent.com/AzUNlS2Zd-dClUV88-K5oRCMJeTmK07KX-ehHdc49eYtIL3Cl-V8bGo6cEi6M5FQxOk9b7cjLwxOLb7oZWZ8ZpAY5w50BJIU0AQ4h--XAxnjcvto6sxFdTrtSfE38rNPYARcHPtsrLVqJox9Kc5qxZ0uNXuSLWbecnldvYJZpdAqvIL0dykquA=w1280" alt="Jorge I. Tabirara" class="member-photo">
+                        <div class="member-name">Jorge I. Tabirara</div>
+                        <div class="member-title">Vice President</div>
+                    </div>
+                    <div class="team-member">
+                        <img src="https://lh5.googleusercontent.com/ssyPjwta4vrMpJUxCNHwTPt4K_Wew-trAwAzDdarrWpdIOEXcmCk3svxwR7-9Qhp8hYtfyq5S3yHBEOAG0ZuB2zaxSwZG78JCtWr5XOUIu1MwxVUGDt2T8P-jlqWgTYhfa7V62zPlTgBxhs819u3tGb7NnBAjH_8oB-uKbzlxYqpOoHe0vaRiQ=w1280" alt="Mary Krystle A. Bagadiong" class="member-photo">
+                        <div class="member-name">Mary Krystle A. Bagadiong</div>
+                        <div class="member-title">Secretary</div>
+                    </div>
+                </div>
+            </div>
+            <div class="team-section">
+                <div class="team-row">
+                    <div class="team-member">
+                        <div class="member-photo" style="background: linear-gradient(135deg, #6aa84f, #5a9340); display: flex; align-items: center; justify-content: center; color: white; font-size: 2em; font-weight: bold;">MT</div>
+                        <div class="member-name">Marites B. Tejerero</div>
+                        <div class="member-title">Treasurer</div>
+                    </div>
+                    <div class="team-member">
+                        <img src="https://lh3.googleusercontent.com/q71so9oqGTVEID1KlJF73qgLJVmiDTEtQTUTvRJIehYMRTBe5eOx6HSukApv1jrGHcWBRwQXiYuOUcRnKb5z-T09zgYlACe4g36Ejq12_DaMmuOFosvxrzs52fZ9Wu5RQjD921COAkCcPelbcnw3hj3icmbbN-0GlHyDWetp51sFB6WvdqNIWg=w1280" alt="Imelda M. Aguilar" class="member-photo">
+                        <div class="member-name">Imelda M. Aguilar</div>
+                        <div class="member-title">Auditor</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Business Management -->
+            <div class="team-section">
+                <div class="team-row">
+                    <div class="team-member">
+                        <img src="https://lh6.googleusercontent.com/Xe7d7jjHVu-d4bbPt-grFbY8Xr2T2r38K3CcKTVCPTvNpeU5lZRRDp8TIZSOlbPTUkgc2BNbU85XpDPWHbuVPcrug-UV39MdxTvkLpeuNBpNbJlcIptp6R3YapIT7oDh1AP7B0XkvFkfASGUIstW-pE3uB0htpr3RNeSxApZd82ANwhDbM6J0w=w1280" alt="Romel M. Valeza" class="member-photo">
+                        <div class="member-name">Romel M. Valeza</div>
+                        <div class="member-title">Business Manager</div>
+                    </div>
+                    <div class="team-member">
+                        <img src="https://lh6.googleusercontent.com/zNmGIkDStKjyCEr47iy5zqlXSB9EXtKzfDDOuRQC9WWTykI_2cNVCMJfZ8GmBS050CbaDGob6OE2JFS430fI0o5evGF5CljtfCALd089SBwIUXtzBmz227sx85RXjzA_ibGMi_qk8s0Za1gYI4p_ivgdX5W7VivHgkb9f9IgepaQ0a4GmWl7tw=w1280" alt="Golda A. Velchez" class="member-photo">
+                        <div class="member-name">Golda A. Velchez</div>
+                        <div class="member-title">Business Manager</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Operations -->
+            <div class="team-section">
+                <div class="team-row">
+                    <div class="team-member">
+                        <img src="https://lh5.googleusercontent.com/KKvsmB90OR_vTT62HzGcCxu0c6Hi1a_QVeCbmZaR7J8y6I6BNLVKHeILx4CxErXFh7oNSWq_CteRrVD7aEc4R6mgSx04nQqmvchG7RH1Nzy46G3w6LNF_M1VGmpTJha7NWb5QMn-fSDus4dCX5WtZ4h8DOtwGHePgud4hrvvfXvMNoE5RjC9Rg=w1280" alt="Armando B. Solano Jr." class="member-photo">
+                        <div class="member-name">Armando B. Solano Jr.</div>
+                        <div class="member-title">MMO</div>
+                    </div>
+                    <div class="team-member">
+                        <img src="https://lh6.googleusercontent.com/SWO83Z1eXLHL6cn7EqkjgFgzb0hoRBO8uOhd-kpWTaregbBE-R0KoeEKiTcqKgF95g6ckvTMmBWg4hdiZDQO93yCsnJAsdu48a1OulbhldetOfSXorjy0yXssK8MM5GznrBXVBCMCT0NaLRVS0I-II8d-h48z0mAcpi_idRy093laCDW-NT6HA=w1280" alt="Fernando T. Martirez" class="member-photo">
+                        <div class="member-name">Fernando T. Martirez</div>
+                        <div class="member-title">Peace Officer</div>
+                    </div>
+                    <div class="team-member">
+                        <img src="https://lh3.googleusercontent.com/HzR-pv6bJa8IOpmPUFMhAKEFGMvnl99r2gh73pSFBwRsJUdCaDVmGjWXXQZMj6sAZDhAO7KYhL-rRmoBF42xz4FgIzPo9Pnwx3yQSlWb-jdQ9bCT6fY9wXHMuJHt4razh3q-ItnQSyApDhlzXRAVDjUs2TPKx4Ef8RkqFQWYWLxyw8TKZ7wcSg=w1280" alt="Nestor S. Sarmiento Jr." class="member-photo">
+                        <div class="member-name">Nestor S. Sarmiento Jr.</div>
+                        <div class="member-title">Peace Officer</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="team-section">
+                <div class="team-row">
+                    <div class="team-member">
+                        <img src="https://lh4.googleusercontent.com/GBDG8vXnldeb6FOJFJ1cwdcqvh9Q6n8SHt0s0Q0-pImCX2tY5i5g4Y2tZG-V0wsbW77vlTyTG1mgYsHGxPcJ2qTvZlpuSHiR8DenrnizxkQjSz2S1yFHdf4-nFXa-j1th6N04w7pd6alOi02ncnBvh-KJs4NAt32msvuauB9j0YYyC41tNkNBw=w1280" alt="Erwin R. Bergonio" class="member-photo">
+                        <div class="member-name">Erwin R. Bergonio</div>
+                        <div class="member-title">Board of Directors</div>
+                    </div>
+                    <div class="team-member">
+                        <img src="https://lh4.googleusercontent.com/ZFvBnSsptO6LfuJHkJALke2yrd8tDkromqFPi_8us1sPiEqFNQvpTdvj3PI1DJebgfhQ5dcNcrj9AcVHdEBn5ClY7ws15ntVgj2mzrKXIle3AugcH3xAH7Tp9iTRYJlBUCONLqP0sYzrjt40mnYjk5VvtWdSGcnGwpc7v4_gXrjsUj06bJOhGQ=w1280" alt="Raffy F. Carania" class="member-photo">
+                        <div class="member-name">Raffy F. Carania</div>
+                        <div class="member-title">Board of Directors</div>
+                    </div>
+                    <div class="team-member">
+                        <img src="https://lh3.googleusercontent.com/jIYp0HXq01hfHzK7AnopIN2e8F3a8SsxI-jtfCM5SIsyO931juDh3p_dYzBj2ZyywG2NGD9_kFbl4YYdglROGleMfUpoRx00z255l4LnWMlMIftcg_K1iCoUrBXM8z0ZnPxB5DcpyNKCXZPV31AXxaAIIJUg9A4iedXHeRGyRUB4fXMkEY4G3A=w1280" alt="Vicente G. Socito" class="member-photo">
+                        <div class="member-name">Vicente G. Socito</div>
+                        <div class="member-title">Board of Directors</div>
+                    </div>
+                </div>
+                <div class="team-row">
+                    <div class="team-member">
+                        <img src="https://lh3.googleusercontent.com/9sAf29v_kRCAqIcnnCKcUPP6NhDKqE8EoXltw8jXrVTqMNzUbcOBOfxxcYOP3dgIWRBfuFHBC0ea0TIPEN9Ud_89w1x3PoudjvhUEcvimt2YbO2-TKup69iqOYzEtrcB4zJT3PwaIzz1qoHMz1NjV55peVkIc9SMa9P0o3a7yFbE63UoNZh4Zg=w1280" alt="Richard A. Masagca" class="member-photo">
+                        <div class="member-name">Richard A. Masagca</div>
+                        <div class="member-title">Board of Directors</div>
+                    </div>
+                    <div class="team-member">
+                        <img src="https://lh3.googleusercontent.com/ZRu8KztPA9IPSkaHqhjaN9nqdg_YYP4bARWXemi0OgDV59HT4iqIq6evtH7CBO0EDBZHHZfvagi1IFuUsPeUTiE3Bv3ZxVqxjvPjvL0LBJjnOTDGiUr9APbWgUmlTKEVIwGi9rnjqzBWbqjzlULXH2GcLDGwnXViJGL4VGhfL_QLHSPLNS4Ieg=w1280" alt="Analyn F. Barcelon" class="member-photo">
+                        <div class="member-name">Analyn F. Barcelon</div>
+                        <div class="member-title">Board of Directors</div>
+                    </div>
+                    <div class="team-member">
+                        <img src="https://lh6.googleusercontent.com/zgJvSih3fN7Sbr5CtSlaL3RkIzICwxrnvMoek0xJjyM-FXFcSG4gifAEwm5D389dXayGsE7ZmTacmPgEHAhAo-gYRIS8PhrK79s4UBcpLFOI4H2ADZJUm5RK2cwf-5pdBzbWR_Gu9pyPxAQaXh3DlmwzNFwX_VjgNYbk2WZY6fO6mk6itn7Srw=w1280" alt="Gina S. Toledana" class="member-photo">
+                        <div class="member-name">Gina S. Toledana</div>
+                        <div class="member-title">Board of Directors</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Team Member -->
+            <div class="team-section">
+                <div class="team-row">
+                    <div class="team-member">
+                        <div class="member-photo" style="background: linear-gradient(135deg, #6aa84f, #5a9340); display: flex; align-items: center; justify-content: center; color: white; font-size: 2em; font-weight: bold;">AE</div>
+                        <div class="member-name">Agnes A. Escaro</div>
+                        <div class="member-title">Team Member</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="call-to-action">
+        <h4>Become a Member Now</h4>
+<br>
+        <p>We are looking for a teammate who is reliable, communicative, and open-minded—someone who actively listens, contributes ideas, and supports the team with a positive attitude and a strong commitment to our shared goals.</p>
+        <a href="https://web.facebook.com/progocea.catanduanes" target="_blank" class="apply-button">Apply Now</a>
+    </section>
