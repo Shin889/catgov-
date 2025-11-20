@@ -1,0 +1,115 @@
+<div id="footer" class="anchor" name="agencyfooter">
+  <div id="supplementary" class="row">
+        <div class="large-12 columns" role="complementary">
+            <aside id="block-61" class="widget widget_block"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+
+
+<footer class="catanduanes-footer">
+
+  <!-- Main Footer Content -->
+  <div class="footer-content">
+
+    <!-- Logos Section -->
+    <div class="footer-logos">
+      <img decoding="async" src="/~happyimartph/wp-content/uploads/2025/07/cropped-logo_catanduanesgov.png" alt="Logo 1">
+      <p>Province of Catanduanes</p>
+    </div>
+    
+    <div class="footer-menu">
+      <h3>About Us</h3>
+      <ul>
+        <li><a href="/~happyimartph/site-map/"><i class="fa-solid fa-sitemap"></i> Site Map</a></li>
+        <li><a href="/~happyimartph/government-2/"><i class="fa-solid fa-landmark"></i> Government</a></li>
+        <li><a href="#"><i class="fa-solid fa-phone-volume"></i> Office Hotlines</a></li>
+        <li><a href="/~happyimartph/governors-corner/"><i class="fa-solid fa-user-tie"></i> Governor's Corner</a></li>
+      </ul>
+    </div>
+
+    <!-- Transparency Menu -->
+    <div class="footer-menu">
+      <h3>Transparency</h3>
+      <ul>
+        <li><a href="/~happyimartph/new-and-information/"><i class="fa-solid fa-archive"></i> Archive</a></li>
+        <li><a href="/~happyimartph/transparency/"><i class="fa-solid fa-download"></i> Downloads</a></li>
+        <li><a href="#"><i class="fa-solid fa-file-signature"></i> Executive Order</a></li>
+        <li><a href="#"><i class="fa-solid fa-book"></i> Citizen's Charter</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Us Menu -->
+    <div class="footer-menu">
+      <h3>Contact Us</h3>
+      <ul>
+        <li><a href="tel:+63695208335"><i class="fa-solid fa-phone"></i> +63 969 520 8335</a></li>
+        <li><a href="#"><i class="fa-solid fa-location-dot"></i> Francia, Virac, Catanduanes</a></li>
+
+
+        <li><a href="https://provinceofcatanduanes.gov.ph/"><i class="fa-solid fa-globe"></i> https://provinceofcatanduanes.gov.ph</a></li>
+        <li><a href="mailto:catanduanesgovernorsoffice@gmail.com"><i class="fa-solid fa-envelope"></i> catanduanesgovernorsoffice@gmail.com</a></li>
+      </ul>
+    </div>
+   
+      <!-- Municipalities Gallery -->
+    <div class="footer-gallery">
+      <h3>Featured Places</h3>
+      <div class="slide-container">
+        <div class="slide-wrapper" id="municipalitySlides" style="transform: translateX(-600%);">
+          <img decoding="async" src="/~happyimartph/wp-content/uploads/2025/08/Panganiban.png" alt="Panganiban">
+          <img decoding="async" src="/~happyimartph/wp-content/uploads/2025/08/Pasa-Tiempo-Resort-San-Andres.jpg" alt="San Andres">
+          
+          <img decoding="async" src="/~happyimartph/wp-content/uploads/2025/08/Soboc-Cove-Viga.jpg" alt="Viga">
+          <img decoding="async" src="/~happyimartph/wp-content/uploads/2025/08/Gigmoto-1.png" alt="Gigmoto">
+          <img decoding="async" src="/~happyimartph/wp-content/uploads/2025/08/Caramoran-1.png" alt="Caramoran">
+          <img decoding="async" src="/~happyimartph/wp-content/uploads/2025/08/Bato-1.png" alt="Bato">
+          <img decoding="async" src="/~happyimartph/wp-content/uploads/2025/08/Baras-1.png" alt="Baras">
+          <img decoding="async" src="/~happyimartph/wp-content/uploads/2025/08/Bagamanoc-1.png" alt="Bagamanoc">
+          <img decoding="async" src="/~happyimartph/wp-content/uploads/2025/08/Virac-1.png" alt="Virac">
+          <img decoding="async" src="/~happyimartph/wp-content/uploads/2025/08/San-Miguel.png" alt="San Miguel">
+          <img decoding="async" src="/~happyimartph/wp-content/uploads/2025/08/Pandan-1.png" alt="Pandan">
+        </div>
+        <button class="slide-btn prev" onclick="changeSlide(-1)">❮</button>
+        <button class="slide-btn next" onclick="changeSlide(1)">❯</button>
+      </div>
+    </div>
+
+  </div>
+ 
+</footer>
+
+<script>
+let slideIndex = 1;
+let slideInterval;
+
+function showSlides(n) {
+  const slides = document.getElementById('municipalitySlides');
+  const totalSlides = slides.children.length;
+  if (n > totalSlides) { slideIndex = 1; }
+  if (n < 1) { slideIndex = totalSlides; }
+  slides.style.transform = `translateX(-${(slideIndex - 1) * 100}%)`;
+}
+
+function changeSlide(n) {
+  clearInterval(slideInterval);
+  slideIndex += n;
+  showSlides(slideIndex);
+  startAutoSlide();
+}
+
+function startAutoSlide() {
+  slideInterval = setInterval(() => {
+    slideIndex++;
+    showSlides(slideIndex);
+  }, 4500);
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  showSlides(slideIndex);
+  startAutoSlide();
+});
+</script></aside>    </div>
+    
+    
+    
+      </div>
+</div>

@@ -7,30 +7,6 @@ div#footer.anchor[name="agencyfooter"] {
     background-position: center;
 }
 
-#animation {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    margin: 0 !important;
-    padding: 0 !important;
-}
-
-#animation .wp-block-group__inner-container,
-#animation .wp-block-video,
-#animation figure {
-    margin: 0 !important;
-    padding: 0 !important;
-    width: 100%;
-    height: 100%;
-}
-
-#animation video {
-    width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: cover; 
-}
-
 .catanduanes-footer {
     margin: 0;
     padding: 0;
@@ -431,59 +407,24 @@ div#footer.anchor[name="agencyfooter"] {
     font-weight: 600;
 }
 
-@media (max-width: 1200px) {
-    .footer-content {
-        margin-top: 260px !important;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 30px;
-    }
-}
-
-@media (max-width: 900px) {
-    .footer-content {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 25px;
-    }
-    .footer-logos img {
-        width: 80%;
-        max-width: 130px;
-        height: auto;
-    }
-    .footer-menu h3 {
-        font-size: 16px;
-        text-align: center;
-    }
-    .footer-menu {
-        text-align: center;
-        display: inline-block;
-        margin: 0 auto;
-	}
-	.footer-menu ul {
-        display: inline-block;
-        text-align: center;
-        margin: 0 auto;
-    }
-	.footer-menu ul li {
-        margin-bottom: 10px; 
-        display: flex;
-        align-items: center; 
-        justify-content: center; 
-        gap: 8px; 
-   }
-}
-@media (max-width: 1024px) {
+@media (max-width: 320px) {
     div#footer.anchor[name="agencyfooter"] {
-        background-image: url(https://provinceofcatanduanes.gov.ph/wp-content/uploads/2025/09/Footer-TabletSize-2.jpg) !important;
+        background-image: url(https://provinceofcatanduanes.gov.ph/wp-content/uploads/2025/09/Footer-MobileSize3.jpg) !important;
         position: relative;
         background-size: cover;
-        background-position: center;
+        background-position: center top;
     }
 }
 
-
-@media (max-width: 600px) {
+@media (min-width: 321px) and (max-width: 375px) {
+    div#footer.anchor[name="agencyfooter"] {
+        background-image: url(https://provinceofcatanduanes.gov.ph/wp-content/uploads/2025/09/Footer-MobileSize3.jpg) !important;
+        position: relative;
+        background-size: cover;
+        background-position: center top;
+    }
     .footer-content {
-        margin-top: 200px !important;
+        margin-top: 170px !important;
         grid-template-columns: 1fr;
         text-align: center;
     }
@@ -503,6 +444,39 @@ div#footer.anchor[name="agencyfooter"] {
         font-size: 12px;
         padding: 15px 10px;
     }
+}
+
+@media (min-width: 376px) and (max-width: 425px) {
+    div#footer.anchor[name="agencyfooter"] {
+        background-image: url(https://provinceofcatanduanes.gov.ph/wp-content/uploads/2025/09/Footer-MobileSize3.jpg) !important;
+        position: relative;
+        background-size: cover;
+        background-position: center top;
+    }
+    .footer-content {
+        margin-top: 190px !important;
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .footer-logos img {
+        width: 100%;
+	    max-width: 120px;
+        height: auto;
+        margin-bottom: 10px;
+    }
+    .footer-menu h3 {
+        font-size: 15px;
+    }
+    .footer-menu ul li a {
+        font-size: 13px;
+    }
+    .footer-bottom {
+        font-size: 12px;
+        padding: 15px 10px;
+    }
+}
+
+@media (min-width: 426px) and (max-width: 500px) {
     div#footer.anchor[name="agencyfooter"] {
         background-image: url(https://provinceofcatanduanes.gov.ph/wp-content/uploads/2025/09/Footer-MobileSize3.jpg) !important;
         position: relative;
@@ -511,14 +485,90 @@ div#footer.anchor[name="agencyfooter"] {
     }
 }
 
-@media (max-width: 992px) {
-    #slider-icon>.wp-block-column:first-child,
-    #slider-icon>.wp-block-column:last-child {
-        flex-basis: 100% !important;
-        max-width: 100% !important;
+@media (min-width: 501px) and (max-width: 699px) {
+    div#footer.anchor[name="agencyfooter"] {
+        background-image: url(https://provinceofcatanduanes.gov.ph/wp-content/uploads/2025/09/Footer-MobileSize3.jpg) !important;
+        position: relative;
+        background-size: cover;
+        background-position: center top;
     }
-    #slider-icon {
-        flex-direction: column !important;
+    .footer-content {
+        margin-top: 220px !important;
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .footer-logos img {
+        width: 100%;
+	    max-width: 120px;
+        height: auto;
+        margin-bottom: 10px;
+    }
+    .footer-menu h3 {
+        font-size: 15px;
+    }
+    .footer-menu ul li a {
+        font-size: 13px;
+    }
+    .footer-bottom {
+        font-size: 12px;
+        padding: 15px 10px;
+    }
+}
+
+@media (min-width: 700px) and (max-width: 768px) {
+    div#footer.anchor[name="agencyfooter"] {
+        background-image: url(https://provinceofcatanduanes.gov.ph/wp-content/uploads/2025/09/Footer-TabletSize-2.jpg) !important;
+        position: relative;
+        background-size: cover;
+        background-position: center top;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 819px) {
+    div#footer.anchor[name="agencyfooter"] {
+        background-image: url(https://provinceofcatanduanes.gov.ph/wp-content/uploads/2025/09/Footer-TabletSize-2.jpg) !important;
+        position: relative;
+        background-size: cover;
+        background-position: center top;
+    }
+}
+
+@media (min-width: 820px) and (max-width: 930px) {
+    div#footer.anchor[name="agencyfooter"] {
+        background-image: url(https://provinceofcatanduanes.gov.ph/wp-content/uploads/2025/09/Footer-TabletSize-2.jpg) !important;
+        position: relative;
+        background-size: cover;
+        background-position: center top;
+    }
+    .footer-content {
+        margin-top: 190px !important;
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .footer-logos img {
+        width: 100%;
+	    max-width: 120px;
+        height: auto;
+        margin-bottom: 10px;
+    }
+    .footer-menu h3 {
+        font-size: 15px;
+    }
+    .footer-menu ul li a {
+        font-size: 13px;
+    }
+    .footer-bottom {
+        font-size: 12px;
+        padding: 15px 10px;
+    }
+}
+
+@media (min-width: 931px) and (max-width: 1024px) {
+    div#footer.anchor[name="agencyfooter"] {
+        background-image: url(https://provinceofcatanduanes.gov.ph/wp-content/uploads/2025/09/Footer-TabletSize-2.jpg) !important;
+        position: relative;
+        background-size: cover;
+        background-position: center top;
     }
 }
 
