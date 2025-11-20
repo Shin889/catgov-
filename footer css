@@ -1,0 +1,529 @@
+div#footer.anchor[name="agencyfooter"] {
+    background-image: url(https://provinceofcatanduanes.gov.ph/wp-content/uploads/2025/09/Footer-DesktopSize.jpg) !important;
+	position: relative;
+    border-top: none !important;
+    background-repeat: no-repeat !important;
+    background-size: cover;
+    background-position: center;
+}
+
+#animation {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+#animation .wp-block-group__inner-container,
+#animation .wp-block-video,
+#animation figure {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100%;
+    height: 100%;
+}
+
+#animation video {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover; 
+}
+
+.catanduanes-footer {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    color: white;
+    background-color: transparent;
+}
+
+.footer-content {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0px 20px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1.3fr 1fr;
+    gap: 40px;
+    z-index: 1;
+    margin-top: 330px;
+}
+
+.footer-logos {
+    text-align: center;
+}
+
+.footer-logos img {
+    width: 150px;
+    height: 150px;
+    margin: 0 10px;
+    display: inline-block;
+    vertical-align: middle;
+    transition: transform 0.3s ease;
+}
+
+.footer-logos p {
+    margin-top: 15px;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.9;
+    line-height: 1.4;
+}
+
+.footer-menu {
+    transition: transform 0.3s ease;
+}
+
+.footer-menu:hover {
+    transform: translateY(-2px);
+}
+
+.footer-menu h3 {
+    color: white;
+    font-weight: 600;
+    margin-bottom: 20px;
+    font-size: 18px;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+.footer-menu h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background: linear-gradient(90deg, #04a9f5, #0288d1);
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+.footer-menu:hover h3::after {
+    width: 60px;
+}
+
+.footer-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-menu ul li {
+    margin-bottom: 26px;
+    transition: transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-menu ul li:hover {
+    transform: translateX(6px);
+}
+
+.footer-menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+    transition: all 0.3s ease;
+    line-height: 1.4;
+}
+
+.footer-menu ul li a:hover {
+    color: #04a9f5;
+    text-shadow: 0 0 10px rgba(4, 169, 245, 0.5);
+}
+
+.footer-menu ul li i {
+    color: #04a9f5;
+    font-size: 14px;
+    flex-shrink: 0;
+}
+
+.footer-gallery {
+    position: relative;
+}
+
+.footer-gallery h3 {
+    color: white;
+    font-weight: 600;
+    margin-bottom: 20px;
+    font-size: 18px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    padding-bottom: 12px;
+}
+
+.footer-gallery h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 2px;
+    background: linear-gradient(90deg, #04a9f5, #0288d1);
+    border-radius: 2px;
+	transition: width 0.3s ease;
+}
+
+.footer-gallery:hover h3::after {
+  width: 70px; 
+}
+
+.slide-container {
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.slide-wrapper {
+    display: flex;
+    transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.slide-wrapper img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.slide-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.3);
+    color: #fff;
+    border: none;
+    padding: 10px 12px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 14px;
+    font-weight: bold;
+    transition: all 0.4s ease;
+    z-index: 15;
+    min-width: 40px;
+    min-height: 40px;
+}
+
+.slide-btn.prev {
+    left: 12px;
+}
+
+.slide-btn.next {
+    right: 12px;
+}
+
+.slide-btn:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 20px 20px;
+    font-size: 13px;
+    margin-bottom: 0;
+    line-height: 1.5;
+}
+
+.footer-bottom .highlight {
+    color: white;
+    font-weight: 600;
+}
+
+.footer-logos {
+    text-align: center;
+}
+
+.footer-logos img {
+    width: 100%;
+    max-width: 160px;
+    height: auto;
+    margin: 0 10px;
+    display: inline-block;
+    vertical-align: middle;
+    transition: transform 0.3s ease;
+}
+
+.footer-logos p {
+    margin-top: 15px;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.9;
+    line-height: 1.4;
+}
+
+.footer-menu {
+    transition: transform 0.3s ease;
+}
+
+.footer-menu:hover {
+    transform: translateY(-2px);
+}
+
+.footer-menu h3 {
+    color: white;
+    font-weight: 600;
+    margin-bottom: 20px;
+    font-size: 18px;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+.footer-menu h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background: linear-gradient(90deg, #04a9f5, #0288d1);
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+.footer-menu:hover h3::after {
+    width: 60px;
+}
+
+.footer-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-menu ul li {
+    margin-bottom: 26px;
+    transition: transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-menu ul li:hover {
+    transform: translateX(6px);
+}
+
+.footer-menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 12.5px;
+    font-weight: 400;
+    transition: all 0.3s ease;
+    line-height: 1.4;
+}
+
+.footer-menu ul li a:hover {
+    color: #04a9f5;
+    text-shadow: 0 0 10px rgba(4, 169, 245, 0.5);
+}
+
+.footer-menu ul li i {
+    color: #04a9f5;
+    font-size: 14px;
+    flex-shrink: 0;
+}
+
+.footer-gallery {
+    position: relative;
+}
+
+.footer-gallery h3 {
+    color: white;
+    font-weight: 600;
+    margin-bottom: 20px;
+    font-size: 18px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    padding-bottom: 12px;
+}
+
+.footer-gallery h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 2px;
+    background: linear-gradient(90deg, #04a9f5, #0288d1);
+    border-radius: 2px;
+}
+
+.slide-container {
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.slide-wrapper {
+    display: flex;
+    transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.slide-wrapper img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.slide-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    border: none;
+    padding: 10px 12px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 14px;
+    font-weight: bold;
+    transition: all 0.4s ease;
+    z-index: 15;
+    min-width: 40px;
+    min-height: 40px;
+}
+
+.slide-btn.prev {
+    left: 12px;
+}
+
+.slide-btn.next {
+    right: 12px;
+}
+
+.slide-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 20px 20px;
+    font-size: 13px;
+    margin-bottom: 0;
+    line-height: 1.5;
+}
+
+.footer-bottom .highlight {
+    color: white;
+    font-weight: 600;
+}
+
+@media (max-width: 1200px) {
+    .footer-content {
+        margin-top: 260px !important;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+}
+
+@media (max-width: 900px) {
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+    .footer-logos img {
+        width: 80%;
+        max-width: 130px;
+        height: auto;
+    }
+    .footer-menu h3 {
+        font-size: 16px;
+        text-align: center;
+    }
+    .footer-menu {
+        text-align: center;
+        display: inline-block;
+        margin: 0 auto;
+	}
+	.footer-menu ul {
+        display: inline-block;
+        text-align: center;
+        margin: 0 auto;
+    }
+	.footer-menu ul li {
+        margin-bottom: 10px; 
+        display: flex;
+        align-items: center; 
+        justify-content: center; 
+        gap: 8px; 
+   }
+}
+@media (max-width: 1024px) {
+    div#footer.anchor[name="agencyfooter"] {
+        background-image: url(https://provinceofcatanduanes.gov.ph/wp-content/uploads/2025/09/Footer-TabletSize-2.jpg) !important;
+        position: relative;
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .footer-content {
+        margin-top: 200px !important;
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .footer-logos img {
+        width: 100%;
+	    max-width: 120px;
+        height: auto;
+        margin-bottom: 10px;
+    }
+    .footer-menu h3 {
+        font-size: 15px;
+    }
+    .footer-menu ul li a {
+        font-size: 13px;
+    }
+    .footer-bottom {
+        font-size: 12px;
+        padding: 15px 10px;
+    }
+    div#footer.anchor[name="agencyfooter"] {
+        background-image: url(https://provinceofcatanduanes.gov.ph/wp-content/uploads/2025/09/Footer-MobileSize3.jpg) !important;
+        position: relative;
+        background-size: cover;
+        background-position: center top;
+    }
+}
+
+@media (max-width: 992px) {
+    #slider-icon>.wp-block-column:first-child,
+    #slider-icon>.wp-block-column:last-child {
+        flex-basis: 100% !important;
+        max-width: 100% !important;
+    }
+    #slider-icon {
+        flex-direction: column !important;
+    }
+}
+
+
+
+
+
+
